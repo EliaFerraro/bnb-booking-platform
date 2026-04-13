@@ -2,6 +2,8 @@
 
 This document defines the core users and user stories for the "Il Respiro del Borgo" platform. Our mission is to digitize an authentic, 1950s "Nonna's Style" rural hospitality experience. By focusing on real-world travelers (wine lovers, event-goers, and road-trippers) and the specific operational constraints of a part-time host, we ensure high technical performance without losing the human, authentic touch that defines the brand.
 
+<br>
+
 ## 1. User Personas
 Understanding the "who" is critical to defining the "how". These personas represent the pillars of the "Il Respiro del Borgo" ecosystem.
 Personas are living documents designed to foster empathy and streamline user-centered design.
@@ -26,3 +28,8 @@ Personas are living documents designed to foster empathy and streamline user-cen
 * **Behavioral pattern:** Technology is not so easy, but it is crucial for this kind of projects.
 * **Needs:** A "Central Info Point" to see availability (including Airbnb/Booking data). Tools for instant price quotes during phone calls and a filter against spam/unknown callers.
 * **Business Value:** Operational sanity. Turning fragmented management into a streamlined, professional process.
+
+<br>
+
+## 2.User Stories
+After defining our primary user personas, this section outlines their respective User Stories. These stories illustrate key interactions with the platform, highlighting the underlying needs and the specific value each functionality provides.
