@@ -18,9 +18,9 @@ Detailed technical specifications and design choices are organized in the follow
 | **User Analysis** | Target Personas, User Stories & Market Needs | [View Docs ↗](./docs/user-strategy.md) |
 | **Requirements** | Functional (Logic) & Non-Functional Specs | [View Docs ↗](./docs/requirements.md) |
 | **Architecture** | Data Models, Concurrency Control & Sync Logic | [Still Work-In-Progress]() |
-| **Tech Stack** | Frameworks, Tools & Service Integrations | [Still Work-In-Progress]() |
+| **Tech Stack & Tools** | Frameworks, Tools & Service Integrations | [View Docs ↗](./docs/Tech%20Stack%20&%20Tools.md) |
 
-
+<!--
 
 ## ⚙️ Getting Started (Development) WIP //TODO
 
@@ -32,7 +32,7 @@ Detailed technical specifications and design choices are organized in the follow
 ### Installation
 ```bash
 # Clone the repository
-git clone https://https://github.com/EliaFerraro/bnb-booking-platform.git
+git clone https://github.com/EliaFerraro/bnb-booking-platform.git
 
 # Install dependencies
 npm install
@@ -42,10 +42,10 @@ cp .env.example .env
 
 # Run the development server
 npm run dev
-```
+``` -->
 <br>
 <br>
-<br>
+<br> 
 👨‍💻 Author
 Elia Ferraro - Web Developer
 
