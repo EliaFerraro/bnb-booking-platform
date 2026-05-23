@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-stone-100 p-8 text-stone-800">
+    <main className="bg-stone-100 p-8 text-stone-800 h-full">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-serif font-bold text-emerald-800 mb-2">
           Il Respiro del Borgo
