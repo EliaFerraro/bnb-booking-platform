@@ -36,6 +36,8 @@ export default function RootLayout({
             <NavbarLink href="/services" label="SERVICES" />
             <NavbarLink href="/contact" label="CONTACT" />
           </nav>
+
+          <div></div>
         </header>
 
         {children}
