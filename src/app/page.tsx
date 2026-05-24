@@ -1,20 +1,22 @@
 export default function Home() {
   return (
-    <main className="bg-stone-100 p-8 text-stone-800 h-full">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-serif font-bold text-emerald-800 mb-2">
-          Il Respiro del Borgo
-        </h1>
-        <p className="text-stone-600 italic mb-8">
-          Famiglia, natura e ospitalità. Il tuo B&B immerso nel verde.
-        </p>
-
-        {/* Placeholder per la prima sezione */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
-          <p className="text-stone-500">
-            Qui metteremo il primo pezzo della landing page...
-          </p>
+    <main>
+      <div
+        id="hero-section"
+        className="h-screen flex flex-col justify-center items-center relative"
+      >
+        <div className="z-10 text-neutral-50 relative top-20">
+          <h1 className="text-center text-7xl">IL RESPIRO DEL BORGO</h1>
+          <div className="flex flex-col items-center text-2xl mt-40 tracking-widest">
+            <span>FAMIGLIA, NATURA E OSPITALITA'</span>
+            <span>IL TUO B&B IMMERSO NEL VERDE</span>
+          </div>
         </div>
+
+        <img
+          className="absolute top-0 left-0 w-full h-full z-0"
+          src="/img/photos/sunset_yard.jpg"
+        ></img>
       </div>
     </main>
   );

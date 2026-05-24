@@ -1,8 +1,10 @@
-import { NavbarLink } from "@/ui/components/navbar/NavbarLink";
+import { NavbarLink } from "@/ui/components/custom/NavbarLink";
 import "../style/main.css";
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import Link from "next/link";
+import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
+import { Button } from "@/ui/components/shadcn/button";
 
 const font = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -37,7 +39,11 @@ export default function RootLayout({
             <NavbarLink href="/contact" label="CONTACT" />
           </nav>
 
-          <div></div>
+          <Button variant="default">CHECK AVAILABILITES</Button>
+
+          <div className="mr-4">
+            <LanguagePicker />
+          </div>
         </header>
 
         {children}
