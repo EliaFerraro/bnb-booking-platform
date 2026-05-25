@@ -20,19 +20,21 @@ export default function Home() {
           src="/img/photos/sunset_yard.jpg"
         ></img>
       </div>
-      <div id="room-section" className="w-full py-6 pl-6 overflow-hidden">
+
+      <div className="w-full h-40" />
+
+      <div id="room-section" className="w-full py-24 pl-6 overflow-hidden">
         <div className="float-right w-full md:w-1/2 h-87 md:h-125 ml-6 mb-6 rounded-l-full overflow-hidden">
           <img
             className="w-full h-full object-cover"
             src="/img/photos/room.jpg"
-            alt="La Camera del Borgo"
+            alt="Photo of the room"
           />
         </div>
 
-        {/* 2. IL CONTENUTO TESTUALE (Scorre e reagisce alla forma dell'immagine) */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl flex flex-col">
           <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-12">
-            La Camera
+            The Room
           </h2>
 
           <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-12 text-justify">
@@ -46,9 +48,42 @@ export default function Home() {
             sodales eget non justo.
           </p>
 
-          {/* Il bottone custom di Shadcn stilizzato con la tua palette */}
-          <button className="bg-secondary-200 text-secondary-950 px-8 py-3 rounded-full text-sm font-medium tracking-wider uppercase hover:bg-secondary-300 transition-colors cursor-pointer shadow-sm">
-            Scopri il tuo rifugio
+          <button className="bg-secondary-200 text-secondary-950 px-8 py-3 mx-auto rounded-full text-sm font-medium tracking-wider uppercase hover:bg-secondary-300 transition-colors cursor-pointer shadow-sm">
+            Discover the refuge
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="house-section"
+        className="w-full py-24 pr-6 overflow-hidden flex justify-between"
+      >
+        <div className="float-left w-full md:w-1/2 h-87 md:h-125 mr-6 mb-6 rounded-r-full overflow-hidden">
+          <img
+            className="w-full h-full object-cover"
+            src="/img/photos/sunset_house.jpg"
+            alt="Photo of the house"
+          />
+        </div>
+
+        <div className="max-w-3xl flex flex-col items-end">
+          <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-12 text-right">
+            The house
+          </h2>
+
+          <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-12 text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
+            lacus id ante posuere feugiat. Sed pulvinar purus ut eleifend
+            porttitor. Duis sed feugiat purus, ac efficitur nulla. Ut finibus
+            nisl ut nisl hendrerit, id elementum nisl egestas. In convallis
+            rhoncus magna, in feugiat lectus efficitur eget. Etiam aliquet, nunc
+            a efficitur pellentesque, justo lectus dictum nisi, ut dictum sem
+            tortor quis turpis. Vestibulum sit amet dolor sed arcu feugiat
+            sodales eget non justo.
+          </p>
+
+          <button className="bg-secondary-200 text-secondary-950 px-8 py-3 mx-auto rounded-full text-sm font-medium tracking-wider uppercase hover:bg-secondary-300 transition-colors cursor-pointer shadow-sm">
+            Visit an old house{" "}
           </button>
         </div>
       </div>
