@@ -33,7 +33,7 @@ export function AboutUs() {
 
             <Button
               variant="outline"
-              className="font-serif uppercase tracking-wider text-sm rounded-full px-6 py-5 h-auto border-neutral-950 text-neutral-950 hover:bg-neutral-950/10 [text-shadow:none]"
+              className="font-serif uppercase tracking-wider text-sm rounded-full px-6 py-5 h-auto border-neutral-950 text-neutral-950 hover:bg-neutral-950/10 text-shadow-none"
             >
               Scopri la nostra storia
             </Button>

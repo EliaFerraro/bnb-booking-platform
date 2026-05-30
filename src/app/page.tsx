@@ -6,6 +6,7 @@ import { Monferrato } from "./_components/Monferrato";
 import { Breakfast } from "./_components/Breakfast";
 import { Services } from "./_components/Services";
 import { Map } from "./_components/Map";
+import { Montemagno } from "./_components/Montemagno";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Room />
       <House />
       <AboutUs />
+      <Montemagno />
       <Monferrato />
       <Breakfast />
       <Services />

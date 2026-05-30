@@ -68,7 +68,7 @@ export function Breakfast() {
 
         {/* Colonna Foto geometricamente unificata (5 colonne) */}
         <div
-          className={`lg:col-span-5 w-full aspect-[4/3] sm:aspect-video lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[16px_160px_16px_160px]`}
+          className={`lg:col-span-5 w-full aspect-4/3 sm:aspect-video lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[16px_160px_16px_160px]`}
         >
           <img
             className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"

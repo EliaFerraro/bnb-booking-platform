@@ -5,7 +5,7 @@ export function House() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         {/* Immagine geometricamente unificata (5 colonne) */}
         <div
-          className={`lg:col-span-5 h-[450px] md:h-[550px] w-full overflow-hidden shadow-md group rounded-[160px_16px_160px_16px]`}
+          className={`lg:col-span-5 h-112.5 md:h-137.5 w-full overflow-hidden shadow-md group rounded-[160px_16px_160px_16px]`}
         >
           <img
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
