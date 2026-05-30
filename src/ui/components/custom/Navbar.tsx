@@ -3,18 +3,13 @@ import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
 import { Button } from "@/ui/components/shadcn/button";
 import { NavbarLink } from "@/ui/components/custom/NavbarLink";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  MenuIcon,
-  UserCircleIcon,
-  MapsLocation01Icon,
-  CallIcon,
-  Mail01Icon,
-} from "@hugeicons/core-free-icons";
+import { MenuIcon, UserCircleIcon } from "@hugeicons/core-free-icons";
+
 export function Navbar() {
   return (
     <header className="w-full flex justify-between items-center bg-navbar-primary text-neutral-50 p-0">
       <Button className="md:hidden" variant="ghost">
-        <HugeiconsIcon icon={MenuIcon} />
+        <HugeiconsIcon icon={MenuIcon} className="size-7" />
       </Button>
       <nav className="flex items-center">
         <Link href="/">
@@ -32,7 +27,7 @@ export function Navbar() {
         </span>
       </nav>
 
-      <Button className="hidden lg:block" variant="default">
+      <Button className="hidden lg:block" variant="secondary">
         CHECK AVAILABILITES
       </Button>
 
@@ -41,9 +36,12 @@ export function Navbar() {
           <LanguagePicker />
         </div>
 
-        <Button variant="ghost">
-          <HugeiconsIcon icon={UserCircleIcon} size={44} />
-        </Button>
+        {
+          /* For the moment this is disabled until I set up authentication in next US. Remove opacity-0 and hidden to enable it */
+          <Button variant="ghost" className="opacity-0 md:hidden">
+            <HugeiconsIcon icon={UserCircleIcon} className="size-7" />
+          </Button>
+        }
       </div>
     </header>
   );
