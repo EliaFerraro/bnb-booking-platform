@@ -27,9 +27,16 @@ export function Navbar() {
         </span>
       </nav>
 
-      <Button className="hidden lg:block" variant="secondary">
-        CHECK AVAILABILITES
-      </Button>
+      {
+        /* This also is hidden for the moment */ false && (
+          <Button
+            className="hidden lg:block cursor-pointer"
+            variant="secondary"
+          >
+            CHECK AVAILABILITES
+          </Button>
+        )
+      }
 
       <div className="flex items-center md:mr-4 gap-2">
         <div className="hidden md:block">
