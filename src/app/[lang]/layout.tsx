@@ -21,9 +21,6 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }>) {
-  // Recuperiamo la lingua corrente dall'URL (es. "it", "en")
-  const { lang } = await params;
-
   return (
     <div className={`${font.variable} font-sans`}>
       {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
