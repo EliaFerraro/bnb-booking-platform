@@ -12,6 +12,9 @@ const font = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: process.env.STRUCTURE_NAME,
   description: "Famiglia, natura e ospitalità. Il tuo B&B immerso nel verde.",
+  icons: {
+    icon: "/img/brand/favicon.ico",
+  },
 };
 
 export default async function LocaleLayout({
