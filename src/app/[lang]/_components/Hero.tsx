@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export function Hero() {
+  const t = useTranslations();
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center relative overflow-hidden">
       <div className="z-10 text-neutral-50 relative top-20">
@@ -6,8 +9,8 @@ export function Hero() {
           IL RESPIRO DEL BORGO
         </h1>
         <div className="flex flex-col items-center text-base md:text-2xl mt-40 tracking-widest text-center">
-          <span>FAMIGLIA, NATURA E OSPITALITA'</span>
-          <span>IL TUO B&B IMMERSO NEL VERDE</span>
+          <span>{t("pages.homepage.hero.subtitle.keywords")}</span>
+          <span>{t("pages.homepage.hero.subtitle.slogan")}</span>
         </div>
       </div>
 
