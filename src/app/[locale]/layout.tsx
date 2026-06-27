@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { Navbar } from "@/ui/components/custom/Navbar";
 import { Footer } from "@/ui/components/custom/Footer";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
 
 const font = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -22,16 +24,23 @@ export default async function LocaleLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: string }>;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  // Rende la lingua disponibile ai Server Components (es. Hero) che usano useTranslations().
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
-    <div className={`${font.variable} font-sans`}>
-      {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
-      <Navbar />
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <div className={`${font.variable} font-sans`}>
+        {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
+        <Navbar />
 
-      <main>{children}</main>
+        <main>{children}</main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </NextIntlClientProvider>
   );
 }
