@@ -10,7 +10,7 @@ export function House() {
           className={`lg:col-span-5 h-112.5 md:h-137.5 w-full overflow-hidden shadow-md group rounded-[160px_16px_160px_16px]`}
         >
           <img
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"
             src="/img/photos/sunset_house.jpg"
             alt="Photo of the house"
           />

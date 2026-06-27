@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
 import { Button } from "@/ui/components/shadcn/button";
@@ -8,13 +8,14 @@ import { MenuIcon, UserCircleIcon } from "@hugeicons/core-free-icons";
 
 export function Navbar() {
   const t = useTranslations("navbar");
+  const locale = useLocale();
   return (
     <header className="w-full flex justify-between items-center bg-navbar-primary text-neutral-50 p-0">
       <Button className="md:hidden" variant="ghost">
         <HugeiconsIcon icon={MenuIcon} className="size-7" />
       </Button>
       <nav className="flex items-center">
-        <Link href="/">
+        <Link href={`/${locale}`}>
           <img
             src="/img/brand/logo.png"
             alt="B&B Logo"
@@ -22,10 +23,10 @@ export function Navbar() {
           ></img>
         </Link>
         <span className="hidden md:inline-flex">
-          <NavbarLink href="/structure" label={t("house")} />
-          <NavbarLink href="/environment" label={t("surroundings")} />
-          <NavbarLink href="/services" label={t("amenities")} />
-          <NavbarLink href="/contact" label={t("findus")} />
+          <NavbarLink href={`/${locale}/structure`} label={t("house")} />
+          <NavbarLink href={`/${locale}/environment`} label={t("surroundings")} />
+          <NavbarLink href={`/${locale}/services`} label={t("amenities")} />
+          <NavbarLink href={`/${locale}/contact`} label={t("findus")} />
         </span>
       </nav>
 

@@ -76,6 +76,273 @@
       "map": {
         "title": "Standort von Il Respiro del Borgo in Montemagno"
       }
+    },
+    "structure": {
+      "hero": {
+        "subtitle": "Räume und Atmosphären",
+        "title": "Das Haus",
+        "tagline": "Ein Steinhof, in dem die Zeit langsamer vergeht"
+      },
+      "intro": {
+        "eyebrow": "Unser Zuhause",
+        "title": "Ein Haus, das vom Monferrato erzählt",
+        "body": "Il Respiro del Borgo entstand aus der sorgfältigen Restaurierung eines alten piemontesischen Bauernhofs, in dem jeder Stein, jeder Balken und jeder sichtbare Ziegel die Erinnerung an das Landleben bewahrt. Wir haben die Räume mit Respekt restauriert, die ursprüngliche Seele des \"Großmutterhauses\" bewahrt und sie mit dezentem modernem Komfort bereichert. Das Ergebnis ist ein intimes, warmes und helles Zuhause, das Sie vom ersten Schritt an willkommen heißt.",
+        "quote": "Hier atmen die Mauern im Takt der Weinberge: wir haben nur die Fenster zur Zeit wieder geöffnet."
+      },
+      "house": {
+        "subtitle": "Gemeinsame Räume, zeitlose Geschichten",
+        "title": "Die Gemeinschaftsräume",
+        "description": "Das Herz des Hauses besteht aus Orten zum Teilen: der Gemeinschaftsraum mit dem großen Steinkamin, ideal zum Lesen an kühleren Abenden, und der blühende Innenhof, der im Sommer zum Freiluft-Wohnzimmer des Hofes wird. Die großzügigen Räume bewahren die solide Architektur der piemontesischen Bauernhöfe, mit sichtbaren Balken, Terrakottaböden und Möbeln aus der Familientradition. Alles lädt dazu ein, langsamer zu werden, sich zu setzen und durchzuatmen.",
+        "features": {
+          "stone": "Stein & Sichtziegel",
+          "courtyard": "Blühender Innenhof",
+          "living": "Aufenthaltsraum mit Kamin",
+          "garden": "Garten & Weinberge"
+        }
+      },
+      "room": {
+        "subtitle": "Ihr privater Rückzugsort",
+        "title": "Das Zimmer",
+        "description": "Das Zimmer ist ein stilles, geborgenes Nest, eingerichtet mit authentischen Stücken der bäuerlichen Tradition und bis ins kleinste Detail gepflegten Oberflächen. Das handgefertigte Kingsize-Bett, bezogen mit Naturleinen und Baumwolle, verspricht tiefe Erholung; die Fenster öffnen sich zu den Hügeln und lassen das erste Morgenlicht herein. Ein separater Eingang sorgt für Freiheit und Ruhe, in einem Raum, der für zwei gedacht ist.",
+        "amenitiesTitle": "Komfort im Zimmer",
+        "amenities": {
+          "bed": "Handgefertigtes Kingsize-Bett",
+          "bathroom": "Privates Bad aus Stein",
+          "entrance": "Separater Eingang",
+          "view": "Blick auf die Hügel",
+          "wifi": "Kostenloses WLAN",
+          "climate": "Heizung & Klimaanlage"
+        }
+      },
+      "specs": {
+        "guests": {
+          "value": "2",
+          "label": "Gäste"
+        },
+        "size": {
+          "value": "28 m²",
+          "label": "Zimmer & Bad"
+        },
+        "bed": {
+          "value": "King",
+          "label": "Doppelbett"
+        },
+        "checkin": {
+          "value": "15 – 20 Uhr",
+          "label": "Check-in-Zeit"
+        }
+      },
+      "gallery": {
+        "title": "Details des Hauses"
+      },
+      "cta": {
+        "title": "Erleben Sie es selbst",
+        "body": "Unser Zimmer ist bereit, Sie zu empfangen. Schreiben Sie uns, um die Verfügbarkeit zu erfahren, und gönnen Sie sich einige Tage echten Durchatmens im Monferrato.",
+        "button": "Verfügbarkeit anfragen"
+      }
+    },
+    "environment": {
+      "hero": {
+        "subtitle": "Die Region",
+        "title": "Die Umgebung",
+        "tagline": "Inmitten der UNESCO-Welterbe-Hügel des Monferrato"
+      },
+      "intro": {
+        "eyebrow": "Wo wir sind",
+        "title": "Im Herzen der Hügel des Monferrato",
+        "body": "Il Respiro del Borgo liegt in Montemagno, einem kleinen mittelalterlichen Dorf inmitten der Weinberge des Asti-Monferrato, das als UNESCO-Welterbe anerkannt ist. Es ist ein Land sanfter Hügel, historischer Weinkeller und reich gedeckter Tische, in dem jede Jahreszeit die Landschaft in andere Farben taucht. Von hier aus beginnen Wanderungen, Weinstraßen und Kunstrouten, die ein authentisches, noch wenig überlaufenes Piemont zeigen.",
+        "quote": "Eine Landschaft, die zu jeder Stunde die Farbe wechselt und nie aufhört zu überraschen."
+      },
+      "montemagno": {
+        "subtitle": "Das mandelförmige Dorf",
+        "title": "Montemagno",
+        "description": "Auf dem Hügel thronend, ist Montemagno ein einzigartiges Dorf, berühmt für seinen charakteristischen mandelförmigen Grundriss und seine zwölf historischen Gassen. Eine monumentale Treppe führt zur Pfarrkirche und zum imposanten Schloss, das über das Tal wacht. Durch diese Gassen zu spazieren bedeutet, in der Zeit zurückzureisen, zwischen stillen Ausblicken und Panoramen, die sich auf die Weinberge öffnen. Das Haus liegt mitten im Dorf, nur wenige Schritte von allem entfernt.",
+        "stats": {
+          "alleys": {
+            "value": "12",
+            "label": "Historische Gassen"
+          },
+          "castle": {
+            "value": "12. Jh.",
+            "label": "Schloss & Kirche"
+          },
+          "distance": {
+            "value": "Zu Fuß",
+            "label": "Vom Dorfzentrum"
+          }
+        }
+      },
+      "monferrato": {
+        "subtitle": "UNESCO-Weltkulturerbe",
+        "title": "Il Monferrato",
+        "description": "Eine endlose Weite von Hügeln, durchzogen von Weinbergen: der Monferrato ist ein großzügiges Land mit weltweit bekannten kulinarischen und önologischen Köstlichkeiten – vom Barbera bis zum Grignolino, von Trüffeln bis zu Hofkäse. Zwischen den Dörfern findet man einladende Weinkeller, romanische Kirchen und die \"Infernot\", kleine in den Sandstein gegrabene Keller, ebenfalls UNESCO-Erbe. Eine Region, die man langsam genießen sollte, Glas für Glas."
+      },
+      "experiences": {
+        "title": "Was man in der Umgebung erleben kann",
+        "wine": {
+          "title": "Weinkeller & Wein",
+          "text": "Besuche und Verkostungen in familiengeführten Weingütern, zwischen Barbera, Grignolino und Ruché. Wir empfehlen Ihnen unsere Lieblingswinzer."
+        },
+        "walks": {
+          "title": "Wandern & Radfahren",
+          "text": "Wege durch die Weinberge und Schotterstraßen, ideal für Spaziergänge, E-Bikes und Touren bei Sonnenuntergang von Hügel zu Hügel."
+        },
+        "food": {
+          "title": "Lokale Aromen",
+          "text": "Trattorien und Bauernhöfe mit Agnolotti, Bagna càuda und Monferrato-Trüffeln, begleitet von Weinen der Region."
+        },
+        "culture": {
+          "title": "Kunst & Schlösser",
+          "text": "Schlösser, romanische Kirchen und mittelalterliche Dörfer nur wenige Autominuten entfernt – für Liebhaber von Geschichte, Kunst und Fotomotiven."
+        }
+      },
+      "gallery": {
+        "title": "Eindrücke der Region"
+      },
+      "cta": {
+        "title": "Lassen Sie sich durch die Hügel führen",
+        "body": "Bei Ihrer Ankunft empfehlen wir Ihnen gerne Routen, Weinkeller und Tische ganz nach Ihrem Geschmack. Schreiben Sie uns, und wir stellen uns gemeinsam Ihren Aufenthalt vor.",
+        "button": "Kontaktieren Sie uns"
+      }
+    },
+    "services": {
+      "hero": {
+        "subtitle": "Aufmerksamkeit und Komfort",
+        "title": "Service",
+        "tagline": "Kleine tägliche Aufmerksamkeiten, mit dem Herzen eines Zuhauses"
+      },
+      "intro": {
+        "eyebrow": "Unsere Gastfreundschaft",
+        "title": "Alles, was Ihren Aufenthalt einfach macht",
+        "body": "Wir glauben an eine Gastfreundschaft aus aufrichtigen Gesten statt aus Förmlichkeiten. Deshalb haben wir an alles gedacht, was Ihren Aufenthalt bequem und gelassen macht, damit Sie die Stille der Hügel genießen können. Einige Leistungen sind immer inbegriffen, andere organisieren wir gerne auf Anfrage: fragen Sie uns einfach."
+      },
+      "breakfast": {
+        "subtitle": "Der Morgen schmeckt hier authentisch",
+        "title": "Das Frühstück im Garten",
+        "description": "Der Tag beginnt am Tisch, im Grün unseres Gartens oder an kühleren Morgen im Gemeinschaftsraum. Jedes Frühstück wird mit Sorgfalt zubereitet: hausgemachte Kuchen und Tartes, handwerkliches Brot, saisonale Marmeladen, frisches Obst und lokale Null-Kilometer-Produkte. Der Kaffee ist immer frisch gebrühter Espresso, denn ein guter Morgen duftet hier nach etwas Echtem.",
+        "features": {
+          "coffee": "Espresso",
+          "pastries": "Hausgemachte Kuchen",
+          "local": "Km null & Natur"
+        }
+      },
+      "included": {
+        "eyebrow": "Immer für Sie da",
+        "title": "Inbegriffene Leistungen",
+        "wifi": {
+          "title": "Kostenloses WLAN",
+          "text": "Schnelle Verbindung im ganzen Haus und in den Gemeinschaftsräumen."
+        },
+        "parking": {
+          "title": "Privatparkplatz",
+          "text": "Kostenloser privater Stellplatz auf dem Grundstück."
+        },
+        "garden": {
+          "title": "Garten & Innenhof",
+          "text": "Grünflächen zum Entspannen, Lesen und Sonnenuntergang-Genießen."
+        },
+        "laundry": {
+          "title": "Wäscheservice",
+          "text": "Nutzung von Waschmaschine und Wäscheständer bei längeren Aufenthalten."
+        },
+        "linen": {
+          "title": "Bettwäsche & Handtücher",
+          "text": "Hochwertige Leinen- und Baumwollwäsche, immer frisch."
+        },
+        "relax": {
+          "title": "Ruhebereich",
+          "text": "Schattiger Sitzplatz im Freien für die wärmeren Stunden."
+        },
+        "climate": {
+          "title": "Heizung & Klima",
+          "text": "Klimatisiertes Zimmer für Komfort in jeder Jahreszeit."
+        },
+        "tips": {
+          "title": "Tipps zur Region",
+          "text": "Karten, Routen und Adressen, von uns für Sie ausgewählt."
+        }
+      },
+      "onRequest": {
+        "eyebrow": "Wann immer Sie es brauchen",
+        "title": "Auf Anfrage",
+        "basket": {
+          "title": "Reisekorb",
+          "text": "Für frühe Abreisen oder ein Picknick zwischen den Reben bereiten wir ein Frühstück zum Mitnehmen vor."
+        },
+        "tastings": {
+          "title": "Verkostungen",
+          "text": "Wir organisieren Besuche und Verkostungen in befreundeten Weingütern des Monferrato."
+        },
+        "bikes": {
+          "title": "Fahrradverleih",
+          "text": "Fahrräder und E-Bikes, um die Hügel auf zwei Rädern zu erkunden (nach Reservierung)."
+        },
+        "transfer": {
+          "title": "Transfer & Ankunft",
+          "text": "Wir können einen Transfer vom Bahnhof oder Flughafen organisieren."
+        },
+        "pets": {
+          "title": "Vierbeinige Freunde",
+          "text": "Ihre Haustiere sind willkommen: teilen Sie es uns bei der Buchung mit."
+        },
+        "late": {
+          "title": "Flexibler Check-in",
+          "text": "Ankunft zu ungewöhnlichen Zeiten? Sagen Sie uns Bescheid, wir finden eine Lösung."
+        },
+        "note": "Für jeden besonderen Wunsch schreiben Sie uns einfach: wir tun unser Bestes, um ihn zu erfüllen."
+      },
+      "cta": {
+        "title": "Haben Sie einen besonderen Wunsch?",
+        "body": "Sagen Sie uns, was Sie für Ihren Aufenthalt brauchen: wir kümmern uns gern um die Details, die den Unterschied machen.",
+        "button": "Schreiben Sie uns"
+      }
+    },
+    "contact": {
+      "hero": {
+        "subtitle": "Besuchen Sie uns",
+        "title": "Kontakt",
+        "tagline": "Im Dorf Montemagno, im Herzen des Monferrato"
+      },
+      "intro": {
+        "eyebrow": "Kontakt & Buchungen",
+        "title": "Nur einen Schritt von den Hügeln entfernt",
+        "body": "Wir beantworten gerne jede Ihrer Fragen und helfen Ihnen bei der Planung Ihres Aufenthalts. Schreiben oder rufen Sie uns an: hinter Il Respiro del Borgo steht eine Familie, keine Telefonzentrale."
+      },
+      "cards": {
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "address": "Adresse",
+        "addressLine1": "Via della Pace, 24",
+        "addressLine2": "14030 Montemagno (AT) — Piemont, Italien",
+        "hours": "Empfang",
+        "hoursValue": "Check-in 15:00 – 20:00 Uhr",
+        "hoursNote": "Check-out bis 10:30 Uhr"
+      },
+      "directions": {
+        "title": "So erreichen Sie uns",
+        "car": {
+          "title": "Mit dem Auto",
+          "text": "Von der Autobahn A21 Turin–Piacenza die Ausfahrt Asti Est nehmen, dann den Schildern nach Montemagno folgen (ca. 20 Minuten). Kostenloser Privatparkplatz vor Ort."
+        },
+        "train": {
+          "title": "Mit dem Zug",
+          "text": "Bahnhof Asti, an der Linie Turin–Genua–Mailand, rund 20 km entfernt. Von dort erreicht man Montemagno mit dem Auto oder per Transfer auf Anfrage."
+        },
+        "plane": {
+          "title": "Mit dem Flugzeug",
+          "text": "Flughäfen Turin Caselle (~70 km), Mailand Malpensa und Genua (~110 km). Ein Mietwagen wird empfohlen, um die Hügel zu erkunden."
+        },
+        "note": "Detaillierte Wegbeschreibungen und den genauen Standort senden wir Ihnen nach Bestätigung Ihrer Buchung."
+      },
+      "map": {
+        "title": "Lage von Il Respiro del Borgo in Montemagno"
+      },
+      "closing": {
+        "title": "Bereit, das Dorf zu atmen?",
+        "body": "Kontaktieren Sie uns, um die Verfügbarkeit zu prüfen oder einfach für einen Rat. Wir antworten Ihnen gerne, in Ihrer Sprache.",
+        "call": "Rufen Sie uns an",
+        "email": "Schreiben Sie uns"
+      }
     }
   },
   "footer": {
@@ -95,11 +362,11 @@
     },
     "legal": {
       "classification": "Klassifizierte Unterkunft ★★",
-      "cir": "CIR: [Insert_CIR_Code_Here]",
       "taxId": "MwSt.-Nr. / Steuernummer: [Insert_Tax_Data]",
       "privacy": "Datenschutzerklärung",
       "cookies": "Cookie-Richtlinie",
-      "copyright": "© 2026 Il Respiro del Borgo. Alle Rechte vorbehalten."
+      "copyright": "© 2026 Il Respiro del Borgo. Alle Rechte vorbehalten.",
+      "cin": "CIN: IT005077C1SCRVTNU4"
     }
   }
 }

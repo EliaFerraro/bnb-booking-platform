@@ -10,7 +10,7 @@ export function Monferrato() {
           className={`lg:col-span-7 h-100 md:h-137.5 w-full overflow-hidden shadow-xl group rounded-[160px_16px_160px_16px]`}
         >
           <img
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover transformtransition-transform duration-1000 ease-out"
             src="/img/photos/Il Monferrato.jpg"
             alt="Le colline del Monferrato"
           />

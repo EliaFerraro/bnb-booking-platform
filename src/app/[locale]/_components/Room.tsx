@@ -39,7 +39,7 @@ export function Room() {
           className={`lg:col-span-6 order-1 lg:order-2 h-125 md:h-150 w-full overflow-hidden shadow-md group rounded-[16px_160px_16px_160px]`}
         >
           <img
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+            className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"
             src="/img/photos/room.jpg"
             alt="Photo of the room"
           />

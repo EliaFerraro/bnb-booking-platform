@@ -73,11 +73,11 @@ export function Footer() {
 
         <div className="w-full pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-[10px] text-[#E5DCC6]/60 uppercase tracking-[0.15em]">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
-            <span className="text-neutral-200">{t("legal.classification")}</span>
+            <span className="text-neutral-200">
+              {t("legal.classification")}
+            </span>
             <span className="hidden sm:inline text-white/20">|</span>
-            <span>{t("legal.cir")}</span>
-            <span className="hidden sm:inline text-white/20">|</span>
-            <span>{t("legal.taxId")}</span>
+            <span>{t("legal.cin")}</span>
           </div>
 
           <div className="flex items-center space-x-4">
