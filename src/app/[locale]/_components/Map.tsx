@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export function Map() {
+  const t = useTranslations("pages.homepage.map");
   return (
     <section id="mappa-section" className="w-full bg-[#F2EFE9] pt-12">
       <div className="w-full h-112.5 relative shadow-inner overflow-hidden">
@@ -8,7 +11,7 @@ export function Map() {
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Posizione di Il Respiro del Borgo a Montemagno"
+          title={t("title")}
         />
       </div>
     </section>

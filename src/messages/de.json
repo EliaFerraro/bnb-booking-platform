@@ -1,12 +1,105 @@
 {
+  "navbar": {
+    "house": "DAS HAUS",
+    "surroundings": "UMGEBUNG",
+    "amenities": "AUSSTATTUNG",
+    "findus": "ANREISE",
+    "checkAvailabilities": "VERFÜGBARKEIT PRÜFEN"
+  },
   "pages": {
     "homepage": {
       "hero": {
         "subtitle": {
           "keywords": "FAMILIE, NATUR UND GASTFREUNDSCHAFT",
-          "slogan": "IHR B & B MITTEN IM GRÜNEN"
+          "slogan": "IHR B&B IM GRÜNEN"
         }
+      },
+      "services": {
+        "title": "Unsere Services",
+        "wifi": "Kostenloses WLAN",
+        "laundry": "Wäscheservice",
+        "parking": "Privatparkplatz",
+        "relaxArea": "Relax-Bereich",
+        "discoverMore": "Alle Services entdecken"
+      },
+      "room": {
+        "subtitle": "Ihr privater Rückzugsort",
+        "title": "Das Zimmer",
+        "description": "Eingerichtet mit authentischen Stücken bäuerlicher Tradition und raffinierten Oberflächen, bietet unser Zimmer anspruchsvollen Komfort, ohne den ursprünglichen Geist des \"Großmutterhauses\" zu verraten. Eine intime und ruhige Umgebung, gestaltet für tiefen und erholsamen Schlaf, weit abseits der hektischen Alltagsgeschwindigkeit.",
+        "features": {
+          "bed": "Handgefertigtes Kingsize-Bett",
+          "entrance": "Privater Eingang",
+          "view": "Hügelblick",
+          "bathroom": "Privates Steinbad"
+        },
+        "cta": "Das Refugium entdecken"
+      },
+      "house": {
+        "subtitle": "Gemeinsame Räume, zeitlose Geschichten",
+        "title": "Das Haus",
+        "description": "Das Anwesen bewahrt den Charme alter piemontesischer Bauernhäuser mit Architektur aus massivem Stein und Sichtmauerwerk. Die großzügigen Gemeinschaftsbereiche und der blumengeschmückte Innenhof sind dafür geschaffen, Momente echter Geselligkeit zu teilen – vom ersten Licht des Morgens beim Frühstück bis zu einem Glas Wein bei Sonnenuntergang.",
+        "quote": "Eine Architektur, die mit den umliegenden Weinbergen atmet, entworfen, um die Zeit zu entschleunigen.",
+        "cta": "Das Anwesen erkunden"
+      },
+      "aboutUs": {
+        "title": "Über uns",
+        "description": "Meine Familie und ich heißen Sie herzlich willkommen in unserem historischen Rückzugsort im Herzen des Monferrato. Wir bieten Ihnen ein authentisches Erlebnis inmitten sanfter Hügel, wo Geschichte, Natur und Kultur harmonisch verschmelzen.",
+        "cta": "Unsere Geschichte entdecken"
+      },
+      "montemagno": {
+        "subtitle": "Das mandelförmige Dorf",
+        "title": "Montemagno",
+        "description": "Auf einem Hügel thronend ist Montemagno ein einzigartiges mittelalterliches Dorf, berühmt für seinen markanten, mandelförmigen Stadtgrundriss und seine zwölf historischen Gassen. Ein Spaziergang durch diese Straßen ist wie eine Reise in die Vergangenheit, bei der man die imposante Burg bewundern kann, die still das umliegende Tal überragt.",
+        "features": {
+          "alleys": "Historische Gassen",
+          "square": "Barockplatz",
+          "distance": "Vom B&B"
+        },
+        "cta": "Das mittelalterliche Dorf erkunden"
+      },
+      "monferrato": {
+        "subtitle": "UNESCO-Weltkulturerbe",
+        "title": "Das Monferrato",
+        "description": "Ein unendliches Meer aus Hügeln, gekämmt von Weinreben. Das Monferrato ist ein großzügiges Land, das einzigartige gastronomische und önologische Exzellenz sowie geschichtsträchtige Dörfer bietet. Eine authentische Landschaft zum Verlieren, in der sich die Farben mit den Jahreszeiten ändern und unvergessliche Sonnenuntergänge bieten.",
+        "cta": "Die Tradition erleben"
+      },
+      "breakfast": {
+        "subtitle": "Hier schmeckt der Morgen authentisch",
+        "title": "Garten-Frühstück",
+        "description": "Starten Sie Ihren Tag inmitten unseres grünen Parks, wo sich der Duft von Kaffee mit der frischen Morgenluft vermischt. Unser Frühstück zelebriert die Region mit einer sorgfältigen Auswahl an hausgemachten Kuchen und Torten, handwerklich gebackenem Brot, frischem Obst der Saison und Köstlichkeiten aus der direkten Umgebung – für einen süßen und regenerierenden Start in den Tag.",
+        "features": {
+          "coffee": "Espresso-Bar",
+          "pastries": "Hausgemachtes Gebäck",
+          "local": "Regional & Natürlich"
+        }
+      },
+      "map": {
+        "title": "Standort von Il Respiro del Borgo in Montemagno"
       }
+    }
+  },
+  "footer": {
+    "location": {
+      "title": "Standort & Adresse",
+      "address": "Via della Pace, 24",
+      "city": "14030 Montemagno (AT)"
+    },
+    "brand": {
+      "name": "Il Respiro del Borgo",
+      "tagline": "Ein intimer Rückzugsort im Herzen des Monferrato, entworfen, um die Zeit zu entschleunigen und die authentische piemontesische Gastfreundschaft neu zu entdecken."
+    },
+    "contact": {
+      "title": "Kontakt & Reservierungen",
+      "phone": "+39 339 7096 173",
+      "email": "ilrespirodelborgobnb@gmail.com"
+    },
+    "legal": {
+      "classification": "Klassifizierte Unterkunft ★★",
+      "cir": "CIR: [Insert_CIR_Code_Here]",
+      "taxId": "MwSt.-Nr. / Steuernummer: [Insert_Tax_Data]",
+      "privacy": "Datenschutzerklärung",
+      "cookies": "Cookie-Richtlinie",
+      "copyright": "© 2026 Il Respiro del Borgo. Alle Rechte vorbehalten."
     }
   }
 }

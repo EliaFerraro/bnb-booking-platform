@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -8,6 +9,7 @@ import {
 } from "@hugeicons/core-free-icons";
 
 export function Services() {
+  const t = useTranslations("pages.homepage.services");
   return (
     <section
       id="servizi-section"
@@ -16,7 +18,7 @@ export function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-20">
           <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-[#707E54]">
-            I Nostri Servizi
+            {t("title")}
           </h2>
         </div>
 
@@ -30,7 +32,7 @@ export function Services() {
               />
             </div>
             <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-medium text-center text-neutral-800">
-              Free Wi-Fi
+              {t("wifi")}
             </span>
           </div>
 
@@ -43,7 +45,7 @@ export function Services() {
               />
             </div>
             <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-medium text-center text-neutral-800">
-              Lavanderia
+              {t("laundry")}
             </span>
           </div>
 
@@ -56,7 +58,7 @@ export function Services() {
               />
             </div>
             <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-medium text-center text-neutral-800">
-              Parcheggio Interno
+              {t("parking")}
             </span>
           </div>
 
@@ -69,7 +71,7 @@ export function Services() {
               />
             </div>
             <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-medium text-center text-neutral-800">
-              Area Relax
+              {t("relaxArea")}
             </span>
           </div>
         </div>
@@ -79,7 +81,7 @@ export function Services() {
             variant="secondary"
             className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-medium tracking-[0.2em] uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
           >
-            Scopri gli altri servizi
+            {t("discoverMore")}
           </Button>
         </div>
       </div>

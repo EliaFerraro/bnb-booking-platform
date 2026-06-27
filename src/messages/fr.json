@@ -1,12 +1,105 @@
 {
+  "navbar": {
+    "house": "MAISON",
+    "surroundings": "ENVIRONS",
+    "amenities": "SERVICES",
+    "findus": "NOUS TROUVER",
+    "checkAvailabilities": "VÉRIFIER LES DISPONIBILITÉS"
+  },
   "pages": {
     "homepage": {
       "hero": {
         "subtitle": {
           "keywords": "FAMILLE, NATURE ET HOSPITALITÉ",
-          "slogan": "TU B&B INMERSO EN EL VERDE"
+          "slogan": "VOTRE B&B AU CŒUR DE LA NATURE"
         }
+      },
+      "services": {
+        "title": "Nos Services",
+        "wifi": "Wi-Fi Gratuit",
+        "laundry": "Blanchisserie",
+        "parking": "Parking Privé",
+        "relaxArea": "Espace Détente",
+        "discoverMore": "Découvrir tous les services"
+      },
+      "room": {
+        "subtitle": "Votre refuge privé",
+        "title": "La Chambre",
+        "description": "Meublée avec des pièces authentiques de la tradition paysanne et des finitions soignées, notre chambre offre un confort raffiné sans trahir l'esprit originel de la « maison de grand-mère ». Un environnement intime et silencieux, conçu pour offrir un repos profond et régénérateur, loin du rythme quotidien frénétique.",
+        "features": {
+          "bed": "Lit King Size Artisanal",
+          "entrance": "Entrée Indépendante",
+          "view": "Vue sur les Collines",
+          "bathroom": "Salle de Bain Privée en Pierre"
+        },
+        "cta": "Découvrir le refuge"
+      },
+      "house": {
+        "subtitle": "Espaces partagés, histoires intemporelles",
+        "title": "La Maison",
+        "description": "La propriété conserve intact le charme des anciennes fermes piémontaises, caractérisée par une solide architecture en pierre et briques apparentes. Les vastes espaces communs et la cour fleurie sont conçus pour partager des moments de convivialité authentique, des premières lueurs du petit-déjeuner jusqu'à un verre de vin au coucher du soleil.",
+        "quote": "Une architecture qui respire avec les vignes environnantes, conçue pour ralentir le temps.",
+        "cta": "Explorer la propriété"
+      },
+      "aboutUs": {
+        "title": "Qui Sommes-Nous",
+        "description": "Ma famille et moi vous accueillons chaleureusement dans notre refuge historique au cœur du Monferrato, offrant une expérience authentique immergée dans les collines, où l'histoire, la nature et la culture se fondent harmonieusement.",
+        "cta": "Découvrir notre histoire"
+      },
+      "montemagno": {
+        "subtitle": "Le village en forme d'amande",
+        "title": "Montemagno",
+        "description": "Perché sur la colline, Montemagno est un village médiéval unique en son genre, célèbre pour son tracé urbain caractéristique en forme d'amande et ses douze ruelles historiques. Se promener dans ses rues signifie faire un bond en arrière dans le temps, en admirant l'imposant château crénelé qui domine silencieusement la vallée environnante.",
+        "features": {
+          "alleys": "Ruelles Historiques",
+          "square": "Place Baroque",
+          "distance": "Du B&B"
+        },
+        "cta": "Explorer le village médiéval"
+      },
+      "monferrato": {
+        "subtitle": "Patrimoine Mondial de l'UNESCO",
+        "title": "Le Monferrato",
+        "description": "Une étendue infinie de collines peignées par les vignobles. Le Monferrato est une terre généreuse qui offre des excellences gastronomiques et vinicoles uniques au monde et des villages riches en histoire. Un paysage authentique dans lequel se perdre, où les couleurs changent au fil des saisons et offrent des couchers de soleil inoubliables.",
+        "cta": "Vivre la tradition"
+      },
+      "breakfast": {
+        "subtitle": "Le matin a un goût authentique ici",
+        "title": "Petit-Déjeuner au Jardin",
+        "description": "Commencez votre journée immergé dans la verdure de notre parc, où le parfum du café se mêle à l'air frais du matin. Notre petit-déjeuner célèbre le territoire avec une sélection soignée de gâteaux et tartes maison, pain artisanal, fruits frais de saison et délices locaux à kilomètre zéro, conçus pour vous offrir un réveil doux et régénérateur.",
+        "features": {
+          "coffee": "Bar à Expresso",
+          "pastries": "Pâtisseries Artisanales",
+          "local": "Km Zéro & Nature"
+        }
+      },
+      "map": {
+        "title": "Emplacement de Il Respiro del Borgo à Montemagno"
       }
+    }
+  },
+  "footer": {
+    "location": {
+      "title": "Siège et Emplacement",
+      "address": "Via della Pace, 24",
+      "city": "14030 Montemagno (AT)"
+    },
+    "brand": {
+      "name": "Il Respiro del Borgo",
+      "tagline": "Un refuge intime au cœur du Monferrato, conçu pour ralentir le temps et redécouvrir l'hospitalité piémontaise authentique."
+    },
+    "contact": {
+      "title": "Contact et Réservations",
+      "phone": "+39 339 7096 173",
+      "email": "ilrespirodelborgobnb@gmail.com"
+    },
+    "legal": {
+      "classification": "Hébergement Classifié ★★",
+      "cir": "CIR : [Insérer_Code_CIR_Ici]",
+      "taxId": "TVA / N° fiscal : [Insérer_Données_Fiscales]",
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Politique de Cookies",
+      "copyright": "© 2026 Il Respiro del Borgo. Tous droits réservés."
     }
   }
 }

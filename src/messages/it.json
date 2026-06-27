@@ -1,4 +1,11 @@
 {
+  "navbar": {
+    "house": "CASA",
+    "surroundings": "AMBIENTE",
+    "amenities": "SERVIZI",
+    "findus": "DOVE SIAMO",
+    "checkAvailabilities": "CONTROLLA DISPONIBILITÀ"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -6,7 +13,93 @@
           "keywords": "FAMIGLIA, NATURA E OSPITALITÀ",
           "slogan": "IL TUO B&B IMMERSO NEL VERDE"
         }
+      },
+      "services": {
+        "title": "I Nostri Servizi",
+        "wifi": "Wi-Fi Gratuito",
+        "laundry": "Lavanderia",
+        "parking": "Parcheggio Interno",
+        "relaxArea": "Area Relax",
+        "discoverMore": "Scopri gli altri servizi"
+      },
+      "room": {
+        "subtitle": "Il tuo rifugio privato",
+        "title": "The Room",
+        "description": "Arredata con pezzi autentici della tradizione contadina e finiture curate, la nostra camera offre un comfort raffinato senza tradire lo spirito originario della \"casa della nonna\". Un ambiente intimo e silenzioso, pensato per regalare un riposo profondo e rigenerante, lontano dal frenetico ritmo quotidiano.",
+        "features": {
+          "bed": "Letto King Size Artigianale",
+          "entrance": "Ingresso Indipendente",
+          "view": "Vista sulle Colline",
+          "bathroom": "Bagno Privato in Pietra"
+        },
+        "cta": "Scopri il rifugio"
+      },
+      "house": {
+        "subtitle": "Spazi condivisi, storie senza tempo",
+        "title": "The House",
+        "description": "La struttura conserva intatto il fascino delle antiche cascine piemontesi, caratterizzata da una solida architettura in pietra e mattoni a vista. Gli ampi spazi comuni e il cortile fiorito sono pensati per condividere momenti di autentica convivialità, dalle prime luci della colazione fino a un bicchiere di vino al tramonto.",
+        "quote": "Un'architettura che respira insieme alle vigne circostanti, pensata per rallentare il tempo.",
+        "cta": "Esplora la struttura"
+      },
+      "aboutUs": {
+        "title": "Chi Siamo",
+        "description": "La mia famiglia ed io vi accogliamo con calore nel nostro rifugio storico nel cuore del Monferrato, offrendo un'esperienza autentica immersa tra le pievi e le colline, dove la storia, la natura e la cultura si fondono armoniosamente.",
+        "cta": "Scopri la nostra storia"
+      },
+      "montemagno": {
+        "subtitle": "Il borgo a mandorla",
+        "title": "Montemagno",
+        "description": "Arroccato sulla collina, Montemagno è un borgo medievale unico nel suo genere, celebre per il suo caratteristico impianto urbano a mandorla e i suoi dodici vicoli storici. Passeggiare tra le sue strade significa fare un salto indietro nel tempo, ammirando l'imponente castello merlato che domina silenzioso la vallata circostante.",
+        "features": {
+          "alleys": "Vicoli Storici",
+          "square": "Piazza Barocca",
+          "distance": "Dal B&B"
+        },
+        "cta": "Esplora il borgo medievale"
+      },
+      "monferrato": {
+        "subtitle": "Patrimonio Mondiale UNESCO",
+        "title": "Il Monferrato",
+        "description": "Una distesa infinita di colline pettinate dai vigneti. Il Monferrato è una terra generosa che regala eccellenze enogastronomiche uniche al mondo e borghi ricchi di storia. Un paesaggio autentico in cui perdersi, dove i colori cambiano con le stagioni e regalano tramonti indimenticabili.",
+        "cta": "Vivi la tradizione"
+      },
+      "breakfast": {
+        "subtitle": "Il buongiorno ha un sapore autentico",
+        "title": "La Colazione in Giardino",
+        "description": "Inizia la tua giornata immerso nel verde del nostro parco, dove il profumo del caffè si fonde con l'aria fresca del mattino. La nostra colazione celebra il territorio con una selezione accurata di torte e crostate fatte in casa, pane artigianale, frutta fresca di stagione e delizie locali a chilometro zero, pensate per regalarti un risveglio dolce e rigenerante.",
+        "features": {
+          "coffee": "Caffetteria Express",
+          "pastries": "Dolci Artigianali",
+          "local": "Km Zero & Natura"
+        }
+      },
+      "map": {
+        "title": "Posizione di Il Respiro del Borgo a Montemagno"
       }
+    }
+  },
+  "footer": {
+    "location": {
+      "title": "Sede e Posizione",
+      "address": "Via della Pace, 24",
+      "city": "14030 Montemagno (AT)"
+    },
+    "brand": {
+      "name": "Il Respiro del Borgo",
+      "tagline": "Un rifugio intimo nel cuore del Monferrato, pensato per rallentare il tempo e riscoprire l'autentica ospitalità piemontese."
+    },
+    "contact": {
+      "title": "Contatti e Prenotazioni",
+      "phone": "+39 339 7096 173",
+      "email": "ilrespirodelborgobnb@gmail.com"
+    },
+    "legal": {
+      "classification": "Struttura Ricettiva Classificata ★★",
+      "cir": "CIR: [Inserisci_Codice_CIR_Qui]",
+      "taxId": "P.IVA / CF: [Inserisci_Dati_Fiscali]",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "copyright": "© 2026 Il Respiro del Borgo. Tutti i diritti riservati."
     }
   }
 }

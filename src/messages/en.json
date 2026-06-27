@@ -1,4 +1,11 @@
 {
+  "navbar": {
+    "house": "HOUSE",
+    "surroundings": "SURROUNDINGS",
+    "amenities": "AMENITIES",
+    "findus": "FIND US",
+    "checkAvailabilities": "CHECK AVAILABILITY"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -6,7 +13,93 @@
           "keywords": "FAMILY, NATURE AND HOSPITALITY",
           "slogan": "YOUR B&B SURROUNDED BY GREENERY"
         }
+      },
+      "services": {
+        "title": "Our Services",
+        "wifi": "Free Wi-Fi",
+        "laundry": "Laundry",
+        "parking": "Private Parking",
+        "relaxArea": "Relax Area",
+        "discoverMore": "Discover all services"
+      },
+      "room": {
+        "subtitle": "Your private retreat",
+        "title": "The Room",
+        "description": "Furnished with authentic pieces from rural tradition and refined finishes, our room offers sophisticated comfort without betraying the original spirit of the \"grandmother's house\". An intimate and quiet environment, designed to provide deep and restorative rest, far from the hectic daily pace.",
+        "features": {
+          "bed": "Artisan King Size Bed",
+          "entrance": "Private Entrance",
+          "view": "Hill View",
+          "bathroom": "Private Stone Bathroom"
+        },
+        "cta": "Discover the retreat"
+      },
+      "house": {
+        "subtitle": "Shared spaces, timeless stories",
+        "title": "The House",
+        "description": "The property preserves the charm of ancient Piedmontese farmhouses, featuring solid stone and exposed brick architecture. The spacious common areas and flower-filled courtyard are designed for sharing moments of authentic conviviality, from the first light of breakfast to a glass of wine at sunset.",
+        "quote": "An architecture that breathes together with the surrounding vineyards, designed to slow down time.",
+        "cta": "Explore the property"
+      },
+      "aboutUs": {
+        "title": "About Us",
+        "description": "My family and I warmly welcome you to our historic retreat in the heart of Monferrato, offering an authentic experience immersed among the rolling hills, where history, nature and culture blend harmoniously.",
+        "cta": "Discover our story"
+      },
+      "montemagno": {
+        "subtitle": "The almond-shaped village",
+        "title": "Montemagno",
+        "description": "Perched on the hill, Montemagno is a unique medieval village, famous for its distinctive almond-shaped urban layout and its twelve historic alleys. Walking through its streets means stepping back in time, admiring the imposing crenellated castle that silently dominates the surrounding valley.",
+        "features": {
+          "alleys": "Historic Alleys",
+          "square": "Baroque Square",
+          "distance": "From B&B"
+        },
+        "cta": "Explore the medieval village"
+      },
+      "monferrato": {
+        "subtitle": "UNESCO World Heritage",
+        "title": "Il Monferrato",
+        "description": "An endless expanse of hills combed by vineyards. Monferrato is a generous land that offers unique gastronomic and wine excellences and villages rich in history. An authentic landscape to get lost in, where colours change with the seasons and offer unforgettable sunsets.",
+        "cta": "Live the tradition"
+      },
+      "breakfast": {
+        "subtitle": "Morning tastes authentic here",
+        "title": "Garden Breakfast",
+        "description": "Start your day immersed in the greenery of our park, where the scent of coffee blends with the fresh morning air. Our breakfast celebrates the territory with a careful selection of homemade cakes and tarts, artisan bread, fresh seasonal fruit and local zero-kilometre delights, designed to give you a sweet and rejuvenating awakening.",
+        "features": {
+          "coffee": "Espresso Bar",
+          "pastries": "Artisan Pastries",
+          "local": "Km Zero & Nature"
+        }
+      },
+      "map": {
+        "title": "Location of Il Respiro del Borgo in Montemagno"
       }
+    }
+  },
+  "footer": {
+    "location": {
+      "title": "Location & Address",
+      "address": "Via della Pace, 24",
+      "city": "14030 Montemagno (AT)"
+    },
+    "brand": {
+      "name": "Il Respiro del Borgo",
+      "tagline": "An intimate retreat in the heart of Monferrato, designed to slow down time and rediscover authentic Piedmontese hospitality."
+    },
+    "contact": {
+      "title": "Contact & Reservations",
+      "phone": "+39 339 7096 173",
+      "email": "ilrespirodelborgobnb@gmail.com"
+    },
+    "legal": {
+      "classification": "Classified Accommodation ★★",
+      "cir": "CIR: [Insert_CIR_Code_Here]",
+      "taxId": "VAT / Tax ID: [Insert_Tax_Data]",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "copyright": "© 2026 Il Respiro del Borgo. All rights reserved."
     }
   }
 }
