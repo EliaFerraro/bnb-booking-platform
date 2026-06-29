@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
+import Link from "next/link";
 
 export function Monferrato() {
   const t = useTranslations("pages.homepage.monferrato");
@@ -29,12 +30,14 @@ export function Monferrato() {
           </p>
 
           <div className="flex justify-start">
-            <Button
-              variant="secondary"
-              className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
-            >
-              {t("cta")}
-            </Button>
+            <Link href="/environment">
+              <Button
+                variant="secondary"
+                className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
+              >
+                {t("cta")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

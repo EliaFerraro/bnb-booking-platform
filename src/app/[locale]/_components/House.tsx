@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
+import Link from "next/link";
 
 export function House() {
   const t = useTranslations("pages.homepage.house");
@@ -33,12 +34,14 @@ export function House() {
           </blockquote>
 
           <div className="flex justify-start">
-            <Button
-              variant="outline"
-              className="border-neutral-950 text-neutral-950 px-8 py-5 rounded-full text-xs font-medium tracking-widest uppercase hover:bg-neutral-950/5 transition-colors cursor-pointer h-auto"
-            >
-              {t("cta")}
-            </Button>
+            <Link href="/structure">
+              <Button
+                variant="outline"
+                className="border-neutral-950 text-neutral-950 px-8 py-5 rounded-full text-xs font-medium tracking-widest uppercase hover:bg-neutral-950/5 transition-colors cursor-pointer h-auto"
+              >
+                {t("cta")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

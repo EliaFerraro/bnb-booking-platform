@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
+import Link from "next/link";
 
 export function Montemagno() {
   const t = useTranslations("pages.homepage.montemagno");
@@ -42,12 +43,14 @@ export function Montemagno() {
           </div>
 
           <div className="flex justify-start">
-            <Button
-              variant="secondary"
-              className="bg-neutral-900 text-white px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-neutral-800 transition-colors cursor-pointer h-auto"
-            >
-              {t("cta")}
-            </Button>
+            <Link href="/environment">
+              <Button
+                variant="secondary"
+                className="bg-neutral-900 text-white px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-neutral-800 transition-colors cursor-pointer h-auto"
+              >
+                {t("cta")}
+              </Button>
+            </Link>
           </div>
         </div>
 

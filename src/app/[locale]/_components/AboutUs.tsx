@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
+import Link from "next/link";
 
 export function AboutUs() {
   const t = useTranslations("pages.homepage.aboutUs");
@@ -29,12 +30,14 @@ export function AboutUs() {
               {t("description")}
             </p>
 
-            <Button
-              variant="outline"
-              className="font-serif uppercase tracking-wider text-sm rounded-full px-6 py-5 h-auto border-neutral-950 text-neutral-950 hover:bg-neutral-950/10 text-shadow-none"
-            >
-              {t("cta")}
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="font-serif uppercase tracking-wider text-sm rounded-full px-6 py-5 h-auto border-neutral-950 text-neutral-950 hover:bg-neutral-950/10 text-shadow-none cursor-pointer"
+              >
+                {t("cta")}
+              </Button>
+            </Link>
           </div>
 
           <div

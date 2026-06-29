@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   WifiIcon,
@@ -77,12 +78,14 @@ export function Services() {
         </div>
 
         <div className="w-full flex justify-end mt-12">
-          <Button
-            variant="secondary"
-            className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-medium tracking-[0.2em] uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
-          >
-            {t("discoverMore")}
-          </Button>
+          <Link href="/services">
+            <Button
+              variant="secondary"
+              className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-medium tracking-[0.2em] uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
+            >
+              {t("discoverMore")}
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
