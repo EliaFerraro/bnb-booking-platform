@@ -5,6 +5,7 @@ import {
   CallIcon,
   Mail01Icon,
 } from "@hugeicons/core-free-icons";
+import { LegalPolicyModal } from "@/ui/components/custom/LegalPolicyModal";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -80,21 +81,7 @@ export function Footer() {
             <span>{t("legal.cin")}</span>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <a
-              href="#privacy"
-              className="hover:text-neutral-50 transition-colors"
-            >
-              {t("legal.privacy")}
-            </a>
-            <span className="text-white/20">•</span>
-            <a
-              href="#cookies"
-              className="hover:text-neutral-50 transition-colors"
-            >
-              {t("legal.cookies")}
-            </a>
-          </div>
+          <LegalPolicyModal />
         </div>
 
         <div className="mt-12 text-[9px] text-neutral-400/50 tracking-[0.25em] text-center uppercase">

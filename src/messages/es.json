@@ -366,7 +366,19 @@
       "privacy": "Política de Privacidad",
       "cookies": "Política de Cookies",
       "copyright": "© 2026 Il Respiro del Borgo. Todos los derechos reservados.",
-      "cin": "CIN: IT005077C1SCRVTNU4"
+      "cin": "CIN: IT005077C1SCRVTNU4",
+      "policy": {
+        "title": "Política de privacidad y cookies",
+        "intro": "Este sitio está diseñado para respetar tu privacidad y recopila la menor cantidad de datos posible. Esto es todo lo que necesitas saber:",
+        "points": {
+          "storage": "El sitio guarda tu idioma preferido directamente en tu navegador (localStorage y una cookie técnica), para que no tengas que seleccionarlo de nuevo en cada visita.",
+          "local": "Este dato NO se envía a servidores externos ni se comparte con terceros: permanece únicamente en tu dispositivo.",
+          "purpose": "Sirve únicamente para mostrarte el sitio en el idioma correcto en tus próximas visitas.",
+          "retention": "Se conserva hasta que borres los datos de navegación del navegador; la cookie técnica caduca automáticamente al cabo de un año.",
+          "noConsent": "Al tratarse de un dato técnico necesario para el funcionamiento del sitio, no requiere tu consentimiento previo conforme a la normativa ePrivacy."
+        },
+        "close": "Cerrar"
+      }
     }
   }
 }
