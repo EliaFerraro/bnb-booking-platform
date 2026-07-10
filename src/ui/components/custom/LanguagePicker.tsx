@@ -100,7 +100,7 @@ export function LanguagePicker() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="flex items-center gap-2 px-2 py-1 text-neutral-50 hover:bg-primary-400 transition-colors uppercase tracking-wider font-medium text-sm focus-visible:ring-0">
+        <Button className="flex items-center gap-2 px-2 py-1 text-neutral-50 hover:bg-primary-400 transition-colors uppercase tracking-wider font-medium text-sm focus-visible:ring-0 cursor-pointer">
           <CurrentFlag className="w-5 h-auto rounded-sm object-cover" />
           <span>{currentLang}</span>
           <HugeiconsIcon icon={ArrowDown01Icon} />
@@ -120,7 +120,7 @@ export function LanguagePicker() {
             <span className="tracking-wider">{label}</span>
             <Flag className="w-5 h-auto rounded-sm object-cover" />
           </DropdownMenuItem>
-        ))}
+        )).sort((a, b) => a.key?.localeCompare(b.key ?? "") ?? 0)}
       </DropdownMenuContent>
     </DropdownMenu>
   );

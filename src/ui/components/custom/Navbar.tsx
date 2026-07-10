@@ -3,17 +3,16 @@ import Link from "next/link";
 import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
 import { Button } from "@/ui/components/shadcn/button";
 import { NavbarLink } from "@/ui/components/custom/NavbarLink";
+import { MobileSidebar } from "@/ui/components/custom/MobileSidebar";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { MenuIcon, UserCircleIcon } from "@hugeicons/core-free-icons";
+import { UserCircleIcon } from "@hugeicons/core-free-icons";
 
 export function Navbar() {
   const t = useTranslations("navbar");
   const locale = useLocale();
   return (
     <header className="w-full flex justify-between items-center bg-navbar-primary text-neutral-50 p-0">
-      <Button className="md:hidden" variant="ghost">
-        <HugeiconsIcon icon={MenuIcon} className="size-7" />
-      </Button>
+      <MobileSidebar />
       <nav className="flex items-center">
         <Link href={`/${locale}`}>
           <img
