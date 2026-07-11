@@ -27,10 +27,10 @@
         "title": "The Room",
         "description": "Furnished with authentic pieces from rural tradition and refined finishes, our room offers sophisticated comfort without betraying the original spirit of the \"grandmother's house\". An intimate and quiet environment, designed to provide deep and restorative rest, far from the hectic daily pace.",
         "features": {
-          "bed": "Artisan King Size Bed",
+          "furniture": "Restored Period Furnishings",
           "entrance": "Private Entrance",
           "view": "Hill View",
-          "bathroom": "Private Stone Bathroom"
+          "bathroom": "Bright Private Bathroom"
         },
         "cta": "Discover the retreat"
       },

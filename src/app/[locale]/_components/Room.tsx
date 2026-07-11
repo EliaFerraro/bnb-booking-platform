@@ -20,7 +20,7 @@ export function Room() {
           </p>
 
           <div className="grid grid-cols-2 gap-4 border-t border-b border-neutral-200 py-6 mb-10 text-xs tracking-wider uppercase text-neutral-600 font-medium">
-            <div>• {t("features.bed")}</div>
+            <div>• {t("features.furniture")}</div>
             <div>• {t("features.entrance")}</div>
             <div>• {t("features.view")}</div>
             <div>• {t("features.bathroom")}</div>

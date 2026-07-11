@@ -27,10 +27,10 @@
         "title": "Das Zimmer",
         "description": "Eingerichtet mit authentischen Stücken bäuerlicher Tradition und raffinierten Oberflächen, bietet unser Zimmer anspruchsvollen Komfort, ohne den ursprünglichen Geist des \"Großmutterhauses\" zu verraten. Eine intime und ruhige Umgebung, gestaltet für tiefen und erholsamen Schlaf, weit abseits der hektischen Alltagsgeschwindigkeit.",
         "features": {
-          "bed": "Handgefertigtes Kingsize-Bett",
+          "furniture": "Restaurierte antike Möbel",
           "entrance": "Privater Eingang",
           "view": "Hügelblick",
-          "bathroom": "Privates Steinbad"
+          "bathroom": "Helles privates Badezimmer"
         },
         "cta": "Das Refugium entdecken"
       },

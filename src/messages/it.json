@@ -27,10 +27,10 @@
         "title": "La stanza",
         "description": "Arredata con pezzi autentici della tradizione contadina e finiture curate, la nostra camera offre un comfort raffinato senza tradire lo spirito originario della \"casa della nonna\". Un ambiente intimo e silenzioso, pensato per regalare un riposo profondo e rigenerante, lontano dal frenetico ritmo quotidiano.",
         "features": {
-          "bed": "Letto King Size Artigianale",
+          "furniture": "Arredi d'epoca restaurati",
           "entrance": "Ingresso Indipendente",
           "view": "Vista sulle Colline",
-          "bathroom": "Bagno Privato in Pietra"
+          "bathroom": "Bagno privato luminoso"
         },
         "cta": "Scopri il rifugio"
       },

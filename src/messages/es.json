@@ -27,10 +27,10 @@
         "title": "La Habitación",
         "description": "Amueblada con piezas auténticas de la tradición campesina y acabados cuidados, nuestra habitación ofrece un confort refinado sin traicionar el espíritu original de la «casa de la abuela». Un ambiente íntimo y silencioso, pensado para ofrecer un descanso profundo y regenerador, lejos del frenético ritmo cotidiano.",
         "features": {
-          "bed": "Cama King Size Artesanal",
+          "furniture": "Muebles de época restaurados",
           "entrance": "Entrada Independiente",
           "view": "Vistas a las Colinas",
-          "bathroom": "Baño Privado de Piedra"
+          "bathroom": "Baño privado luminoso"
         },
         "cta": "Descubrir el refugio"
       },

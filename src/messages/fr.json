@@ -27,10 +27,10 @@
         "title": "La Chambre",
         "description": "Meublée avec des pièces authentiques de la tradition paysanne et des finitions soignées, notre chambre offre un confort raffiné sans trahir l'esprit originel de la « maison de grand-mère ». Un environnement intime et silencieux, conçu pour offrir un repos profond et régénérateur, loin du rythme quotidien frénétique.",
         "features": {
-          "bed": "Lit King Size Artisanal",
+          "furniture": "Mobilier d'époque restauré",
           "entrance": "Entrée Indépendante",
           "view": "Vue sur les Collines",
-          "bathroom": "Salle de Bain Privée en Pierre"
+          "bathroom": "Salle de bain privée lumineuse"
         },
         "cta": "Découvrir le refuge"
       },
