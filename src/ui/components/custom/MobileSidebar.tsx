@@ -31,7 +31,7 @@ export function MobileSidebar() {
       <div
         onClick={close}
         aria-hidden={!open}
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ease-in-out ${
+        className={`fixed inset-0 z-40 bg-neutral-950/50 transition-opacity duration-300 ease-in-out ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />

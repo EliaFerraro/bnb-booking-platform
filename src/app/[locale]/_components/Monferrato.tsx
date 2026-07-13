@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Monferrato() {
   const t = useTranslations("pages.homepage.monferrato");
   return (
-    <section id="monferrato-section" className="w-full py-32 bg-[#707E54]/5">
+    <section id="monferrato-section" className="w-full py-32 bg-primary-500/5">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <div
           className={`lg:col-span-7 h-100 md:h-137.5 w-full overflow-hidden shadow-xl group rounded-[160px_16px_160px_16px]`}
@@ -18,7 +18,7 @@ export function Monferrato() {
         </div>
 
         <div className="lg:col-span-5 flex flex-col justify-center">
-          <span className="font-sans text-xs tracking-[0.3em] text-[#707E54] uppercase mb-3 block font-semibold">
+          <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
             {t("subtitle")}
           </span>
           <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
@@ -33,7 +33,7 @@ export function Monferrato() {
             <Link href="/environment">
               <Button
                 variant="secondary"
-                className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
+                className="bg-primary-500 text-neutral-50 px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-primary-700 transition-all cursor-pointer shadow-md h-auto"
               >
                 {t("cta")}
               </Button>

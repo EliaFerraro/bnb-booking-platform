@@ -8,7 +8,7 @@ export function Montemagno() {
     <section id="montemagno-section" className="w-full py-32 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
-          <span className="font-sans text-xs tracking-[0.3em] text-[#707E54] uppercase mb-3 block font-semibold">
+          <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
             {t("subtitle")}
           </span>
           <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
@@ -46,7 +46,7 @@ export function Montemagno() {
             <Link href="/environment">
               <Button
                 variant="secondary"
-                className="bg-neutral-900 text-white px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-neutral-800 transition-colors cursor-pointer h-auto"
+                className="bg-neutral-900 text-neutral-50 px-8 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-neutral-800 transition-colors cursor-pointer h-auto"
               >
                 {t("cta")}
               </Button>

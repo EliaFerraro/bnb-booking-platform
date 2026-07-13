@@ -81,7 +81,7 @@
       "hero": {
         "subtitle": "Espaces et atmosphères",
         "title": "La Maison",
-        "tagline": "Une ferme de pierre où le temps ralentit"
+        "tagline": "Une ferme en brique où le temps ralentit"
       },
       "intro": {
         "eyebrow": "Notre demeure",
@@ -90,28 +90,28 @@
         "quote": "Ici les murs respirent au rythme des vignes : nous avons seulement rouvert les fenêtres sur le temps."
       },
       "house": {
-        "subtitle": "Espaces partagés, histoires intemporelles",
-        "title": "Les Espaces Communs",
-        "description": "Le cœur de la maison est fait de lieux à partager : le salon commun avec sa grande cheminée en pierre, idéal pour lire un livre les soirs plus frais, et la cour fleurie qui devient en été le salon en plein air de la ferme. Les vastes espaces conservent l'architecture solide des fermes piémontaises, avec poutres apparentes, sols en terre cuite et mobilier transmis par la tradition familiale. Tout invite à ralentir, à s'asseoir et à respirer.",
+        "subtitle": "Vivre dehors, des jours sans hâte",
+        "title": "Les Espaces Extérieurs",
+        "description": "Ici, les plus beaux moments se vivent dehors. La véranda panoramique est notre salon lumineux : entourée de grandes baies vitrées qui encadrent les vignes, elle invite aux matinées lentes autour d'un café et aux longs après-midis paisibles dans la lumière. Juste au-delà, le jardin s'ouvre sur les collines vallonnées — un coin paisible pour respirer profondément, lire à l'ombre et laisser le temps s'étirer. Deux espaces faits de verdure, de lumière naturelle et d'un soin discret, pensés pour les hôtes qui viennent dans le Monferrato en quête de calme, de nature et d'un vrai bien-être.",
         "features": {
-          "stone": "Pierre & brique apparente",
-          "courtyard": "Cour fleurie",
-          "living": "Salon avec cheminée",
-          "garden": "Jardin & vignes"
+          "veranda": "Véranda panoramique",
+          "garden": "Jardin sur les collines",
+          "light": "Beaucoup de lumière naturelle",
+          "slowness": "Fait pour ralentir"
         }
       },
       "room": {
         "subtitle": "Votre refuge privé",
         "title": "La Chambre",
-        "description": "La chambre est un nid intime et silencieux, meublé de pièces authentiques de la tradition paysanne et de finitions soignées dans les moindres détails. Le lit king size artisanal, habillé de lin et de coton naturels, promet un repos profond ; les fenêtres s'ouvrent sur les collines et laissent entrer la première lumière du matin. Une entrée indépendante garantit liberté et tranquillité, dans un espace pensé pour deux.",
+        "description": "La chambre est un nid intime et silencieux, meublé de pièces authentiques de la tradition paysanne et de finitions soignées dans les moindres détails. Elle peut être aménagée pour accueillir un couple en lit double ou deux voyageurs en lits simples, habillés de lin et de coton naturels pour un repos profond ; les fenêtres s'ouvrent sur les collines et laissent entrer la première lumière du matin. La salle de bain privée, lumineuse et habillée de carreaux d'époque, et une entrée indépendante garantissent liberté et tranquillité, dans un espace pensé pour deux.",
         "amenitiesTitle": "Confort de la chambre",
         "amenities": {
-          "bed": "Lit king size artisanal",
-          "bathroom": "Salle de bain privée en pierre",
+          "bed": "Lit double ou deux lits simples",
+          "bathroom": "Salle de bain lumineuse à carreaux d'époque",
           "entrance": "Entrée indépendante",
           "view": "Vue sur les collines",
           "wifi": "Wi-Fi gratuit",
-          "climate": "Chauffage & climatisation"
+          "climate": "Chauffage"
         }
       },
       "specs": {
@@ -120,12 +120,12 @@
           "label": "Voyageurs"
         },
         "size": {
-          "value": "28 m²",
+          "value": "37 m²",
           "label": "Chambre & salle de bain"
         },
         "bed": {
-          "value": "King",
-          "label": "Lit double"
+          "value": "Double / Simples",
+          "label": "Lit double ou lits simples"
         },
         "checkin": {
           "value": "15 h – 20 h",
@@ -134,6 +134,15 @@
       },
       "gallery": {
         "title": "Détails de la maison"
+      },
+      "images": {
+        "hero": "La ferme au coucher du soleil",
+        "spaces": "La véranda et le jardin",
+        "room": "La chambre",
+        "yard": "Le jardin",
+        "housefromabove": "La maison vue d'en haut",
+        "bathroom": "La salle de bain",
+        "veranda": "Véranda panoramique"
       },
       "cta": {
         "title": "Venez la vivre en personne",

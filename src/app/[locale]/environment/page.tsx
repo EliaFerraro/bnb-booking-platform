@@ -40,7 +40,7 @@ function EnvironmentContent({ locale }: { locale: string }) {
       {/* Intro */}
       <section className="w-full bg-neutral-50 py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="font-sans text-xs tracking-[0.3em] text-[#707E54] uppercase mb-4 block font-semibold">
+          <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-4 block font-semibold">
             {t("intro.eyebrow")}
           </span>
           <h2 className="font-serif text-3xl md:text-4xl tracking-widest uppercase text-neutral-950 mb-8">
@@ -49,17 +49,17 @@ function EnvironmentContent({ locale }: { locale: string }) {
           <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-8">
             {t("intro.body")}
           </p>
-          <blockquote className="font-serif italic text-xl md:text-2xl text-[#707E54] leading-relaxed">
+          <blockquote className="font-serif italic text-xl md:text-2xl text-primary-500 leading-relaxed">
             "{t("intro.quote")}"
           </blockquote>
         </div>
       </section>
 
       {/* Montemagno */}
-      <section className="w-full py-24 bg-[#F2EFE9]/40">
+      <section className="w-full py-24 bg-secondary-50/40">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
-            <span className="font-sans text-xs tracking-[0.3em] text-[#707E54] uppercase mb-3 block font-semibold">
+            <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
               {t("montemagno.subtitle")}
             </span>
             <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
@@ -93,7 +93,7 @@ function EnvironmentContent({ locale }: { locale: string }) {
       </section>
 
       {/* Monferrato */}
-      <section className="w-full py-24 bg-[#707E54]/5">
+      <section className="w-full py-24 bg-primary-500/5">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-7 h-100 md:h-137.5 w-full overflow-hidden shadow-xl rounded-[160px_16px_160px_16px]">
             <img
@@ -103,7 +103,7 @@ function EnvironmentContent({ locale }: { locale: string }) {
             />
           </div>
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <span className="font-sans text-xs tracking-[0.3em] text-[#707E54] uppercase mb-3 block font-semibold">
+            <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
               {t("monferrato.subtitle")}
             </span>
             <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
@@ -119,16 +119,16 @@ function EnvironmentContent({ locale }: { locale: string }) {
       {/* Experiences */}
       <section className="w-full bg-neutral-50 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-[#707E54] text-center mb-14">
+          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-primary-500 text-center mb-14">
             {t("experiences.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {EXPERIENCES.map(({ key, icon }) => (
               <div
                 key={key}
-                className="flex flex-col items-center text-center p-8 bg-[#F2EFE9]/50 rounded-[40px_8px_40px_8px] border border-neutral-200/60"
+                className="flex flex-col items-center text-center p-8 bg-secondary-50/50 rounded-[40px_8px_40px_8px] border border-neutral-200/60"
               >
-                <div className="w-16 h-16 rounded-full border-2 border-[#707E54] flex items-center justify-center mb-6 text-[#707E54]">
+                <div className="w-16 h-16 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500">
                   <HugeiconsIcon icon={icon} className="w-7 h-7" strokeWidth={1.3} />
                 </div>
                 <h3 className="font-serif text-xl tracking-wider uppercase text-neutral-950 mb-3">
@@ -144,9 +144,9 @@ function EnvironmentContent({ locale }: { locale: string }) {
       </section>
 
       {/* Gallery */}
-      <section className="w-full bg-[#F2EFE9]/40 py-24 px-6">
+      <section className="w-full bg-secondary-50/40 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-[#707E54] text-center mb-14">
+          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-primary-500 text-center mb-14">
             {t("gallery.title")}
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

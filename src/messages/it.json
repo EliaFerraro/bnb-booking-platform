@@ -81,7 +81,7 @@
       "hero": {
         "subtitle": "Spazi e atmosfere",
         "title": "La Casa",
-        "tagline": "Una cascina di pietra dove il tempo rallenta"
+        "tagline": "Un casale in mattoni dove il tempo rallenta"
       },
       "intro": {
         "eyebrow": "La nostra dimora",
@@ -90,28 +90,28 @@
         "quote": "Qui le mura respirano insieme alle vigne: abbiamo solo riaperto le finestre sul tempo."
       },
       "house": {
-        "subtitle": "Spazi condivisi, storie senza tempo",
-        "title": "Gli spazi comuni",
-        "description": "Il cuore della casa è fatto di luoghi da condividere: la sala comune con il grande camino in pietra, dove leggere un libro nelle sere più fresche, e il cortile fiorito che d'estate diventa il salotto all'aperto della cascina. Gli ampi spazi conservano l'architettura solida delle cascine piemontesi, tra travi a vista, pavimenti in cotto e arredi recuperati dalla tradizione di famiglia. Tutto invita a rallentare, a sedersi e a respirare.",
+        "subtitle": "Vivere all'aperto, giorni senza fretta",
+        "title": "Gli spazi all'aperto",
+        "description": "Qui i momenti più belli accadono all'aperto. La veranda panoramica è il nostro luminoso salotto: avvolta da ampie vetrate che incorniciano i vigneti, accoglie mattine lente davanti al caffè e lunghi pomeriggi senza fretta nella luce. Poco più in là, il giardino si apre sulle colline del Monferrato — un angolo tranquillo dove respirare a pieni polmoni, leggere all'ombra e lasciare che il tempo si dilati. Due spazi fatti di verde, luce naturale e cura silenziosa, pensati per chi arriva in Monferrato in cerca di quiete, natura e autentico benessere.",
         "features": {
-          "stone": "Pietra e mattoni a vista",
-          "courtyard": "Cortile fiorito",
-          "living": "Sala comune con camino",
-          "garden": "Giardino e vigne"
+          "veranda": "Veranda panoramica",
+          "garden": "Giardino sulle colline",
+          "light": "Tanta luce naturale",
+          "slowness": "Fatto per rallentare"
         }
       },
       "room": {
         "subtitle": "Il tuo rifugio privato",
         "title": "La Camera",
-        "description": "La camera è un nido raccolto e silenzioso, arredato con pezzi autentici della tradizione contadina e finiture curate nei minimi dettagli. Il letto king size artigianale, vestito di lino e cotone naturale, promette un riposo profondo; le finestre si aprono sulle colline e lasciano entrare la prima luce del mattino. Un ingresso indipendente vi garantisce libertà e tranquillità, in un ambiente pensato per due.",
+        "description": "La camera è un nido raccolto e silenzioso, arredato con pezzi autentici della tradizione contadina e finiture curate nei minimi dettagli. Può essere allestita per ospitare una coppia in letto matrimoniale oppure due ospiti in letti singoli, vestiti di lino e cotone naturale per un riposo profondo; le finestre si aprono sulle colline e lasciano entrare la prima luce del mattino. Il bagno privato, luminoso e rifinito con piastrelle d'epoca, e un ingresso indipendente vi garantiscono libertà e tranquillità, in un ambiente pensato per due.",
         "amenitiesTitle": "Comfort della camera",
         "amenities": {
-          "bed": "Letto king size artigianale",
-          "bathroom": "Bagno privato in pietra",
+          "bed": "Letto matrimoniale o due singoli",
+          "bathroom": "Bagno luminoso con piastrelle d'epoca",
           "entrance": "Ingresso indipendente",
           "view": "Vista sulle colline",
           "wifi": "Wi-Fi gratuito",
-          "climate": "Riscaldamento e clima"
+          "climate": "Riscaldamento"
         }
       },
       "specs": {
@@ -120,12 +120,12 @@
           "label": "Ospiti"
         },
         "size": {
-          "value": "28 m²",
+          "value": "37 m²",
           "label": "Camera e bagno"
         },
         "bed": {
-          "value": "King",
-          "label": "Letto matrimoniale"
+          "value": "Matr. / Singoli",
+          "label": "Matrimoniale o singoli"
         },
         "checkin": {
           "value": "15 – 20",
@@ -134,6 +134,15 @@
       },
       "gallery": {
         "title": "Dettagli della casa"
+      },
+      "images": {
+        "hero": "La cascina al tramonto",
+        "spaces": "La veranda e il giardino",
+        "room": "La camera",
+        "yard": "Il giardino",
+        "housefromabove": "La casa dall'alto",
+        "bathroom": "Il bagno",
+        "veranda": "Veranda panoramica"
       },
       "cta": {
         "title": "Vieni a viverla di persona",

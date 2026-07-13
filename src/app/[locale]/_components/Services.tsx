@@ -14,18 +14,18 @@ export function Services() {
   return (
     <section
       id="servizi-section"
-      className="w-full bg-[#F2EFE9] py-24 px-6 md:px-12 lg:px-24 text-neutral-950"
+      className="w-full bg-secondary-50 py-24 px-6 md:px-12 lg:px-24 text-neutral-950"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-20">
-          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-[#707E54]">
+          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-primary-500">
             {t("title")}
           </h2>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 items-center justify-items-center mb-16">
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[#707E54] flex items-center justify-center mb-6 text-[#707E54] transition-all duration-300 shadow-sm">
+            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={WifiIcon}
                 className="w-10 h-10 md:w-12 md:h-12"
@@ -38,7 +38,7 @@ export function Services() {
           </div>
 
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[#707E54] flex items-center justify-center mb-6 text-[#707E54] transition-all duration-300 shadow-sm">
+            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={WashingMachineIcon}
                 className="w-10 h-10 md:w-12 md:h-12"
@@ -51,7 +51,7 @@ export function Services() {
           </div>
 
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[#707E54] flex items-center justify-center mb-6 text-[#707E54] transition-all duration-300 shadow-sm">
+            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={ParkingAreaCircleIcon}
                 className="w-10 h-10 md:w-12 md:h-12"
@@ -64,7 +64,7 @@ export function Services() {
           </div>
 
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[#707E54] flex items-center justify-center mb-6 text-[#707E54] transition-all duration-300 shadow-sm">
+            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={TerraceIcon}
                 className="w-10 h-10 md:w-12 md:h-12"
@@ -81,7 +81,7 @@ export function Services() {
           <Link href="/services">
             <Button
               variant="secondary"
-              className="bg-[#707E54] text-neutral-50 px-8 py-6 rounded-full text-xs font-medium tracking-[0.2em] uppercase hover:bg-[#5b6843] transition-all cursor-pointer shadow-md h-auto"
+              className="bg-primary-500 text-neutral-50 px-8 py-6 rounded-full text-xs font-medium tracking-[0.2em] uppercase hover:bg-primary-700 transition-all cursor-pointer shadow-md h-auto"
             >
               {t("discoverMore")}
             </Button>

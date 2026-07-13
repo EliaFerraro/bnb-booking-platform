@@ -21,17 +21,14 @@ const ROOM_AMENITIES = [
   { key: "climate", icon: TemperatureIcon },
 ] as const;
 
-const HOUSE_FEATURES = ["stone", "courtyard", "living", "garden"] as const;
+const HOUSE_FEATURES = ["veranda", "garden", "light", "slowness"] as const;
 const SPECS = ["guests", "size", "bed", "checkin"] as const;
 const GALLERY = [
-  { src: "/img/photos/sunset_house.jpg", alt: "La cascina al tramonto" },
-  { src: "/img/photos/room.jpg", alt: "La camera" },
-  {
-    src: "/img/photos/Casa con colazione.jpg",
-    alt: "La colazione in giardino",
-  },
-  { src: "/img/photos/sunset_yard.jpg", alt: "Il cortile al tramonto" },
-];
+  { src: "/img/photos/yard.jpg", altKey: "yard" },
+  { src: "/img/photos/bedroom_corner.jpg", altKey: "room" },
+  { src: "/img/photos/bathroom.jpg", altKey: "bathroom" },
+  { src: "/img/photos/veranda.jpg", altKey: "veranda" },
+] as const;
 
 function StructureContent({ locale }: { locale: string }) {
   const t = useTranslations("pages.structure");
@@ -40,17 +37,17 @@ function StructureContent({ locale }: { locale: string }) {
     <>
       <PageHero
         image="/img/photos/sunset_house.jpg"
-        alt="La cascina al tramonto"
+        alt={t("images.hero")}
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
         tagline={t("hero.tagline")}
-        accentClassName="text-[#d9b89c]"
+        accentClassName="text-secondary-300"
       />
 
       {/* Intro */}
       <section className="w-full bg-neutral-50 py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="font-sans text-xs tracking-[0.3em] text-[#a36527] uppercase mb-4 block font-semibold">
+          <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-4 block font-semibold">
             {t("intro.eyebrow")}
           </span>
           <h2 className="font-serif text-3xl md:text-4xl tracking-widest uppercase text-neutral-950 mb-8">
@@ -59,24 +56,24 @@ function StructureContent({ locale }: { locale: string }) {
           <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-8">
             {t("intro.body")}
           </p>
-          <blockquote className="font-serif italic text-xl md:text-2xl text-[#707E54] leading-relaxed">
+          <blockquote className="font-serif italic text-xl md:text-2xl text-primary-500 leading-relaxed">
             "{t("intro.quote")}"
           </blockquote>
         </div>
       </section>
 
       {/* Shared spaces */}
-      <section className="w-full py-24 bg-[#F2EFE9]/40">
+      <section className="w-full py-24 bg-secondary-50/40">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-6 h-112.5 md:h-137.5 w-full overflow-hidden shadow-md rounded-[160px_16px_160px_16px]">
             <img
               className="w-full h-full object-cover"
-              src="/img/photos/sunset_yard.jpg"
-              alt="Il cortile e il giardino"
+              src="/img/photos/Casa dall'alto.jpg"
+              alt={t("images.spaces")}
             />
           </div>
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <span className="font-sans text-xs tracking-[0.3em] text-[#a36527] uppercase mb-3 block font-semibold">
+            <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-3 block font-semibold">
               {t("house.subtitle")}
             </span>
             <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
@@ -98,7 +95,7 @@ function StructureContent({ locale }: { locale: string }) {
       <section className="w-full py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
-            <span className="font-sans text-xs tracking-[0.3em] text-[#707E54] uppercase mb-3 block font-semibold">
+            <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
               {t("room.subtitle")}
             </span>
             <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
@@ -115,7 +112,7 @@ function StructureContent({ locale }: { locale: string }) {
                 <div key={key} className="flex items-center gap-3">
                   <HugeiconsIcon
                     icon={icon}
-                    className="w-5 h-5 text-[#707E54] shrink-0"
+                    className="w-5 h-5 text-primary-500 shrink-0"
                     strokeWidth={1.5}
                   />
                   <span className="text-xs tracking-wide uppercase text-neutral-700 font-medium">
@@ -128,22 +125,22 @@ function StructureContent({ locale }: { locale: string }) {
           <div className="lg:col-span-6 order-1 lg:order-2 h-125 md:h-150 w-full overflow-hidden shadow-md rounded-[16px_160px_16px_160px]">
             <img
               className="w-full h-full object-cover"
-              src="/img/photos/room.jpg"
-              alt="La camera"
+              src="/img/photos/bedroom.jpg"
+              alt={t("images.room")}
             />
           </div>
         </div>
       </section>
 
       {/* Specs strip */}
-      <section className="w-full bg-[#707E54] text-neutral-50 py-16 px-6">
+      <section className="w-full bg-primary-500 text-neutral-50 py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center">
           {SPECS.map((s) => (
             <div key={s} className="flex flex-col items-center">
-              <span className="font-serif text-2xl md:text-3xl text-[#E5DCC6] font-semibold mb-2">
+              <span className="font-serif text-2xl md:text-3xl text-secondary-100 font-semibold mb-2">
                 {t(`specs.${s}.value`)}
               </span>
-              <span className="text-[11px] tracking-[0.2em] uppercase text-[#F2EFE9]/80 font-medium">
+              <span className="text-[11px] tracking-[0.2em] uppercase text-secondary-50/80 font-medium">
                 {t(`specs.${s}.label`)}
               </span>
             </div>
@@ -154,7 +151,7 @@ function StructureContent({ locale }: { locale: string }) {
       {/* Gallery */}
       <section className="w-full bg-neutral-50 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-[#707E54] text-center mb-14">
+          <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-primary-500 text-center mb-14">
             {t("gallery.title")}
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -170,7 +167,7 @@ function StructureContent({ locale }: { locale: string }) {
                 <img
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
                   src={g.src}
-                  alt={g.alt}
+                  alt={t(`images.${g.altKey}`)}
                 />
               </div>
             ))}

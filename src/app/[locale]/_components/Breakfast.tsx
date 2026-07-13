@@ -11,11 +11,11 @@ export function Breakfast() {
   return (
     <section
       id="breakfast-section"
-      className="w-full bg-[#707E54] py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden"
+      className="w-full bg-primary-500 py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 flex flex-col justify-center">
-          <span className="font-sans text-xs md:text-sm tracking-[0.3em] text-[#E5DCC6] uppercase mb-3 block font-medium">
+          <span className="font-sans text-xs md:text-sm tracking-[0.3em] text-secondary-200 uppercase mb-3 block font-medium">
             {t("subtitle")}
           </span>
 
@@ -23,18 +23,18 @@ export function Breakfast() {
             {t("title")}
           </h2>
 
-          <p className="text-base md:text-lg text-[#F2EFE9] leading-relaxed font-light mb-10 text-justify max-w-2xl">
+          <p className="text-base md:text-lg text-secondary-50 leading-relaxed font-light mb-10 text-justify max-w-2xl">
             {t("description")}
           </p>
 
-          <div className="grid grid-cols-3 gap-4 border-t border-white/20 pt-8 max-w-xl">
+          <div className="grid grid-cols-3 gap-4 border-t border-neutral-50/20 pt-8 max-w-xl">
             <div className="flex flex-col items-center text-center p-2">
               <HugeiconsIcon
                 icon={CoffeeIcon}
-                className="text-[#E5DCC6] mb-2 w-6 h-6"
+                className="text-secondary-200 mb-2 w-6 h-6"
                 strokeWidth={1.5}
               />
-              <span className="text-xs tracking-wider uppercase font-medium text-[#E5DCC6]">
+              <span className="text-xs tracking-wider uppercase font-medium text-secondary-200">
                 {t("features.coffee")}
               </span>
             </div>
@@ -42,10 +42,10 @@ export function Breakfast() {
             <div className="flex flex-col items-center text-center p-2">
               <HugeiconsIcon
                 icon={CheeseCake01Icon}
-                className="text-[#E5DCC6] mb-2 w-6 h-6"
+                className="text-secondary-200 mb-2 w-6 h-6"
                 strokeWidth={1.5}
               />
-              <span className="text-xs tracking-wider uppercase font-medium text-[#E5DCC6]">
+              <span className="text-xs tracking-wider uppercase font-medium text-secondary-200">
                 {t("features.pastries")}
               </span>
             </div>
@@ -53,10 +53,10 @@ export function Breakfast() {
             <div className="flex flex-col items-center text-center p-2">
               <HugeiconsIcon
                 icon={NaturalFoodIcon}
-                className="text-[#E5DCC6] mb-2 w-6 h-6"
+                className="text-secondary-200 mb-2 w-6 h-6"
                 strokeWidth={1.5}
               />
-              <span className="text-xs tracking-wider uppercase font-medium text-[#E5DCC6]">
+              <span className="text-xs tracking-wider uppercase font-medium text-secondary-200">
                 {t("features.local")}
               </span>
             </div>

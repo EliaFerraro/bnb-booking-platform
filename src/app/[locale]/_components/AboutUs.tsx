@@ -11,7 +11,7 @@ export function AboutUs() {
           <h2 className="font-serif text-3xl md:text-4xl tracking-widest uppercase">
             {t("title")}
           </h2>
-          <div className="h-px w-12 bg-[#a36527] mx-auto mt-4" />
+          <div className="h-px w-12 bg-secondary-600 mx-auto mt-4" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
@@ -26,7 +26,7 @@ export function AboutUs() {
           </div>
 
           <div className="flex flex-col items-center text-center px-4 md:px-8 order-3 lg:order-2 py-6 lg:py-0">
-            <p className="font-sans text-base md:text-lg leading-relaxed text-gray-700 max-w-md mb-8">
+            <p className="font-sans text-base md:text-lg leading-relaxed text-neutral-700 max-w-md mb-8">
               {t("description")}
             </p>
 

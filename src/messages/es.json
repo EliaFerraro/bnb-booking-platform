@@ -81,7 +81,7 @@
       "hero": {
         "subtitle": "Espacios y atmósferas",
         "title": "La Casa",
-        "tagline": "Una casa de campo de piedra donde el tiempo se detiene"
+        "tagline": "Una masía de ladrillo donde el tiempo se ralentiza"
       },
       "intro": {
         "eyebrow": "Nuestra morada",
@@ -90,28 +90,28 @@
         "quote": "Aquí los muros respiran al ritmo de las viñas: solo hemos vuelto a abrir las ventanas al tiempo."
       },
       "house": {
-        "subtitle": "Espacios compartidos, historias atemporales",
-        "title": "Los Espacios Comunes",
-        "description": "El corazón de la casa está hecho de lugares para compartir: la sala común con su gran chimenea de piedra, ideal para leer un libro en las noches más frescas, y el patio florido que en verano se convierte en el salón al aire libre de la casa. Los amplios espacios conservan la sólida arquitectura de las casas de campo piamontesas, con vigas a la vista, suelos de barro cocido y mobiliario heredado de la tradición familiar. Todo invita a frenar, a sentarse y a respirar.",
+        "subtitle": "Vivir al aire libre, días sin prisa",
+        "title": "Los Espacios Exteriores",
+        "description": "Aquí los mejores momentos suceden al aire libre. La galería panorámica es nuestro luminoso salón: envuelta en grandes ventanales que enmarcan los viñedos, invita a mañanas pausadas con un café y a largas tardes tranquilas bañadas de luz. Un poco más allá, el jardín se abre a las colinas onduladas — un rincón sereno para respirar hondo, leer a la sombra y dejar que el tiempo se dilate. Dos espacios hechos de verde, luz natural y cuidado discreto, pensados para quienes llegan al Monferrato en busca de calma, naturaleza y auténtico bienestar.",
         "features": {
-          "stone": "Piedra y ladrillo visto",
-          "courtyard": "Patio florido",
-          "living": "Sala común con chimenea",
-          "garden": "Jardín y viñedos"
+          "veranda": "Galería panorámica",
+          "garden": "Jardín con vistas a las colinas",
+          "light": "Mucha luz natural",
+          "slowness": "Hecho para ir despacio"
         }
       },
       "room": {
         "subtitle": "Tu refugio privado",
         "title": "La Habitación",
-        "description": "La habitación es un nido recogido y silencioso, amueblado con piezas auténticas de la tradición campesina y acabados cuidados hasta el último detalle. La cama king size artesanal, vestida de lino y algodón natural, promete un descanso profundo; las ventanas se abren a las colinas y dejan entrar la primera luz de la mañana. Una entrada independiente garantiza libertad y tranquilidad, en un ambiente pensado para dos.",
+        "description": "La habitación es un nido recogido y silencioso, amueblado con piezas auténticas de la tradición campesina y acabados cuidados hasta el último detalle. Puede prepararse para alojar a una pareja en cama de matrimonio o a dos huéspedes en camas individuales, vestidas de lino y algodón natural para un descanso profundo; las ventanas se abren a las colinas y dejan entrar la primera luz de la mañana. El baño privado, luminoso y con azulejos de época, y una entrada independiente garantizan libertad y tranquilidad, en un ambiente pensado para dos.",
         "amenitiesTitle": "Confort de la habitación",
         "amenities": {
-          "bed": "Cama king size artesanal",
-          "bathroom": "Baño privado de piedra",
+          "bed": "Cama de matrimonio o dos individuales",
+          "bathroom": "Baño luminoso con azulejos de época",
           "entrance": "Entrada independiente",
           "view": "Vistas a las colinas",
           "wifi": "Wi-Fi gratuito",
-          "climate": "Calefacción y climatización"
+          "climate": "Calefacción"
         }
       },
       "specs": {
@@ -120,12 +120,12 @@
           "label": "Huéspedes"
         },
         "size": {
-          "value": "28 m²",
+          "value": "37 m²",
           "label": "Habitación y baño"
         },
         "bed": {
-          "value": "King",
-          "label": "Cama de matrimonio"
+          "value": "Matr. / Indiv.",
+          "label": "Cama de matrimonio o individuales"
         },
         "checkin": {
           "value": "15 – 20 h",
@@ -134,6 +134,15 @@
       },
       "gallery": {
         "title": "Detalles de la casa"
+      },
+      "images": {
+        "hero": "La casa de campo al atardecer",
+        "spaces": "La galería y el jardín",
+        "room": "La habitación",
+        "yard": "El jardín",
+        "housefromabove": "La casa desde arriba",
+        "bathroom": "el baño",
+        "veranda": "Terraza panorámica"
       },
       "cta": {
         "title": "Ven a vivirla en persona",

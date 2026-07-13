@@ -81,7 +81,7 @@
       "hero": {
         "subtitle": "Spaces and atmospheres",
         "title": "The House",
-        "tagline": "A stone farmhouse where time slows down"
+        "tagline": "A brick farmhouse where time slows down"
       },
       "intro": {
         "eyebrow": "Our home",
@@ -90,28 +90,28 @@
         "quote": "Here the walls breathe together with the vineyards: we simply reopened the windows onto time."
       },
       "house": {
-        "subtitle": "Shared spaces, timeless stories",
-        "title": "The Common Areas",
-        "description": "The heart of the house is made of places to share: the common lounge with its large stone fireplace, perfect for reading a book on cooler evenings, and the flower-filled courtyard that becomes the farmhouse's open-air living room in summer. The spacious rooms preserve the solid architecture of Piedmontese farmhouses, with exposed beams, terracotta floors and furnishings handed down through the family. Everything invites you to slow down, sit and breathe.",
+        "subtitle": "Outdoor living, unhurried days",
+        "title": "The Outdoor Spaces",
+        "description": "Here, the best moments happen outdoors. The panoramic veranda is our bright living room: wrapped in large windows that frame the vineyards, it welcomes slow mornings over coffee and long, unhurried afternoons in the light. Just beyond, the garden opens onto the rolling hills — a peaceful corner to breathe deeply, read in the shade and let time stretch out. Two spaces shaped by greenery, natural light and quiet care, designed for guests who come to the Monferrato in search of calm, nature and a genuine sense of wellbeing.",
         "features": {
-          "stone": "Stone & exposed brick",
-          "courtyard": "Flower-filled courtyard",
-          "living": "Lounge with fireplace",
-          "garden": "Garden & vineyards"
+          "veranda": "Panoramic veranda",
+          "garden": "Hillside garden",
+          "light": "Abundant natural light",
+          "slowness": "Made for slowing down"
         }
       },
       "room": {
         "subtitle": "Your private retreat",
         "title": "The Room",
-        "description": "The room is a quiet, intimate nest, furnished with authentic pieces of rural tradition and finishes cared for down to the smallest detail. The handcrafted king-size bed, dressed in natural linen and cotton, promises deep rest; the windows open onto the hills and let in the first light of morning. A private entrance ensures freedom and tranquillity, in a space designed for two.",
+        "description": "The room is a quiet, intimate nest, furnished with authentic pieces of rural tradition and finishes cared for down to the smallest detail. It can be arranged to host a couple in a double bed or two guests in single beds, dressed in natural linen and cotton for a deep, restful sleep; the windows open onto the hills and let in the first light of morning. The bright en-suite bathroom is finished in period tiles, and a private entrance ensures freedom and tranquillity, in a space designed for two.",
         "amenitiesTitle": "Room comforts",
         "amenities": {
-          "bed": "Handcrafted king-size bed",
-          "bathroom": "Private stone bathroom",
+          "bed": "Double bed or two singles",
+          "bathroom": "Bright bathroom with period tiles",
           "entrance": "Private entrance",
           "view": "Hill view",
           "wifi": "Free Wi-Fi",
-          "climate": "Heating & air conditioning"
+          "climate": "Heating"
         }
       },
       "specs": {
@@ -120,12 +120,12 @@
           "label": "Guests"
         },
         "size": {
-          "value": "28 m²",
+          "value": "37 m²",
           "label": "Room & bathroom"
         },
         "bed": {
-          "value": "King",
-          "label": "Double bed"
+          "value": "Double / Twin",
+          "label": "Double or twin beds"
         },
         "checkin": {
           "value": "3 – 8 pm",
@@ -134,6 +134,15 @@
       },
       "gallery": {
         "title": "Details of the house"
+      },
+      "images": {
+        "hero": "The farmhouse at sunset",
+        "spaces": "The veranda and the garden",
+        "room": "The room",
+        "yard": "The garden",
+        "housefromabove": "The house from above",
+        "bathroom": "The bathroom",
+        "veranda": "Panoramic veranda"
       },
       "cta": {
         "title": "Come and experience it yourself",

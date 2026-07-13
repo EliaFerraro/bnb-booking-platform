@@ -14,7 +14,7 @@ export function PageHero({
   subtitle,
   title,
   tagline,
-  accentClassName = "text-[#E5DCC6]",
+  accentClassName = "text-secondary-200",
 }: Props) {
   return (
     <section className="relative w-full h-[62vh] min-h-[440px] flex items-center justify-center overflow-hidden">
@@ -34,8 +34,8 @@ export function PageHero({
         <h1 className="font-serif text-5xl md:text-7xl tracking-widest uppercase mb-6">
           {title}
         </h1>
-        <div className="h-px w-16 bg-[#E5DCC6]/70 mx-auto mb-6" />
-        <p className="font-serif italic text-lg md:text-2xl text-[#F2EFE9]/90 tracking-wide font-light">
+        <div className="h-px w-16 bg-secondary-200/70 mx-auto mb-6" />
+        <p className="font-serif italic text-lg md:text-2xl text-secondary-50/90 tracking-wide font-light">
           {tagline}
         </p>
       </div>

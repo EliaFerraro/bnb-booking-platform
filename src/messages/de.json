@@ -81,7 +81,7 @@
       "hero": {
         "subtitle": "Räume und Atmosphären",
         "title": "Das Haus",
-        "tagline": "Ein Steinhof, in dem die Zeit langsamer vergeht"
+        "tagline": "Ein Backsteinbauernhaus, in dem die Zeit verlangsamt wird"
       },
       "intro": {
         "eyebrow": "Unser Zuhause",
@@ -90,28 +90,28 @@
         "quote": "Hier atmen die Mauern im Takt der Weinberge: wir haben nur die Fenster zur Zeit wieder geöffnet."
       },
       "house": {
-        "subtitle": "Gemeinsame Räume, zeitlose Geschichten",
-        "title": "Die Gemeinschaftsräume",
-        "description": "Das Herz des Hauses besteht aus Orten zum Teilen: der Gemeinschaftsraum mit dem großen Steinkamin, ideal zum Lesen an kühleren Abenden, und der blühende Innenhof, der im Sommer zum Freiluft-Wohnzimmer des Hofes wird. Die großzügigen Räume bewahren die solide Architektur der piemontesischen Bauernhöfe, mit sichtbaren Balken, Terrakottaböden und Möbeln aus der Familientradition. Alles lädt dazu ein, langsamer zu werden, sich zu setzen und durchzuatmen.",
+        "subtitle": "Draußen leben, Tage ohne Eile",
+        "title": "Die Außenbereiche",
+        "description": "Hier spielen sich die schönsten Momente im Freien ab. Die Panorama-Veranda ist unser lichtdurchflutetes Wohnzimmer: umrahmt von großen Fenstern mit Blick auf die Weinberge, lädt sie zu langsamen Morgen bei Kaffee und langen, entspannten Nachmittagen im Licht ein. Gleich dahinter öffnet sich der Garten zu den sanften Hügeln — eine ruhige Ecke, um tief durchzuatmen, im Schatten zu lesen und die Zeit zu dehnen. Zwei Räume aus Grün, natürlichem Licht und stiller Sorgfalt, für Gäste, die im Monferrato Ruhe, Natur und echtes Wohlbefinden suchen.",
         "features": {
-          "stone": "Stein & Sichtziegel",
-          "courtyard": "Blühender Innenhof",
-          "living": "Aufenthaltsraum mit Kamin",
-          "garden": "Garten & Weinberge"
+          "veranda": "Panorama-Veranda",
+          "garden": "Garten mit Hügelblick",
+          "light": "Viel natürliches Licht",
+          "slowness": "Zum Entschleunigen gemacht"
         }
       },
       "room": {
         "subtitle": "Ihr privater Rückzugsort",
         "title": "Das Zimmer",
-        "description": "Das Zimmer ist ein stilles, geborgenes Nest, eingerichtet mit authentischen Stücken der bäuerlichen Tradition und bis ins kleinste Detail gepflegten Oberflächen. Das handgefertigte Kingsize-Bett, bezogen mit Naturleinen und Baumwolle, verspricht tiefe Erholung; die Fenster öffnen sich zu den Hügeln und lassen das erste Morgenlicht herein. Ein separater Eingang sorgt für Freiheit und Ruhe, in einem Raum, der für zwei gedacht ist.",
+        "description": "Das Zimmer ist ein stilles, geborgenes Nest, eingerichtet mit authentischen Stücken der bäuerlichen Tradition und bis ins kleinste Detail gepflegten Oberflächen. Es kann für ein Paar mit Doppelbett oder für zwei Gäste mit Einzelbetten hergerichtet werden, bezogen mit Naturleinen und Baumwolle für erholsamen Schlaf; die Fenster öffnen sich zu den Hügeln und lassen das erste Morgenlicht herein. Das helle, private Bad mit historischen Fliesen und ein separater Eingang sorgen für Freiheit und Ruhe, in einem Raum, der für zwei gedacht ist.",
         "amenitiesTitle": "Komfort im Zimmer",
         "amenities": {
-          "bed": "Handgefertigtes Kingsize-Bett",
-          "bathroom": "Privates Bad aus Stein",
+          "bed": "Doppelbett oder zwei Einzelbetten",
+          "bathroom": "Helles Bad mit historischen Fliesen",
           "entrance": "Separater Eingang",
           "view": "Blick auf die Hügel",
           "wifi": "Kostenloses WLAN",
-          "climate": "Heizung & Klimaanlage"
+          "climate": "Heizung"
         }
       },
       "specs": {
@@ -120,12 +120,12 @@
           "label": "Gäste"
         },
         "size": {
-          "value": "28 m²",
+          "value": "37 m²",
           "label": "Zimmer & Bad"
         },
         "bed": {
-          "value": "King",
-          "label": "Doppelbett"
+          "value": "Doppel / Einzel",
+          "label": "Doppel- oder Einzelbetten"
         },
         "checkin": {
           "value": "15 – 20 Uhr",
@@ -134,6 +134,15 @@
       },
       "gallery": {
         "title": "Details des Hauses"
+      },
+      "images": {
+        "hero": "Das Landhaus bei Sonnenuntergang",
+        "spaces": "Die Veranda und der Garten",
+        "room": "Das Zimmer",
+        "yard": "Der Garten",
+        "bathroom": "Das Badezimmer",
+        "housefromabove": "Das Haus von oben",
+        "veranda": "Panoramaveranda"
       },
       "cta": {
         "title": "Erleben Sie es selbst",
