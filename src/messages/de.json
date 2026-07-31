@@ -274,25 +274,17 @@
       "onRequest": {
         "eyebrow": "Wann immer Sie es brauchen",
         "title": "Auf Anfrage",
-        "basket": {
-          "title": "Reisekorb",
-          "text": "Für frühe Abreisen oder ein Picknick zwischen den Reben bereiten wir ein Frühstück zum Mitnehmen vor."
-        },
         "tastings": {
           "title": "Verkostungen",
           "text": "Wir organisieren Besuche und Verkostungen in befreundeten Weingütern des Monferrato."
-        },
-        "bikes": {
-          "title": "Fahrradverleih",
-          "text": "Fahrräder und E-Bikes, um die Hügel auf zwei Rädern zu erkunden (nach Reservierung)."
         },
         "transfer": {
           "title": "Transfer & Ankunft",
           "text": "Wir können einen Transfer vom Bahnhof oder Flughafen organisieren."
         },
-        "pets": {
-          "title": "Vierbeinige Freunde",
-          "text": "Ihre Haustiere sind willkommen: teilen Sie es uns bei der Buchung mit."
+        "guide": {
+          "title": "Geführte Erlebnisse",
+          "text": "Ein ortskundiger Guide begleitet Sie durch Dörfer, Kunst und die Geschichten, die das Monferrato besonders machen."
         },
         "late": {
           "title": "Flexibler Check-in",

@@ -274,25 +274,17 @@
       "onRequest": {
         "eyebrow": "Quando vi serve",
         "title": "Su richiesta",
-        "basket": {
-          "title": "Cestino da viaggio",
-          "text": "Per le partenze all'alba o un picnic tra le vigne, prepariamo una colazione da portare con voi."
-        },
         "tastings": {
           "title": "Degustazioni",
           "text": "Organizziamo visite e degustazioni nelle cantine amiche del Monferrato."
-        },
-        "bikes": {
-          "title": "Noleggio biciclette",
-          "text": "Biciclette ed e-bike per esplorare le colline su due ruote (su prenotazione)."
         },
         "transfer": {
           "title": "Transfer e arrivi",
           "text": "Possiamo organizzare il transfer dalla stazione o dall'aeroporto."
         },
-        "pets": {
-          "title": "Amici a quattro zampe",
-          "text": "I vostri animali sono i benvenuti: segnalatecelo al momento della prenotazione."
+        "guide": {
+          "title": "Esperienze guidate",
+          "text": "Una guida del posto per accompagnarvi tra borghi, arte e le storie che rendono speciale il Monferrato."
         },
         "late": {
           "title": "Check-in flessibile",

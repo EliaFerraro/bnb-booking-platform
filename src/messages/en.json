@@ -274,25 +274,17 @@
       "onRequest": {
         "eyebrow": "Whenever you need it",
         "title": "On Request",
-        "basket": {
-          "title": "Travel basket",
-          "text": "For early departures or a picnic among the vines, we prepare a breakfast to take with you."
-        },
         "tastings": {
           "title": "Tastings",
           "text": "We arrange visits and tastings in our favourite Monferrato wineries."
-        },
-        "bikes": {
-          "title": "Bike rental",
-          "text": "Bicycles and e-bikes to explore the hills on two wheels (by reservation)."
         },
         "transfer": {
           "title": "Transfers & arrivals",
           "text": "We can arrange a transfer from the station or the airport."
         },
-        "pets": {
-          "title": "Four-legged friends",
-          "text": "Your pets are welcome: just let us know when you book."
+        "guide": {
+          "title": "Guided experiences",
+          "text": "A local guide to walk you through villages, art and the stories that make the Monferrato special."
         },
         "late": {
           "title": "Flexible check-in",

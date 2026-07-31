@@ -34,7 +34,7 @@ const INCLUDED = [
   { key: "tips", icon: MapsLocation01Icon },
 ] as const;
 
-const ON_REQUEST = ["basket", "tastings", "bikes", "transfer", "pets", "late"] as const;
+const ON_REQUEST = ["tastings", "guide", "transfer", "late"] as const;
 
 function ServicesContent({ locale }: { locale: string }) {
   const t = useTranslations("pages.services");
