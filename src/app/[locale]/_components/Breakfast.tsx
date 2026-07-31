@@ -11,9 +11,9 @@ export function Breakfast() {
   return (
     <section
       id="breakfast-section"
-      className="w-full bg-primary-500 py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden"
+      className="w-full bg-primary-500 py-16 md:py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
         <div className="lg:col-span-7 flex flex-col justify-center">
           <span className="font-sans text-xs md:text-sm tracking-[0.3em] text-secondary-200 uppercase mb-3 block font-medium">
             {t("subtitle")}
@@ -64,7 +64,7 @@ export function Breakfast() {
         </div>
 
         <div
-          className={`lg:col-span-5 w-full aspect-4/3 sm:aspect-video lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[16px_160px_16px_160px]`}
+          className={`lg:col-span-5 w-full aspect-4/3 sm:aspect-video lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
         >
           <img
             className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out"

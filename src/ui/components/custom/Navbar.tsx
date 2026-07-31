@@ -4,8 +4,6 @@ import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
 import { Button } from "@/ui/components/shadcn/button";
 import { NavbarLink } from "@/ui/components/custom/NavbarLink";
 import { MobileSidebar } from "@/ui/components/custom/MobileSidebar";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { UserCircleIcon } from "@hugeicons/core-free-icons";
 
 export function Navbar() {
   const t = useTranslations("navbar");
@@ -40,16 +38,8 @@ export function Navbar() {
         )
       }
 
-      <div className="flex items-center md:mr-4 gap-2">
-        <div className="hidden md:block">
-          <LanguagePicker />
-        </div>
-
-        {
-          <Button variant="ghost" className="opacity-0 md:hidden">
-            <HugeiconsIcon icon={UserCircleIcon} className="size-7" />
-          </Button>
-        }
+      <div className="flex items-center mr-2 md:mr-4 gap-2">
+        <LanguagePicker />
       </div>
     </header>
   );

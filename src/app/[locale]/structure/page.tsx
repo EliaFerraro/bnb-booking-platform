@@ -45,7 +45,7 @@ function StructureContent({ locale }: { locale: string }) {
       />
 
       {/* Intro */}
-      <section className="w-full bg-neutral-50 py-24 md:py-32 px-6">
+      <section className="w-full bg-neutral-50 py-16 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-4 block font-semibold">
             {t("intro.eyebrow")}
@@ -63,9 +63,9 @@ function StructureContent({ locale }: { locale: string }) {
       </section>
 
       {/* Shared spaces */}
-      <section className="w-full py-24 bg-secondary-50/40">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          <div className="lg:col-span-6 h-112.5 md:h-137.5 w-full overflow-hidden shadow-md rounded-[160px_16px_160px_16px]">
+      <section className="w-full py-16 md:py-24 bg-secondary-50/40">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
+          <div className="lg:col-span-6 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-md rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
             <img
               className="w-full h-full object-cover"
               src="/img/photos/Casa dall'alto.jpg"
@@ -76,10 +76,10 @@ function StructureContent({ locale }: { locale: string }) {
             <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-3 block font-semibold">
               {t("house.subtitle")}
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
+            <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-5 md:mb-8">
               {t("house.title")}
             </h2>
-            <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-8 text-justify">
+            <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-6 md:mb-8 text-justify">
               {t("house.description")}
             </p>
             <div className="grid grid-cols-2 gap-y-4 gap-x-6 border-t border-b border-neutral-200 py-6 text-xs tracking-wider uppercase text-neutral-600 font-medium">
@@ -92,16 +92,16 @@ function StructureContent({ locale }: { locale: string }) {
       </section>
 
       {/* The room */}
-      <section className="w-full py-24 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <section className="w-full py-16 md:py-24 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
           <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
             <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
               {t("room.subtitle")}
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
+            <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-5 md:mb-8">
               {t("room.title")}
             </h2>
-            <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-8 text-justify">
+            <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-6 md:mb-8 text-justify">
               {t("room.description")}
             </p>
             <span className="font-sans text-[11px] tracking-[0.25em] text-neutral-500 uppercase mb-5 block font-semibold">
@@ -122,7 +122,7 @@ function StructureContent({ locale }: { locale: string }) {
               ))}
             </div>
           </div>
-          <div className="lg:col-span-6 order-1 lg:order-2 h-125 md:h-150 w-full overflow-hidden shadow-md rounded-[16px_160px_16px_160px]">
+          <div className="lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
             <img
               className="w-full h-full object-cover"
               src="/img/photos/bedroom.jpg"
@@ -149,7 +149,7 @@ function StructureContent({ locale }: { locale: string }) {
       </section>
 
       {/* Gallery */}
-      <section className="w-full bg-neutral-50 py-24 px-6">
+      <section className="w-full bg-neutral-50 py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-primary-500 text-center mb-14">
             {t("gallery.title")}
@@ -160,8 +160,8 @@ function StructureContent({ locale }: { locale: string }) {
                 key={g.src}
                 className={`overflow-hidden shadow-sm aspect-4/5 ${
                   i % 2 === 0
-                    ? "rounded-[80px_12px_80px_12px]"
-                    : "rounded-[12px_80px_12px_80px]"
+                    ? "rounded-[32px_10px_32px_10px] md:rounded-[80px_12px_80px_12px]"
+                    : "rounded-[10px_32px_10px_32px] md:rounded-[12px_80px_12px_80px]"
                 }`}
               >
                 <img

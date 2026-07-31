@@ -14,21 +14,21 @@ export function Services() {
   return (
     <section
       id="servizi-section"
-      className="w-full bg-secondary-50 py-24 px-6 md:px-12 lg:px-24 text-neutral-950"
+      className="w-full bg-secondary-50 py-16 md:py-24 px-6 md:px-12 lg:px-24 text-neutral-950"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16 md:mb-20">
+        <div className="mb-10 md:mb-20">
           <h2 className="font-serif text-3xl md:text-4xl tracking-[0.2em] uppercase text-primary-500">
             {t("title")}
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 items-center justify-items-center mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 md:gap-y-16 items-center justify-items-center mb-10 md:mb-16">
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
+            <div className="w-16 h-16 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 md:mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={WifiIcon}
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-7 h-7 md:w-12 md:h-12"
                 strokeWidth={1.2}
               />
             </div>
@@ -38,10 +38,10 @@ export function Services() {
           </div>
 
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
+            <div className="w-16 h-16 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 md:mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={WashingMachineIcon}
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-7 h-7 md:w-12 md:h-12"
                 strokeWidth={1.2}
               />
             </div>
@@ -51,10 +51,10 @@ export function Services() {
           </div>
 
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
+            <div className="w-16 h-16 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 md:mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={ParkingAreaCircleIcon}
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-7 h-7 md:w-12 md:h-12"
                 strokeWidth={1.2}
               />
             </div>
@@ -64,10 +64,10 @@ export function Services() {
           </div>
 
           <div className="flex flex-col items-center group">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-6 text-primary-500 transition-all duration-300 shadow-sm">
+            <div className="w-16 h-16 md:w-28 md:h-28 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 md:mb-6 text-primary-500 transition-all duration-300 shadow-sm">
               <HugeiconsIcon
                 icon={TerraceIcon}
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-7 h-7 md:w-12 md:h-12"
                 strokeWidth={1.2}
               />
             </div>

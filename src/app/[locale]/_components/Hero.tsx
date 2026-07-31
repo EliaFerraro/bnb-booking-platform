@@ -8,7 +8,7 @@ export function Hero() {
         <h1 className="text-center text-5xl md:text-7xl tracking-widest">
           IL RESPIRO DEL BORGO
         </h1>
-        <div className="flex flex-col items-center text-base md:text-2xl mt-40 tracking-widest text-center">
+        <div className="flex flex-col items-center text-base md:text-2xl mt-24 md:mt-40 tracking-widest text-center">
           <span>{t("pages.homepage.hero.subtitle.keywords")}</span>
           <span>{t("pages.homepage.hero.subtitle.slogan")}</span>
         </div>

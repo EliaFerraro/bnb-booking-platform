@@ -50,7 +50,7 @@ function ServicesContent({ locale }: { locale: string }) {
       />
 
       {/* Intro */}
-      <section className="w-full bg-neutral-50 py-24 md:py-32 px-6">
+      <section className="w-full bg-neutral-50 py-16 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-4 block font-semibold">
             {t("intro.eyebrow")}
@@ -65,9 +65,9 @@ function ServicesContent({ locale }: { locale: string }) {
       </section>
 
       {/* Breakfast feature (sage band) */}
-      <section className="w-full bg-primary-500 py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 w-full aspect-4/3 lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[160px_16px_160px_16px] order-1">
+      <section className="w-full bg-primary-500 py-16 md:py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+          <div className="lg:col-span-5 w-full aspect-4/3 lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px] order-1">
             <img
               className="w-full h-full object-cover object-center"
               src="/img/photos/Casa con colazione.jpg"
@@ -103,9 +103,9 @@ function ServicesContent({ locale }: { locale: string }) {
       </section>
 
       {/* Included services grid */}
-      <section className="w-full bg-secondary-50 py-24 px-6 md:px-12 lg:px-24 text-neutral-950">
+      <section className="w-full bg-secondary-50 py-16 md:py-24 px-6 md:px-12 lg:px-24 text-neutral-950">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-3 block font-semibold">
               {t("included.eyebrow")}
             </span>
@@ -113,13 +113,13 @@ function ServicesContent({ locale }: { locale: string }) {
               {t("included.title")}
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14 items-start justify-items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 md:gap-y-14 items-start justify-items-center">
             {INCLUDED.map(({ key, icon }) => (
               <div key={key} className="flex flex-col items-center text-center max-w-44">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary-500 flex items-center justify-center mb-5 text-primary-500 shadow-sm">
+                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-primary-500 flex items-center justify-center mb-4 md:mb-5 text-primary-500 shadow-sm">
                   <HugeiconsIcon
                     icon={icon}
-                    className="w-9 h-9 md:w-10 md:h-10"
+                    className="w-7 h-7 md:w-10 md:h-10"
                     strokeWidth={1.2}
                   />
                 </div>
@@ -136,7 +136,7 @@ function ServicesContent({ locale }: { locale: string }) {
       </section>
 
       {/* On request */}
-      <section className="w-full bg-neutral-50 py-24 px-6">
+      <section className="w-full bg-neutral-50 py-16 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-3 block font-semibold">

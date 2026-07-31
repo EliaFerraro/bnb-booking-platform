@@ -22,8 +22,8 @@ export function PageCta({
     <section
       className={
         isSage
-          ? "w-full bg-secondary-500 text-neutral-50 py-24 px-6"
-          : "w-full bg-secondary-50 text-neutral-950 py-24 px-6"
+          ? "w-full bg-secondary-500 text-neutral-50 py-16 md:py-24 px-6"
+          : "w-full bg-secondary-50 text-neutral-950 py-16 md:py-24 px-6"
       }
     >
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center">

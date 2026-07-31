@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { Button } from "@/ui/components/shadcn/button";
@@ -20,6 +20,14 @@ export function MobileSidebar() {
   ];
 
   const close = () => setOpen(false);
+
+  // Blocca lo scroll della pagina mentre la sidebar è aperta
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <div className="md:hidden">

@@ -5,17 +5,17 @@ import Link from "next/link";
 export function Montemagno() {
   const t = useTranslations("pages.homepage.montemagno");
   return (
-    <section id="montemagno-section" className="w-full py-32 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+    <section id="montemagno-section" className="w-full py-16 md:py-32 bg-neutral-50">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
         <div className="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
           <span className="font-sans text-xs tracking-[0.3em] text-primary-500 uppercase mb-3 block font-semibold">
             {t("subtitle")}
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-8">
+          <h2 className="text-4xl md:text-5xl font-serif tracking-widest text-neutral-950 uppercase mb-5 md:mb-8">
             {t("title")}
           </h2>
 
-          <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-8 text-justify">
+          <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-6 md:mb-8 text-justify">
             {t("description")}
           </p>
 
@@ -55,7 +55,7 @@ export function Montemagno() {
         </div>
 
         <div
-          className={`lg:col-span-6 order-1 lg:order-2 h-125 md:h-150 w-full overflow-hidden shadow-lg group rounded-[16px_160px_16px_160px]`}
+          className={`lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-lg group rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
         >
           <img
             className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"

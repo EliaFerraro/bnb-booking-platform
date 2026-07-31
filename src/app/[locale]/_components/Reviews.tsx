@@ -37,7 +37,7 @@ export function Reviews() {
   return (
     <section
       id="reviews-section"
-      className="w-full bg-secondary-50/50 py-24 px-6 md:px-12 lg:px-24 text-neutral-950"
+      className="w-full bg-secondary-50/50 py-16 md:py-24 px-6 md:px-12 lg:px-24 text-neutral-950"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16">

@@ -14,9 +14,9 @@ export function AboutUs() {
           <div className="h-px w-12 bg-secondary-600 mx-auto mt-4" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center">
           <div
-            className={`w-full aspect-4/5 overflow-hidden shadow-sm order-1 rounded-[160px_16px_160px_16px]`}
+            className={`w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-1 rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
           >
             <img
               src="/img/photos/Lorenzo.jpg"
@@ -41,7 +41,7 @@ export function AboutUs() {
           </div>
 
           <div
-            className={`w-full aspect-4/5 overflow-hidden shadow-sm order-2 lg:order-3 rounded-[16px_160px_16px_160px]`}
+            className={`w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-2 lg:order-3 rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
           >
             <img
               src="/img/photos/Margherita.jpg"
