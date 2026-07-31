@@ -5,6 +5,7 @@ import { AboutUs } from "./_components/AboutUs";
 import { Monferrato } from "./_components/Monferrato";
 import { Breakfast } from "./_components/Breakfast";
 import { Services } from "./_components/Services";
+import { Reviews } from "./_components/Reviews";
 import { Map } from "./_components/Map";
 import { Montemagno } from "./_components/Montemagno";
 import { setRequestLocale } from "next-intl/server";
@@ -26,6 +27,7 @@ export default async function Home({
       <Monferrato />
       <Breakfast />
       <Services />
+      <Reviews />
       <Map />
     </main>
   );

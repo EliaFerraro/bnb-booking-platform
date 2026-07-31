@@ -73,6 +73,45 @@
           "local": "Km Cero & Naturaleza"
         }
       },
+      "reviews": {
+        "subtitle": "La voz de nuestros huéspedes",
+        "title": "Reseñas",
+        "ratingLabel": "Valoración media en Google",
+        "sourceLabel": "Reseña en Google",
+        "cta": "Leer todas las reseñas en Google",
+        "items": [
+          {
+            "name": "Franco Bocca",
+            "rating": 5,
+            "text": "Una estancia agradabilísima en un entorno rodeado de verde, cuidado en cada detalle y con vistas impresionantes. Limpieza impecable. La cálida acogida, la amabilidad y la disponibilidad de los propietarios son un valor añadido que hace que la experiencia sea inolvidable. ¡Sin duda repetiremos!"
+          },
+          {
+            "name": "Samantha Gallo",
+            "rating": 5,
+            "text": "Pasamos 2 noches en este lugar maravilloso y enseguida nos sentimos como en casa. Muy limpio y la señora Margherita amabilísima. Recomiendo a todos probar esta hermosa experiencia, ¡volveremos!"
+          },
+          {
+            "name": "Manuela Testa",
+            "rating": 5,
+            "text": "Nos alojamos solo una noche en el B&B Il Respiro del Borgo pero enseguida nos sentimos como en casa. La habitación es amplia, limpia y en la planta baja. Espléndidas vistas a las colinas y al castillo de Montemagno."
+          },
+          {
+            "name": "Ilaria Guazzo",
+            "rating": 5,
+            "text": "La estancia con Margherita fue muy agradable. La habitación estaba impecable y el desayuno delicioso. Margherita fue amabilísima y siempre disponible. ¡Muy recomendable!"
+          },
+          {
+            "name": "Maura Ferrari",
+            "rating": 5,
+            "text": "Un lugar acogedor y limpio. La habitación es espaciosa y da a un precioso jardín. Una ubicación con vistas impresionantes a las colinas y al castillo de Montemagno, en el corazón del Monferrato."
+          },
+          {
+            "name": "Liliana Aiulfi",
+            "rating": 5,
+            "text": "¡Un lugar realmente encantador y unos anfitriones exquisitos! Nos sentimos como en casa. Lo recomiendo al 100%. Volveremos… ¡prometido!!"
+          }
+        ]
+      },
       "map": {
         "title": "Ubicación de Il Respiro del Borgo en Montemagno"
       }

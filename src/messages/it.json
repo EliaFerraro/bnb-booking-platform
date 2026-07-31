@@ -73,6 +73,45 @@
           "local": "Km Zero & Natura"
         }
       },
+      "reviews": {
+        "subtitle": "La voce dei nostri ospiti",
+        "title": "Recensioni",
+        "ratingLabel": "Valutazione media su Google",
+        "sourceLabel": "Recensione su Google",
+        "cta": "Leggi tutte le recensioni su Google",
+        "items": [
+          {
+            "name": "Franco Bocca",
+            "rating": 5,
+            "text": "Piacevolissimo soggiorno in una location immersa nel verde, curata in ogni dettaglio e con vista mozzafiato. Pulizia impeccabile. La cordiale accoglienza, la gentilezza e la disponibilità dei proprietari sono un valore aggiunto che rende l'esperienza indimenticabile. Da ripetere sicuramente!"
+          },
+          {
+            "name": "Samantha Gallo",
+            "rating": 5,
+            "text": "Abbiamo soggiornato 2 notti in questo posto stupendo e subito ci siamo sentiti a casa. Ottima la pulizia e la signora Margherita super gentile! Consiglio a chiunque di provare questa bellissima esperienza, ci torneremo!"
+          },
+          {
+            "name": "Manuela Testa",
+            "rating": 5,
+            "text": "Abbiamo soggiornato una sola notte al B&B Il Respiro del Borgo ma ci siamo sentiti subito a casa. La stanza è ampia, pulita e posta al piano terra. Splendida la vista sulle colline e sul castello di Montemagno."
+          },
+          {
+            "name": "Ilaria Guazzo",
+            "rating": 5,
+            "text": "Il soggiorno da Margherita è stato molto piacevole. La camera era pulitissima e la colazione deliziosa. Margherita è stata super gentile e sempre disponibile. Consigliatissimo!"
+          },
+          {
+            "name": "Maura Ferrari",
+            "rating": 5,
+            "text": "Posto accogliente e pulito. La stanza è spaziosa e si affaccia su un bellissimo giardino. Posizione con vista mozzafiato sulle colline e sul castello di Montemagno, immersa nel Monferrato."
+          },
+          {
+            "name": "Liliana Aiulfi",
+            "rating": 5,
+            "text": "Posto davvero incantevole e padroni di casa squisiti! Ci siamo sentiti a casa. Lo consiglio al 100%. Ci torneremo… promesso!!"
+          }
+        ]
+      },
       "map": {
         "title": "Posizione di Il Respiro del Borgo a Montemagno"
       }
