@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# Enabled by `git config core.hooksPath .githooks`, which src/package.json runs
+# automatically from its "prepare" script on npm install. To wire it up by hand:
+#
+#     git config core.hooksPath .githooks
+#
+# The npm project lives in src/ while the git root is one level up, so every
+# step below runs from src/. Skip once with `git commit --no-verify`.
+
+set -e
+
+cd "$(git rev-parse --show-toplevel)/src"
+
+if [ ! -d node_modules ]; then
+  echo "pre-commit: src/node_modules is missing — run 'npm install' in src/." >&2
+  exit 1
+fi
+
+# 1. ESLint with --fix on staged .ts/.tsx only, so the hook stays fast and
+#    re-stages anything it repairs. Warnings pass; errors block.
+npx --no-install lint-staged
+
+# 2. The five locale files share no type link, so a key added to one and
+#    forgotten in another would only fail at runtime.
+npm run --silent check:locales
+
+# 3. Type errors span files that are not staged, so this has to be project-wide.
+npm run --silent typecheck
+
+echo "pre-commit: checks passed"
