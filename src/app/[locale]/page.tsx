@@ -6,7 +6,6 @@ import { Monferrato } from "./_components/Monferrato";
 import { Breakfast } from "./_components/Breakfast";
 import { Services } from "./_components/Services";
 import { Reviews } from "./_components/Reviews";
-import { Map } from "./_components/Map";
 import { Montemagno } from "./_components/Montemagno";
 import { setRequestLocale } from "next-intl/server";
 
@@ -17,8 +16,10 @@ export default async function Home({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  // Frammento e non <main>: il layout avvolge già children in <main>, e due
+  // <main> annidati non sono HTML valido. Le altre pagine fanno già così.
   return (
-    <main>
+    <>
       <Hero />
       <Room />
       <House />
@@ -28,7 +29,6 @@ export default async function Home({
       <Breakfast />
       <Services />
       <Reviews />
-      <Map />
-    </main>
+    </>
   );
 }

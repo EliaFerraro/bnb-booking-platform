@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { Navbar } from "@/ui/components/custom/Navbar";
 import { Footer } from "@/ui/components/custom/Footer";
+import { Map } from "@/app/[locale]/_components/Map";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
@@ -38,6 +39,9 @@ export default async function LocaleLayout({
         <Navbar />
 
         <main>{children}</main>
+
+        {/* Sopra il footer su ogni pagina: la posizione è utile ovunque. */}
+        <Map />
 
         <Footer />
       </div>

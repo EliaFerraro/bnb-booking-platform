@@ -11,6 +11,9 @@
     "mailSubject": "Informationsanfrage — Il Respiro del Borgo",
     "mailBody": "Guten Tag,\n\nich möchte gerne die Verfügbarkeit anfragen.\n\nZeitraum: vom ___ bis ___\nGäste: ___\n\nAnmerkungen:\n\nVielen Dank,\n"
   },
+  "map": {
+    "title": "Standort von Il Respiro del Borgo in Montemagno"
+  },
   "enquiryEmail": {
     "subject": "Wir haben Ihre Anfrage erhalten — {structure}",
     "greeting": "Sehr geehrte/r {name},",
@@ -128,9 +131,6 @@
             "text": "Ein wahrhaft bezaubernder Ort mit herrlichen Gastgebern! Wir fühlten uns wie zu Hause. Ich empfehle ihn zu 100 %. Wir kommen wieder … versprochen!!"
           }
         ]
-      },
-      "map": {
-        "title": "Standort von Il Respiro del Borgo in Montemagno"
       }
     },
     "structure": {
@@ -452,9 +452,6 @@
           "text": "Flughäfen Turin Caselle (~70 km), Mailand Malpensa und Genua (~110 km). Ein Mietwagen wird empfohlen, um die Hügel zu erkunden."
         },
         "note": "Detaillierte Wegbeschreibungen und den genauen Standort senden wir Ihnen nach Bestätigung Ihrer Buchung."
-      },
-      "map": {
-        "title": "Lage von Il Respiro del Borgo in Montemagno"
       },
       "closing": {
         "title": "Bereit, das Dorf zu atmen?",

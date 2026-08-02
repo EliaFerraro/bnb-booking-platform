@@ -11,6 +11,9 @@
     "mailSubject": "Richiesta informazioni — Il Respiro del Borgo",
     "mailBody": "Buongiorno,\n\nvorrei informazioni sulla disponibilità.\n\nDate: dal ___ al ___\nOspiti: ___\n\nNote:\n\nGrazie,\n"
   },
+  "map": {
+    "title": "Posizione di Il Respiro del Borgo a Montemagno"
+  },
   "enquiryEmail": {
     "subject": "Abbiamo ricevuto la vostra richiesta — {structure}",
     "greeting": "Gentile {name},",
@@ -128,9 +131,6 @@
             "text": "Posto davvero incantevole e padroni di casa squisiti! Ci siamo sentiti a casa. Lo consiglio al 100%. Ci torneremo… promesso!!"
           }
         ]
-      },
-      "map": {
-        "title": "Posizione di Il Respiro del Borgo a Montemagno"
       }
     },
     "structure": {
@@ -452,9 +452,6 @@
           "text": "Aeroporti di Torino Caselle (~70 km), Milano Malpensa e Genova (~110 km). Noleggio auto consigliato per esplorare le colline."
         },
         "note": "Vi invieremo indicazioni dettagliate e la posizione esatta al momento della conferma della prenotazione."
-      },
-      "map": {
-        "title": "Posizione di Il Respiro del Borgo a Montemagno"
       },
       "closing": {
         "title": "Pronti a respirare il borgo?",

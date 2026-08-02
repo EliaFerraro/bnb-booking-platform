@@ -195,19 +195,7 @@ function ContactContent() {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="w-full bg-secondary-50">
-        <div className="w-full h-80 md:h-112.5 relative shadow-inner overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.348633800613!2d8.3228965!3d44.9772095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787948ef5336e1b%3A0x600ba4974f88e404!2sVia%20della%20Pace%2C%2024%2C%2014030%20Montemagno%20AT!5e0!3m2!1sit!2sit!4v1716750000000!5m2!1sit!2sit"
-            className="w-full h-full border-0 grayscale opacity-85 hover:grayscale-0 transition-all duration-700 ease-in-out"
-            allowFullScreen={false}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={t("map.title")}
-          />
-        </div>
-      </section>
+      {/* La mappa non è più qui: il layout la rende sopra il footer di ogni pagina. */}
 
       {/* Closing call band */}
       <section className="w-full bg-primary-500 text-neutral-50 py-16 md:py-24 px-6">
