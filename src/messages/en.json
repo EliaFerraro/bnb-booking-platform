@@ -382,9 +382,12 @@
         "title": "Write to us in a minute",
         "body": "Tell us your dates and how many guests you are: that way we can reply straight away with availability and a price, with no unnecessary back and forth.",
         "fields": {
-          "name": "Full name",
+          "firstName": "First name",
+          "lastName": "Last name",
           "email": "Email",
+          "emailPlaceholder": "name@example.com",
           "phone": "Phone (optional)",
+          "phonePlaceholder": "+39 333 123 4567",
           "arrival": "Arrival",
           "departure": "Departure",
           "guests": "Guests",
@@ -402,9 +405,13 @@
           "faster": "Message us on WhatsApp"
         },
         "errors": {
-          "name": {
-            "tooShort": "Please enter your name.",
-            "tooLong": "That name is too long."
+          "firstName": {
+            "tooShort": "Please enter your first name.",
+            "tooLong": "That first name is too long."
+          },
+          "lastName": {
+            "tooShort": "Please enter your last name.",
+            "tooLong": "That last name is too long."
           },
           "email": {
             "invalid": "Please enter a valid email address.",
@@ -423,8 +430,7 @@
             "notAfterArrival": "Departure must be after arrival."
           },
           "guests": {
-            "invalid": "Please enter a valid number of guests.",
-            "tooMany": "For larger groups please write to us directly — we'll find a solution."
+            "invalid": "Please enter a valid number of guests."
           },
           "message": {
             "tooShort": "Please write a little more so we can help you properly.",

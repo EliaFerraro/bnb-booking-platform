@@ -1,30 +1,39 @@
 "use client";
 
-import { useActionState, useEffect, useId, useRef } from "react";
+import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Alert02Icon,
   CheckmarkCircle02Icon,
+  UserMultiple02Icon,
   WhatsappIcon,
 } from "@hugeicons/core-free-icons";
 
 import { Button } from "@/ui/components/shadcn/button";
+import { TextField } from "@/ui/components/form/TextField";
+import { TextareaField } from "@/ui/components/form/TextareaField";
 import { LegalPolicyModal } from "@/ui/components/custom/LegalPolicyModal";
 import { mailtoHref, whatsappHref } from "@/configuration/contact";
 import { submitEnquiry } from "@/lib/enquiry/actions";
 import { initialEnquiryState } from "@/lib/enquiry/state";
-import type { EnquiryInput } from "@/lib/enquiry/schema";
-import { cn } from "@/lib/utils";
+import { enquirySchema, firstIssuePerField } from "@/lib/enquiry/schema";
 
-type EnquiryField = keyof EnquiryInput;
+const EMPTY_VALUES = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  arrival: "",
+  departure: "",
+  guests: "",
+  message: "",
+};
 
-const FIELD_CLASS =
-  "w-full rounded-[8px] border border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-950 transition-colors placeholder:text-neutral-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25 aria-[invalid=true]:border-red-600";
+type FieldName = keyof typeof EMPTY_VALUES;
 
-const LABEL_CLASS =
-  "block text-[11px] tracking-[0.2em] uppercase text-neutral-600 font-semibold mb-2";
+const FIELD_NAMES = Object.keys(EMPTY_VALUES) as FieldName[];
 
 export function EnquiryForm() {
   const t = useTranslations("pages.contact.form");
@@ -37,14 +46,18 @@ export function EnquiryForm() {
     initialEnquiryState
   );
 
+  const [values, setValues] = useState(EMPTY_VALUES);
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
+  const [submitAttempt, setSubmitAttempt] = useState(0);
+
   const formRef = useRef<HTMLFormElement>(null);
   const startedAtRef = useRef<HTMLInputElement>(null);
   const arrivalRef = useRef<HTMLInputElement>(null);
   const departureRef = useRef<HTMLInputElement>(null);
-  const baseId = useId();
 
   // Stamped after mount so the server renders no time-dependent value, which
-  // would otherwise produce a hydration mismatch.
+  // would otherwise produce a hydration mismatch. Same reason for the date
+  // minimums: "today" is not knowable at render time on the server.
   useEffect(() => {
     if (startedAtRef.current) {
       startedAtRef.current.value = String(Date.now());
@@ -54,16 +67,60 @@ export function EnquiryForm() {
     departureRef.current?.setAttribute("min", today);
   }, []);
 
-  const fieldErrors = state.status === "error" ? state.fieldErrors : undefined;
+  // The same schema the server uses, so a field can never be accepted here and
+  // rejected there. Cross-field rules work because the whole object is parsed;
+  // only the display is filtered by which fields have been touched.
+  const clientErrors = useMemo(() => {
+    const result = enquirySchema.safeParse({
+      ...values,
+      locale,
+      sourcePath: pathname,
+    });
+    return result.success ? {} : firstIssuePerField(result.error);
+  }, [values, locale, pathname]);
 
-  // Move focus to the first rejected field so keyboard and screen-reader users
-  // are not left at the bottom of the form guessing what failed.
+  const serverErrors = state.status === "error" ? state.fieldErrors : undefined;
+
+  /** Live validation once a field has been left; server errors until then. */
+  const errorFor = (field: FieldName) => {
+    const key = touched[field] ? clientErrors[field] : serverErrors?.[field];
+    return key ? t(`errors.${key}`) : undefined;
+  };
+
+  const handleChange = (field: FieldName) => (value: string) =>
+    setValues((previous) => ({ ...previous, [field]: value }));
+
+  const markTouched = (...fields: FieldName[]) =>
+    setTouched((previous) => {
+      const next = { ...previous };
+      for (const field of fields) next[field] = true;
+      return next;
+    });
+
+  const fieldProps = (field: FieldName) => ({
+    name: field,
+    value: values[field],
+    error: errorFor(field),
+    onChange: (event: { target: { value: string } }) =>
+      handleChange(field)(event.target.value),
+    // Blurring either date also reveals the other's error: the "departure
+    // needs an arrival" rule is reported on a field the guest never touched.
+    onBlur: () =>
+      field === "arrival" || field === "departure"
+        ? markTouched("arrival", "departure")
+        : markTouched(field),
+  });
+
+  const hasClientErrors = Object.keys(clientErrors).length > 0;
+
+  // Focus the first rejected control after a blocked submit or a server
+  // rejection, so keyboard and screen-reader users are not left guessing.
   useEffect(() => {
-    if (!fieldErrors) return;
+    if (submitAttempt === 0 && !serverErrors) return;
     formRef.current
       ?.querySelector<HTMLElement>('[aria-invalid="true"]')
       ?.focus();
-  }, [fieldErrors]);
+  }, [submitAttempt, serverErrors]);
 
   if (state.status === "success") {
     return (
@@ -101,36 +158,19 @@ export function EnquiryForm() {
     );
   }
 
-  const errorFor = (field: EnquiryField) => fieldErrors?.[field];
-
-  const describedBy = (field: EnquiryField) =>
-    errorFor(field) ? `${baseId}-${field}-error` : undefined;
-
-  // A plain render function rather than a nested component, so React does not
-  // remount the node on every parent render.
-  const fieldError = (field: EnquiryField) => {
-    const code = errorFor(field);
-    if (!code) return null;
-    return (
-      <p
-        id={`${baseId}-${field}-error`}
-        className="mt-2 flex items-start gap-1.5 text-xs text-red-700"
-      >
-        <HugeiconsIcon
-          icon={Alert02Icon}
-          className="w-3.5 h-3.5 mt-px shrink-0"
-          strokeWidth={2}
-        />
-        <span>{t(`errors.${code}`)}</span>
-      </p>
-    );
-  };
-
   return (
     <form
       ref={formRef}
       action={formAction}
       noValidate
+      onSubmit={(event) => {
+        // Without JavaScript this never runs and the server validates instead.
+        if (hasClientErrors) {
+          event.preventDefault();
+          markTouched(...FIELD_NAMES);
+          setSubmitAttempt((attempt) => attempt + 1);
+        }
+      }}
       className="max-w-3xl mx-auto"
     >
       <input type="hidden" name="locale" value={locale} />
@@ -144,9 +184,9 @@ export function EnquiryForm() {
         style={{ position: "absolute", left: "-9999px" }}
         className="w-px h-px overflow-hidden"
       >
-        <label htmlFor={`${baseId}-website`}>Website</label>
+        <label htmlFor="enquiry-website">Website</label>
         <input
-          id={`${baseId}-website`}
+          id="enquiry-website"
           type="text"
           name="website"
           tabIndex={-1}
@@ -154,123 +194,79 @@ export function EnquiryForm() {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
-        <div className="sm:col-span-1">
-          <label htmlFor={`${baseId}-name`} className={LABEL_CLASS}>
-            {t("fields.name")} *
-          </label>
-          <input
-            id={`${baseId}-name`}
-            name="name"
-            type="text"
-            autoComplete="name"
-            required
-            className={FIELD_CLASS}
-            aria-invalid={Boolean(errorFor("name"))}
-            aria-describedby={describedBy("name")}
-          />
-          {fieldError("name")}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-6 gap-x-6 gap-y-5">
+        <TextField
+          {...fieldProps("firstName")}
+          className="sm:col-span-3"
+          label={t("fields.firstName")}
+          type="text"
+          autoComplete="given-name"
+          required
+        />
 
-        <div className="sm:col-span-1">
-          <label htmlFor={`${baseId}-email`} className={LABEL_CLASS}>
-            {t("fields.email")} *
-          </label>
-          <input
-            id={`${baseId}-email`}
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-            className={FIELD_CLASS}
-            aria-invalid={Boolean(errorFor("email"))}
-            aria-describedby={describedBy("email")}
-          />
-          {fieldError("email")}
-        </div>
+        <TextField
+          {...fieldProps("lastName")}
+          className="sm:col-span-3"
+          label={t("fields.lastName")}
+          type="text"
+          autoComplete="family-name"
+          required
+        />
 
-        <div className="sm:col-span-2">
-          <label htmlFor={`${baseId}-phone`} className={LABEL_CLASS}>
-            {t("fields.phone")}
-          </label>
-          <input
-            id={`${baseId}-phone`}
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            className={FIELD_CLASS}
-            aria-invalid={Boolean(errorFor("phone"))}
-            aria-describedby={describedBy("phone")}
-          />
-          {fieldError("phone")}
-        </div>
+        <TextField
+          {...fieldProps("email")}
+          className="sm:col-span-3"
+          label={t("fields.email")}
+          type="email"
+          autoComplete="email"
+          placeholder={t("fields.emailPlaceholder")}
+          required
+        />
 
-        <div>
-          <label htmlFor={`${baseId}-arrival`} className={LABEL_CLASS}>
-            {t("fields.arrival")}
-          </label>
-          <input
-            id={`${baseId}-arrival`}
-            ref={arrivalRef}
-            name="arrival"
-            type="date"
-            className={FIELD_CLASS}
-            aria-invalid={Boolean(errorFor("arrival"))}
-            aria-describedby={describedBy("arrival")}
-          />
-          {fieldError("arrival")}
-        </div>
+        <TextField
+          {...fieldProps("phone")}
+          className="sm:col-span-3"
+          label={t("fields.phone")}
+          type="tel"
+          autoComplete="tel"
+          placeholder={t("fields.phonePlaceholder")}
+        />
 
-        <div>
-          <label htmlFor={`${baseId}-departure`} className={LABEL_CLASS}>
-            {t("fields.departure")}
-          </label>
-          <input
-            id={`${baseId}-departure`}
-            ref={departureRef}
-            name="departure"
-            type="date"
-            className={FIELD_CLASS}
-            aria-invalid={Boolean(errorFor("departure"))}
-            aria-describedby={describedBy("departure")}
-          />
-          {fieldError("departure")}
-        </div>
+        <TextField
+          {...fieldProps("arrival")}
+          ref={arrivalRef}
+          className="sm:col-span-2"
+          label={t("fields.arrival")}
+          type="date"
+        />
 
-        <div className="sm:col-span-2">
-          <label htmlFor={`${baseId}-guests`} className={LABEL_CLASS}>
-            {t("fields.guests")}
-          </label>
-          <input
-            id={`${baseId}-guests`}
-            name="guests"
-            type="number"
-            inputMode="numeric"
-            min={1}
-            max={20}
-            className={cn(FIELD_CLASS, "sm:max-w-40")}
-            aria-invalid={Boolean(errorFor("guests"))}
-            aria-describedby={describedBy("guests")}
-          />
-          {fieldError("guests")}
-        </div>
+        <TextField
+          {...fieldProps("departure")}
+          ref={departureRef}
+          className="sm:col-span-2"
+          label={t("fields.departure")}
+          type="date"
+        />
 
-        <div className="sm:col-span-2">
-          <label htmlFor={`${baseId}-message`} className={LABEL_CLASS}>
-            {t("fields.message")} *
-          </label>
-          <textarea
-            id={`${baseId}-message`}
-            name="message"
-            rows={6}
-            required
-            placeholder={t("fields.messagePlaceholder")}
-            className={cn(FIELD_CLASS, "resize-y")}
-            aria-invalid={Boolean(errorFor("message"))}
-            aria-describedby={describedBy("message")}
-          />
-          {fieldError("message")}
-        </div>
+        <TextField
+          {...fieldProps("guests")}
+          className="sm:col-span-2"
+          label={t("fields.guests")}
+          type="number"
+          inputMode="numeric"
+          min={1}
+          max={20}
+          icon={UserMultiple02Icon}
+        />
+
+        <TextareaField
+          {...fieldProps("message")}
+          className="sm:col-span-6"
+          label={t("fields.message")}
+          rows={6}
+          placeholder={t("fields.messagePlaceholder")}
+          required
+        />
       </div>
 
       {/* Result announcements for assistive tech; also the visible error block. */}

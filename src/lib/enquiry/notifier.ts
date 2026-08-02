@@ -16,6 +16,9 @@ const LANGUAGE_NAMES: Record<string, string> = {
   es: "Spagnolo",
 };
 
+const fullName = (enquiry: EnquiryInput) =>
+  `${enquiry.firstName} ${enquiry.lastName}`;
+
 function nightsBetween(arrival?: string, departure?: string) {
   if (!arrival || !departure) return undefined;
   const ms = Date.parse(departure) - Date.parse(arrival);
@@ -51,7 +54,8 @@ export async function notifyHost(enquiry: EnquiryInput) {
   const lines = [
     "Nuova richiesta ricevuta dal sito.",
     "",
-    `Nome:        ${enquiry.name}`,
+    `Nome:        ${enquiry.firstName}`,
+    `Cognome:     ${enquiry.lastName}`,
     `Email:       ${enquiry.email}`,
     `Telefono:    ${enquiry.phone ?? "—"}`,
     `Lingua:      ${language}  ← rispondere in questa lingua`,
@@ -74,7 +78,7 @@ export async function notifyHost(enquiry: EnquiryInput) {
   await sendMail({
     to: hostInbox(),
     replyTo: enquiry.email,
-    subject: `Richiesta — ${enquiry.name}${
+    subject: `Richiesta — ${fullName(enquiry)}${
       enquiry.arrival ? ` — ${enquiry.arrival}` : ""
     } (${language})`,
     text: lines.join("\n"),
@@ -94,7 +98,7 @@ export async function acknowledgeGuest(enquiry: EnquiryInput) {
   const stay = formatStay(enquiry, enquiry.locale);
 
   const lines = [
-    t("greeting", { name: enquiry.name }),
+    t("greeting", { name: fullName(enquiry) }),
     "",
     t("received"),
     "",

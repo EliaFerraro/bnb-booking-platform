@@ -382,9 +382,12 @@
         "title": "Schreiben Sie uns in einer Minute",
         "body": "Nennen Sie uns Ihren Zeitraum und die Anzahl der Gäste: So können wir Ihnen sofort mit Verfügbarkeit und Preis antworten, ganz ohne unnötiges Hin und Her.",
         "fields": {
-          "name": "Vor- und Nachname",
+          "firstName": "Vorname",
+          "lastName": "Nachname",
           "email": "E-Mail",
+          "emailPlaceholder": "name@beispiel.de",
           "phone": "Telefon (optional)",
+          "phonePlaceholder": "+39 333 123 4567",
           "arrival": "Anreise",
           "departure": "Abreise",
           "guests": "Gäste",
@@ -402,9 +405,13 @@
           "faster": "Schreiben Sie uns auf WhatsApp"
         },
         "errors": {
-          "name": {
-            "tooShort": "Bitte geben Sie Ihren Namen an.",
-            "tooLong": "Dieser Name ist zu lang."
+          "firstName": {
+            "tooShort": "Bitte geben Sie Ihren Vornamen an.",
+            "tooLong": "Dieser Vorname ist zu lang."
+          },
+          "lastName": {
+            "tooShort": "Bitte geben Sie Ihren Nachnamen an.",
+            "tooLong": "Dieser Nachname ist zu lang."
           },
           "email": {
             "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse an.",
@@ -423,8 +430,7 @@
             "notAfterArrival": "Die Abreise muss nach der Anreise liegen."
           },
           "guests": {
-            "invalid": "Bitte geben Sie eine gültige Anzahl an Gästen an.",
-            "tooMany": "Für größere Gruppen schreiben Sie uns bitte direkt — wir finden eine Lösung."
+            "invalid": "Bitte geben Sie eine gültige Anzahl an Gästen an."
           },
           "message": {
             "tooShort": "Bitte schreiben Sie etwas mehr, damit wir Ihnen gut helfen können.",

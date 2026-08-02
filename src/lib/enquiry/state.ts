@@ -1,4 +1,4 @@
-import type { EnquiryInput } from "./schema";
+import type { EnquiryFieldErrors } from "./schema";
 
 /**
  * Kept out of `actions.ts` because every export of a "use server" module must
@@ -11,7 +11,7 @@ export type EnquiryState =
       status: "error";
       /** Translation key under `pages.contact.form.errors`. */
       formError?: string;
-      fieldErrors?: Partial<Record<keyof EnquiryInput, string>>;
+      fieldErrors?: EnquiryFieldErrors;
     };
 
 export const initialEnquiryState: EnquiryState = { status: "idle" };

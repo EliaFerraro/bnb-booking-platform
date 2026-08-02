@@ -1,7 +1,7 @@
 "use server";
 
 import { headers } from "next/headers";
-import { enquirySchema, type EnquiryInput } from "./schema";
+import { enquirySchema, firstIssuePerField } from "./schema";
 import type { EnquiryState } from "./state";
 import { acknowledgeGuest, notifyHost } from "./notifier";
 
@@ -64,7 +64,8 @@ export async function submitEnquiry(
   }
 
   const parsed = enquirySchema.safeParse({
-    name: formData.get("name"),
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
     email: formData.get("email"),
     phone: formData.get("phone"),
     arrival: formData.get("arrival"),
@@ -76,12 +77,7 @@ export async function submitEnquiry(
   });
 
   if (!parsed.success) {
-    const fieldErrors: Partial<Record<keyof EnquiryInput, string>> = {};
-    for (const issue of parsed.error.issues) {
-      const field = issue.path[0] as keyof EnquiryInput | undefined;
-      if (field && !fieldErrors[field]) fieldErrors[field] = issue.message;
-    }
-    return { status: "error", fieldErrors };
+    return { status: "error", fieldErrors: firstIssuePerField(parsed.error) };
   }
 
   if (isRateLimited(await clientKey())) {

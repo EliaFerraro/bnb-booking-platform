@@ -10,11 +10,17 @@ const emptyToUndefined = (value: unknown) =>
 
 export const enquirySchema = z
   .object({
-    name: z
+    firstName: z
       .string()
       .trim()
-      .min(2, { error: "name.tooShort" })
-      .max(100, { error: "name.tooLong" }),
+      .min(2, { error: "firstName.tooShort" })
+      .max(60, { error: "firstName.tooLong" }),
+
+    lastName: z
+      .string()
+      .trim()
+      .min(2, { error: "lastName.tooShort" })
+      .max(60, { error: "lastName.tooLong" }),
 
     email: z
       .email({ error: "email.invalid" })
@@ -35,13 +41,16 @@ export const enquirySchema = z
       z.iso.date({ error: "departure.invalid" }).optional()
     ),
 
+    // The upper bound only rejects nonsense input; exceeding it reports the
+    // same generic message, as a dedicated "too many guests" error is noise
+    // for a property this size.
     guests: z.preprocess(
       emptyToUndefined,
       z.coerce
         .number({ error: "guests.invalid" })
         .int({ error: "guests.invalid" })
         .min(1, { error: "guests.invalid" })
-        .max(20, { error: "guests.tooMany" })
+        .max(20, { error: "guests.invalid" })
         .optional()
     ),
 
@@ -93,3 +102,18 @@ export const enquirySchema = z
  * redesigned.
  */
 export type EnquiryInput = z.infer<typeof enquirySchema>;
+
+export type EnquiryFieldErrors = Partial<Record<keyof EnquiryInput, string>>;
+
+/**
+ * Keeps the first issue per field. Shared by the server action and the form's
+ * live validation so both surface exactly the same message for a given input.
+ */
+export function firstIssuePerField(error: z.ZodError): EnquiryFieldErrors {
+  const errors: EnquiryFieldErrors = {};
+  for (const issue of error.issues) {
+    const field = issue.path[0] as keyof EnquiryInput | undefined;
+    if (field && !errors[field]) errors[field] = issue.message;
+  }
+  return errors;
+}

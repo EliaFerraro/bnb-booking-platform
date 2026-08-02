@@ -382,9 +382,12 @@
         "title": "Escríbenos en un minuto",
         "body": "Indícanos las fechas y el número de huéspedes: así podremos responderte enseguida con la disponibilidad y el precio, sin intercambios innecesarios.",
         "fields": {
-          "name": "Nombre y apellidos",
+          "firstName": "Nombre",
+          "lastName": "Apellidos",
           "email": "Email",
+          "emailPlaceholder": "nombre@ejemplo.es",
           "phone": "Teléfono (opcional)",
+          "phonePlaceholder": "+39 333 123 4567",
           "arrival": "Llegada",
           "departure": "Salida",
           "guests": "Huéspedes",
@@ -402,9 +405,13 @@
           "faster": "Escríbenos por WhatsApp"
         },
         "errors": {
-          "name": {
+          "firstName": {
             "tooShort": "Indica tu nombre.",
             "tooLong": "Ese nombre es demasiado largo."
+          },
+          "lastName": {
+            "tooShort": "Indica tus apellidos.",
+            "tooLong": "Esos apellidos son demasiado largos."
           },
           "email": {
             "invalid": "Indica una dirección de email válida.",
@@ -423,8 +430,7 @@
             "notAfterArrival": "La salida debe ser posterior a la llegada."
           },
           "guests": {
-            "invalid": "Indica un número de huéspedes válido.",
-            "tooMany": "Para grupos numerosos escríbenos directamente: encontraremos una solución."
+            "invalid": "Indica un número de huéspedes válido."
           },
           "message": {
             "tooShort": "Escribe algunas palabras más para que podamos ayudarte mejor.",
