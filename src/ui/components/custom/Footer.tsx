@@ -4,11 +4,20 @@ import {
   MapsLocation01Icon,
   CallIcon,
   Mail01Icon,
+  WhatsappIcon,
 } from "@hugeicons/core-free-icons";
 import { LegalPolicyModal } from "@/ui/components/custom/LegalPolicyModal";
+import {
+  EMAIL,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+  mailtoHref,
+  whatsappHref,
+} from "@/configuration/contact";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tc = useTranslations("contactChannels");
   return (
     <footer className="w-full bg-primary-500 text-neutral-50 py-16 px-6 md:px-12 lg:px-24 font-light text-xs tracking-wider">
       <div className="max-w-7xl mx-auto flex flex-col">
@@ -47,7 +56,20 @@ export function Footer() {
             </h4>
             <div className="flex flex-col items-center lg:items-end space-y-2 text-[13px] text-secondary-50 tracking-wide">
               <a
-                href="tel:+393397096173"
+                href={whatsappHref(tc("whatsappPrefill"))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
+              >
+                <HugeiconsIcon
+                  icon={WhatsappIcon}
+                  className="w-4 h-4 text-secondary-200/80 group-hover:scale-110 transition-transform"
+                  strokeWidth={1.5}
+                />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href={PHONE_HREF}
                 className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
               >
                 <HugeiconsIcon
@@ -55,10 +77,10 @@ export function Footer() {
                   className="w-4 h-4 text-secondary-200/80 group-hover:scale-110 transition-transform"
                   strokeWidth={1.5}
                 />
-                <span>{t("contact.phone")}</span>
+                <span>{PHONE_DISPLAY}</span>
               </a>
               <a
-                href="mailto:ilrespirodelborgobnb@gmail.com"
+                href={mailtoHref(tc("mailSubject"), tc("mailBody"))}
                 className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
               >
                 <HugeiconsIcon
@@ -66,7 +88,7 @@ export function Footer() {
                   className="w-4 h-4 text-secondary-200/80 group-hover:scale-110 transition-transform"
                   strokeWidth={1.5}
                 />
-                <span>{t("contact.email")}</span>
+                <span>{EMAIL}</span>
               </a>
             </div>
           </div>

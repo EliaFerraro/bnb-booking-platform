@@ -6,6 +6,11 @@
     "findus": "ENCUÉNTRANOS",
     "checkAvailabilities": "VERIFICAR DISPONIBILIDAD"
   },
+  "contactChannels": {
+    "whatsappPrefill": "Buenos días, me gustaría recibir información sobre Il Respiro del Borgo.",
+    "mailSubject": "Solicitud de información — Il Respiro del Borgo",
+    "mailBody": "Buenos días,\n\nme gustaría conocer la disponibilidad.\n\nFechas: del ___ al ___\nHuéspedes: ___\n\nNotas:\n\nGracias,\n"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -349,6 +354,8 @@
         "body": "Estaremos encantados de responder a cualquier pregunta y de ayudarte a organizar tu estancia. Escríbenos o llámanos: detrás de Il Respiro del Borgo hay una familia, no una centralita."
       },
       "cards": {
+        "whatsapp": "WhatsApp",
+        "whatsappNote": "La forma más rápida de obtener respuesta",
         "phone": "Teléfono",
         "email": "Correo electrónico",
         "address": "Dirección",
@@ -380,6 +387,7 @@
       "closing": {
         "title": "¿Listo para respirar el pueblo?",
         "body": "Contáctanos para comprobar la disponibilidad o simplemente para pedir consejo. Te responderemos con gusto, en tu idioma.",
+        "whatsapp": "Escríbenos por WhatsApp",
         "call": "Llámanos",
         "email": "Escríbenos"
       }
@@ -396,9 +404,7 @@
       "tagline": "Un refugio íntimo en el corazón del Monferrato, pensado para ralentizar el tiempo y redescubrir la auténtica hospitalidad piamontesa."
     },
     "contact": {
-      "title": "Contacto y Reservas",
-      "phone": "+39 339 7096 173",
-      "email": "ilrespirodelborgobnb@gmail.com"
+      "title": "Contacto y Reservas"
     },
     "legal": {
       "classification": "Alojamiento Clasificado ★★",

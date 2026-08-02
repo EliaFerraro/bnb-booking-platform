@@ -11,11 +11,15 @@ import {
   CarIcon,
   TrainIcon,
   Airplane01Icon,
+  WhatsappIcon,
 } from "@hugeicons/core-free-icons";
-
-const PHONE = "+39 339 7096 173";
-const PHONE_HREF = "tel:+393397096173";
-const EMAIL = "ilrespirodelborgobnb@gmail.com";
+import {
+  EMAIL,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+  mailtoHref,
+  whatsappHref,
+} from "@/configuration/contact";
 
 const DIRECTIONS = [
   { key: "car", icon: CarIcon },
@@ -25,6 +29,10 @@ const DIRECTIONS = [
 
 function ContactContent() {
   const t = useTranslations("pages.contact");
+  const tc = useTranslations("contactChannels");
+
+  const emailHref = mailtoHref(tc("mailSubject"), tc("mailBody"));
+  const whatsAppUrl = whatsappHref(tc("whatsappPrefill"));
 
   return (
     <>
@@ -52,6 +60,28 @@ function ContactContent() {
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
           <a
+            href={whatsAppUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:col-span-2 flex items-center gap-5 p-7 bg-primary-500/10 rounded-[40px_8px_40px_8px] border border-primary-500/30 hover:border-primary-500/70 transition-colors group"
+          >
+            <div className="w-12 h-12 rounded-full bg-primary-500 text-neutral-50 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              <HugeiconsIcon icon={WhatsappIcon} className="w-5 h-5" strokeWidth={1.5} />
+            </div>
+            <div className="min-w-0">
+              <span className="block text-[11px] tracking-[0.2em] uppercase text-neutral-500 font-semibold mb-1">
+                {t("cards.whatsapp")}
+              </span>
+              <span className="font-serif text-xl text-neutral-950 block leading-snug">
+                {PHONE_DISPLAY}
+              </span>
+              <span className="text-sm text-neutral-600">
+                {t("cards.whatsappNote")}
+              </span>
+            </div>
+          </a>
+
+          <a
             href={PHONE_HREF}
             className="flex items-center gap-5 p-7 bg-secondary-50/60 rounded-[40px_8px_40px_8px] border border-neutral-200/60 hover:border-primary-500/50 transition-colors group"
           >
@@ -62,12 +92,14 @@ function ContactContent() {
               <span className="block text-[11px] tracking-[0.2em] uppercase text-neutral-500 font-semibold mb-1">
                 {t("cards.phone")}
               </span>
-              <span className="font-serif text-xl text-neutral-950">{PHONE}</span>
+              <span className="font-serif text-xl text-neutral-950">
+                {PHONE_DISPLAY}
+              </span>
             </div>
           </a>
 
           <a
-            href={`mailto:${EMAIL}`}
+            href={emailHref}
             className="flex items-center gap-5 p-7 bg-secondary-50/60 rounded-[8px_40px_8px_40px] border border-neutral-200/60 hover:border-primary-500/50 transition-colors group"
           >
             <div className="w-12 h-12 rounded-full bg-primary-500 text-neutral-50 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
@@ -172,6 +204,15 @@ function ContactContent() {
             <Button
               asChild
               className="bg-secondary-200 text-neutral-900 px-10 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-secondary-50 transition-colors shadow-md h-auto"
+            >
+              <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer">
+                {t("closing.whatsapp")}
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-secondary-200 text-secondary-200 px-10 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-neutral-50/10 transition-colors h-auto bg-transparent"
             >
               <a href={PHONE_HREF}>{t("closing.call")}</a>
             </Button>
