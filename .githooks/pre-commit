@@ -41,7 +41,11 @@ npm run --silent check:locales
 #    without the other would silently split the brand palette in two.
 npm run --silent check:palette
 
-# 4. Type errors span files that are not staged, so this has to be project-wide.
+# 4. lib/email/logo.ts embeds public/img/brand/logo.png; replacing the artwork
+#    without regenerating would leave the old logo in every outgoing email.
+npm run --silent check:email-logo
+
+# 5. Type errors span files that are not staged, so this has to be project-wide.
 npm run --silent typecheck
 
 echo "pre-commit: checks passed"

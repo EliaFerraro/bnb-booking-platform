@@ -11,7 +11,9 @@
     "check:locales": "node scripts/check-locales.mjs",
     "gen:palette": "node scripts/generate-palette.mjs",
     "check:palette": "node scripts/generate-palette.mjs --check",
-    "verify": "npm run lint && npm run check:locales && npm run check:palette && npm run typecheck",
+    "gen:email-logo": "node scripts/generate-email-logo.mjs",
+    "check:email-logo": "node scripts/generate-email-logo.mjs --check",
+    "verify": "npm run lint && npm run check:locales && npm run check:palette && npm run check:email-logo && npm run typecheck",
     "prepare": "git config core.hooksPath .githooks"
   },
   "lint-staged": {
@@ -43,6 +45,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "lint-staged": "^16.4.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

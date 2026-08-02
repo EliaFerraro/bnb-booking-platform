@@ -1,3 +1,8 @@
+import {
+  EMAIL_LOGO_CID,
+  EMAIL_LOGO_HEIGHT,
+  EMAIL_LOGO_WIDTH,
+} from "./logo";
 import { MAIL_COLORS as C, MAIL_FONTS as F, MAIL_WIDTH } from "./theme";
 
 /**
@@ -203,9 +208,12 @@ export function renderHtml(doc: MailDocument): string {
           <table role="presentation" class="mail-shell" width="${MAIL_WIDTH}" cellpadding="0" cellspacing="0" border="0" ${cell(`width:${MAIL_WIDTH}px;max-width:${MAIL_WIDTH}px;border-collapse:collapse;`)}>
             <tbody>
               <tr>
-                <td bgcolor="${C.band}" class="mail-pad" ${cell(`padding:30px 36px;border-radius:12px 12px 0 0;`)}>
-                  <p ${cell(`margin:0;font-family:${F.serif};font-size:25px;line-height:1.25;letter-spacing:0.4px;color:${C.bandText};`)}>${escapeHtml(doc.brandName)}</p>
-                  <p ${cell(`margin:7px 0 0;font-family:${F.sans};font-size:11px;line-height:1.4;letter-spacing:2.4px;text-transform:uppercase;color:${C.bandMuted};`)}>${escapeHtml(doc.brandKicker)}</p>
+                <td bgcolor="${C.band}" class="mail-pad" ${cell(`padding:28px 36px 26px;border-radius:12px 12px 0 0;`)}>
+                  <!-- The type styles on the image are what the alt text
+                       inherits when a client blocks images, so the header
+                       still reads as a wordmark rather than a broken box. -->
+                  <img src="cid:${EMAIL_LOGO_CID}" width="${EMAIL_LOGO_WIDTH}" height="${EMAIL_LOGO_HEIGHT}" alt="${escapeHtml(doc.brandName)}" ${cell(`display:block;border:0;outline:none;text-decoration:none;width:${EMAIL_LOGO_WIDTH}px;height:auto;max-width:100%;font-family:${F.serif};font-size:24px;line-height:1.25;letter-spacing:0.4px;color:${C.bandText};`)} />
+                  <p ${cell(`margin:14px 0 0;font-family:${F.sans};font-size:11px;line-height:1.4;letter-spacing:2.4px;text-transform:uppercase;color:${C.bandMuted};`)}>${escapeHtml(doc.brandKicker)}</p>
                 </td>
               </tr>
               <tr>
