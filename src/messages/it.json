@@ -14,17 +14,29 @@
   "map": {
     "title": "Posizione di Il Respiro del Borgo a Montemagno"
   },
+  "datePicker": {
+    "placeholder": "Scegli una data",
+    "previousMonth": "Mese precedente",
+    "nextMonth": "Mese successivo",
+    "clear": "Cancella"
+  },
   "enquiryEmail": {
-    "subject": "Abbiamo ricevuto la vostra richiesta — {structure}",
-    "greeting": "Gentile {name},",
-    "received": "grazie per averci scritto. Abbiamo ricevuto la vostra richiesta e vi risponderemo personalmente entro 24 ore.",
-    "summaryTitle": "Riepilogo della richiesta:",
+    "subject": "Abbiamo ricevuto la tua richiesta — {structure}",
+    "preheader": "Ti rispondiamo personalmente entro 24 ore.",
+    "eyebrow": "Richiesta ricevuta",
+    "heading": "Grazie, abbiamo ricevuto la tua richiesta",
+    "greeting": "Ciao {name},",
+    "received": "grazie per averci scritto. Abbiamo ricevuto la tua richiesta e ti risponderemo personalmente entro 24 ore.",
+    "summaryTitle": "Riepilogo della richiesta",
     "labelDates": "Date",
     "labelGuests": "Ospiti",
-    "labelMessage": "Il vostro messaggio",
-    "urgent": "Se avete bisogno di una risposta più rapida, potete scriverci su WhatsApp o chiamarci al {phone}.",
-    "replyable": "Potete rispondere direttamente a questa email: la leggeremo noi.",
-    "signature": "A presto,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT)"
+    "labelMessage": "Il tuo messaggio",
+    "urgent": "Se hai bisogno di una risposta più rapida, puoi scriverci su WhatsApp o chiamarci al {phone}.",
+    "ctaWhatsapp": "Scrivici su WhatsApp",
+    "ctaCall": "Chiama {phone}",
+    "replyable": "Puoi rispondere direttamente a questa email: la leggeremo noi.",
+    "signature": "A presto,\n{structure}",
+    "footerNote": "Hai ricevuto questa email perché hai inviato una richiesta dal modulo di contatto del nostro sito. Non inviamo comunicazioni pubblicitarie."
   },
   "pages": {
     "homepage": {
@@ -63,7 +75,7 @@
       },
       "aboutUs": {
         "title": "Chi Siamo",
-        "description": "La mia famiglia ed io vi accogliamo con calore nel nostro rifugio storico nel cuore del Monferrato, offrendo un'esperienza autentica immersa tra le pievi e le colline, dove la storia, la natura e la cultura si fondono armoniosamente.",
+        "description": "La mia famiglia ed io ti accogliamo con calore nel nostro rifugio storico nel cuore del Monferrato, per offrirti un'esperienza autentica immersa tra le pievi e le colline, dove la storia, la natura e la cultura si fondono armoniosamente.",
         "cta": "Scopri la nostra storia"
       },
       "montemagno": {
@@ -142,7 +154,7 @@
       "intro": {
         "eyebrow": "La nostra dimora",
         "title": "Una casa che racconta il Monferrato",
-        "body": "Il Respiro del Borgo nasce dal recupero attento di un'antica cascina piemontese, dove ogni pietra, ogni trave e ogni mattone a vista custodiscono la memoria della vita contadina. Abbiamo restaurato gli ambienti con rispetto, mantenendo l'anima originaria della \"casa della nonna\" e arricchendola con il comfort discreto di oggi. Il risultato è una dimora intima, calda e luminosa, pensata per farvi sentire a casa fin dal primo passo.",
+        "body": "Il Respiro del Borgo nasce dal recupero attento di un'antica cascina piemontese, dove ogni pietra, ogni trave e ogni mattone a vista custodiscono la memoria della vita contadina. Abbiamo restaurato gli ambienti con rispetto, mantenendo l'anima originaria della \"casa della nonna\" e arricchendola con il comfort discreto di oggi. Il risultato è una dimora intima, calda e luminosa, pensata per farti sentire a casa fin dal primo passo.",
         "quote": "Qui le mura respirano insieme alle vigne: abbiamo solo riaperto le finestre sul tempo."
       },
       "house": {
@@ -159,7 +171,7 @@
       "room": {
         "subtitle": "Il tuo rifugio privato",
         "title": "La Camera",
-        "description": "La camera è un nido raccolto e silenzioso, arredato con pezzi autentici della tradizione contadina e finiture curate nei minimi dettagli. Può essere allestita per ospitare una coppia in letto matrimoniale oppure due ospiti in letti singoli, vestiti di lino e cotone naturale per un riposo profondo; le finestre si aprono sulle colline e lasciano entrare la prima luce del mattino. Il bagno privato, luminoso e rifinito con piastrelle d'epoca, e un ingresso indipendente vi garantiscono libertà e tranquillità, in un ambiente pensato per due.",
+        "description": "La camera è un nido raccolto e silenzioso, arredato con pezzi autentici della tradizione contadina e finiture curate nei minimi dettagli. Può essere allestita per ospitare una coppia in letto matrimoniale oppure due ospiti in letti singoli, vestiti di lino e cotone naturale per un riposo profondo; le finestre si aprono sulle colline e lasciano entrare la prima luce del mattino. Il bagno privato, luminoso e rifinito con piastrelle d'epoca, e un ingresso indipendente ti garantiscono libertà e tranquillità, in un ambiente pensato per due.",
         "amenitiesTitle": "Comfort della camera",
         "amenities": {
           "bed": "Letto matrimoniale o due singoli",
@@ -202,7 +214,7 @@
       },
       "cta": {
         "title": "Vieni a viverla di persona",
-        "body": "La nostra camera è pronta ad accogliervi. Scriveteci per conoscere le disponibilità e regalarvi qualche giorno di autentico respiro in Monferrato.",
+        "body": "La nostra camera è pronta ad accoglierti. Scrivici per conoscere le disponibilità e regalarti qualche giorno di autentico respiro in Monferrato.",
         "button": "Richiedi disponibilità"
       }
     },
@@ -246,7 +258,7 @@
         "title": "Cosa fare nei dintorni",
         "wine": {
           "title": "Cantine e vino",
-          "text": "Visite e degustazioni nelle cantine di famiglia, tra Barbera, Grignolino e Ruché. Vi indichiamo i produttori che amiamo di più."
+          "text": "Visite e degustazioni nelle cantine di famiglia, tra Barbera, Grignolino e Ruché. Ti indichiamo i produttori che amiamo di più."
         },
         "walks": {
           "title": "Camminate e bici",
@@ -266,7 +278,7 @@
       },
       "cta": {
         "title": "Lasciati guidare tra le colline",
-        "body": "Al vostro arrivo saremo felici di consigliarvi itinerari, cantine e tavole su misura per voi. Scriveteci e iniziamo a immaginare insieme il vostro soggiorno.",
+        "body": "Al tuo arrivo saremo felici di consigliarti itinerari, cantine e tavole su misura per te. Scrivici e iniziamo a immaginare insieme il tuo soggiorno.",
         "button": "Contattaci"
       }
     },
@@ -279,7 +291,7 @@
       "intro": {
         "eyebrow": "La nostra ospitalità",
         "title": "Tutto ciò che rende il soggiorno semplice",
-        "body": "Crediamo in un'ospitalità fatta di gesti sinceri più che di formalità. Per questo abbiamo pensato a tutto ciò che può rendere il vostro soggiorno comodo e sereno, lasciandovi liberi di godervi il silenzio delle colline. Alcuni servizi sono sempre inclusi, altri li organizziamo volentieri su richiesta: basta chiederci."
+        "body": "Crediamo in un'ospitalità fatta di gesti sinceri più che di formalità. Per questo abbiamo pensato a tutto ciò che può rendere il tuo soggiorno comodo e sereno, così puoi goderti in pace il silenzio delle colline. Alcuni servizi sono sempre inclusi, altri li organizziamo volentieri su richiesta: basta chiedere."
       },
       "breakfast": {
         "subtitle": "Il buongiorno ha un sapore autentico",
@@ -292,7 +304,7 @@
         }
       },
       "included": {
-        "eyebrow": "Sempre con voi",
+        "eyebrow": "Sempre con te",
         "title": "Servizi inclusi",
         "wifi": {
           "title": "Wi-Fi gratuito",
@@ -324,11 +336,11 @@
         },
         "tips": {
           "title": "Consigli sul territorio",
-          "text": "Mappe, itinerari e indirizzi scelti da noi per voi."
+          "text": "Mappe, itinerari e indirizzi scelti da noi per te."
         }
       },
       "onRequest": {
-        "eyebrow": "Quando vi serve",
+        "eyebrow": "Quando ti serve",
         "title": "Su richiesta",
         "tastings": {
           "title": "Degustazioni",
@@ -340,17 +352,17 @@
         },
         "guide": {
           "title": "Esperienze guidate",
-          "text": "Una guida del posto per accompagnarvi tra borghi, arte e le storie che rendono speciale il Monferrato."
+          "text": "Una guida del posto per accompagnarti tra borghi, arte e le storie che rendono speciale il Monferrato."
         },
         "late": {
           "title": "Check-in flessibile",
-          "text": "Arrivi in orari particolari? Avvisateci e troveremo una soluzione."
+          "text": "Arrivi in orari particolari? Avvisaci e troveremo una soluzione."
         },
-        "note": "Per qualsiasi richiesta speciale, scriveteci: faremo il possibile per accontentarvi."
+        "note": "Per qualsiasi richiesta speciale, scrivici: faremo il possibile per accontentarti."
       },
       "cta": {
-        "title": "Avete un desiderio particolare?",
-        "body": "Raccontateci di cosa avete bisogno per il vostro soggiorno: ci piace prenderci cura dei dettagli che fanno la differenza.",
+        "title": "Hai un desiderio particolare?",
+        "body": "Raccontaci di cosa hai bisogno per il tuo soggiorno: ci piace prenderci cura dei dettagli che fanno la differenza.",
         "button": "Scrivici"
       }
     },
@@ -363,7 +375,7 @@
       "intro": {
         "eyebrow": "Contatti e prenotazioni",
         "title": "A un passo dalle colline",
-        "body": "Saremo felici di rispondere a ogni vostra domanda e di aiutarvi a organizzare il soggiorno. Scriveteci o chiamateci: dietro Il Respiro del Borgo c'è una famiglia, non un centralino."
+        "body": "Saremo felici di rispondere a ogni tua domanda e di aiutarti a organizzare il soggiorno. Scrivici o chiamaci: dietro Il Respiro del Borgo c'è una famiglia, non un centralino."
       },
       "cards": {
         "whatsapp": "WhatsApp",
@@ -379,8 +391,8 @@
       },
       "form": {
         "eyebrow": "Richiesta di disponibilità",
-        "title": "Scriveteci in un minuto",
-        "body": "Indicateci le date e il numero di ospiti: potremo rispondervi subito con disponibilità e prezzo, senza scambi di email inutili.",
+        "title": "Scrivici in un minuto",
+        "body": "Indicaci le date e il numero di ospiti: potremo risponderti subito con disponibilità e prezzo, senza scambi di email inutili.",
         "fields": {
           "firstName": "Nome",
           "lastName": "Cognome",
@@ -392,54 +404,54 @@
           "departure": "Partenza",
           "guests": "Ospiti",
           "message": "Messaggio",
-          "messagePlaceholder": "Raccontateci qualcosa del vostro soggiorno: viaggiate in famiglia, con bambini o animali, avete esigenze particolari…"
+          "messagePlaceholder": "Raccontaci qualcosa del tuo soggiorno: viaggi in famiglia, con bambini o animali, hai esigenze particolari…"
         },
         "submit": "Invia richiesta",
         "submitting": "Invio in corso…",
         "requiredNote": "* Campi obbligatori.",
-        "privacyNote": "Useremo i vostri dati solo per rispondervi.",
+        "privacyNote": "Useremo i tuoi dati solo per risponderti.",
         "success": {
           "title": "Richiesta inviata",
-          "body": "Grazie! Abbiamo ricevuto la vostra richiesta e vi abbiamo inviato una conferma a {email}. Vi risponderemo personalmente entro 24 ore.",
-          "spamHint": "Se non vedete la conferma, controllate la cartella spam.",
+          "body": "Grazie! Abbiamo ricevuto la tua richiesta e ti abbiamo inviato una conferma a {email}. Ti risponderemo personalmente entro 24 ore.",
+          "spamHint": "Se non vedi la conferma, controlla la cartella spam.",
           "faster": "Scriveteci su WhatsApp"
         },
         "errors": {
           "firstName": {
-            "tooShort": "Inserite il vostro nome.",
+            "tooShort": "Inserisci il tuo nome.",
             "tooLong": "Il nome è troppo lungo."
           },
           "lastName": {
-            "tooShort": "Inserite il vostro cognome.",
+            "tooShort": "Inserisci il tuo cognome.",
             "tooLong": "Il cognome è troppo lungo."
           },
           "email": {
-            "invalid": "Inserite un indirizzo email valido.",
+            "invalid": "Inserisci un indirizzo email valido.",
             "tooLong": "L'indirizzo email è troppo lungo."
           },
           "phone": {
             "tooLong": "Il numero di telefono è troppo lungo."
           },
           "arrival": {
-            "invalid": "Inserite una data di arrivo valida.",
+            "invalid": "Inserisci una data di arrivo valida.",
             "inPast": "La data di arrivo non può essere nel passato.",
-            "required": "Indicate anche la data di arrivo."
+            "required": "Indica anche la data di arrivo."
           },
           "departure": {
-            "invalid": "Inserite una data di partenza valida.",
+            "invalid": "Inserisci una data di partenza valida.",
             "notAfterArrival": "La partenza deve essere successiva all'arrivo."
           },
           "guests": {
-            "invalid": "Indicate un numero di ospiti valido."
+            "invalid": "Indica un numero di ospiti valido."
           },
           "message": {
-            "tooShort": "Scrivete qualche parola in più, così potremo aiutarvi meglio.",
+            "tooShort": "Scrivi qualche parola in più, così potremo aiutarti meglio.",
             "tooLong": "Il messaggio è troppo lungo."
           },
-          "tooFast": "Qualcosa non ha funzionato nell'invio. Riprovate tra qualche istante.",
-          "rateLimited": "Avete già inviato alcune richieste. Attendete qualche minuto oppure contattateci direttamente.",
+          "tooFast": "Qualcosa non ha funzionato nell'invio. Riprova tra qualche istante.",
+          "rateLimited": "Hai già inviato alcune richieste. Attendi qualche minuto oppure contattaci direttamente.",
           "sendFailed": "Non siamo riusciti a inviare la richiesta.",
-          "fallbackIntro": "Nel frattempo potete raggiungerci su",
+          "fallbackIntro": "Nel frattempo puoi raggiungerci su",
           "fallbackEmail": "Email"
         }
       },
@@ -457,11 +469,11 @@
           "title": "In aereo",
           "text": "Aeroporti di Torino Caselle (~70 km), Milano Malpensa e Genova (~110 km). Noleggio auto consigliato per esplorare le colline."
         },
-        "note": "Vi invieremo indicazioni dettagliate e la posizione esatta al momento della conferma della prenotazione."
+        "note": "Ti invieremo indicazioni dettagliate e la posizione esatta al momento della conferma della prenotazione."
       },
       "closing": {
         "title": "Pronti a respirare il borgo?",
-        "body": "Contattateci per verificare le disponibilità o semplicemente per qualche consiglio. Vi risponderemo con piacere, nella vostra lingua.",
+        "body": "Contattaci per verificare le disponibilità o semplicemente per qualche consiglio. Ti risponderemo con piacere, nella tua lingua.",
         "whatsapp": "Scrivici su WhatsApp",
         "call": "Chiamaci",
         "email": "Scrivici"

@@ -14,17 +14,29 @@
   "map": {
     "title": "Location of Il Respiro del Borgo in Montemagno"
   },
+  "datePicker": {
+    "placeholder": "Choose a date",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "clear": "Clear"
+  },
   "enquiryEmail": {
     "subject": "We have received your request — {structure}",
-    "greeting": "Dear {name},",
+    "preheader": "We will reply to you personally within 24 hours.",
+    "eyebrow": "Request received",
+    "heading": "Thank you — we have your request",
+    "greeting": "Hi {name},",
     "received": "thank you for writing to us. We have received your request and will reply personally within 24 hours.",
-    "summaryTitle": "Summary of your request:",
+    "summaryTitle": "Summary of your request",
     "labelDates": "Dates",
     "labelGuests": "Guests",
     "labelMessage": "Your message",
     "urgent": "If you need a faster answer, you can message us on WhatsApp or call us on {phone}.",
+    "ctaWhatsapp": "Message us on WhatsApp",
+    "ctaCall": "Call {phone}",
     "replyable": "You can reply directly to this email — it reaches us.",
-    "signature": "See you soon,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT), Italy"
+    "signature": "See you soon,\n{structure}",
+    "footerNote": "You are receiving this email because you sent a request through the contact form on our website. We never send marketing messages."
   },
   "pages": {
     "homepage": {

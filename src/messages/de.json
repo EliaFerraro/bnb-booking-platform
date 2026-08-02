@@ -14,24 +14,36 @@
   "map": {
     "title": "Standort von Il Respiro del Borgo in Montemagno"
   },
+  "datePicker": {
+    "placeholder": "Datum wählen",
+    "previousMonth": "Voriger Monat",
+    "nextMonth": "Nächster Monat",
+    "clear": "Löschen"
+  },
   "enquiryEmail": {
-    "subject": "Wir haben Ihre Anfrage erhalten — {structure}",
-    "greeting": "Sehr geehrte/r {name},",
-    "received": "vielen Dank für Ihre Nachricht. Wir haben Ihre Anfrage erhalten und antworten Ihnen persönlich innerhalb von 24 Stunden.",
-    "summaryTitle": "Zusammenfassung Ihrer Anfrage:",
+    "subject": "Wir haben deine Anfrage erhalten — {structure}",
+    "preheader": "Wir antworten dir persönlich innerhalb von 24 Stunden.",
+    "eyebrow": "Anfrage erhalten",
+    "heading": "Vielen Dank — deine Anfrage ist bei uns",
+    "greeting": "Hallo {name},",
+    "received": "vielen Dank für deine Nachricht. Wir haben deine Anfrage erhalten und antworten dir persönlich innerhalb von 24 Stunden.",
+    "summaryTitle": "Zusammenfassung deiner Anfrage",
     "labelDates": "Zeitraum",
     "labelGuests": "Gäste",
-    "labelMessage": "Ihre Nachricht",
-    "urgent": "Wenn Sie schneller eine Antwort brauchen, schreiben Sie uns auf WhatsApp oder rufen Sie uns an unter {phone}.",
-    "replyable": "Sie können direkt auf diese E-Mail antworten — sie erreicht uns.",
-    "signature": "Bis bald,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT), Italien"
+    "labelMessage": "Deine Nachricht",
+    "urgent": "Wenn du schneller eine Antwort brauchst, schreib uns auf WhatsApp oder ruf uns an unter {phone}.",
+    "ctaWhatsapp": "Schreib uns auf WhatsApp",
+    "ctaCall": "{phone} anrufen",
+    "replyable": "Du kannst direkt auf diese E-Mail antworten — sie erreicht uns.",
+    "signature": "Bis bald,\n{structure}",
+    "footerNote": "Du erhältst diese E-Mail, weil du über das Kontaktformular unserer Website eine Anfrage gesendet hast. Wir versenden keine Werbenachrichten."
   },
   "pages": {
     "homepage": {
       "hero": {
         "subtitle": {
           "keywords": "FAMILIE, NATUR UND GASTFREUNDSCHAFT",
-          "slogan": "IHR B&B IM GRÜNEN"
+          "slogan": "DEIN B&B IM GRÜNEN"
         }
       },
       "services": {
@@ -43,7 +55,7 @@
         "discoverMore": "Alle Services entdecken"
       },
       "room": {
-        "subtitle": "Ihr privater Rückzugsort",
+        "subtitle": "Dein privater Rückzugsort",
         "title": "Das Zimmer",
         "description": "Eingerichtet mit authentischen Stücken bäuerlicher Tradition und raffinierten Oberflächen, bietet unser Zimmer anspruchsvollen Komfort, ohne den ursprünglichen Geist des \"Großmutterhauses\" zu verraten. Eine intime und ruhige Umgebung, gestaltet für tiefen und erholsamen Schlaf, weit abseits der hektischen Alltagsgeschwindigkeit.",
         "features": {
@@ -63,7 +75,7 @@
       },
       "aboutUs": {
         "title": "Über uns",
-        "description": "Meine Familie und ich heißen Sie herzlich willkommen in unserem historischen Rückzugsort im Herzen des Monferrato. Wir bieten Ihnen ein authentisches Erlebnis inmitten sanfter Hügel, wo Geschichte, Natur und Kultur harmonisch verschmelzen.",
+        "description": "Meine Familie und ich heißen dich herzlich willkommen in unserem historischen Rückzugsort im Herzen des Monferrato. Wir bieten dir ein authentisches Erlebnis inmitten sanfter Hügel, wo Geschichte, Natur und Kultur harmonisch verschmelzen.",
         "cta": "Unsere Geschichte entdecken"
       },
       "montemagno": {
@@ -86,7 +98,7 @@
       "breakfast": {
         "subtitle": "Hier schmeckt der Morgen authentisch",
         "title": "Garten-Frühstück",
-        "description": "Starten Sie Ihren Tag inmitten unseres grünen Parks, wo sich der Duft von Kaffee mit der frischen Morgenluft vermischt. Unser Frühstück zelebriert die Region mit einer sorgfältigen Auswahl an hausgemachten Kuchen und Torten, handwerklich gebackenem Brot, frischem Obst der Saison und Köstlichkeiten aus der direkten Umgebung – für einen süßen und regenerierenden Start in den Tag.",
+        "description": "Starte deinen Tag inmitten unseres grünen Parks, wo sich der Duft von Kaffee mit der frischen Morgenluft vermischt. Unser Frühstück zelebriert die Region mit einer sorgfältigen Auswahl an hausgemachten Kuchen und Torten, handwerklich gebackenem Brot, frischem Obst der Saison und Köstlichkeiten aus der direkten Umgebung – für einen süßen und regenerierenden Start in den Tag.",
         "features": {
           "coffee": "Espresso-Bar",
           "pastries": "Hausgemachtes Gebäck",
@@ -142,7 +154,7 @@
       "intro": {
         "eyebrow": "Unser Zuhause",
         "title": "Ein Haus, das vom Monferrato erzählt",
-        "body": "Il Respiro del Borgo entstand aus der sorgfältigen Restaurierung eines alten piemontesischen Bauernhofs, in dem jeder Stein, jeder Balken und jeder sichtbare Ziegel die Erinnerung an das Landleben bewahrt. Wir haben die Räume mit Respekt restauriert, die ursprüngliche Seele des \"Großmutterhauses\" bewahrt und sie mit dezentem modernem Komfort bereichert. Das Ergebnis ist ein intimes, warmes und helles Zuhause, das Sie vom ersten Schritt an willkommen heißt.",
+        "body": "Il Respiro del Borgo entstand aus der sorgfältigen Restaurierung eines alten piemontesischen Bauernhofs, in dem jeder Stein, jeder Balken und jeder sichtbare Ziegel die Erinnerung an das Landleben bewahrt. Wir haben die Räume mit Respekt restauriert, die ursprüngliche Seele des \"Großmutterhauses\" bewahrt und sie mit dezentem modernem Komfort bereichert. Das Ergebnis ist ein intimes, warmes und helles Zuhause, das dich vom ersten Schritt an willkommen heißt.",
         "quote": "Hier atmen die Mauern im Takt der Weinberge: wir haben nur die Fenster zur Zeit wieder geöffnet."
       },
       "house": {
@@ -157,7 +169,7 @@
         }
       },
       "room": {
-        "subtitle": "Ihr privater Rückzugsort",
+        "subtitle": "Dein privater Rückzugsort",
         "title": "Das Zimmer",
         "description": "Das Zimmer ist ein stilles, geborgenes Nest, eingerichtet mit authentischen Stücken der bäuerlichen Tradition und bis ins kleinste Detail gepflegten Oberflächen. Es kann für ein Paar mit Doppelbett oder für zwei Gäste mit Einzelbetten hergerichtet werden, bezogen mit Naturleinen und Baumwolle für erholsamen Schlaf; die Fenster öffnen sich zu den Hügeln und lassen das erste Morgenlicht herein. Das helle, private Bad mit historischen Fliesen und ein separater Eingang sorgen für Freiheit und Ruhe, in einem Raum, der für zwei gedacht ist.",
         "amenitiesTitle": "Komfort im Zimmer",
@@ -201,8 +213,8 @@
         "veranda": "Panoramaveranda"
       },
       "cta": {
-        "title": "Erleben Sie es selbst",
-        "body": "Unser Zimmer ist bereit, Sie zu empfangen. Schreiben Sie uns, um die Verfügbarkeit zu erfahren, und gönnen Sie sich einige Tage echten Durchatmens im Monferrato.",
+        "title": "Erlebe es selbst",
+        "body": "Unser Zimmer ist bereit, dich zu empfangen. Schreib uns, um die Verfügbarkeit zu erfahren, und gönn dir einige Tage echten Durchatmens im Monferrato.",
         "button": "Verfügbarkeit anfragen"
       }
     },
@@ -246,7 +258,7 @@
         "title": "Was man in der Umgebung erleben kann",
         "wine": {
           "title": "Weinkeller & Wein",
-          "text": "Besuche und Verkostungen in familiengeführten Weingütern, zwischen Barbera, Grignolino und Ruché. Wir empfehlen Ihnen unsere Lieblingswinzer."
+          "text": "Besuche und Verkostungen in familiengeführten Weingütern, zwischen Barbera, Grignolino und Ruché. Wir empfehlen dir unsere Lieblingswinzer."
         },
         "walks": {
           "title": "Wandern & Radfahren",
@@ -265,9 +277,9 @@
         "title": "Eindrücke der Region"
       },
       "cta": {
-        "title": "Lassen Sie sich durch die Hügel führen",
-        "body": "Bei Ihrer Ankunft empfehlen wir Ihnen gerne Routen, Weinkeller und Tische ganz nach Ihrem Geschmack. Schreiben Sie uns, und wir stellen uns gemeinsam Ihren Aufenthalt vor.",
-        "button": "Kontaktieren Sie uns"
+        "title": "Lass dich durch die Hügel führen",
+        "body": "Bei deiner Ankunft empfehlen wir dir gerne Routen, Weinkeller und Tische ganz nach deinem Geschmack. Schreib uns, und wir stellen uns gemeinsam deinen Aufenthalt vor.",
+        "button": "Kontaktiere uns"
       }
     },
     "services": {
@@ -278,8 +290,8 @@
       },
       "intro": {
         "eyebrow": "Unsere Gastfreundschaft",
-        "title": "Alles, was Ihren Aufenthalt einfach macht",
-        "body": "Wir glauben an eine Gastfreundschaft aus aufrichtigen Gesten statt aus Förmlichkeiten. Deshalb haben wir an alles gedacht, was Ihren Aufenthalt bequem und gelassen macht, damit Sie die Stille der Hügel genießen können. Einige Leistungen sind immer inbegriffen, andere organisieren wir gerne auf Anfrage: fragen Sie uns einfach."
+        "title": "Alles, was deinen Aufenthalt einfach macht",
+        "body": "Wir glauben an eine Gastfreundschaft aus aufrichtigen Gesten statt aus Förmlichkeiten. Deshalb haben wir an alles gedacht, was deinen Aufenthalt bequem und gelassen macht, damit du die Stille der Hügel genießen kannst. Einige Leistungen sind immer inbegriffen, andere organisieren wir gerne auf Anfrage: frag uns einfach."
       },
       "breakfast": {
         "subtitle": "Der Morgen schmeckt hier authentisch",
@@ -292,7 +304,7 @@
         }
       },
       "included": {
-        "eyebrow": "Immer für Sie da",
+        "eyebrow": "Immer für dich da",
         "title": "Inbegriffene Leistungen",
         "wifi": {
           "title": "Kostenloses WLAN",
@@ -324,11 +336,11 @@
         },
         "tips": {
           "title": "Tipps zur Region",
-          "text": "Karten, Routen und Adressen, von uns für Sie ausgewählt."
+          "text": "Karten, Routen und Adressen, von uns für dich ausgewählt."
         }
       },
       "onRequest": {
-        "eyebrow": "Wann immer Sie es brauchen",
+        "eyebrow": "Wann immer du es brauchst",
         "title": "Auf Anfrage",
         "tastings": {
           "title": "Verkostungen",
@@ -340,30 +352,30 @@
         },
         "guide": {
           "title": "Geführte Erlebnisse",
-          "text": "Ein ortskundiger Guide begleitet Sie durch Dörfer, Kunst und die Geschichten, die das Monferrato besonders machen."
+          "text": "Ein ortskundiger Guide begleitet dich durch Dörfer, Kunst und die Geschichten, die das Monferrato besonders machen."
         },
         "late": {
           "title": "Flexibler Check-in",
-          "text": "Ankunft zu ungewöhnlichen Zeiten? Sagen Sie uns Bescheid, wir finden eine Lösung."
+          "text": "Ankunft zu ungewöhnlichen Zeiten? Sag uns Bescheid, wir finden eine Lösung."
         },
-        "note": "Für jeden besonderen Wunsch schreiben Sie uns einfach: wir tun unser Bestes, um ihn zu erfüllen."
+        "note": "Für jeden besonderen Wunsch schreib uns einfach: wir tun unser Bestes, um ihn zu erfüllen."
       },
       "cta": {
-        "title": "Haben Sie einen besonderen Wunsch?",
-        "body": "Sagen Sie uns, was Sie für Ihren Aufenthalt brauchen: wir kümmern uns gern um die Details, die den Unterschied machen.",
-        "button": "Schreiben Sie uns"
+        "title": "Hast du einen besonderen Wunsch?",
+        "body": "Sag uns, was du für deinen Aufenthalt brauchst: wir kümmern uns gern um die Details, die den Unterschied machen.",
+        "button": "Schreib uns"
       }
     },
     "contact": {
       "hero": {
-        "subtitle": "Besuchen Sie uns",
+        "subtitle": "Besuch uns",
         "title": "Kontakt",
         "tagline": "Im Dorf Montemagno, im Herzen des Monferrato"
       },
       "intro": {
         "eyebrow": "Kontakt & Buchungen",
         "title": "Nur einen Schritt von den Hügeln entfernt",
-        "body": "Wir beantworten gerne jede Ihrer Fragen und helfen Ihnen bei der Planung Ihres Aufenthalts. Schreiben oder rufen Sie uns an: hinter Il Respiro del Borgo steht eine Familie, keine Telefonzentrale."
+        "body": "Wir beantworten gerne jede deiner Fragen und helfen dir bei der Planung deines Aufenthalts. Schreib oder ruf uns an: hinter Il Respiro del Borgo steht eine Familie, keine Telefonzentrale."
       },
       "cards": {
         "whatsapp": "WhatsApp",
@@ -379,8 +391,8 @@
       },
       "form": {
         "eyebrow": "Verfügbarkeitsanfrage",
-        "title": "Schreiben Sie uns in einer Minute",
-        "body": "Nennen Sie uns Ihren Zeitraum und die Anzahl der Gäste: So können wir Ihnen sofort mit Verfügbarkeit und Preis antworten, ganz ohne unnötiges Hin und Her.",
+        "title": "Schreib uns in einer Minute",
+        "body": "Nenn uns deinen Zeitraum und die Anzahl der Gäste: So können wir dir sofort mit Verfügbarkeit und Preis antworten, ganz ohne unnötiges Hin und Her.",
         "fields": {
           "firstName": "Vorname",
           "lastName": "Nachname",
@@ -392,59 +404,59 @@
           "departure": "Abreise",
           "guests": "Gäste",
           "message": "Nachricht",
-          "messagePlaceholder": "Erzählen Sie uns etwas über Ihren Aufenthalt: reisen Sie als Familie, mit Kindern oder Haustieren, haben Sie besondere Wünsche…"
+          "messagePlaceholder": "Erzähl uns etwas über deinen Aufenthalt: reist du als Familie, mit Kindern oder Haustieren, hast du besondere Wünsche…"
         },
         "submit": "Anfrage senden",
         "submitting": "Wird gesendet…",
         "requiredNote": "* Pflichtfelder.",
-        "privacyNote": "Wir verwenden Ihre Daten ausschließlich, um Ihnen zu antworten.",
+        "privacyNote": "Wir verwenden deine Daten ausschließlich, um dir zu antworten.",
         "success": {
           "title": "Anfrage gesendet",
-          "body": "Vielen Dank! Wir haben Ihre Anfrage erhalten und eine Bestätigung an {email} geschickt. Wir antworten Ihnen persönlich innerhalb von 24 Stunden.",
-          "spamHint": "Falls Sie die Bestätigung nicht sehen, prüfen Sie bitte Ihren Spam-Ordner.",
-          "faster": "Schreiben Sie uns auf WhatsApp"
+          "body": "Vielen Dank! Wir haben deine Anfrage erhalten und eine Bestätigung an {email} geschickt. Wir antworten dir persönlich innerhalb von 24 Stunden.",
+          "spamHint": "Falls du die Bestätigung nicht siehst, prüf bitte deinen Spam-Ordner.",
+          "faster": "Schreib uns auf WhatsApp"
         },
         "errors": {
           "firstName": {
-            "tooShort": "Bitte geben Sie Ihren Vornamen an.",
+            "tooShort": "Bitte gib deinen Vornamen an.",
             "tooLong": "Dieser Vorname ist zu lang."
           },
           "lastName": {
-            "tooShort": "Bitte geben Sie Ihren Nachnamen an.",
+            "tooShort": "Bitte gib deinen Nachnamen an.",
             "tooLong": "Dieser Nachname ist zu lang."
           },
           "email": {
-            "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse an.",
+            "invalid": "Bitte gib eine gültige E-Mail-Adresse an.",
             "tooLong": "Diese E-Mail-Adresse ist zu lang."
           },
           "phone": {
             "tooLong": "Diese Telefonnummer ist zu lang."
           },
           "arrival": {
-            "invalid": "Bitte geben Sie ein gültiges Anreisedatum an.",
+            "invalid": "Bitte gib ein gültiges Anreisedatum an.",
             "inPast": "Das Anreisedatum kann nicht in der Vergangenheit liegen.",
-            "required": "Bitte geben Sie auch ein Anreisedatum an."
+            "required": "Bitte gib auch ein Anreisedatum an."
           },
           "departure": {
-            "invalid": "Bitte geben Sie ein gültiges Abreisedatum an.",
+            "invalid": "Bitte gib ein gültiges Abreisedatum an.",
             "notAfterArrival": "Die Abreise muss nach der Anreise liegen."
           },
           "guests": {
-            "invalid": "Bitte geben Sie eine gültige Anzahl an Gästen an."
+            "invalid": "Bitte gib eine gültige Anzahl an Gästen an."
           },
           "message": {
-            "tooShort": "Bitte schreiben Sie etwas mehr, damit wir Ihnen gut helfen können.",
+            "tooShort": "Bitte schreib etwas mehr, damit wir dir gut helfen können.",
             "tooLong": "Diese Nachricht ist zu lang."
           },
-          "tooFast": "Beim Senden ist etwas schiefgelaufen. Bitte versuchen Sie es gleich noch einmal.",
-          "rateLimited": "Sie haben bereits mehrere Anfragen gesendet. Bitte warten Sie einige Minuten oder kontaktieren Sie uns direkt.",
-          "sendFailed": "Wir konnten Ihre Anfrage nicht senden.",
-          "fallbackIntro": "In der Zwischenzeit erreichen Sie uns über",
+          "tooFast": "Beim Senden ist etwas schiefgelaufen. Bitte versuch es gleich noch einmal.",
+          "rateLimited": "Du hast bereits mehrere Anfragen gesendet. Bitte warte einige Minuten oder kontaktiere uns direkt.",
+          "sendFailed": "Wir konnten deine Anfrage nicht senden.",
+          "fallbackIntro": "In der Zwischenzeit erreichst du uns über",
           "fallbackEmail": "E-Mail"
         }
       },
       "directions": {
-        "title": "So erreichen Sie uns",
+        "title": "So erreichst du uns",
         "car": {
           "title": "Mit dem Auto",
           "text": "Von der Autobahn A21 Turin–Piacenza die Ausfahrt Asti Est nehmen, dann den Schildern nach Montemagno folgen (ca. 20 Minuten). Kostenloser Privatparkplatz vor Ort."
@@ -457,14 +469,14 @@
           "title": "Mit dem Flugzeug",
           "text": "Flughäfen Turin Caselle (~70 km), Mailand Malpensa und Genua (~110 km). Ein Mietwagen wird empfohlen, um die Hügel zu erkunden."
         },
-        "note": "Detaillierte Wegbeschreibungen und den genauen Standort senden wir Ihnen nach Bestätigung Ihrer Buchung."
+        "note": "Detaillierte Wegbeschreibungen und den genauen Standort senden wir dir nach Bestätigung deiner Buchung."
       },
       "closing": {
         "title": "Bereit, das Dorf zu atmen?",
-        "body": "Kontaktieren Sie uns, um die Verfügbarkeit zu prüfen oder einfach für einen Rat. Wir antworten Ihnen gerne, in Ihrer Sprache.",
-        "whatsapp": "Schreiben Sie uns auf WhatsApp",
-        "call": "Rufen Sie uns an",
-        "email": "Schreiben Sie uns"
+        "body": "Kontaktiere uns, um die Verfügbarkeit zu prüfen oder einfach für einen Rat. Wir antworten dir gerne, in deiner Sprache.",
+        "whatsapp": "Schreib uns auf WhatsApp",
+        "call": "Ruf uns an",
+        "email": "Schreib uns"
       }
     }
   },
@@ -490,13 +502,13 @@
       "cin": "CIN: IT005077C1SCRVTNU4",
       "policy": {
         "title": "Datenschutz- & Cookie-Richtlinie",
-        "intro": "Diese Website erhebt so wenige Daten wie möglich. Hier ist alles, was Sie wissen müssen:",
+        "intro": "Diese Website erhebt so wenige Daten wie möglich. Hier ist alles, was du wissen musst:",
         "points": {
-          "language": "Die Website speichert Ihre bevorzugte Sprache in Ihrem Browser (localStorage und ein technisches Cookie): Sie bleibt auf Ihrem Gerät, wird an niemanden übermittelt und erfordert als technisches Datum keine Einwilligung.",
-          "enquiry": "Wenn Sie das Kontaktformular nutzen, erheben wir Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer (falls angegeben), den Zeitraum, die Anzahl der Gäste und Ihre Nachricht.",
-          "enquiryBasis": "Diese Daten dienen ausschließlich dazu, Ihnen zu antworten und einen möglichen Aufenthalt zu organisieren (Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, vorvertragliche Maßnahmen auf Ihre Anfrage). Sie werden per E-Mail über Google (Gmail) an das Postfach der Unterkunft gesendet: Sie werden in keiner Datenbank gespeichert, nicht an Dritte weitergegeben und nie für Marketing verwendet.",
-          "retention": "Die E-Mail verbleibt im Postfach der Unterkunft, solange dies zur Bearbeitung Ihrer Anfrage und eines etwaigen Aufenthalts erforderlich ist.",
-          "rights": "Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen, indem Sie an {email} schreiben."
+          "language": "Die Website speichert deine bevorzugte Sprache in deinem Browser (localStorage und ein technisches Cookie): Sie bleibt auf deinem Gerät, wird an niemanden übermittelt und erfordert als technisches Datum keine Einwilligung.",
+          "enquiry": "Wenn du das Kontaktformular nutzt, erheben wir deinen Namen, deine E-Mail-Adresse, deine Telefonnummer (falls angegeben), den Zeitraum, die Anzahl der Gäste und deine Nachricht.",
+          "enquiryBasis": "Diese Daten dienen ausschließlich dazu, dir zu antworten und einen möglichen Aufenthalt zu organisieren (Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, vorvertragliche Maßnahmen auf deine Anfrage). Sie werden per E-Mail über Google (Gmail) an das Postfach der Unterkunft gesendet: Sie werden in keiner Datenbank gespeichert, nicht an Dritte weitergegeben und nie für Marketing verwendet.",
+          "retention": "Die E-Mail verbleibt im Postfach der Unterkunft, solange dies zur Bearbeitung deiner Anfrage und eines etwaigen Aufenthalts erforderlich ist.",
+          "rights": "Du kannst jederzeit Auskunft, Berichtigung oder Löschung deiner Daten verlangen, indem du an {email} schreibst."
         },
         "close": "Schließen"
       }

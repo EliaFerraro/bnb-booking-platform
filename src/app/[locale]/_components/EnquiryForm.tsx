@@ -4,21 +4,20 @@ import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Alert02Icon,
-  CheckmarkCircle02Icon,
-  UserMultiple02Icon,
-  WhatsappIcon,
-} from "@hugeicons/core-free-icons";
+import { Alert02Icon, UserMultiple02Icon } from "@hugeicons/core-free-icons";
 
 import { Button } from "@/ui/components/shadcn/button";
 import { TextField } from "@/ui/components/form/TextField";
 import { TextareaField } from "@/ui/components/form/TextareaField";
+import { DateField } from "@/ui/components/form/DateField";
+import { nextDayIso } from "@/ui/components/form/Calendar";
 import { LegalPolicyModal } from "@/ui/components/custom/LegalPolicyModal";
 import { mailtoHref, whatsappHref } from "@/configuration/contact";
 import { submitEnquiry } from "@/lib/enquiry/actions";
 import { initialEnquiryState } from "@/lib/enquiry/state";
 import { enquirySchema, firstIssuePerField } from "@/lib/enquiry/schema";
+import { cn } from "@/lib/utils";
+import { EnquirySuccess, EXIT_MS } from "./EnquirySuccess";
 
 const EMPTY_VALUES = {
   firstName: "",
@@ -50,21 +49,26 @@ export function EnquiryForm() {
   const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
   const [submitAttempt, setSubmitAttempt] = useState(0);
 
+  // Success arrives in two beats — the form fades out, then the confirmation is
+  // drawn on — and this is the switch between them.
+  const [hasLeft, setHasLeft] = useState(false);
+
+  useEffect(() => {
+    if (state.status !== "success") return;
+    const timer = setTimeout(() => setHasLeft(true), EXIT_MS);
+    return () => clearTimeout(timer);
+  }, [state.status]);
+
   const formRef = useRef<HTMLFormElement>(null);
   const startedAtRef = useRef<HTMLInputElement>(null);
-  const arrivalRef = useRef<HTMLInputElement>(null);
-  const departureRef = useRef<HTMLInputElement>(null);
 
   // Stamped after mount so the server renders no time-dependent value, which
-  // would otherwise produce a hydration mismatch. Same reason for the date
-  // minimums: "today" is not knowable at render time on the server.
+  // would otherwise produce a hydration mismatch. The date pickers apply their
+  // own minimums for the same reason: "today" is not knowable on the server.
   useEffect(() => {
     if (startedAtRef.current) {
       startedAtRef.current.value = String(Date.now());
     }
-    const today = new Date().toISOString().slice(0, 10);
-    arrivalRef.current?.setAttribute("min", today);
-    departureRef.current?.setAttribute("min", today);
   }, []);
 
   // The same schema the server uses, so a field can never be accepted here and
@@ -103,12 +107,23 @@ export function EnquiryForm() {
     error: errorFor(field),
     onChange: (event: { target: { value: string } }) =>
       handleChange(field)(event.target.value),
-    // Blurring either date also reveals the other's error: the "departure
-    // needs an arrival" rule is reported on a field the guest never touched.
-    onBlur: () =>
-      field === "arrival" || field === "departure"
-        ? markTouched("arrival", "departure")
-        : markTouched(field),
+    onBlur: () => markTouched(field),
+  });
+
+  /**
+   * A picker has no meaningful blur, so a date counts as touched the moment it
+   * is chosen — and choosing either date reveals the other's error too, since
+   * the "departure needs an arrival" rule is reported on a field the guest may
+   * never have opened.
+   */
+  const dateProps = (field: "arrival" | "departure") => ({
+    name: field,
+    value: values[field],
+    error: errorFor(field),
+    onValueChange: (value: string) => {
+      handleChange(field)(value);
+      markTouched("arrival", "departure");
+    },
   });
 
   const hasClientErrors = Object.keys(clientErrors).length > 0;
@@ -117,45 +132,15 @@ export function EnquiryForm() {
   // rejection, so keyboard and screen-reader users are not left guessing.
   useEffect(() => {
     if (submitAttempt === 0 && !serverErrors) return;
+    // The date pickers report invalidity as data rather than aria, since a
+    // button role does not accept aria-invalid.
     formRef.current
-      ?.querySelector<HTMLElement>('[aria-invalid="true"]')
+      ?.querySelector<HTMLElement>('[aria-invalid="true"], [data-invalid="true"]')
       ?.focus();
   }, [submitAttempt, serverErrors]);
 
-  if (state.status === "success") {
-    return (
-      <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
-        <div className="w-16 h-16 rounded-full bg-primary-500 text-neutral-50 flex items-center justify-center mb-6">
-          <HugeiconsIcon
-            icon={CheckmarkCircle02Icon}
-            className="w-8 h-8"
-            strokeWidth={1.5}
-          />
-        </div>
-        <h3 className="font-serif text-2xl md:text-3xl tracking-wider uppercase text-neutral-950 mb-4">
-          {t("success.title")}
-        </h3>
-        <p className="text-base text-neutral-700 leading-relaxed font-light mb-2">
-          {t("success.body", { email: state.email })}
-        </p>
-        <p className="text-sm text-neutral-600 leading-relaxed font-light mb-8">
-          {t("success.spamHint")}
-        </p>
-        <Button
-          asChild
-          className="bg-primary-500 text-neutral-50 px-8 py-5 rounded-full text-xs font-semibold tracking-widest uppercase h-auto hover:bg-primary-600"
-        >
-          <a
-            href={whatsappHref(tc("whatsappPrefill"))}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <HugeiconsIcon icon={WhatsappIcon} className="w-4 h-4" strokeWidth={1.5} />
-            {t("success.faster")}
-          </a>
-        </Button>
-      </div>
-    );
+  if (hasLeft && state.status === "success") {
+    return <EnquirySuccess email={state.email} />;
   }
 
   return (
@@ -171,7 +156,13 @@ export function EnquiryForm() {
           setSubmitAttempt((attempt) => attempt + 1);
         }
       }}
-      className="max-w-3xl mx-auto"
+      className={cn(
+        "max-w-3xl mx-auto",
+        // The form is still on screen while it fades: replacing it in the same
+        // frame as the confirmation would make the panel appear to jump in.
+        state.status === "success" && "animate-fade-out-up pointer-events-none"
+      )}
+      aria-hidden={state.status === "success"}
     >
       <input type="hidden" name="locale" value={locale} />
       <input type="hidden" name="sourcePath" value={pathname} />
@@ -232,20 +223,18 @@ export function EnquiryForm() {
           placeholder={t("fields.phonePlaceholder")}
         />
 
-        <TextField
-          {...fieldProps("arrival")}
-          ref={arrivalRef}
+        <DateField
+          {...dateProps("arrival")}
           className="sm:col-span-2"
           label={t("fields.arrival")}
-          type="date"
         />
 
-        <TextField
-          {...fieldProps("departure")}
-          ref={departureRef}
+        <DateField
+          {...dateProps("departure")}
           className="sm:col-span-2"
           label={t("fields.departure")}
-          type="date"
+          // A stay is at least one night, so the arrival day itself is out.
+          min={values.arrival ? nextDayIso(values.arrival) : undefined}
         />
 
         <TextField

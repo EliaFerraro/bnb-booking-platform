@@ -37,7 +37,11 @@ npx --no-install lint-staged
 #    forgotten in another would only fail at runtime.
 npm run --silent check:locales
 
-# 3. Type errors span files that are not staged, so this has to be project-wide.
+# 3. style/palette.css is generated from style/palette.mjs; committing one
+#    without the other would silently split the brand palette in two.
+npm run --silent check:palette
+
+# 4. Type errors span files that are not staged, so this has to be project-wide.
 npm run --silent typecheck
 
 echo "pre-commit: checks passed"

@@ -4,6 +4,14 @@ export const PHONE_HREF = `tel:${PHONE_E164}`;
 
 export const EMAIL = "ilrespirodelborgobnb@gmail.com";
 
+/**
+ * Postal and licence identity, printed in the footer of every outgoing email.
+ * Deliberately not translated: an address is written in the language of the
+ * country that sends it, and the CIN is a code.
+ */
+export const ADDRESS_LINE = "Via della Pace, 24 — 14030 Montemagno (AT), Italia";
+export const CIN = "IT005077C1SCRVTNU4";
+
 /** wa.me expects the E.164 number without the leading "+". */
 export const WHATSAPP_NUMBER = PHONE_E164.replace("+", "");
 
