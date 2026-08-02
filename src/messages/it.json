@@ -11,6 +11,18 @@
     "mailSubject": "Richiesta informazioni — Il Respiro del Borgo",
     "mailBody": "Buongiorno,\n\nvorrei informazioni sulla disponibilità.\n\nDate: dal ___ al ___\nOspiti: ___\n\nNote:\n\nGrazie,\n"
   },
+  "enquiryEmail": {
+    "subject": "Abbiamo ricevuto la vostra richiesta — {structure}",
+    "greeting": "Gentile {name},",
+    "received": "grazie per averci scritto. Abbiamo ricevuto la vostra richiesta e vi risponderemo personalmente entro 24 ore.",
+    "summaryTitle": "Riepilogo della richiesta:",
+    "labelDates": "Date",
+    "labelGuests": "Ospiti",
+    "labelMessage": "Il vostro messaggio",
+    "urgent": "Se avete bisogno di una risposta più rapida, potete scriverci su WhatsApp o chiamarci al {phone}.",
+    "replyable": "Potete rispondere direttamente a questa email: la leggeremo noi.",
+    "signature": "A presto,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT)"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -365,6 +377,66 @@
         "hoursValue": "Check-in 15:00 – 20:00",
         "hoursNote": "Check-out entro le 10:30"
       },
+      "form": {
+        "eyebrow": "Richiesta di disponibilità",
+        "title": "Scriveteci in un minuto",
+        "body": "Indicateci le date e il numero di ospiti: potremo rispondervi subito con disponibilità e prezzo, senza scambi di email inutili.",
+        "fields": {
+          "name": "Nome e cognome",
+          "email": "Email",
+          "phone": "Telefono (facoltativo)",
+          "arrival": "Arrivo",
+          "departure": "Partenza",
+          "guests": "Ospiti",
+          "message": "Messaggio",
+          "messagePlaceholder": "Raccontateci qualcosa del vostro soggiorno: viaggiate in famiglia, con bambini o animali, avete esigenze particolari…"
+        },
+        "submit": "Invia richiesta",
+        "submitting": "Invio in corso…",
+        "requiredNote": "* Campi obbligatori.",
+        "privacyNote": "Useremo i vostri dati solo per rispondervi.",
+        "success": {
+          "title": "Richiesta inviata",
+          "body": "Grazie! Abbiamo ricevuto la vostra richiesta e vi abbiamo inviato una conferma a {email}. Vi risponderemo personalmente entro 24 ore.",
+          "spamHint": "Se non vedete la conferma, controllate la cartella spam.",
+          "faster": "Scriveteci su WhatsApp"
+        },
+        "errors": {
+          "name": {
+            "tooShort": "Inserite il vostro nome.",
+            "tooLong": "Il nome è troppo lungo."
+          },
+          "email": {
+            "invalid": "Inserite un indirizzo email valido.",
+            "tooLong": "L'indirizzo email è troppo lungo."
+          },
+          "phone": {
+            "tooLong": "Il numero di telefono è troppo lungo."
+          },
+          "arrival": {
+            "invalid": "Inserite una data di arrivo valida.",
+            "inPast": "La data di arrivo non può essere nel passato.",
+            "required": "Indicate anche la data di arrivo."
+          },
+          "departure": {
+            "invalid": "Inserite una data di partenza valida.",
+            "notAfterArrival": "La partenza deve essere successiva all'arrivo."
+          },
+          "guests": {
+            "invalid": "Indicate un numero di ospiti valido.",
+            "tooMany": "Per gruppi numerosi scriveteci direttamente: troveremo una soluzione."
+          },
+          "message": {
+            "tooShort": "Scrivete qualche parola in più, così potremo aiutarvi meglio.",
+            "tooLong": "Il messaggio è troppo lungo."
+          },
+          "tooFast": "Qualcosa non ha funzionato nell'invio. Riprovate tra qualche istante.",
+          "rateLimited": "Avete già inviato alcune richieste. Attendete qualche minuto oppure contattateci direttamente.",
+          "sendFailed": "Non siamo riusciti a inviare la richiesta.",
+          "fallbackIntro": "Nel frattempo potete raggiungerci su",
+          "fallbackEmail": "Email"
+        }
+      },
       "directions": {
         "title": "Come raggiungerci",
         "car": {
@@ -415,13 +487,13 @@
       "cin": "CIN: IT005077C1SCRVTNU4",
       "policy": {
         "title": "Privacy & Cookie Policy",
-        "intro": "Questo sito è pensato per rispettare la tua privacy e raccoglie il minor numero possibile di dati. Ecco tutto ciò che devi sapere:",
+        "intro": "Questo sito raccoglie il minor numero possibile di dati. Ecco tutto ciò che devi sapere:",
         "points": {
-          "storage": "Il sito salva la lingua che preferisci direttamente nel tuo browser (localStorage e un cookie tecnico), così non devi selezionarla di nuovo a ogni visita.",
-          "local": "Questo dato NON viene inviato a server esterni né condiviso con terze parti: resta esclusivamente sul tuo dispositivo.",
-          "purpose": "Serve unicamente a mostrarti il sito nella lingua corretta durante le visite successive.",
-          "retention": "Viene conservato finché non cancelli i dati di navigazione del browser; il cookie tecnico scade automaticamente dopo un anno.",
-          "noConsent": "Trattandosi di un dato tecnico necessario al funzionamento del sito, non richiede il tuo consenso preventivo ai sensi della normativa ePrivacy."
+          "language": "Il sito salva la lingua che preferisci nel tuo browser (localStorage e un cookie tecnico): resta sul tuo dispositivo, non viene inviata a nessuno e, trattandosi di un dato tecnico, non richiede il tuo consenso.",
+          "enquiry": "Se usi il modulo di contatto raccogliamo il tuo nome, l'email, il telefono (se lo indichi), le date, il numero di ospiti e il messaggio.",
+          "enquiryBasis": "Questi dati servono solo a risponderti e a organizzare l'eventuale soggiorno (base giuridica: art. 6.1.b GDPR, misure precontrattuali su tua richiesta). Vengono inviati via email alla casella della struttura tramite Google (Gmail): non sono conservati in alcun database, non vengono ceduti a terzi e non sono usati per finalità di marketing.",
+          "retention": "L'email resta nella casella della struttura per il tempo necessario a gestire la richiesta e l'eventuale soggiorno.",
+          "rights": "Puoi chiedere in qualsiasi momento di accedere, correggere o cancellare i tuoi dati scrivendo a {email}."
         },
         "close": "Chiudi"
       }

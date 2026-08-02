@@ -11,6 +11,18 @@
     "mailSubject": "Demande d'informations — Il Respiro del Borgo",
     "mailBody": "Bonjour,\n\nje souhaiterais connaître vos disponibilités.\n\nDates : du ___ au ___\nVoyageurs : ___\n\nRemarques :\n\nMerci,\n"
   },
+  "enquiryEmail": {
+    "subject": "Nous avons bien reçu votre demande — {structure}",
+    "greeting": "Bonjour {name},",
+    "received": "merci de nous avoir écrit. Nous avons bien reçu votre demande et vous répondrons personnellement sous 24 heures.",
+    "summaryTitle": "Récapitulatif de votre demande :",
+    "labelDates": "Dates",
+    "labelGuests": "Voyageurs",
+    "labelMessage": "Votre message",
+    "urgent": "Si vous avez besoin d'une réponse plus rapide, écrivez-nous sur WhatsApp ou appelez-nous au {phone}.",
+    "replyable": "Vous pouvez répondre directement à cet e-mail — il nous parvient.",
+    "signature": "À bientôt,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT), Italie"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -365,6 +377,66 @@
         "hoursValue": "Arrivée 15 h – 20 h",
         "hoursNote": "Départ avant 10 h 30"
       },
+      "form": {
+        "eyebrow": "Demande de disponibilité",
+        "title": "Écrivez-nous en une minute",
+        "body": "Indiquez-nous vos dates et le nombre de voyageurs : nous pourrons vous répondre immédiatement avec les disponibilités et le tarif, sans échanges inutiles.",
+        "fields": {
+          "name": "Nom et prénom",
+          "email": "E-mail",
+          "phone": "Téléphone (facultatif)",
+          "arrival": "Arrivée",
+          "departure": "Départ",
+          "guests": "Voyageurs",
+          "message": "Message",
+          "messagePlaceholder": "Parlez-nous un peu de votre séjour : en famille, avec des enfants ou des animaux, des besoins particuliers…"
+        },
+        "submit": "Envoyer la demande",
+        "submitting": "Envoi en cours…",
+        "requiredNote": "* Champs obligatoires.",
+        "privacyNote": "Nous utiliserons vos données uniquement pour vous répondre.",
+        "success": {
+          "title": "Demande envoyée",
+          "body": "Merci ! Nous avons bien reçu votre demande et vous avons envoyé une confirmation à {email}. Nous vous répondrons personnellement sous 24 heures.",
+          "spamHint": "Si vous ne voyez pas la confirmation, vérifiez votre dossier spam.",
+          "faster": "Écrivez-nous sur WhatsApp"
+        },
+        "errors": {
+          "name": {
+            "tooShort": "Veuillez indiquer votre nom.",
+            "tooLong": "Ce nom est trop long."
+          },
+          "email": {
+            "invalid": "Veuillez indiquer une adresse e-mail valide.",
+            "tooLong": "Cette adresse e-mail est trop longue."
+          },
+          "phone": {
+            "tooLong": "Ce numéro de téléphone est trop long."
+          },
+          "arrival": {
+            "invalid": "Veuillez indiquer une date d'arrivée valide.",
+            "inPast": "La date d'arrivée ne peut pas être dans le passé.",
+            "required": "Veuillez également indiquer une date d'arrivée."
+          },
+          "departure": {
+            "invalid": "Veuillez indiquer une date de départ valide.",
+            "notAfterArrival": "Le départ doit être postérieur à l'arrivée."
+          },
+          "guests": {
+            "invalid": "Veuillez indiquer un nombre de voyageurs valide.",
+            "tooMany": "Pour les grands groupes, écrivez-nous directement — nous trouverons une solution."
+          },
+          "message": {
+            "tooShort": "Écrivez quelques mots de plus, afin que nous puissions mieux vous aider.",
+            "tooLong": "Ce message est trop long."
+          },
+          "tooFast": "Un problème est survenu lors de l'envoi. Réessayez dans un instant.",
+          "rateLimited": "Vous avez déjà envoyé plusieurs demandes. Patientez quelques minutes ou contactez-nous directement.",
+          "sendFailed": "Nous n'avons pas pu envoyer votre demande.",
+          "fallbackIntro": "En attendant, vous pouvez nous joindre sur",
+          "fallbackEmail": "E-mail"
+        }
+      },
       "directions": {
         "title": "Comment nous rejoindre",
         "car": {
@@ -415,13 +487,13 @@
       "cin": "CIN : IT005077C1SCRVTNU4",
       "policy": {
         "title": "Politique de confidentialité & cookies",
-        "intro": "Ce site est conçu pour respecter votre vie privée et collecte le moins de données possible. Voici tout ce que vous devez savoir :",
+        "intro": "Ce site collecte le moins de données possible. Voici tout ce que vous devez savoir :",
         "points": {
-          "storage": "Le site enregistre votre langue préférée directement dans votre navigateur (localStorage et un cookie technique), afin que vous n'ayez pas à la sélectionner à nouveau à chaque visite.",
-          "local": "Cette donnée n'est PAS envoyée à des serveurs externes ni partagée avec des tiers : elle reste uniquement sur votre appareil.",
-          "purpose": "Elle sert uniquement à vous afficher le site dans la bonne langue lors de vos prochaines visites.",
-          "retention": "Elle est conservée jusqu'à ce que vous effaciez les données de votre navigateur ; le cookie technique expire automatiquement au bout d'un an.",
-          "noConsent": "S'agissant d'une donnée technique nécessaire au fonctionnement du site, elle ne requiert pas votre consentement préalable au sens de la réglementation ePrivacy."
+          "language": "Le site enregistre votre langue préférée dans votre navigateur (localStorage et un cookie technique) : elle reste sur votre appareil, n'est transmise à personne et, s'agissant d'une donnée technique, ne nécessite pas votre consentement.",
+          "enquiry": "Si vous utilisez le formulaire de contact, nous collectons votre nom, votre e-mail, votre téléphone (si vous l'indiquez), vos dates, le nombre de voyageurs et votre message.",
+          "enquiryBasis": "Ces données servent uniquement à vous répondre et à organiser un éventuel séjour (base légale : art. 6.1.b du RGPD, mesures précontractuelles à votre demande). Elles sont envoyées par e-mail à la boîte de l'établissement via Google (Gmail) : elles ne sont conservées dans aucune base de données, ne sont pas cédées à des tiers et ne sont jamais utilisées à des fins marketing.",
+          "retention": "L'e-mail reste dans la boîte de l'établissement le temps nécessaire au traitement de votre demande et d'un éventuel séjour.",
+          "rights": "Vous pouvez à tout moment demander l'accès, la rectification ou la suppression de vos données en écrivant à {email}."
         },
         "close": "Fermer"
       }

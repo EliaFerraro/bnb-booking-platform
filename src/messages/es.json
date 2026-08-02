@@ -11,6 +11,18 @@
     "mailSubject": "Solicitud de información — Il Respiro del Borgo",
     "mailBody": "Buenos días,\n\nme gustaría conocer la disponibilidad.\n\nFechas: del ___ al ___\nHuéspedes: ___\n\nNotas:\n\nGracias,\n"
   },
+  "enquiryEmail": {
+    "subject": "Hemos recibido tu solicitud — {structure}",
+    "greeting": "Hola {name}:",
+    "received": "gracias por escribirnos. Hemos recibido tu solicitud y te responderemos personalmente en menos de 24 horas.",
+    "summaryTitle": "Resumen de tu solicitud:",
+    "labelDates": "Fechas",
+    "labelGuests": "Huéspedes",
+    "labelMessage": "Tu mensaje",
+    "urgent": "Si necesitas una respuesta más rápida, escríbenos por WhatsApp o llámanos al {phone}.",
+    "replyable": "Puedes responder directamente a este correo: nos llega.",
+    "signature": "Hasta pronto,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT), Italia"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -365,6 +377,66 @@
         "hoursValue": "Entrada 15:00 – 20:00",
         "hoursNote": "Salida antes de las 10:30"
       },
+      "form": {
+        "eyebrow": "Solicitud de disponibilidad",
+        "title": "Escríbenos en un minuto",
+        "body": "Indícanos las fechas y el número de huéspedes: así podremos responderte enseguida con la disponibilidad y el precio, sin intercambios innecesarios.",
+        "fields": {
+          "name": "Nombre y apellidos",
+          "email": "Email",
+          "phone": "Teléfono (opcional)",
+          "arrival": "Llegada",
+          "departure": "Salida",
+          "guests": "Huéspedes",
+          "message": "Mensaje",
+          "messagePlaceholder": "Cuéntanos algo sobre tu estancia: viajas en familia, con niños o mascotas, tienes necesidades especiales…"
+        },
+        "submit": "Enviar solicitud",
+        "submitting": "Enviando…",
+        "requiredNote": "* Campos obligatorios.",
+        "privacyNote": "Usaremos tus datos únicamente para responderte.",
+        "success": {
+          "title": "Solicitud enviada",
+          "body": "¡Gracias! Hemos recibido tu solicitud y te hemos enviado una confirmación a {email}. Te responderemos personalmente en menos de 24 horas.",
+          "spamHint": "Si no ves la confirmación, revisa la carpeta de spam.",
+          "faster": "Escríbenos por WhatsApp"
+        },
+        "errors": {
+          "name": {
+            "tooShort": "Indica tu nombre.",
+            "tooLong": "Ese nombre es demasiado largo."
+          },
+          "email": {
+            "invalid": "Indica una dirección de email válida.",
+            "tooLong": "Esa dirección de email es demasiado larga."
+          },
+          "phone": {
+            "tooLong": "Ese número de teléfono es demasiado largo."
+          },
+          "arrival": {
+            "invalid": "Indica una fecha de llegada válida.",
+            "inPast": "La fecha de llegada no puede estar en el pasado.",
+            "required": "Indica también una fecha de llegada."
+          },
+          "departure": {
+            "invalid": "Indica una fecha de salida válida.",
+            "notAfterArrival": "La salida debe ser posterior a la llegada."
+          },
+          "guests": {
+            "invalid": "Indica un número de huéspedes válido.",
+            "tooMany": "Para grupos numerosos escríbenos directamente: encontraremos una solución."
+          },
+          "message": {
+            "tooShort": "Escribe algunas palabras más para que podamos ayudarte mejor.",
+            "tooLong": "Ese mensaje es demasiado largo."
+          },
+          "tooFast": "Algo ha fallado al enviar. Inténtalo de nuevo en un momento.",
+          "rateLimited": "Ya has enviado varias solicitudes. Espera unos minutos o contáctanos directamente.",
+          "sendFailed": "No hemos podido enviar tu solicitud.",
+          "fallbackIntro": "Mientras tanto puedes localizarnos en",
+          "fallbackEmail": "Email"
+        }
+      },
       "directions": {
         "title": "Cómo llegar",
         "car": {
@@ -415,13 +487,13 @@
       "cin": "CIN: IT005077C1SCRVTNU4",
       "policy": {
         "title": "Política de privacidad y cookies",
-        "intro": "Este sitio está diseñado para respetar tu privacidad y recopila la menor cantidad de datos posible. Esto es todo lo que necesitas saber:",
+        "intro": "Este sitio recoge la menor cantidad de datos posible. Esto es todo lo que debes saber:",
         "points": {
-          "storage": "El sitio guarda tu idioma preferido directamente en tu navegador (localStorage y una cookie técnica), para que no tengas que seleccionarlo de nuevo en cada visita.",
-          "local": "Este dato NO se envía a servidores externos ni se comparte con terceros: permanece únicamente en tu dispositivo.",
-          "purpose": "Sirve únicamente para mostrarte el sitio en el idioma correcto en tus próximas visitas.",
-          "retention": "Se conserva hasta que borres los datos de navegación del navegador; la cookie técnica caduca automáticamente al cabo de un año.",
-          "noConsent": "Al tratarse de un dato técnico necesario para el funcionamiento del sitio, no requiere tu consentimiento previo conforme a la normativa ePrivacy."
+          "language": "El sitio guarda tu idioma preferido en tu navegador (localStorage y una cookie técnica): permanece en tu dispositivo, no se envía a nadie y, al tratarse de un dato técnico, no requiere tu consentimiento.",
+          "enquiry": "Si utilizas el formulario de contacto recogemos tu nombre, email, teléfono (si lo indicas), fechas, número de huéspedes y mensaje.",
+          "enquiryBasis": "Estos datos sirven únicamente para responderte y organizar una posible estancia (base jurídica: art. 6.1.b del RGPD, medidas precontractuales a petición tuya). Se envían por email al buzón del alojamiento a través de Google (Gmail): no se conservan en ninguna base de datos, no se ceden a terceros y nunca se usan con fines de marketing.",
+          "retention": "El email permanece en el buzón del alojamiento el tiempo necesario para gestionar tu solicitud y una eventual estancia.",
+          "rights": "Puedes solicitar en cualquier momento el acceso, la rectificación o la supresión de tus datos escribiendo a {email}."
         },
         "close": "Cerrar"
       }

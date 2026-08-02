@@ -2,6 +2,8 @@
 
 import { useTranslations } from "next-intl";
 
+import { cn } from "@/lib/utils";
+import { EMAIL } from "@/configuration/contact";
 import {
   Dialog,
   DialogContent,
@@ -12,14 +14,14 @@ import {
 } from "@/ui/components/shadcn/dialog";
 
 const POINT_KEYS = [
-  "storage",
-  "local",
-  "purpose",
+  "language",
+  "enquiry",
+  "enquiryBasis",
   "retention",
-  "noConsent",
+  "rights",
 ] as const;
 
-export function LegalPolicyModal() {
+export function LegalPolicyModal({ className }: { className?: string }) {
   const t = useTranslations("footer.legal");
 
   const triggerClass =
@@ -27,7 +29,9 @@ export function LegalPolicyModal() {
 
   return (
     <Dialog>
-      <DialogTrigger className={triggerClass}>{t("privacy")}</DialogTrigger>
+      <DialogTrigger className={cn(triggerClass, className)}>
+        {t("privacy")}
+      </DialogTrigger>
 
       <DialogContent closeLabel={t("policy.close")}>
         <DialogHeader>
@@ -46,7 +50,7 @@ export function LegalPolicyModal() {
                 aria-hidden="true"
                 className="mt-2 size-1.5 shrink-0 rounded-full bg-primary-400"
               />
-              <span>{t(`policy.points.${key}`)}</span>
+              <span>{t(`policy.points.${key}`, { email: EMAIL })}</span>
             </li>
           ))}
         </ul>

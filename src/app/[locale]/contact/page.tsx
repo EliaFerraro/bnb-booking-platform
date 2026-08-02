@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { PageHero } from "../_components/PageHero";
+import { EnquiryForm } from "../_components/EnquiryForm";
 import { Button } from "@/ui/components/shadcn/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -145,6 +146,23 @@ function ContactContent() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Enquiry form — placed directly after the direct channels, so the
+          higher-intent action comes before the travel logistics. */}
+      <section className="w-full bg-secondary-50 py-16 md:py-24 px-6">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-4 block font-semibold">
+            {t("form.eyebrow")}
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl tracking-widest uppercase text-neutral-950 mb-6">
+            {t("form.title")}
+          </h2>
+          <p className="text-base text-neutral-700 leading-relaxed font-light">
+            {t("form.body")}
+          </p>
+        </div>
+        <EnquiryForm />
       </section>
 
       {/* How to reach us */}

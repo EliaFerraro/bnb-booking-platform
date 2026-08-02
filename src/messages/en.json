@@ -11,6 +11,18 @@
     "mailSubject": "Information request — Il Respiro del Borgo",
     "mailBody": "Hello,\n\nI would like to ask about availability.\n\nDates: from ___ to ___\nGuests: ___\n\nNotes:\n\nThank you,\n"
   },
+  "enquiryEmail": {
+    "subject": "We have received your request — {structure}",
+    "greeting": "Dear {name},",
+    "received": "thank you for writing to us. We have received your request and will reply personally within 24 hours.",
+    "summaryTitle": "Summary of your request:",
+    "labelDates": "Dates",
+    "labelGuests": "Guests",
+    "labelMessage": "Your message",
+    "urgent": "If you need a faster answer, you can message us on WhatsApp or call us on {phone}.",
+    "replyable": "You can reply directly to this email — it reaches us.",
+    "signature": "See you soon,\n{structure}\nVia della Pace, 24 — 14030 Montemagno (AT), Italy"
+  },
   "pages": {
     "homepage": {
       "hero": {
@@ -365,6 +377,66 @@
         "hoursValue": "Check-in 3:00 – 8:00 pm",
         "hoursNote": "Check-out by 10:30 am"
       },
+      "form": {
+        "eyebrow": "Availability request",
+        "title": "Write to us in a minute",
+        "body": "Tell us your dates and how many guests you are: that way we can reply straight away with availability and a price, with no unnecessary back and forth.",
+        "fields": {
+          "name": "Full name",
+          "email": "Email",
+          "phone": "Phone (optional)",
+          "arrival": "Arrival",
+          "departure": "Departure",
+          "guests": "Guests",
+          "message": "Message",
+          "messagePlaceholder": "Tell us a little about your stay: travelling as a family, with children or pets, any particular needs…"
+        },
+        "submit": "Send request",
+        "submitting": "Sending…",
+        "requiredNote": "* Required fields.",
+        "privacyNote": "We will use your details only to reply to you.",
+        "success": {
+          "title": "Request sent",
+          "body": "Thank you! We have received your request and sent a confirmation to {email}. We will reply personally within 24 hours.",
+          "spamHint": "If you don't see the confirmation, please check your spam folder.",
+          "faster": "Message us on WhatsApp"
+        },
+        "errors": {
+          "name": {
+            "tooShort": "Please enter your name.",
+            "tooLong": "That name is too long."
+          },
+          "email": {
+            "invalid": "Please enter a valid email address.",
+            "tooLong": "That email address is too long."
+          },
+          "phone": {
+            "tooLong": "That phone number is too long."
+          },
+          "arrival": {
+            "invalid": "Please enter a valid arrival date.",
+            "inPast": "The arrival date cannot be in the past.",
+            "required": "Please add an arrival date as well."
+          },
+          "departure": {
+            "invalid": "Please enter a valid departure date.",
+            "notAfterArrival": "Departure must be after arrival."
+          },
+          "guests": {
+            "invalid": "Please enter a valid number of guests.",
+            "tooMany": "For larger groups please write to us directly — we'll find a solution."
+          },
+          "message": {
+            "tooShort": "Please write a little more so we can help you properly.",
+            "tooLong": "That message is too long."
+          },
+          "tooFast": "Something went wrong while sending. Please try again in a moment.",
+          "rateLimited": "You have already sent a few requests. Please wait a few minutes or contact us directly.",
+          "sendFailed": "We couldn't send your request.",
+          "fallbackIntro": "In the meantime you can reach us on",
+          "fallbackEmail": "Email"
+        }
+      },
       "directions": {
         "title": "How to reach us",
         "car": {
@@ -415,13 +487,13 @@
       "cin": "CIN: IT005077C1SCRVTNU4",
       "policy": {
         "title": "Privacy & Cookie Policy",
-        "intro": "This website is designed to respect your privacy and collects as little data as possible. Here is everything you need to know:",
+        "intro": "This website collects as little data as possible. Here is everything you need to know:",
         "points": {
-          "storage": "The site saves your preferred language directly in your browser (localStorage and a technical cookie), so you don't have to select it again on every visit.",
-          "local": "This data is NOT sent to external servers or shared with third parties: it stays solely on your device.",
-          "purpose": "It is used only to show you the site in the correct language on your future visits.",
-          "retention": "It is kept until you clear your browser data; the technical cookie automatically expires after one year.",
-          "noConsent": "As this is a technical piece of data necessary for the site to work, it does not require your prior consent under the ePrivacy regulations."
+          "language": "The site saves your preferred language in your browser (localStorage and a technical cookie): it stays on your device, is not sent to anyone and, being technical data, does not require your consent.",
+          "enquiry": "If you use the contact form we collect your name, email, phone number (if you provide one), dates, number of guests and message.",
+          "enquiryBasis": "This data is used only to reply to you and to arrange a possible stay (legal basis: Art. 6(1)(b) GDPR, pre-contractual measures at your request). It is emailed to the property's mailbox via Google (Gmail): it is not kept in any database, not shared with third parties and never used for marketing.",
+          "retention": "The email stays in the property's mailbox for as long as needed to handle your request and any resulting stay.",
+          "rights": "You can ask to access, correct or delete your data at any time by writing to {email}."
         },
         "close": "Close"
       }
