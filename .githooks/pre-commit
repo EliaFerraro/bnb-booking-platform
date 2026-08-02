@@ -10,6 +10,18 @@
 
 set -e
 
+# 0. Fail fast if a filled-in credential is about to be committed. .env.example
+#    is deliberately tracked (it documents the required variables), which makes
+#    it dangerously easy to paste real values into instead of .env.local.
+for staged in $(git diff --cached --name-only --diff-filter=ACM | grep -E '(^|/)\.env' || true); do
+  if git show ":$staged" |
+    grep -qE '^[A-Z_]*(PASSWORD|SECRET|TOKEN|CREDENTIAL)[A-Z_]*=("?)[^"[:space:]]+'; then
+    echo "pre-commit: $staged holds a non-empty credential." >&2
+    echo "            Move the real value to src/.env.local (gitignored)." >&2
+    exit 1
+  fi
+done
+
 cd "$(git rev-parse --show-toplevel)/src"
 
 if [ ! -d node_modules ]; then
