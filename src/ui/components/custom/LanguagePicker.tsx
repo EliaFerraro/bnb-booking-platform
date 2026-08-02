@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,64 +17,32 @@ import { LANGUAGES, DEFAULT_LANGUAGE } from "@/configuration/language";
 const STORAGE_KEY = "user-preferred-language";
 const COOKIE_KEY = "NEXT_LOCALE";
 
+// Helper per impostare sia Cookie che LocalStorage
+const saveLanguagePreference = (lang: string) => {
+  const lowerLang = lang.toLowerCase();
+  localStorage.setItem(STORAGE_KEY, lowerLang);
+  // Imposta il cookie valido per tutto il dominio
+  document.cookie = `${COOKIE_KEY}=${lowerLang}; path=/; max-age=31536000; SameSite=Lax`;
+};
+
 export function LanguagePicker() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Gestiamo lo stato internamente in minuscolo per coerenza con le rotte
-  const [currentLang, setLanguage] = useState(
-    DEFAULT_LANGUAGE.code.toLowerCase(),
-  );
+  // La lingua attiva è già risolta da proxy.ts (cookie -> accept-language ->
+  // default) e messa a disposizione da NextIntlClientProvider: non serve
+  // duplicarla in uno stato locale né ricavarla dall'URL.
+  const currentLang = useLocale().toLowerCase();
 
-  // Helper per impostare sia Cookie che LocalStorage
-  const saveLanguagePreference = (lang: string) => {
-    const lowerLang = lang.toLowerCase();
-    localStorage.setItem(STORAGE_KEY, lowerLang);
-    // Imposta il cookie valido per tutto il dominio
-    document.cookie = `${COOKIE_KEY}=${lowerLang}; path=/; max-age=31536000; SameSite=Lax`;
-  };
-
+  // Unico effetto rimasto: allineare gli storage del browser alla lingua
+  // mostrata, così la preferenza sopravvive alla visita successiva.
   useEffect(() => {
-    // 1. Controlla l'URL corrente (ha la precedenza assoluta sullo stato visivo del picker)
-    const segments = pathname.split("/");
-    const urlLocale = segments[1]?.toLowerCase();
-    const isSupportedInUrl = LANGUAGES.some(
-      (l) => l.code.toLowerCase() === urlLocale,
-    );
-
-    if (isSupportedInUrl) {
-      setLanguage(urlLocale);
-      saveLanguagePreference(urlLocale);
-      return;
-    }
-
-    // 2. Se non è nell'URL, controlla il LocalStorage
-    const savedLang = localStorage.getItem(STORAGE_KEY)?.toLowerCase();
-    if (
-      savedLang &&
-      LANGUAGES.some((l) => l.code.toLowerCase() === savedLang)
-    ) {
-      setLanguage(savedLang);
-      return;
-    }
-
-    // 3. Fallback: Lingua del browser
-    const browserLang = navigator.language.split("-")[0].toLowerCase();
-    const isBrowserSupported = LANGUAGES.some(
-      (l) => l.code.toLowerCase() === browserLang,
-    );
-
-    if (isBrowserSupported) {
-      setLanguage(browserLang);
-      saveLanguagePreference(browserLang);
-    }
-  }, [pathname]);
+    saveLanguagePreference(currentLang);
+  }, [currentLang]);
 
   const handleLangChange = (newLang: string) => {
     const lowerNewLang = newLang.toLowerCase();
 
-    // Aggiorna gli storage
-    setLanguage(lowerNewLang);
     saveLanguagePreference(lowerNewLang);
 
     // Calcola la nuova rotta sostituendo il primo segmento dell'URL

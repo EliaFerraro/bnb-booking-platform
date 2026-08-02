@@ -57,7 +57,7 @@ function StructureContent({ locale }: { locale: string }) {
             {t("intro.body")}
           </p>
           <blockquote className="font-serif italic text-xl md:text-2xl text-primary-500 leading-relaxed">
-            "{t("intro.quote")}"
+            &ldquo;{t("intro.quote")}&rdquo;
           </blockquote>
         </div>
       </section>

@@ -37,7 +37,7 @@ export function Footer() {
               {t("brand.name")}
             </span>
             <blockquote className="text-secondary-50/70 leading-relaxed font-serif italic text-[13px] tracking-wide max-w-xs">
-              "{t("brand.tagline")}"
+              &ldquo;{t("brand.tagline")}&rdquo;
             </blockquote>
           </div>
 

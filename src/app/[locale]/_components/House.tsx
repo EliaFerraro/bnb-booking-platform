@@ -30,7 +30,7 @@ export function House() {
           </p>
 
           <blockquote className="border-l-2 border-secondary-600 pl-4 italic text-neutral-600 text-sm mb-8 font-light">
-            "{t("quote")}"
+            &ldquo;{t("quote")}&rdquo;
           </blockquote>
 
           <div className="flex justify-start">
