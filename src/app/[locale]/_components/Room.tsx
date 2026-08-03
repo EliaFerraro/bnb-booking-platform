@@ -43,7 +43,7 @@ export function Room() {
         >
           <img
             className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"
-            src="/img/photos/room.jpg"
+            src="/img/photos/room-detail.jpg"
             alt="Photo of the room"
           />
         </div>

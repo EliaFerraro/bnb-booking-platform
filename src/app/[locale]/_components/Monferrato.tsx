@@ -12,7 +12,7 @@ export function Monferrato() {
         >
           <img
             className="w-full h-full object-cover transformtransition-transform duration-1000 ease-out"
-            src="/img/photos/Il Monferrato.jpg"
+            src="/img/photos/hills-monferrato.jpg"
             alt="Le colline del Monferrato"
           />
         </div>

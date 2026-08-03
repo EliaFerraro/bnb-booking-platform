@@ -42,7 +42,7 @@ function ServicesContent({ locale }: { locale: string }) {
   return (
     <>
       <PageHero
-        image="/img/photos/Casa con colazione.jpg"
+        image="/img/photos/breakfast-outdoor.jpg"
         alt="La colazione servita in giardino"
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
@@ -70,7 +70,7 @@ function ServicesContent({ locale }: { locale: string }) {
           <div className="lg:col-span-5 w-full aspect-4/3 lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px] order-1">
             <img
               className="w-full h-full object-cover object-center"
-              src="/img/photos/Casa con colazione.jpg"
+              src="/img/photos/breakfast-table.jpg"
               alt="Tavola della colazione all'aperto"
             />
           </div>

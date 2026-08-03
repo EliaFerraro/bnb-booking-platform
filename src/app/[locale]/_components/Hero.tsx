@@ -16,7 +16,7 @@ export function Hero() {
 
       <img
         className="absolute top-0 left-0 z-0 object-cover w-full h-full"
-        src="/img/photos/sunset_yard.jpg"
+        src="/img/photos/yard-sunset.jpg"
         alt="Sunset yard"
       />
     </div>

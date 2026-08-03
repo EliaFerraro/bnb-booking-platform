@@ -68,7 +68,7 @@ export function Breakfast() {
         >
           <img
             className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out"
-            src="/img/photos/Casa con colazione.jpg"
+            src="/img/photos/breakfast-table.jpg"
             alt="Tavola imbandita per la colazione all'aperto nel giardino del B&B"
           />
         </div>

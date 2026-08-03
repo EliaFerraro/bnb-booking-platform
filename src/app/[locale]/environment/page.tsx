@@ -18,10 +18,10 @@ const EXPERIENCES = [
   { key: "culture", icon: Castle01Icon },
 ] as const;
 const GALLERY = [
-  { src: "/img/photos/Montemagno.jpeg", alt: "Il borgo di Montemagno" },
-  { src: "/img/photos/Il Monferrato.jpg", alt: "Le colline del Monferrato" },
-  { src: "/img/photos/Aperitivo.png", alt: "Aperitivo tra le vigne" },
-  { src: "/img/photos/sunset_yard.jpg", alt: "Tramonto sulle colline" },
+  { src: "/img/photos/village-winter-evening.jpg", alt: "Il borgo di Montemagno" },
+  { src: "/img/photos/landscape-view.jpg", alt: "Le colline del Monferrato" },
+  { src: "/img/photos/orchard-blossoms.jpg", alt: "Aperitivo tra le vigne" },
+  { src: "/img/photos/sunset-sky.jpg", alt: "Tramonto sulle colline" },
 ];
 
 function EnvironmentContent({ locale }: { locale: string }) {
@@ -30,7 +30,7 @@ function EnvironmentContent({ locale }: { locale: string }) {
   return (
     <>
       <PageHero
-        image="/img/photos/Il Monferrato.jpg"
+        image="/img/photos/landscape-golden-hour.jpg"
         alt="Le colline del Monferrato"
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
@@ -85,7 +85,7 @@ function EnvironmentContent({ locale }: { locale: string }) {
           <div className="lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-lg rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
             <img
               className="w-full h-full object-cover"
-              src="/img/photos/Montemagno.jpeg"
+              src="/img/photos/village-spring.jpg"
               alt="Il borgo di Montemagno"
             />
           </div>
@@ -98,8 +98,8 @@ function EnvironmentContent({ locale }: { locale: string }) {
           <div className="lg:col-span-7 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
             <img
               className="w-full h-full object-cover"
-              src="/img/photos/Il Monferrato.jpg"
-              alt="Le colline del Monferrato"
+              src="/img/photos/castle-vineyard.jpg"
+              alt="Castello e vigne"
             />
           </div>
           <div className="lg:col-span-5 flex flex-col justify-center">

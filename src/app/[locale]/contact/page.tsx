@@ -38,7 +38,7 @@ function ContactContent() {
   return (
     <>
       <PageHero
-        image="/img/photos/sunset_yard.jpg"
+        image="/img/photos/courtyard-sunset.jpg"
         alt="Il cortile della cascina al tramonto"
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}

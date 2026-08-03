@@ -24,10 +24,10 @@ const ROOM_AMENITIES = [
 const HOUSE_FEATURES = ["veranda", "garden", "light", "slowness"] as const;
 const SPECS = ["guests", "size", "bed", "checkin"] as const;
 const GALLERY = [
-  { src: "/img/photos/yard.jpg", altKey: "yard" },
-  { src: "/img/photos/bedroom_corner.jpg", altKey: "room" },
-  { src: "/img/photos/bathroom.jpg", altKey: "bathroom" },
-  { src: "/img/photos/veranda.jpg", altKey: "veranda" },
+  { src: "/img/photos/garden-yard.jpg", altKey: "yard" },
+  { src: "/img/photos/room-corner.jpg", altKey: "room" },
+  { src: "/img/photos/room-bathroom.jpg", altKey: "bathroom" },
+  { src: "/img/photos/terrace-veranda.jpg", altKey: "veranda" },
 ] as const;
 
 function StructureContent({ locale }: { locale: string }) {
@@ -36,7 +36,7 @@ function StructureContent({ locale }: { locale: string }) {
   return (
     <>
       <PageHero
-        image="/img/photos/sunset_house.jpg"
+        image="/img/photos/house-sunset.jpg"
         alt={t("images.hero")}
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
@@ -68,7 +68,7 @@ function StructureContent({ locale }: { locale: string }) {
           <div className="lg:col-span-6 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-md rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
             <img
               className="w-full h-full object-cover"
-              src="/img/photos/Casa dall'alto.jpg"
+              src="/img/photos/house-aerial.jpg"
               alt={t("images.spaces")}
             />
           </div>
@@ -125,7 +125,7 @@ function StructureContent({ locale }: { locale: string }) {
           <div className="lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
             <img
               className="w-full h-full object-cover"
-              src="/img/photos/bedroom.jpg"
+              src="/img/photos/room-bedroom.jpg"
               alt={t("images.room")}
             />
           </div>

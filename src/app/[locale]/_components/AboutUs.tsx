@@ -19,7 +19,7 @@ export function AboutUs() {
             className={`w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-1 rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
           >
             <img
-              src="/img/photos/Lorenzo.jpg"
+              src="/img/photos/portrait-lorenzo.jpg"
               alt="L'accoglienza in Monferrato"
               className="w-full h-full object-cover"
             />
@@ -44,7 +44,7 @@ export function AboutUs() {
             className={`w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-2 lg:order-3 rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
           >
             <img
-              src="/img/photos/Margherita.jpg"
+              src="/img/photos/portrait-margherita.jpg"
               alt="La convivialità nella nostra cascina"
               className="w-full h-full object-cover"
             />

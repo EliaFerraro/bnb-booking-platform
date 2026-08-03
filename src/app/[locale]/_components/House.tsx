@@ -12,7 +12,7 @@ export function House() {
         >
           <img
             className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"
-            src="/img/photos/sunset_house.jpg"
+            src="/img/photos/house-sunset.jpg"
             alt="Photo of the house"
           />
         </div>

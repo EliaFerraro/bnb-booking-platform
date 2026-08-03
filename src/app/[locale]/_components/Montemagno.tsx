@@ -59,7 +59,7 @@ export function Montemagno() {
         >
           <img
             className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"
-            src="/img/photos/Montemagno.jpeg"
+            src="/img/photos/village-montemagno.png"
             alt="Il borgo di Montemagno"
           />
         </div>
