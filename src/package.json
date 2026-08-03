@@ -16,7 +16,7 @@
     "gen:og-image": "node scripts/generate-og-image.mjs",
     "check:og-image": "node scripts/generate-og-image.mjs --check",
     "verify": "npm run lint && npm run check:locales && npm run check:palette && npm run check:email-logo && npm run check:og-image && npm run typecheck",
-    "prepare": "git config core.hooksPath .githooks"
+    "prepare": "git config core.hooksPath .githooks || exit 0"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix"
