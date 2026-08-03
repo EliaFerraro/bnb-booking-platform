@@ -11,6 +11,7 @@ import {
   WifiIcon,
   TemperatureIcon,
 } from "@hugeicons/core-free-icons";
+import { enquiryHref } from "@/configuration/contact";
 
 const ROOM_AMENITIES = [
   { key: "bed", icon: BedSingle01Icon },
@@ -179,7 +180,7 @@ function StructureContent({ locale }: { locale: string }) {
         title={t("cta.title")}
         body={t("cta.body")}
         button={t("cta.button")}
-        href={`/${locale}/contact`}
+        href={enquiryHref(locale)}
         variant="sage"
       />
     </>

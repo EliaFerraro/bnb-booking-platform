@@ -43,3 +43,15 @@ export function whatsappHref(text?: string) {
   const base = `https://wa.me/${WHATSAPP_NUMBER}`;
   return text ? `${base}?text=${encodeURIComponent(text)}` : base;
 }
+
+/** Id of the enquiry-form section on the contact page. */
+export const ENQUIRY_ANCHOR = "enquiry";
+
+/**
+ * Every "write to us" call to action points here rather than at the bare
+ * contact page: the guest lands on the form itself, past the direct channels
+ * and the intro they have already read a version of.
+ */
+export function enquiryHref(locale: string) {
+  return `/${locale}/contact#${ENQUIRY_ANCHOR}`;
+}

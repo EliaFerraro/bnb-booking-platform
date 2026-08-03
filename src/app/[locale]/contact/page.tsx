@@ -16,6 +16,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import {
   EMAIL,
+  ENQUIRY_ANCHOR,
   PHONE_DISPLAY,
   PHONE_HREF,
   mailtoHref,
@@ -149,8 +150,13 @@ function ContactContent() {
       </section>
 
       {/* Enquiry form — placed directly after the direct channels, so the
-          higher-intent action comes before the travel logistics. */}
-      <section className="w-full bg-secondary-50 py-16 md:py-24 px-6">
+          higher-intent action comes before the travel logistics.
+          The id is the landing point for every "contact us" call to action on
+          the other pages: they open the form, not just the page. */}
+      <section
+        id={ENQUIRY_ANCHOR}
+        className="w-full bg-secondary-50 py-16 md:py-24 px-6 scroll-mt-4"
+      >
         <div className="max-w-3xl mx-auto text-center mb-12">
           <span className="font-sans text-xs tracking-[0.3em] text-secondary-600 uppercase mb-4 block font-semibold">
             {t("form.eyebrow")}

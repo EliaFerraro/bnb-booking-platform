@@ -9,6 +9,7 @@ import {
   DiningTableIcon,
   Castle01Icon,
 } from "@hugeicons/core-free-icons";
+import { enquiryHref } from "@/configuration/contact";
 
 const MONTEMAGNO_STATS = ["alleys", "castle", "distance"] as const;
 const EXPERIENCES = [
@@ -174,7 +175,7 @@ function EnvironmentContent({ locale }: { locale: string }) {
         title={t("cta.title")}
         body={t("cta.body")}
         button={t("cta.button")}
-        href={`/${locale}/contact`}
+        href={enquiryHref(locale)}
         variant="sand"
       />
     </>

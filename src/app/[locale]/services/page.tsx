@@ -16,6 +16,7 @@ import {
   TemperatureIcon,
   MapsLocation01Icon,
 } from "@hugeicons/core-free-icons";
+import { enquiryHref } from "@/configuration/contact";
 
 const BREAKFAST_FEATURES = [
   { key: "coffee", icon: CoffeeIcon },
@@ -174,7 +175,7 @@ function ServicesContent({ locale }: { locale: string }) {
         title={t("cta.title")}
         body={t("cta.body")}
         button={t("cta.button")}
-        href={`/${locale}/contact`}
+        href={enquiryHref(locale)}
         variant="sage"
       />
     </>
