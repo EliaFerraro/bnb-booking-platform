@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { PageHero } from "../_components/PageHero";
 import { PageCta } from "../_components/PageCta";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -10,6 +11,16 @@ import {
   Castle01Icon,
 } from "@hugeicons/core-free-icons";
 import { enquiryHref } from "@/configuration/contact";
+import { buildMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildMetadata({ locale, page: "environment" });
+}
 
 const MONTEMAGNO_STATS = ["alleys", "castle", "distance"] as const;
 const EXPERIENCES = [
@@ -83,11 +94,13 @@ function EnvironmentContent({ locale }: { locale: string }) {
               ))}
             </div>
           </div>
-          <div className="lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-lg rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
-            <img
-              className="w-full h-full object-cover"
+          <div className="relative lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-lg rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
+            <Image
+              className="object-cover"
               src="/img/photos/village-spring.jpg"
               alt="Il borgo di Montemagno"
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
             />
           </div>
         </div>
@@ -96,11 +109,13 @@ function EnvironmentContent({ locale }: { locale: string }) {
       {/* Monferrato */}
       <section className="w-full py-16 md:py-24 bg-primary-500/5">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
-          <div className="lg:col-span-7 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
-            <img
-              className="w-full h-full object-cover"
+          <div className="relative lg:col-span-7 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
+            <Image
+              className="object-cover"
               src="/img/photos/castle-vineyard.jpg"
               alt="Castello e vigne"
+              fill
+              sizes="(min-width: 1024px) 55vw, 100vw"
             />
           </div>
           <div className="lg:col-span-5 flex flex-col justify-center">
@@ -154,16 +169,18 @@ function EnvironmentContent({ locale }: { locale: string }) {
             {GALLERY.map((g, i) => (
               <div
                 key={g.src}
-                className={`overflow-hidden shadow-sm aspect-4/5 ${
+                className={`relative overflow-hidden shadow-sm aspect-4/5 ${
                   i % 2 === 0
                     ? "rounded-[32px_10px_32px_10px] md:rounded-[80px_12px_80px_12px]"
                     : "rounded-[10px_32px_10px_32px] md:rounded-[12px_80px_12px_80px]"
                 }`}
               >
-                <img
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                <Image
+                  className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
                   src={g.src}
                   alt={g.alt}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 50vw"
                 />
               </div>
             ))}

@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { PageHero } from "../_components/PageHero";
 import { PageCta } from "../_components/PageCta";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -17,6 +18,16 @@ import {
   MapsLocation01Icon,
 } from "@hugeicons/core-free-icons";
 import { enquiryHref } from "@/configuration/contact";
+import { buildMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildMetadata({ locale, page: "services" });
+}
 
 const BREAKFAST_FEATURES = [
   { key: "coffee", icon: CoffeeIcon },
@@ -68,11 +79,13 @@ function ServicesContent({ locale }: { locale: string }) {
       {/* Breakfast feature (sage band) */}
       <section className="w-full bg-primary-500 py-16 md:py-24 px-6 md:px-12 lg:px-24 text-neutral-50 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
-          <div className="lg:col-span-5 w-full aspect-4/3 lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px] order-1">
-            <img
-              className="w-full h-full object-cover object-center"
+          <div className="relative lg:col-span-5 w-full aspect-4/3 lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px] order-1">
+            <Image
+              className="object-cover object-center"
               src="/img/photos/breakfast-table.jpg"
               alt="Tavola della colazione all'aperto"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
             />
           </div>
           <div className="lg:col-span-7 flex flex-col justify-center order-2">

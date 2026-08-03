@@ -8,6 +8,16 @@ import { Services } from "./_components/Services";
 import { Reviews } from "./_components/Reviews";
 import { Montemagno } from "./_components/Montemagno";
 import { setRequestLocale } from "next-intl/server";
+import { buildMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildMetadata({ locale });
+}
 
 export default async function Home({
   params,

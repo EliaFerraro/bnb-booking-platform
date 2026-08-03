@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Monferrato() {
   const t = useTranslations("pages.homepage.monferrato");
@@ -8,12 +9,14 @@ export function Monferrato() {
     <section id="monferrato-section" className="w-full py-16 md:py-32 bg-primary-500/5">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
         <div
-          className={`lg:col-span-7 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-xl group rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
+          className={`relative lg:col-span-7 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-xl group rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
         >
-          <img
-            className="w-full h-full object-cover transformtransition-transform duration-1000 ease-out"
+          <Image
+            className="object-cover transition-transform duration-1000 ease-out"
             src="/img/photos/hills-monferrato.jpg"
             alt="Le colline del Monferrato"
+            fill
+            sizes="(min-width: 1024px) 55vw, 100vw"
           />
         </div>
 

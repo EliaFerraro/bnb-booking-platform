@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   image: string;
   alt: string;
@@ -18,10 +20,14 @@ export function PageHero({
 }: Props) {
   return (
     <section className="relative w-full h-[62vh] min-h-[440px] flex items-center justify-center overflow-hidden">
-      <img
-        className="absolute inset-0 z-0 w-full h-full object-cover"
+      {/* Above the fold on every subpage, so it is fetched eagerly. */}
+      <Image
+        className="z-0 object-cover"
         src={image}
         alt={alt}
+        fill
+        priority
+        sizes="100vw"
       />
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-neutral-950/50 via-neutral-950/30 to-neutral-950/60" />
 

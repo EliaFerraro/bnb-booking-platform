@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/ui/components/shadcn/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { MenuIcon, Cancel01Icon } from "@hugeicons/core-free-icons";
@@ -52,7 +53,14 @@ export function MobileSidebar() {
       >
         <div className="relative flex items-center justify-center p-4">
           <Link href={`/${locale}`} onClick={close}>
-            <img src="/img/brand/logo.png" alt="B&B Logo" className="w-28" />
+            <Image
+              src="/img/brand/logo.png"
+              alt="B&B Logo"
+              width={1440}
+              height={1013}
+              sizes="112px"
+              className="w-28 h-auto"
+            />
           </Link>
           <Button
             variant="ghost"

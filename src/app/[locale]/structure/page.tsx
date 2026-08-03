@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { PageHero } from "../_components/PageHero";
 import { PageCta } from "../_components/PageCta";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -12,6 +13,16 @@ import {
   TemperatureIcon,
 } from "@hugeicons/core-free-icons";
 import { enquiryHref } from "@/configuration/contact";
+import { buildMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildMetadata({ locale, page: "structure" });
+}
 
 const ROOM_AMENITIES = [
   { key: "bed", icon: BedSingle01Icon },
@@ -66,11 +77,13 @@ function StructureContent({ locale }: { locale: string }) {
       {/* Shared spaces */}
       <section className="w-full py-16 md:py-24 bg-secondary-50/40">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
-          <div className="lg:col-span-6 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-md rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
-            <img
-              className="w-full h-full object-cover"
+          <div className="relative lg:col-span-6 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-md rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
+            <Image
+              className="object-cover"
               src="/img/photos/house-aerial.jpg"
               alt={t("images.spaces")}
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
             />
           </div>
           <div className="lg:col-span-6 flex flex-col justify-center">
@@ -123,11 +136,13 @@ function StructureContent({ locale }: { locale: string }) {
               ))}
             </div>
           </div>
-          <div className="lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
-            <img
-              className="w-full h-full object-cover"
+          <div className="relative lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
+            <Image
+              className="object-cover"
               src="/img/photos/room-bedroom.jpg"
               alt={t("images.room")}
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
             />
           </div>
         </div>
@@ -159,16 +174,18 @@ function StructureContent({ locale }: { locale: string }) {
             {GALLERY.map((g, i) => (
               <div
                 key={g.src}
-                className={`overflow-hidden shadow-sm aspect-4/5 ${
+                className={`relative overflow-hidden shadow-sm aspect-4/5 ${
                   i % 2 === 0
                     ? "rounded-[32px_10px_32px_10px] md:rounded-[80px_12px_80px_12px]"
                     : "rounded-[10px_32px_10px_32px] md:rounded-[12px_80px_12px_80px]"
                 }`}
               >
-                <img
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                <Image
+                  className="object-cover hover:scale-105 transition-transform duration-700 ease-out"
                   src={g.src}
                   alt={t(`images.${g.altKey}`)}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 50vw"
                 />
               </div>
             ))}

@@ -13,7 +13,9 @@
     "check:palette": "node scripts/generate-palette.mjs --check",
     "gen:email-logo": "node scripts/generate-email-logo.mjs",
     "check:email-logo": "node scripts/generate-email-logo.mjs --check",
-    "verify": "npm run lint && npm run check:locales && npm run check:palette && npm run check:email-logo && npm run typecheck",
+    "gen:og-image": "node scripts/generate-og-image.mjs",
+    "check:og-image": "node scripts/generate-og-image.mjs --check",
+    "verify": "npm run lint && npm run check:locales && npm run check:palette && npm run check:email-logo && npm run check:og-image && npm run typecheck",
     "prepare": "git config core.hooksPath .githooks"
   },
   "lint-staged": {

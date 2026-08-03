@@ -1,4 +1,25 @@
 {
+  "meta": {
+    "tagline": "B&B en Montemagno, en el corazón del Monferrato",
+    "description": "Una habitación cuidada en una casa de familia en Montemagno, entre las colinas del Monferrato. Desayuno casero, jardín y acogida personal.",
+    "ogAlt": "El patio del B&B Il Respiro del Borgo al atardecer",
+    "structure": {
+      "title": "La casa y la habitación",
+      "description": "La habitación, los espacios comunes, la veranda y el jardín de nuestro B&B en Montemagno, en el Monferrato."
+    },
+    "environment": {
+      "title": "El pueblo y el Monferrato",
+      "description": "Montemagno y las colinas del Monferrato: viñedos, paseos, bodegas y castillos a pocos minutos del B&B."
+    },
+    "services": {
+      "title": "Desayuno y servicios",
+      "description": "Desayuno casero con productos locales, wi-fi, aparcamiento, jardín y todo lo que está incluido en tu estancia."
+    },
+    "contact": {
+      "title": "Dónde estamos y contacto",
+      "description": "Cómo llegar a Montemagno (AT) y cómo escribirnos para comprobar la disponibilidad: respuesta personal en 24 horas."
+    }
+  },
   "navbar": {
     "house": "CASA",
     "surroundings": "ALREDEDORES",

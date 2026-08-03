@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
 import { Button } from "@/ui/components/shadcn/button";
 import { NavbarLink } from "@/ui/components/custom/NavbarLink";
@@ -13,11 +14,18 @@ export function Navbar() {
       <MobileSidebar />
       <nav className="flex items-center">
         <Link href={`/${locale}`}>
-          <img
+          {/* In the header of every page, so it is never lazy-loaded. The
+              intrinsic size is the 1440x1013 artwork; `w-*` scales it down and
+              `h-auto` keeps Next from stretching it. */}
+          <Image
             src="/img/brand/logo.png"
             alt="B&B Logo"
-            className="w-20 md:w-40"
-          ></img>
+            width={1440}
+            height={1013}
+            priority
+            sizes="(min-width: 768px) 160px, 80px"
+            className="w-20 md:w-40 h-auto"
+          />
         </Link>
         <span className="hidden md:inline-flex">
           <NavbarLink href={`/${locale}/structure`} label={t("house")} />

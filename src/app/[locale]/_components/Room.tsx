@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Room() {
   const t = useTranslations("pages.homepage.room");
@@ -39,12 +40,14 @@ export function Room() {
         </div>
 
         <div
-          className={`lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md group rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
+          className={`relative lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md group rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
         >
-          <img
-            className="w-full h-full object-cover transform transition-transform duration-1000 ease-out"
+          <Image
+            className="object-cover transition-transform duration-1000 ease-out"
             src="/img/photos/room-detail.jpg"
             alt="Photo of the room"
+            fill
+            sizes="(min-width: 1024px) 45vw, 100vw"
           />
         </div>
       </div>

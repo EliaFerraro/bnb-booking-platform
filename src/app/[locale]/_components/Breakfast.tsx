@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   CoffeeIcon,
@@ -64,12 +65,14 @@ export function Breakfast() {
         </div>
 
         <div
-          className={`lg:col-span-5 w-full aspect-4/3 sm:aspect-video lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
+          className={`relative lg:col-span-5 w-full aspect-4/3 sm:aspect-video lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
         >
-          <img
-            className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out"
+          <Image
+            className="object-cover object-center transition-transform duration-700 ease-out"
             src="/img/photos/breakfast-table.jpg"
             alt="Tavola imbandita per la colazione all'aperto nel giardino del B&B"
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
           />
         </div>
       </div>

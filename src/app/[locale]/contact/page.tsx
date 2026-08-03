@@ -22,6 +22,16 @@ import {
   mailtoHref,
   whatsappHref,
 } from "@/configuration/contact";
+import { buildMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return buildMetadata({ locale, page: "contact" });
+}
 
 const DIRECTIONS = [
   { key: "car", icon: CarIcon },

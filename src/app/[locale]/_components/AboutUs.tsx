@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export function AboutUs() {
   const t = useTranslations("pages.homepage.aboutUs");
@@ -16,12 +17,14 @@ export function AboutUs() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center">
           <div
-            className={`w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-1 rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
+            className={`relative w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-1 rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
           >
-            <img
+            <Image
               src="/img/photos/portrait-lorenzo.jpg"
               alt="L'accoglienza in Monferrato"
-              className="w-full h-full object-cover"
+              className="object-cover"
+              fill
+              sizes="(min-width: 1024px) 30vw, 100vw"
             />
           </div>
 
@@ -41,12 +44,14 @@ export function AboutUs() {
           </div>
 
           <div
-            className={`w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-2 lg:order-3 rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
+            className={`relative w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-2 lg:order-3 rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
           >
-            <img
+            <Image
               src="/img/photos/portrait-margherita.jpg"
               alt="La convivialità nella nostra cascina"
-              className="w-full h-full object-cover"
+              className="object-cover"
+              fill
+              sizes="(min-width: 1024px) 30vw, 100vw"
             />
           </div>
         </div>

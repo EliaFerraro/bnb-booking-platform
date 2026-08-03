@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function Hero() {
   const t = useTranslations();
@@ -14,10 +15,15 @@ export function Hero() {
         </div>
       </div>
 
-      <img
-        className="absolute top-0 left-0 z-0 object-cover w-full h-full"
+      {/* `priority` because this is the largest contentful paint on the site:
+          left to lazy-load it would be fetched after everything else. */}
+      <Image
+        className="z-0 object-cover"
         src="/img/photos/yard-sunset.jpg"
         alt="Sunset yard"
+        fill
+        priority
+        sizes="100vw"
       />
     </div>
   );

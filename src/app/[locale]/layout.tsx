@@ -1,4 +1,5 @@
-// app/[lang]/layout.tsx
+// app/[locale]/layout.tsx
+import "../../style/main.css";
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { Navbar } from "@/ui/components/custom/Navbar";
@@ -6,17 +7,38 @@ import { Footer } from "@/ui/components/custom/Footer";
 import { Map } from "@/app/[locale]/_components/Map";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { SITE_URL, STRUCTURE_NAME } from "@/configuration/site";
 
 const font = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
   subsets: ["latin"],
 });
 
+/**
+ * This is the root layout: it owns <html>, so `lang` can be the locale actually
+ * being served. A layout above it, at app/layout.tsx, would have no access to
+ * the route params and could only ever hardcode one language.
+ *
+ * What follows is inherited by every page and then overridden field by field —
+ * each page supplies its own title, description and canonical URL through
+ * `buildMetadata`.
+ */
 export const metadata: Metadata = {
-  title: process.env.STRUCTURE_NAME,
-  description: "Famiglia, natura e ospitalità. Il tuo B&B immerso nel verde.",
+  // Makes the relative URLs in the Open Graph tags absolute. Scrapers never
+  // resolve a relative path.
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: STRUCTURE_NAME,
+    template: `%s · ${STRUCTURE_NAME}`,
+  },
+  applicationName: STRUCTURE_NAME,
+  manifest: "/manifest/site.webmanifest",
   icons: {
-    icon: "/img/brand/favicon.ico",
+    icon: [
+      { url: "/img/brand/favicon.ico", sizes: "any" },
+      { url: "/img/brand/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/img/brand/apple-touch-icon.png",
   },
 };
 
@@ -33,18 +55,20 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className={`${font.variable} font-sans`}>
-        {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
-        <Navbar />
+    <html lang={locale}>
+      <body className={`${font.variable} font-sans m-0 p-0 antialiased`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
+          <Navbar />
 
-        <main>{children}</main>
+          <main>{children}</main>
 
-        {/* Sopra il footer su ogni pagina: la posizione è utile ovunque. */}
-        <Map />
+          {/* Sopra il footer su ogni pagina: la posizione è utile ovunque. */}
+          <Map />
 
-        <Footer />
-      </div>
-    </NextIntlClientProvider>
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
