@@ -1,4 +1,5 @@
 import nodemailer, { type Transporter } from "nodemailer";
+import { requireEnv } from "@/lib/env";
 import {
   EMAIL_LOGO_BASE64,
   EMAIL_LOGO_CID,
@@ -12,14 +13,6 @@ import {
  */
 
 let cachedTransport: Transporter | null = null;
-
-function requireEnv(name: string): string {
-  const value = process.env[name];
-  if (!value) {
-    throw new Error(`Missing required environment variable: ${name}`);
-  }
-  return value;
-}
 
 /** Gmail requires the From address to be the authenticated account. */
 export function senderAddress(): string {
