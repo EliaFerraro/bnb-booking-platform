@@ -56,19 +56,19 @@ function CookieRow({
       </code>
       <dl className="flex flex-col gap-1.5 text-sm">
         <div className="flex gap-2">
-          <dt className="text-xs tracking-[0.1em] uppercase text-secondary-600 font-semibold shrink-0 w-20 pt-0.5">
+          <dt className="text-xs tracking-widest uppercase text-secondary-600 font-semibold shrink-0 w-20 pt-0.5">
             {labels.purpose}
           </dt>
           <dd className="text-neutral-700">{purpose}</dd>
         </div>
         <div className="flex gap-2">
-          <dt className="text-xs tracking-[0.1em] uppercase text-secondary-600 font-semibold shrink-0 w-20 pt-0.5">
+          <dt className="text-xs tracking-widest uppercase text-secondary-600 font-semibold shrink-0 w-20 pt-0.5">
             {labels.duration}
           </dt>
           <dd className="text-neutral-700">{duration}</dd>
         </div>
         <div className="flex gap-2">
-          <dt className="text-xs tracking-[0.1em] uppercase text-secondary-600 font-semibold shrink-0 w-20 pt-0.5">
+          <dt className="text-xs tracking-widest uppercase text-secondary-600 font-semibold shrink-0 w-20 pt-0.5">
             {labels.type}
           </dt>
           <dd className="text-neutral-700">{type}</dd>
@@ -138,9 +138,15 @@ function CookiePolicyContent({ locale }: { locale: string }) {
       <LegalSection title={t("sections.analytics.title")}>
         <p>{t("sections.analytics.body")}</p>
         <LegalList>
-          <LegalListItem>{t("sections.analytics.items.noCookie")}</LegalListItem>
-          <LegalListItem>{t("sections.analytics.items.rotating")}</LegalListItem>
-          <LegalListItem>{t("sections.analytics.items.firstParty")}</LegalListItem>
+          <LegalListItem>
+            {t("sections.analytics.items.noCookie")}
+          </LegalListItem>
+          <LegalListItem>
+            {t("sections.analytics.items.rotating")}
+          </LegalListItem>
+          <LegalListItem>
+            {t("sections.analytics.items.firstParty")}
+          </LegalListItem>
         </LegalList>
         <p>{t("sections.analytics.why")}</p>
       </LegalSection>
@@ -149,7 +155,9 @@ function CookiePolicyContent({ locale }: { locale: string }) {
         <p>{t("sections.absent.body")}</p>
         <LegalList>
           <LegalListItem>{t("sections.absent.items.analytics")}</LegalListItem>
-          <LegalListItem>{t("sections.absent.items.advertising")}</LegalListItem>
+          <LegalListItem>
+            {t("sections.absent.items.advertising")}
+          </LegalListItem>
           <LegalListItem>{t("sections.absent.items.social")}</LegalListItem>
           <LegalListItem>{t("sections.absent.items.fonts")}</LegalListItem>
         </LegalList>
