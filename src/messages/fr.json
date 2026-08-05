@@ -18,6 +18,18 @@
     "contact": {
       "title": "Où nous trouver et nous contacter",
       "description": "Comment nous rejoindre à Montemagno (AT) et comment nous écrire pour vérifier les disponibilités : réponse personnelle sous 24 heures."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Quelles données nous recueillons quand tu nous écris, pourquoi nous les traitons, combien de temps nous les gardons et comment en demander la suppression."
+    },
+    "cookiePolicy": {
+      "title": "Politique relative aux cookies",
+      "description": "La liste complète des cookies de ce site : uniquement des cookies techniques, plus la carte Google qui ne se charge que si tu l'autorises."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "description": "Les conditions d'utilisation de ce site. En bref : le formulaire de contact ouvre une conversation, ce n'est pas une réservation."
     }
   },
   "navbar": {
@@ -499,6 +511,287 @@
         "call": "Appelle-nous",
         "email": "Écris-nous"
       }
+    },
+    "privacy": {
+      "hero": {
+        "eyebrow": "Informations sur la confidentialité",
+        "title": "Politique de confidentialité",
+        "updated": "Dernière mise à jour : {date}"
+      },
+      "intro": "Ce site recueille le moins de données possible, et aucune à des fins publicitaires ou statistiques. Tu trouveras ici, en détail, ce qu'il advient de tes données quand tu nous écris : qui les reçoit, où elles vont, combien de temps elles restent et ce que tu peux nous demander à tout moment.",
+      "sections": {
+        "controller": {
+          "title": "Qui traite tes données",
+          "body": "Le responsable du traitement est Il Respiro del Borgo, la maison d'hôtes qui gère ce site et reçoit les demandes envoyées par le formulaire de contact.",
+          "labels": {
+            "address": "Adresse",
+            "email": "E-mail",
+            "phone": "Téléphone",
+            "cin": "CIN"
+          },
+          "noDpo": "Compte tenu de la taille de la structure, aucun délégué à la protection des données (DPO) n'a été désigné : pour toute question concernant tes données, écris directement à l'adresse ci-dessus."
+        },
+        "data": {
+          "title": "Quelles données nous recueillons",
+          "body": "Uniquement ce que tu saisis dans le formulaire de contact, plus les quelques données techniques nécessaires à son bon fonctionnement. Nous ne te demandons pas de t'inscrire et il n'existe aucun compte.",
+          "items": {
+            "identity": {
+              "label": "Prénom, nom, e-mail",
+              "text": "obligatoires : sans eux, nous ne pouvons pas te répondre."
+            },
+            "stay": {
+              "label": "Téléphone, dates, nombre de personnes",
+              "text": "facultatifs : nous les demandons seulement pour te répondre plus précisément sur la disponibilité."
+            },
+            "message": {
+              "label": "Ton message",
+              "text": "ce que tu choisis d'écrire. Merci de ne pas y mettre ce dont la demande n'a pas besoin."
+            },
+            "technical": {
+              "label": "Données techniques",
+              "text": "la langue dans laquelle tu navigues, la page depuis laquelle tu as envoyé la demande, ton navigateur, ainsi qu'une version chiffrée et non réversible de ton adresse IP. L'adresse IP elle-même n'est jamais conservée."
+            }
+          },
+          "noSpecialCategories": "Nous ne traitons pas de catégories particulières de données (santé, convictions, orientation) et nous te demandons de ne pas les inscrire dans ton message. Si ton séjour suppose des besoins particuliers, nous préférons en parler par téléphone ou de vive voix."
+        },
+        "purposes": {
+          "title": "Pourquoi nous les traitons",
+          "items": {
+            "reply": "Pour te répondre et organiser un éventuel séjour. Base légale : art. 6.1.b du RGPD, mesures précontractuelles prises à ta demande. C'est pourquoi nous ne te demandons pas ton consentement : sans ces données, ta demande ne peut tout simplement pas être traitée.",
+            "abuse": "Pour protéger le formulaire des envois automatisés et des abus, au moyen de la version chiffrée de ton adresse IP. Base légale : art. 6.1.f du RGPD, notre intérêt légitime à maintenir le site en état de marche.",
+            "consent": "Pour enregistrer le choix que tu fais sur la bannière des cookies, afin de pouvoir démontrer quand et à quoi tu as consenti. Base légale : art. 6.1.c du RGPD, obligation légale de conserver la preuve du consentement."
+          },
+          "noObligation": "Nous n'utilisons pas tes données à des fins de marketing, nous ne t'inscrivons à aucune liste de diffusion, et nous ne prenons aucune décision automatisée ni ne faisons de profilage."
+        },
+        "storage": {
+          "title": "Où elles vont",
+          "body": "Ta demande est envoyée par e-mail à la boîte de la structure et, en même temps, enregistrée dans une base de données. La base sert à ne perdre aucune demande : si l'envoi de l'e-mail échoue, ta demande reste malgré tout enregistrée et nous pouvons la récupérer. Auparavant il n'y avait que l'e-mail, et un échec d'acheminement signifiait une demande perdue pour toujours.",
+          "location": "Les données sont conservées sur des serveurs situés dans l'Union européenne, chiffrées aussi bien pendant le transfert qu'au repos. L'accès est réservé aux personnes qui gèrent la structure."
+        },
+        "recipients": {
+          "title": "Qui d'autre les voit",
+          "body": "Personne en dehors de la structure. Nous nous appuyons toutefois sur quelques prestataires techniques, qui traitent les données pour notre compte en qualité de sous-traitants :",
+          "items": {
+            "hosting": {
+              "label": "Vercel",
+              "text": "héberge le site et en tient les journaux techniques."
+            },
+            "email": {
+              "label": "Google (Gmail)",
+              "text": "achemine et conserve les e-mails de demande dans la boîte de la structure."
+            },
+            "database": {
+              "label": "Supabase",
+              "text": "héberge la base de données où les demandes sont enregistrées."
+            },
+            "maps": {
+              "label": "Google Maps",
+              "text": "affiche la carte de la structure, et seulement si tu choisis de la charger. Tant que tu ne le fais pas, Google ne reçoit rien de ce site."
+            }
+          },
+          "noSale": "Tes données ne sont ni vendues, ni louées, ni échangées avec qui que ce soit. Elles ne peuvent être communiquées aux autorités que si la loi l'impose."
+        },
+        "retention": {
+          "title": "Combien de temps",
+          "body": "Les demandes restent dans la base de données pendant {months} mois à compter de leur envoi.",
+          "anonymisation": "Passé ce délai, elles ne sont pas supprimées mais anonymisées automatiquement : prénom, nom, e-mail, téléphone, message et l'IP chiffrée sont effacés de façon définitive. Ne subsiste que ce qui ne permet plus de remonter à personne — la période demandée, le nombre de personnes, la langue et le mois de la demande — ce qui nous aide à comprendre comment se passe la saison. À partir de là, ce ne sont plus des données personnelles, et il ne reste rien te concernant à effacer.",
+          "mailbox": "L'e-mail lui-même reste dans la boîte de la structure le temps nécessaire au traitement de ta demande et à un éventuel séjour. Si un séjour a effectivement lieu, les pièces fiscales qui en découlent sont conservées dix ans, comme l'impose la loi italienne."
+        },
+        "rights": {
+          "title": "Tes droits",
+          "body": "Tu peux à tout moment nous demander :",
+          "items": {
+            "access": "d'accéder aux données te concernant et de recevoir copie de ce que nous détenons ;",
+            "rectification": "de corriger ce qui est erroné ou incomplet ;",
+            "erasure": "de les effacer ;",
+            "restriction": "d'en limiter le traitement ;",
+            "portability": "de les recevoir dans un format lisible par machine ;",
+            "objection": "de t'opposer au traitement fondé sur notre intérêt légitime."
+          },
+          "how": "Il te suffit d'écrire à {email}. Nous répondons sous un mois ; si la demande est complexe, cela peut aller jusqu'à trois, et nous te préviendrons. Tout cela est gratuit.",
+          "complaint": "Si tu estimes que quelque chose ne va pas, tu as le droit de saisir l'autorité italienne de protection des données (www.garanteprivacy.it) ou l'autorité de contrôle du pays où tu résides."
+        },
+        "security": {
+          "title": "Sécurité",
+          "body": "Le site n'est servi que par connexion chiffrée (HTTPS). La base de données est chiffrée, accessible uniquement avec des identifiants confidentiels, et n'est pas joignable publiquement. Ton adresse IP n'est jamais conservée en clair : elle est transformée par une fonction à sens unique et une clé secrète conservée séparément, et le résultat ne permet pas de retrouver l'adresse d'origine."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "body": "Ce site n'utilise que des cookies techniques, plus la carte Google, qui ne se charge qu'après ton accord explicite. La liste complète figure dans la",
+          "link": "politique relative aux cookies"
+        },
+        "changes": {
+          "title": "Modifications de cette politique",
+          "body": "Si nous changeons quelque chose, nous mettons à jour la date en haut de cette page. Si la modification concerne les services tiers ou les finalités du traitement, la bannière des cookies te sera présentée de nouveau afin que tu puisses choisir à nouveau."
+        },
+        "analytics": {
+          "title": "Statistiques d'utilisation du site",
+          "body": "Nous mesurons la façon dont le site est utilisé — combien de pages sont lues, lesquelles, pendant combien de temps, depuis quel pays — parce que c'est le seul moyen de savoir ce qui fonctionne et ce qui ne fonctionne pas. Nous le faisons sans savoir qui tu es, et sans pouvoir le découvrir ensuite.",
+          "items": {
+            "what": "Nous recueillons : la page consultée, la langue, le temps que tu y passes, la taille de ton écran (en trois catégories), le site d'où tu arrives le cas échéant, et quelques interactions comme l'envoi du formulaire ou le chargement de la carte.",
+            "noStorage": "Nous n'enregistrons rien sur ton appareil : aucun cookie, aucune donnée dans le navigateur. C'est pourquoi la bannière ne te demande rien au sujet de ces statistiques.",
+            "visitor": "Pour distinguer deux visiteurs au cours d'une même journée, nous utilisons un code calculé à partir de ton adresse IP et de ton navigateur, mêlés à un nombre secret généré au hasard chaque jour puis détruit. Une fois ce nombre supprimé, le code ne peut plus être rattaché à personne — pas même par nous.",
+            "country": "Le pays nous est indiqué par le prestataire qui héberge le site. Ton adresse IP n'est jamais conservée."
+          },
+          "basis": "Base légale : art. 6.1.f du RGPD, intérêt légitime à comprendre comment le site est utilisé. L'incidence sur toi est minimale par construction : les données portent sur des pages et non sur des personnes, et au bout de trente jours même le code qui distingue un visiteur d'un autre est effacé, ne laissant que des chiffres agrégés."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "hero": {
+        "eyebrow": "Cookies et technologies similaires",
+        "title": "Politique relative aux cookies",
+        "updated": "Dernière mise à jour : {date}"
+      },
+      "intro": "Ce site n'utilise aucun cookie de profilage, ne dispose d'aucun outil de statistiques et n'héberge aucune publicité. Voici la liste complète, sans omission, de ce qui est enregistré sur ton appareil.",
+      "table": {
+        "purpose": "Finalité",
+        "duration": "Durée",
+        "type": "Type"
+      },
+      "sections": {
+        "what": {
+          "title": "Ce que c'est",
+          "body": "Les cookies sont de petits fichiers qu'un site enregistre dans ton navigateur pour se souvenir de quelque chose d'une page à l'autre. Le stockage local fonctionne de la même manière, sauf que la valeur reste sur l'appareil et n'accompagne pas les requêtes.",
+          "categories": "Les cookies techniques font fonctionner le site et n'exigent pas ton consentement. Tout le reste — statistiques, publicité, contenus tiers — requiert un consentement préalable, et sur ce site le seul cas est la carte."
+        },
+        "technical": {
+          "title": "Cookies techniques",
+          "body": "Toujours actifs, car sans eux le site ne ferait pas ce que tu lui demandes. Ils ne t'identifient pas en tant que personne et ne sont partagés avec personne.",
+          "items": {
+            "locale": {
+              "purpose": "Retient la langue que tu as choisie, pour ne pas avoir à la resélectionner à chaque visite.",
+              "duration": "1 an",
+              "type": "Technique, première partie"
+            },
+            "localeStorage": {
+              "purpose": "La même préférence de langue, conservée dans le stockage local du navigateur.",
+              "duration": "Jusqu'à ce que tu vides les données du navigateur",
+              "type": "Stockage local, première partie"
+            },
+            "consent": {
+              "purpose": "Retient le choix que tu as fait sur la bannière des cookies, pour ne pas te le represser à chaque page.",
+              "duration": "6 mois",
+              "type": "Technique, première partie"
+            }
+          },
+          "serverNote": "Une précision, car une version antérieure de cette page affirmait le contraire : le cookie de langue est envoyé à notre serveur à chaque requête — c'est ainsi que le site sait dans quelle langue te répondre. Cela reste une donnée technique, elle ne t'identifie pas et ne va nulle part ailleurs."
+        },
+        "thirdParty": {
+          "title": "Tiers : la carte",
+          "body": "La carte de la structure est un cadre Google Maps. Lorsque tu la charges, Google reçoit ton adresse IP et des informations sur ton navigateur, et peut déposer ses propres cookies sur ton appareil selon sa propre politique de confidentialité — sur laquelle nous n'avons aucun contrôle.",
+          "items": {
+            "maps": {
+              "purpose": "Cookies déposés par Google pour la sécurité, les préférences et — selon ton historique avec les services Google — le profilage.",
+              "duration": "De 6 mois à 2 ans, déterminée par Google",
+              "type": "Tiers, soumis au consentement"
+            }
+          },
+          "gate": "C'est pourquoi la carte ne se charge pas d'elle-même : à sa place se trouve un cadre avec un bouton, et tant que tu ne l'actionnes pas, aucune requête ne part vers Google. Si tu préfères ne pas la charger, tu peux tout de même ouvrir l'emplacement de la structure directement sur Google Maps dans un nouvel onglet."
+        },
+        "absent": {
+          "title": "Ce qu'il n'y a pas",
+          "body": "Cela mérite d'être énuméré, car c'est tout ce que tu t'attendrais à trouver et que tu ne trouveras pas :",
+          "items": {
+            "analytics": "aucun outil de statistiques tiers : ni Google Analytics ni équivalent. Le peu que nous mesurons reste sur nos propres serveurs, sans cookies (voir plus haut).",
+            "advertising": "aucun cookie publicitaire, aucun pixel de suivi, aucun reciblage.",
+            "social": "aucun bouton ni contenu intégré de réseau social.",
+            "fonts": "les caractères typographiques sont téléchargés depuis Google au moment de la compilation puis servis par notre propre site : ton navigateur ne contacte jamais les serveurs de Google pour les charger."
+          }
+        },
+        "manage": {
+          "title": "Changer d'avis",
+          "body": "Ton choix n'est pas définitif, et le retirer est aussi simple que de le donner.",
+          "open": "Ouvrir les préférences de cookies",
+          "browser": "Tu peux aussi supprimer les cookies de ce site depuis les réglages de ton navigateur : la question te sera simplement reposée à ta prochaine visite.",
+          "consequence": "Refuser ou retirer ton consentement ne limite en rien l'usage du site : la seule différence est qu'à la place de la carte interactive tu verras un cadre avec un lien pour l'ouvrir sur Google Maps."
+        },
+        "more": {
+          "title": "Le reste de tes données",
+          "body": "Ce qu'il advient des données que tu saisis dans le formulaire de contact est expliqué dans la",
+          "link": "politique de confidentialité"
+        },
+        "analytics": {
+          "title": "Statistiques : aucun cookie",
+          "body": "Le site mesure sa propre fréquentation, mais sans cookies et sans rien écrire sur ton appareil.",
+          "items": {
+            "noCookie": "aucun cookie, aucun stockage local, aucun identifiant qui survive à ta visite ;",
+            "rotating": "les visiteurs sont distingués par un code calculé avec un secret aléatoire qui change chaque jour puis est détruit : d'un jour à l'autre, personne ne peut être reconnu ;",
+            "firstParty": "les données restent les nôtres et dans notre propre base — aucune société tierce ne les reçoit."
+          },
+          "why": "C'est précisément parce que rien n'est enregistré sur ton appareil et qu'aucune personne ne peut être identifiée que ces statistiques ne requièrent pas ton consentement, au regard des lignes directrices de l'autorité italienne de protection des données. C'est aussi pourquoi tu ne trouveras pas Google Analytics ici."
+        }
+      }
+    },
+    "terms": {
+      "hero": {
+        "eyebrow": "Conditions d'utilisation",
+        "title": "Conditions d'utilisation",
+        "updated": "Dernière mise à jour : {date}"
+      },
+      "intro": "Ces conditions régissent l'usage de ce site. Elles sont peu nombreuses et directes : le site présente la structure et te permet de nous écrire, rien de plus. En particulier, le formulaire de contact ouvre une conversation — ce n'est pas une réservation.",
+      "sections": {
+        "scope": {
+          "title": "Objet",
+          "body": "Ce site a une vocation d'information et de contact : il présente la structure, ses espaces, ses services et le territoire alentour, et met à disposition un formulaire pour se renseigner sur la disponibilité. Ce n'est pas une plateforme de réservation et il ne gère aucun paiement.",
+          "owner": "Le site est géré par Il Respiro del Borgo, {address}, CIN {cin}."
+        },
+        "notABooking": {
+          "title": "Une demande n'est pas une réservation",
+          "body": "C'est le point le plus important de cette page. En envoyant le formulaire, tu demandes des informations : tu ne réserves pas et tu ne bloques aucune date.",
+          "items": {
+            "noCommitment": "l'envoi n'engage ni toi ni nous, et ne fait naître aucun contrat ;",
+            "noPayment": "aucun paiement ne t'est jamais demandé, ni sur le site ni comme condition pour obtenir une réponse ;",
+            "confirmation": "un séjour n'est confirmé que lorsque nous te le confirmons explicitement par écrit, avec les dates, le prix et les conditions."
+          },
+          "terms": "Les conditions du séjour — prix, acompte, horaires d'arrivée et de départ, annulation — te sont communiquées à ce moment-là et ne deviennent contraignantes qu'avec la confirmation. Jusque-là, toute disponibilité affichée ou évoquée reste indicative."
+        },
+        "use": {
+          "title": "Comment utiliser le site",
+          "body": "Nous demandons peu, mais nous le demandons :",
+          "items": {
+            "accurate": "indique des informations exactes : une adresse e-mail erronée signifie simplement que tu n'auras pas de réponse ;",
+            "lawful": "n'utilise pas le formulaire pour envoyer des contenus offensants, illicites ou publicitaires ;",
+            "automated": "n'utilise pas de systèmes automatisés pour envoyer des demandes en masse ou pour aspirer le contenu du site. Le formulaire comporte des limites techniques prévues exactement pour cela."
+          }
+        },
+        "content": {
+          "title": "Contenus du site",
+          "body": "Les textes, photographies et descriptions rendent compte de la structure avec tout le soin possible, mais restent du matériel descriptif : de légères différences avec ce que tu trouveras sont possibles, et les espaces communs et le jardin changent au fil des saisons.",
+          "prices": "Les prix ou disponibilités éventuellement indiqués sur le site ont une valeur indicative et ne constituent pas une offre. Seuls font foi ceux que nous te confirmons par écrit."
+        },
+        "intellectualProperty": {
+          "title": "Propriété intellectuelle",
+          "body": "Les photographies, les textes, le nom et la marque de la structure appartiennent à Il Respiro del Borgo. Tu peux partager librement les pages du site ; réutiliser des photographies ou des textes dans d'autres contextes requiert en revanche notre accord écrit."
+        },
+        "availability": {
+          "title": "Disponibilité du site",
+          "body": "Nous faisons le nécessaire pour que le site reste accessible, mais nous ne pouvons pas garantir l'absence d'interruption : maintenance, mises à jour ou incidents chez nos prestataires techniques peuvent le rendre temporairement indisponible. Si tu es pressé, le téléphone et WhatsApp fonctionnent toujours.",
+          "links": "Le site renvoie à des services externes (Google Maps, WhatsApp). Nous ne contrôlons pas ces services et ne répondons ni de leurs contenus ni de leurs conditions d'utilisation."
+        },
+        "liability": {
+          "title": "Responsabilité",
+          "body": "Nous ne répondons pas des dommages résultant d'un usage impropre du site, d'une indisponibilité temporaire ou d'informations qui, bien que renseignées avec soin, s'avéreraient inexactes ou obsolètes.",
+          "consumer": "Rien dans ces conditions ne limite les droits que la loi te reconnaît en tant que consommateur, ni notre responsabilité dans les cas où la loi n'admet pas d'exclusion."
+        },
+        "privacy": {
+          "title": "Données personnelles et cookies",
+          "body": "La façon dont nous traitons tes données est expliquée dans la",
+          "privacyLink": "politique de confidentialité",
+          "and": "et dans la",
+          "cookieLink": "politique relative aux cookies"
+        },
+        "law": {
+          "title": "Loi applicable",
+          "body": "Ces conditions sont régies par la loi italienne. Pour tout litige, le tribunal du lieu où tu résides ou es domicilié est compétent, si tu es un consommateur résidant dans l'Union européenne.",
+          "odr": "La Commission européenne met par ailleurs à disposition une plateforme de règlement en ligne des litiges, accessible à l'adresse ec.europa.eu/consumers/odr."
+        },
+        "changes": {
+          "title": "Modifications",
+          "body": "Nous pouvons mettre à jour ces conditions ; la version en vigueur est toujours celle publiée ici, avec la date de mise à jour en haut de la page.",
+          "contact": "Pour toute question sur cette page, écris-nous à {email}."
+        }
+      }
     }
   },
   "footer": {
@@ -516,23 +809,47 @@
     },
     "legal": {
       "classification": "Hébergement Classifié ★★",
-      "taxId": "TVA / N° fiscal : [Insérer_Données_Fiscales]",
       "privacy": "Politique de Confidentialité",
       "cookies": "Politique de Cookies",
       "copyright": "© 2026 Il Respiro del Borgo. Tous droits réservés.",
       "cin": "CIN : IT005077C1SCRVTNU4",
-      "policy": {
-        "title": "Politique de confidentialité & cookies",
-        "intro": "Ce site collecte le moins de données possible. Voici tout ce que tu dois savoir :",
-        "points": {
-          "language": "Le site enregistre ta langue préférée dans ton navigateur (localStorage et un cookie technique) : elle reste sur ton appareil, n'est transmise à personne et, s'agissant d'une donnée technique, ne nécessite pas ton consentement.",
-          "enquiry": "Si tu utilises le formulaire de contact, nous collectons ton nom, ton e-mail, ton téléphone (si tu l'indiques), tes dates, le nombre de voyageurs et ton message.",
-          "enquiryBasis": "Ces données servent uniquement à te répondre et à organiser un éventuel séjour (base légale : art. 6.1.b du RGPD, mesures précontractuelles à ta demande). Elles sont envoyées par e-mail à la boîte de l'établissement via Google (Gmail) : elles ne sont conservées dans aucune base de données, ne sont pas cédées à des tiers et ne sont jamais utilisées à des fins marketing.",
-          "retention": "L'e-mail reste dans la boîte de l'établissement le temps nécessaire au traitement de ta demande et d'un éventuel séjour.",
-          "rights": "Tu peux à tout moment demander l'accès, la rectification ou la suppression de tes données en écrivant à {email}."
-        },
-        "close": "Fermer"
+      "terms": "Conditions",
+      "manageCookies": "Gérer les cookies"
+    }
+  },
+  "consent": {
+    "banner": {
+      "title": "Un instant",
+      "body": "Ce site n'utilise que des cookies techniques. Certains contenus et services fournis par des tiers ne sont chargés que si tu les autorises.",
+      "accept": "Accepter tous",
+      "reject": "Uniquement techniques",
+      "customise": "Préférences",
+      "policyLink": "Politique relative aux cookies"
+    },
+    "dialog": {
+      "title": "Préférences de cookies",
+      "description": "C'est toi qui décides de ce qui peut être chargé. Tu peux revenir ici à tout moment depuis le lien en bas de chaque page.",
+      "save": "Enregistrer les préférences",
+      "acceptAll": "Tout accepter",
+      "rejectAll": "Tout refuser",
+      "close": "Fermer"
+    },
+    "categories": {
+      "necessary": {
+        "label": "Cookies techniques",
+        "description": "Ils retiennent la langue que tu as choisie et cette préférence de cookies elle-même. Toujours actifs : sans eux, le site ne fonctionne pas.",
+        "always": "Toujours actifs"
+      },
+      "maps": {
+        "label": "Contenus externes",
+        "description": "Contenus hébergés par des tiers — aujourd'hui la carte interactive de la structure, fournie par Google Maps. Si tu les actives, le fournisseur reçoit ton adresse IP et peut déposer ses propres cookies."
       }
+    },
+    "map": {
+      "title": "Ici, la carte est éteinte",
+      "body": "La carte vient de Google Maps. Si tu la charges, Google reçoit ton adresse IP et peut déposer ses propres cookies.",
+      "load": "Charger la carte",
+      "fallback": "Ou l'ouvrir sur Google Maps"
     }
   }
 }

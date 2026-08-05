@@ -1,4 +1,5 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   MapsLocation01Icon,
@@ -6,7 +7,7 @@ import {
   Mail01Icon,
   WhatsappIcon,
 } from "@hugeicons/core-free-icons";
-import { LegalPolicyModal } from "@/ui/components/custom/LegalPolicyModal";
+import { CookiePreferencesLink } from "@/ui/components/custom/CookiePreferencesLink";
 import {
   EMAIL,
   PHONE_DISPLAY,
@@ -15,9 +16,14 @@ import {
   whatsappHref,
 } from "@/configuration/contact";
 
+/** Shared by the three legal links and the preferences button, so they read as one row. */
+const LEGAL_LINK_CLASS =
+  "hover:text-neutral-50 transition-colors focus-visible:outline-none focus-visible:text-neutral-50 focus-visible:underline underline-offset-4 uppercase";
+
 export function Footer() {
   const t = useTranslations("footer");
   const tc = useTranslations("contactChannels");
+  const locale = useLocale();
   return (
     <footer className="w-full bg-primary-500 text-neutral-50 py-16 px-6 md:px-12 lg:px-24 font-light text-xs tracking-wider">
       <div className="max-w-7xl mx-auto flex flex-col">
@@ -57,6 +63,7 @@ export function Footer() {
             <div className="flex flex-col items-center lg:items-end space-y-2 text-[13px] text-secondary-50 tracking-wide">
               <a
                 href={whatsappHref(tc("whatsappPrefill"))}
+                data-track="contact_whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
@@ -70,6 +77,7 @@ export function Footer() {
               </a>
               <a
                 href={PHONE_HREF}
+                data-track="contact_phone"
                 className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
               >
                 <HugeiconsIcon
@@ -81,6 +89,7 @@ export function Footer() {
               </a>
               <a
                 href={mailtoHref(tc("mailSubject"), tc("mailBody"))}
+                data-track="contact_email"
                 className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
               >
                 <HugeiconsIcon
@@ -103,7 +112,24 @@ export function Footer() {
             <span>{t("legal.cin")}</span>
           </div>
 
-          <LegalPolicyModal />
+          {/* Reachable from every page, which is what makes withdrawing consent
+              as easy as giving it — GDPR art. 7(3) asks for exactly that. */}
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Link href={`/${locale}/privacy`} className={LEGAL_LINK_CLASS}>
+              {t("legal.privacy")}
+            </Link>
+            <Link href={`/${locale}/cookie-policy`} className={LEGAL_LINK_CLASS}>
+              {t("legal.cookies")}
+            </Link>
+            <Link href={`/${locale}/terms`} className={LEGAL_LINK_CLASS}>
+              {t("legal.terms")}
+            </Link>
+            <CookiePreferencesLink
+              className={`${LEGAL_LINK_CLASS} cursor-pointer`}
+            >
+              {t("legal.manageCookies")}
+            </CookiePreferencesLink>
+          </nav>
         </div>
 
         <div className="mt-12 text-[9px] text-neutral-400/50 tracking-[0.25em] text-center uppercase">

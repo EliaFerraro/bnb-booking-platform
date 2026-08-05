@@ -18,6 +18,18 @@
     "contact": {
       "title": "Find us and get in touch",
       "description": "How to reach us in Montemagno (AT) and how to write to us to check availability: a personal reply within 24 hours."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "What we collect when you write to us, why we process it, how long we keep it and how to ask us to delete it."
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "description": "The complete list of cookies this site uses: technical cookies only, plus the Google map that loads only if you allow it."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "The conditions for using this site. In short: the contact form starts a conversation, it is not a booking."
     }
   },
   "navbar": {
@@ -499,6 +511,287 @@
         "call": "Call us",
         "email": "Write to us"
       }
+    },
+    "privacy": {
+      "hero": {
+        "eyebrow": "Privacy notice",
+        "title": "Privacy Policy",
+        "updated": "Last updated: {date}"
+      },
+      "intro": "This site collects as little data as possible, and none of it for advertising or statistics. Below is the full account of what happens to your data when you write to us: who receives it, where it goes, how long it stays and what you can ask us at any time.",
+      "sections": {
+        "controller": {
+          "title": "Who processes your data",
+          "body": "The data controller is Il Respiro del Borgo, the guest house that runs this site and receives the enquiries sent through the contact form.",
+          "labels": {
+            "address": "Address",
+            "email": "Email",
+            "phone": "Phone",
+            "cin": "CIN"
+          },
+          "noDpo": "Given the size of the property, no Data Protection Officer has been appointed: for anything concerning your data, write directly to the address above."
+        },
+        "data": {
+          "title": "What we collect",
+          "body": "Only what you type into the contact form, plus the few technical details needed to keep it working safely. We never ask you to register and there is no account.",
+          "items": {
+            "identity": {
+              "label": "First name, last name, email",
+              "text": "required: without them we cannot reply to you."
+            },
+            "stay": {
+              "label": "Phone, dates, number of guests",
+              "text": "optional: we only ask so we can answer more precisely about availability."
+            },
+            "message": {
+              "label": "Your message",
+              "text": "whatever you choose to write. Please don't include anything the enquiry doesn't need."
+            },
+            "technical": {
+              "label": "Technical data",
+              "text": "the language you are browsing in, the page you sent the enquiry from, your browser, and an encrypted, non-reversible version of your IP address. The IP address itself is never stored."
+            }
+          },
+          "noSpecialCategories": "We do not process special categories of data (health, beliefs, orientation) and we ask you not to put them in your message. If your stay involves specific needs, we would rather discuss them by phone or in person."
+        },
+        "purposes": {
+          "title": "Why we process it",
+          "items": {
+            "reply": "To reply to you and arrange a possible stay. Legal basis: Art. 6(1)(b) GDPR, pre-contractual measures taken at your request. That is why we do not ask for your consent: without this data your enquiry cannot be handled at all.",
+            "abuse": "To protect the form from automated submissions and abuse, using the encrypted version of your IP address. Legal basis: Art. 6(1)(f) GDPR, our legitimate interest in keeping the site working.",
+            "consent": "To record the choice you make on the cookie banner, so we can show when and to what you consented. Legal basis: Art. 6(1)(c) GDPR, the legal obligation to keep proof of consent."
+          },
+          "noObligation": "We do not use your data for marketing, we do not add you to any mailing list, and we make no automated decisions and carry out no profiling."
+        },
+        "storage": {
+          "title": "Where it goes",
+          "body": "Your enquiry is emailed to the property's mailbox and, at the same time, saved in a database. The database exists so that no enquiry is lost: if the email fails to send, your enquiry is still recorded and we can recover it. Previously there was only the email, and a failed delivery meant an enquiry gone for good.",
+          "location": "Data is held on servers located in the European Union, encrypted both in transit and at rest. Access is limited to the people who run the property."
+        },
+        "recipients": {
+          "title": "Who else sees it",
+          "body": "Nobody outside the property. We do rely on a few technical suppliers, which process the data on our behalf as processors:",
+          "items": {
+            "hosting": {
+              "label": "Vercel",
+              "text": "hosts the site and keeps its technical logs."
+            },
+            "email": {
+              "label": "Google (Gmail)",
+              "text": "delivers and stores the enquiry emails in the property's mailbox."
+            },
+            "database": {
+              "label": "Supabase",
+              "text": "hosts the database where enquiries are recorded."
+            },
+            "maps": {
+              "label": "Google Maps",
+              "text": "shows the map of the property, and only if you choose to load it. Until you do, Google receives nothing from this site."
+            }
+          },
+          "noSale": "Your data is never sold, rented or traded with anyone. It may be disclosed to the authorities only where the law requires it."
+        },
+        "retention": {
+          "title": "How long we keep it",
+          "body": "Enquiries stay in the database for {months} months from the day you send them.",
+          "anonymisation": "After that they are not deleted but automatically anonymised: first name, last name, email, phone, message and the encrypted IP are irreversibly cleared. What remains cannot be traced back to anyone — the dates requested, the number of guests, the language and the month of the enquiry — and helps us understand how the season is going. From that moment it is no longer personal data, and there is nothing left about you to erase.",
+          "mailbox": "The email itself stays in the property's mailbox for as long as needed to handle your enquiry and any resulting stay. If a stay does go ahead, the tax records it produces are kept for ten years, as Italian law requires."
+        },
+        "rights": {
+          "title": "Your rights",
+          "body": "At any time you can ask us:",
+          "items": {
+            "access": "to access the data concerning you and receive a copy of what we hold;",
+            "rectification": "to correct anything wrong or incomplete;",
+            "erasure": "to erase it;",
+            "restriction": "to restrict how it is processed;",
+            "portability": "to receive it in a machine-readable format;",
+            "objection": "to object to processing based on our legitimate interest."
+          },
+          "how": "Just write to {email}. We reply within a month; if the request is complex it may take up to three, and we will tell you. There is no charge for any of this.",
+          "complaint": "If you think something is wrong, you have the right to complain to the Italian Data Protection Authority (www.garanteprivacy.it) or to the supervisory authority of the country where you live."
+        },
+        "security": {
+          "title": "Security",
+          "body": "The site is served only over an encrypted connection (HTTPS). The database is encrypted, reachable only with private credentials, and not publicly accessible. Your IP address is never stored as it is: it is transformed with a one-way function and a secret key held separately, and the original address cannot be recovered from the result."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "body": "This site uses technical cookies only, plus the Google map, which loads only after you explicitly allow it. The complete list is in the",
+          "link": "Cookie Policy"
+        },
+        "changes": {
+          "title": "Changes to this notice",
+          "body": "If we change anything we update the date at the top of this page. If the change concerns third-party services or the purposes of processing, the cookie banner will be shown again so you can choose afresh."
+        },
+        "analytics": {
+          "title": "Site usage statistics",
+          "body": "We measure how the site is used — how many pages are read, which ones, for how long, from which country — because it is the only way to tell what works and what does not. We do it without knowing who you are, and without being able to find out later.",
+          "items": {
+            "what": "We collect: the page visited, the language, how long you stay on it, your screen size (in three bands), the site you arrived from if any, and a few interactions such as sending the form or loading the map.",
+            "noStorage": "We store nothing on your device: no cookie, no browser data. That is why these statistics are not something the banner asks you about.",
+            "visitor": "To tell two visitors apart within the same day we use a code computed from your IP address and browser, mixed with a secret number generated at random each day and then destroyed. Once that number is deleted the code cannot be linked back to anyone — including by us.",
+            "country": "The country is reported to us by the provider hosting the site. Your IP address is never stored."
+          },
+          "basis": "Legal basis: Art. 6(1)(f) GDPR, our legitimate interest in understanding how the site is used. The impact on you is minimal by construction: the data is about pages rather than people, and after thirty days even the code that distinguishes one visitor from another is cleared, leaving only aggregate figures."
+        }
+      }
+    },
+    "cookiePolicy": {
+      "hero": {
+        "eyebrow": "Cookies and similar technologies",
+        "title": "Cookie Policy",
+        "updated": "Last updated: {date}"
+      },
+      "intro": "This site uses no profiling cookies, has no analytics and carries no advertising. What follows is the complete list, with nothing left out, of what gets stored on your device.",
+      "table": {
+        "purpose": "Purpose",
+        "duration": "Duration",
+        "type": "Type"
+      },
+      "sections": {
+        "what": {
+          "title": "What they are",
+          "body": "Cookies are small files a site saves in your browser to remember something between one page and the next. Local storage works the same way, except the value stays on your device and is not sent along with requests.",
+          "categories": "Technical cookies make the site work and need no consent from you. Everything else — analytics, advertising, third-party content — needs consent up front, and on this site the only such case is the map."
+        },
+        "technical": {
+          "title": "Technical cookies",
+          "body": "Always on, because without them the site would not do what you ask of it. They do not identify you as a person and are not shared with anyone.",
+          "items": {
+            "locale": {
+              "purpose": "Remembers the language you chose, so you don't have to pick it again on every visit.",
+              "duration": "1 year",
+              "type": "Technical, first party"
+            },
+            "localeStorage": {
+              "purpose": "The same language preference, kept in the browser's local storage.",
+              "duration": "Until you clear your browser data",
+              "type": "Local storage, first party"
+            },
+            "consent": {
+              "purpose": "Remembers the choice you made on the cookie banner, so it isn't shown again on every page.",
+              "duration": "6 months",
+              "type": "Technical, first party"
+            }
+          },
+          "serverNote": "One clarification, because an earlier version of this page said otherwise: the language cookie is sent to our server with every request — that is how the site knows which language to answer in. It is still technical data, it does not identify you, and it goes nowhere else."
+        },
+        "thirdParty": {
+          "title": "Third party: the map",
+          "body": "The map of the property is a Google Maps frame. When you load it, Google receives your IP address and information about your browser, and may store its own cookies on your device under its own privacy policy — over which we have no control.",
+          "items": {
+            "maps": {
+              "purpose": "Cookies set by Google for security, preferences and — depending on your history with Google services — profiling.",
+              "duration": "From 6 months to 2 years, decided by Google",
+              "type": "Third party, consent required"
+            }
+          },
+          "gate": "That is why the map does not load by itself: in its place you get a panel with a button, and until you press it no request goes to Google at all. If you would rather not load it, you can still open the property's location directly on Google Maps in a new tab."
+        },
+        "absent": {
+          "title": "What isn't here",
+          "body": "Worth listing, because it is everything you would expect to find and won't:",
+          "items": {
+            "analytics": "no third-party analytics: no Google Analytics, no equivalents. The little we measure stays on our own servers, without cookies (see above).",
+            "advertising": "no advertising cookies, no tracking pixels, no remarketing.",
+            "social": "no social network buttons or embedded content.",
+            "fonts": "the typefaces are downloaded from Google at build time and served from our own site: your browser never contacts Google's servers to load them."
+          }
+        },
+        "manage": {
+          "title": "Changing your mind",
+          "body": "Your choice is not final, and withdrawing it is as easy as giving it.",
+          "open": "Open cookie preferences",
+          "browser": "Alternatively you can delete this site's cookies from your browser settings: you will simply be asked again on your next visit.",
+          "consequence": "Refusing or withdrawing consent limits nothing about using the site: the only difference is that instead of the interactive map you will see a panel with a link to open it on Google Maps."
+        },
+        "more": {
+          "title": "The rest of your data",
+          "body": "What happens to the data you type into the contact form is explained in the",
+          "link": "Privacy Policy"
+        },
+        "analytics": {
+          "title": "Statistics: no cookies",
+          "body": "The site measures its own usage, but it does so with no cookies and without writing anything to your device.",
+          "items": {
+            "noCookie": "no cookie, no local storage, no identifier that outlives your visit;",
+            "rotating": "visitors are told apart using a code computed with a random secret that changes every day and is then destroyed: from one day to the next, nobody can be recognised;",
+            "firstParty": "the data stays ours and in our own database — no third-party company receives it."
+          },
+          "why": "Precisely because nothing is stored on your device and no individual can be identified, these statistics need no consent from you under the Italian Data Protection Authority's guidelines. It is also why you will not find Google Analytics here."
+        }
+      }
+    },
+    "terms": {
+      "hero": {
+        "eyebrow": "Conditions of use",
+        "title": "Terms of Use",
+        "updated": "Last updated: {date}"
+      },
+      "intro": "These terms govern the use of this site. They are few and to the point: the site describes the property and lets you write to us, and nothing more. In particular, the contact form starts a conversation — it is not a booking.",
+      "sections": {
+        "scope": {
+          "title": "Purpose",
+          "body": "This site is informational and a way to get in touch: it presents the property, its spaces, its services and the area around it, and offers a form for asking about availability. It is not a booking platform and it handles no payments.",
+          "owner": "The site is run by Il Respiro del Borgo, {address}, CIN {cin}."
+        },
+        "notABooking": {
+          "title": "An enquiry is not a booking",
+          "body": "This is the most important point on the page. When you send the form you are asking for information: you are not booking and you are not holding any dates.",
+          "items": {
+            "noCommitment": "sending it commits neither you nor us, and creates no contract;",
+            "noPayment": "you are never asked for payment, on the site or as a condition of getting a reply;",
+            "confirmation": "a stay is confirmed only when we explicitly confirm it to you in writing, with dates, price and conditions."
+          },
+          "terms": "The terms of the stay — price, deposit, arrival and departure times, cancellation — are given to you at that point, and become binding only with the confirmation. Until then, any availability shown or discussed is always indicative."
+        },
+        "use": {
+          "title": "Using the site",
+          "body": "We ask for little, but we do ask:",
+          "items": {
+            "accurate": "give real details: a wrong email address simply means you will get no reply;",
+            "lawful": "do not use the form to send offensive, unlawful or promotional content;",
+            "automated": "do not use automated systems to send bulk enquiries or to harvest the site's content. The form has technical limits designed for exactly that."
+          }
+        },
+        "content": {
+          "title": "Site content",
+          "body": "Text, photographs and descriptions portray the property as faithfully as we can manage, but they remain descriptive material: small differences from what you will find are possible, and the shared spaces and garden change with the seasons.",
+          "prices": "Any prices or availability shown on the site are indicative and do not constitute an offer. Only what we confirm to you in writing counts."
+        },
+        "intellectualProperty": {
+          "title": "Intellectual property",
+          "body": "The photographs, text, name and mark of the property belong to Il Respiro del Borgo. You are welcome to share pages of the site; reusing photographs or text in other contexts requires our written permission."
+        },
+        "availability": {
+          "title": "Availability of the site",
+          "body": "We do what we can to keep the site reachable, but we cannot promise it will never be interrupted: maintenance, updates or problems at our technical suppliers can take it offline temporarily. If you are in a hurry, the phone and WhatsApp always work.",
+          "links": "The site links to external services (Google Maps, WhatsApp). We do not control those services and are not responsible for their content or their terms."
+        },
+        "liability": {
+          "title": "Liability",
+          "body": "We are not liable for damage arising from improper use of the site, from temporary unavailability, or from information that, despite being entered with care, turns out to be inaccurate or out of date.",
+          "consumer": "Nothing in these terms limits the rights the law gives you as a consumer, nor our liability in cases where the law does not permit exclusions."
+        },
+        "privacy": {
+          "title": "Personal data and cookies",
+          "body": "How we handle your data is explained in the",
+          "privacyLink": "Privacy Policy",
+          "and": "and the",
+          "cookieLink": "Cookie Policy"
+        },
+        "law": {
+          "title": "Governing law",
+          "body": "These terms are governed by Italian law. For any dispute, the court of the place where you live or are domiciled has jurisdiction, if you are a consumer resident in the European Union.",
+          "odr": "The European Commission also provides an online dispute resolution platform, available at ec.europa.eu/consumers/odr."
+        },
+        "changes": {
+          "title": "Changes",
+          "body": "We may update these terms; the version in force is always the one published here, with the update date at the top of the page.",
+          "contact": "If anything on this page is unclear, write to us at {email}."
+        }
+      }
     }
   },
   "footer": {
@@ -516,23 +809,47 @@
     },
     "legal": {
       "classification": "Classified Accommodation ★★",
-      "taxId": "VAT / Tax ID: [Insert_Tax_Data]",
       "privacy": "Privacy Policy",
       "cookies": "Cookie Policy",
       "copyright": "© 2026 Il Respiro del Borgo. All rights reserved.",
       "cin": "CIN: IT005077C1SCRVTNU4",
-      "policy": {
-        "title": "Privacy & Cookie Policy",
-        "intro": "This website collects as little data as possible. Here is everything you need to know:",
-        "points": {
-          "language": "The site saves your preferred language in your browser (localStorage and a technical cookie): it stays on your device, is not sent to anyone and, being technical data, does not require your consent.",
-          "enquiry": "If you use the contact form we collect your name, email, phone number (if you provide one), dates, number of guests and message.",
-          "enquiryBasis": "This data is used only to reply to you and to arrange a possible stay (legal basis: Art. 6(1)(b) GDPR, pre-contractual measures at your request). It is emailed to the property's mailbox via Google (Gmail): it is not kept in any database, not shared with third parties and never used for marketing.",
-          "retention": "The email stays in the property's mailbox for as long as needed to handle your request and any resulting stay.",
-          "rights": "You can ask to access, correct or delete your data at any time by writing to {email}."
-        },
-        "close": "Close"
+      "terms": "Terms",
+      "manageCookies": "Manage cookies"
+    }
+  },
+  "consent": {
+    "banner": {
+      "title": "One moment",
+      "body": "This site uses technical cookies only. Some content and services provided by third parties are loaded only if you allow them.",
+      "accept": "Accept all cookies",
+      "reject": "Technical only",
+      "customise": "Preferences",
+      "policyLink": "Cookie Policy"
+    },
+    "dialog": {
+      "title": "Cookie preferences",
+      "description": "You decide what may be loaded. You can come back here at any time from the link at the bottom of every page.",
+      "save": "Save preferences",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject all",
+      "close": "Close"
+    },
+    "categories": {
+      "necessary": {
+        "label": "Technical cookies",
+        "description": "They remember the language you chose and this very cookie preference. Always on: without them the site does not work.",
+        "always": "Always on"
+      },
+      "maps": {
+        "label": "External content",
+        "description": "Content hosted by third parties — currently the interactive map of the property, provided by Google Maps. If you enable it, the provider receives your IP address and may set its own cookies."
       }
+    },
+    "map": {
+      "title": "The map is off here",
+      "body": "The map comes from Google Maps. If you load it, Google receives your IP address and may set its own cookies.",
+      "load": "Load the map",
+      "fallback": "Or open it on Google Maps"
     }
   }
 }

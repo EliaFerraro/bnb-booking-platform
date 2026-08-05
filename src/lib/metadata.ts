@@ -26,7 +26,14 @@ const OG_LOCALE: Record<string, string> = {
 };
 
 /** The message key under `meta` holding a subpage's title and description. */
-export type MetaPage = "structure" | "environment" | "services" | "contact";
+export type MetaPage =
+  | "structure"
+  | "environment"
+  | "services"
+  | "contact"
+  | "privacy"
+  | "cookiePolicy"
+  | "terms";
 
 interface Options {
   locale: string;
@@ -45,6 +52,9 @@ const PATHS: Record<MetaPage | "home", string> = {
   environment: "/environment",
   services: "/services",
   contact: "/contact",
+  privacy: "/privacy",
+  cookiePolicy: "/cookie-policy",
+  terms: "/terms",
 };
 
 export async function buildMetadata({
