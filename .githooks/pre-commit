@@ -20,6 +20,16 @@ for staged in $(git diff --cached --name-only --diff-filter=ACM | grep -E '(^|/)
     echo "            Move the real value to src/.env.local (gitignored)." >&2
     exit 1
   fi
+  # A connection string carries its password inline, so it matches none of the
+  # keywords above — DATABASE_URL is now the most dangerous line that could be
+  # staged. Catches scheme://user:password@host in any *_URL variable, while
+  # leaving an empty or passwordless URL alone.
+  if git show ":$staged" |
+    grep -qE '^[A-Z_]*URL[A-Z_]*=("?)[a-z+]+://[^:@/[:space:]]+:[^@/[:space:]]+@'; then
+    echo "pre-commit: $staged holds a connection string with an inline password." >&2
+    echo "            Move the real value to src/.env.local (gitignored)." >&2
+    exit 1
+  fi
 done
 
 cd "$(git rev-parse --show-toplevel)/src"
@@ -45,7 +55,13 @@ npm run --silent check:palette
 #    without regenerating would leave the old logo in every outgoing email.
 npm run --silent check:email-logo
 
-# 5. Type errors span files that are not staged, so this has to be project-wide.
+# 5. Two migrations generated on separate branches collide silently: same
+#    sequence number, divergent snapshots. This is offline — it reads the
+#    journal, never the database — so the hook still works with Postgres
+#    stopped, which is a hard requirement for every step here.
+npm run --silent check:migrations
+
+# 6. Type errors span files that are not staged, so this has to be project-wide.
 npm run --silent typecheck
 
 echo "pre-commit: checks passed"
