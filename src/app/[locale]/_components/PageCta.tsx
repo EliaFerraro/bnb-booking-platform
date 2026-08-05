@@ -46,7 +46,12 @@ export function PageCta({
               : "bg-primary-500 text-neutral-50 px-10 py-6 rounded-full text-xs font-semibold tracking-widest uppercase hover:bg-primary-700 transition-colors shadow-md h-auto"
           }
         >
-          <Link href={href}>{button}</Link>
+          {/* Picked up by the delegated listener in Analytics.tsx, so this
+              stays a server component. Every use of PageCta today points at the
+              enquiry form. */}
+          <Link href={href} data-track="cta_enquiry">
+            {button}
+          </Link>
         </Button>
       </div>
     </section>

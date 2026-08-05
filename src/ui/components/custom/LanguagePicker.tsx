@@ -13,6 +13,7 @@ import { Button } from "@/ui/components/shadcn/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { LANGUAGES, DEFAULT_LANGUAGE } from "@/configuration/language";
+import { trackEvent } from "@/lib/analytics/track";
 
 const STORAGE_KEY = "user-preferred-language";
 const COOKIE_KEY = "NEXT_LOCALE";
@@ -44,6 +45,9 @@ export function LanguagePicker() {
     const lowerNewLang = newLang.toLowerCase();
 
     saveLanguagePreference(lowerNewLang);
+    // Quanti visitatori cambiano lingua a mano dice se il rilevamento
+    // automatico in proxy.ts sta funzionando.
+    trackEvent("language_changed");
 
     // Calcola la nuova rotta sostituendo il primo segmento dell'URL
     const segments = pathname.split("/");

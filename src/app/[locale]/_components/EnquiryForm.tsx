@@ -3,6 +3,7 @@
 import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Alert02Icon, UserMultiple02Icon } from "@hugeicons/core-free-icons";
 
@@ -11,11 +12,11 @@ import { TextField } from "@/ui/components/form/TextField";
 import { TextareaField } from "@/ui/components/form/TextareaField";
 import { DateField } from "@/ui/components/form/DateField";
 import { nextDayIso } from "@/ui/components/form/Calendar";
-import { LegalPolicyModal } from "@/ui/components/custom/LegalPolicyModal";
 import { mailtoHref, whatsappHref } from "@/configuration/contact";
 import { submitEnquiry } from "@/lib/enquiry/actions";
 import { initialEnquiryState } from "@/lib/enquiry/state";
 import { enquirySchema, firstIssuePerField } from "@/lib/enquiry/schema";
+import { trackEvent } from "@/lib/analytics/track";
 import { cn } from "@/lib/utils";
 import { EnquirySuccess, EXIT_MS } from "./EnquirySuccess";
 
@@ -37,6 +38,8 @@ const FIELD_NAMES = Object.keys(EMPTY_VALUES) as FieldName[];
 export function EnquiryForm() {
   const t = useTranslations("pages.contact.form");
   const tc = useTranslations("contactChannels");
+  // The privacy link reuses the footer's label so the two never drift apart.
+  const tf = useTranslations("footer.legal");
   const locale = useLocale();
   const pathname = usePathname();
 
@@ -69,7 +72,15 @@ export function EnquiryForm() {
     if (startedAtRef.current) {
       startedAtRef.current.value = String(Date.now());
     }
+    trackEvent("enquiry_form_start");
   }, []);
+
+  // Pairs with enquiry_form_start, so the gap between the two counts is the
+  // abandonment rate — the number worth knowing about a form this long.
+  useEffect(() => {
+    if (state.status === "success") trackEvent("enquiry_form_success");
+    if (state.status === "error") trackEvent("enquiry_form_error");
+  }, [state.status]);
 
   // The same schema the server uses, so a field can never be accepted here and
   // rejected there. Cross-field rules work because the whole object is parsed;
@@ -154,6 +165,16 @@ export function EnquiryForm() {
           event.preventDefault();
           markTouched(...FIELD_NAMES);
           setSubmitAttempt((attempt) => attempt + 1);
+          return;
+        }
+
+        // How long the guest actually took, from the same timestamp the bot
+        // trap already stamps. Recorded twice on purpose: as an event, so it
+        // can be compared against the abandoned attempts that never get here,
+        // and on the enquiry row itself, where it survives anonymisation.
+        const startedAt = Number(startedAtRef.current?.value ?? 0);
+        if (startedAt > 0) {
+          trackEvent("enquiry_form_submit", { value: Date.now() - startedAt });
         }
       }}
       className={cn(
@@ -301,9 +322,18 @@ export function EnquiryForm() {
           {isPending ? t("submitting") : t("submit")}
         </Button>
 
+        {/* A link rather than a consent checkbox: the legal basis here is
+            art. 6(1)(b), pre-contractual measures. Asking for consent that is
+            not the basis would be wrong, and would create a right to withdraw
+            that could block us from replying at all. */}
         <p className="text-xs text-neutral-500 leading-relaxed font-light">
           {t("privacyNote")}{" "}
-          <LegalPolicyModal className="normal-case underline underline-offset-4 text-neutral-600 hover:text-neutral-900" />
+          <Link
+            href={`/${locale}/privacy`}
+            className="normal-case underline underline-offset-4 text-neutral-600 hover:text-neutral-900"
+          >
+            {tf("legal.privacy")}
+          </Link>
         </p>
       </div>
 

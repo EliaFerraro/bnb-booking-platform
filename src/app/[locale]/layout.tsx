@@ -5,6 +5,9 @@ import { Cormorant_Garamond } from "next/font/google";
 import { Navbar } from "@/ui/components/custom/Navbar";
 import { Footer } from "@/ui/components/custom/Footer";
 import { Map } from "@/app/[locale]/_components/Map";
+import { ConsentProvider } from "@/ui/components/custom/ConsentProvider";
+import { CookieBanner } from "@/ui/components/custom/CookieBanner";
+import { Analytics } from "@/ui/components/custom/Analytics";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { SITE_URL, STRUCTURE_NAME } from "@/configuration/site";
@@ -58,15 +61,28 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${font.variable} font-sans m-0 p-0 antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
-          <Navbar />
+          {/* Dentro NextIntlClientProvider perché il banner e le preferenze
+              usano useTranslations, e sopra Map e Footer perché entrambi
+              leggono la scelta sui cookie. */}
+          <ConsentProvider>
+            {/* Ora puoi passare la lingua corrente alla Navbar per tradurre i menu! */}
+            <Navbar />
 
-          <main>{children}</main>
+            <main>{children}</main>
 
-          {/* Sopra il footer su ogni pagina: la posizione è utile ovunque. */}
-          <Map />
+            {/* Sopra il footer su ogni pagina: la posizione è utile ovunque. */}
+            <Map />
 
-          <Footer />
+            <Footer />
+
+            <CookieBanner />
+
+            {/* Fuori dal gate del consenso di proposito: è misurazione di
+                prima parte, senza cookie e senza nulla salvato sul dispositivo,
+                quindi non rientra nell'art. 5(3) ePrivacy. Vedi
+                configuration/analytics.ts. */}
+            <Analytics />
+          </ConsentProvider>
         </NextIntlClientProvider>
       </body>
     </html>
