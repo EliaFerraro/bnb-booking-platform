@@ -1,0 +1,13 @@
+# Git stores text files with LF and, under core.autocrlf=true on Windows, checks
+# them back out as CRLF. That is fine for hand-written source, but the files
+# below are produced by src/scripts/generate-*.mjs, which write LF and then
+# verify with a byte-for-byte string comparison (`npm run verify` and the
+# pre-commit hook). A CRLF working copy therefore fails a staleness check that
+# regenerating cannot fix, because the next checkout puts the CRLFs straight
+# back. Pinning them to LF makes the comparison mean what it claims to.
+
+* text=auto
+
+src/style/palette.css                text eol=lf
+src/lib/email/logo.ts                text eol=lf
+src/public/img/brand/og-cover.source text eol=lf
