@@ -13,6 +13,7 @@ import { TextareaField } from "@/ui/components/form/TextareaField";
 import { DateField } from "@/ui/components/form/DateField";
 import { nextDayIso } from "@/ui/components/form/Calendar";
 import { mailtoHref, whatsappHref } from "@/configuration/contact";
+import { STRUCTURE_NAME } from "@/configuration/site";
 import { submitEnquiry } from "@/lib/enquiry/actions";
 import { initialEnquiryState } from "@/lib/enquiry/state";
 import { enquirySchema, firstIssuePerField } from "@/lib/enquiry/schema";
@@ -294,7 +295,9 @@ export function EnquiryForm() {
             <p className="mt-3 text-red-800/90">
               {t("errors.fallbackIntro")}{" "}
               <a
-                href={whatsappHref(tc("whatsappPrefill"))}
+                href={whatsappHref(
+                  tc("whatsappPrefill", { brand: STRUCTURE_NAME }),
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline underline-offset-4 font-medium"
@@ -303,7 +306,10 @@ export function EnquiryForm() {
               </a>{" "}
               <span aria-hidden="true">·</span>{" "}
               <a
-                href={mailtoHref(tc("mailSubject"), tc("mailBody"))}
+                href={mailtoHref(
+                  tc("mailSubject", { brand: STRUCTURE_NAME }),
+                  tc("mailBody"),
+                )}
                 className="underline underline-offset-4 font-medium"
               >
                 {t("errors.fallbackEmail")}
@@ -332,7 +338,7 @@ export function EnquiryForm() {
             href={`/${locale}/privacy`}
             className="normal-case underline underline-offset-4 text-neutral-600 hover:text-neutral-900"
           >
-            {tf("legal.privacy")}
+            {tf("privacy")}
           </Link>
         </p>
       </div>

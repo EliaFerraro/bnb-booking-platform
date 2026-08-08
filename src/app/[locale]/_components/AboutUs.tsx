@@ -2,9 +2,11 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
 import Image from "next/image";
+import { IMAGES } from "@/configuration/images.mjs";
 
 export function AboutUs() {
   const t = useTranslations("pages.homepage.aboutUs");
+  const ti = useTranslations("pages.homepage.images");
   return (
     <section className="w-full bg-secondary-400 py-16 px-4 md:px-8 lg:px-16 text-neutral-950">
       <div className="max-w-7xl mx-auto">
@@ -20,8 +22,8 @@ export function AboutUs() {
             className={`relative w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-1 rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]`}
           >
             <Image
-              src="/img/photos/portrait-lorenzo.jpg"
-              alt="L'accoglienza in Monferrato"
+              src={IMAGES.home.portraitLeft}
+              alt={ti("portraitLeft")}
               className="object-cover"
               fill
               sizes="(min-width: 1024px) 30vw, 100vw"
@@ -47,8 +49,8 @@ export function AboutUs() {
             className={`relative w-full aspect-4/3 md:aspect-4/5 overflow-hidden shadow-sm order-2 lg:order-3 rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]`}
           >
             <Image
-              src="/img/photos/portrait-margherita.jpg"
-              alt="La convivialità nella nostra cascina"
+              src={IMAGES.home.portraitRight}
+              alt={ti("portraitRight")}
               className="object-cover"
               fill
               sizes="(min-width: 1024px) 30vw, 100vw"

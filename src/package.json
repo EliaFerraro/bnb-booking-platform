@@ -9,6 +9,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "check:locales": "node scripts/check-locales.mjs",
+    "check:config": "node scripts/check-config.mjs",
     "gen:palette": "node scripts/generate-palette.mjs",
     "check:palette": "node scripts/generate-palette.mjs --check",
     "gen:email-logo": "node scripts/generate-email-logo.mjs",
@@ -21,7 +22,7 @@
     "db:studio": "node --env-file-if-exists=.env.local node_modules/drizzle-kit/bin.cjs studio",
     "db:push": "node --env-file-if-exists=.env.local node_modules/drizzle-kit/bin.cjs push",
     "check:migrations": "node node_modules/drizzle-kit/bin.cjs check",
-    "verify": "npm run lint && npm run check:locales && npm run check:palette && npm run check:email-logo && npm run check:og-image && npm run check:migrations && npm run typecheck",
+    "verify": "npm run lint && npm run check:locales && npm run check:config && npm run check:palette && npm run check:email-logo && npm run check:og-image && npm run check:migrations && npm run typecheck",
     "prepare": "git config core.hooksPath .githooks || exit 0"
   },
   "lint-staged": {

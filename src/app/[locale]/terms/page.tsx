@@ -8,6 +8,7 @@ import {
   LegalSection,
 } from "../_components/LegalPage";
 import { ADDRESS_LINE, CIN, EMAIL } from "@/configuration/contact";
+import { STRUCTURE_NAME } from "@/configuration/site";
 import { LEGAL_UPDATED_AT } from "@/configuration/privacy";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -32,7 +33,13 @@ function TermsContent({ locale }: { locale: string }) {
     >
       <LegalSection title={t("sections.scope.title")}>
         <p>{t("sections.scope.body")}</p>
-        <p>{t("sections.scope.owner", { address: ADDRESS_LINE, cin: CIN })}</p>
+        <p>
+          {t("sections.scope.owner", {
+            brand: STRUCTURE_NAME,
+            address: ADDRESS_LINE,
+            cin: CIN,
+          })}
+        </p>
       </LegalSection>
 
       {/*
@@ -66,7 +73,9 @@ function TermsContent({ locale }: { locale: string }) {
       </LegalSection>
 
       <LegalSection title={t("sections.intellectualProperty.title")}>
-        <p>{t("sections.intellectualProperty.body")}</p>
+        <p>
+          {t("sections.intellectualProperty.body", { brand: STRUCTURE_NAME })}
+        </p>
       </LegalSection>
 
       <LegalSection title={t("sections.availability.title")}>

@@ -9,16 +9,24 @@ import {
 } from "@hugeicons/core-free-icons";
 import { CookiePreferencesLink } from "@/ui/components/custom/CookiePreferencesLink";
 import {
+  ADDRESS_LOCALITY,
+  ADDRESS_STREET,
+  CIN,
   EMAIL,
   PHONE_DISPLAY,
   PHONE_HREF,
   mailtoHref,
   whatsappHref,
 } from "@/configuration/contact";
+import { PROPERTY } from "@/configuration/property.mjs";
+import { STRUCTURE_NAME } from "@/configuration/site";
 
 /** Shared by the three legal links and the preferences button, so they read as one row. */
 const LEGAL_LINK_CLASS =
   "hover:text-neutral-50 transition-colors focus-visible:outline-none focus-visible:text-neutral-50 focus-visible:underline underline-offset-4 uppercase";
+
+/** The classification as the tourist board grants it: that many filled stars. */
+const STARS = "★".repeat(PROPERTY.brand.stars);
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -39,17 +47,17 @@ export function Footer() {
                   className="w-4 h-4 text-secondary-200/80"
                   strokeWidth={1.5}
                 />
-                <span>{t("location.address")}</span>
+                <span>{ADDRESS_STREET}</span>
               </div>
               <p className="pl-0 lg:pl-6 text-secondary-200 font-medium uppercase text-xs tracking-widest">
-                {t("location.city")}
+                {ADDRESS_LOCALITY}
               </p>
             </div>
           </div>
 
           <div className="lg:col-span-4 flex flex-col items-center justify-center px-4 border-y lg:border-y-0 lg:border-x border-neutral-50/10 py-6 lg:py-2">
             <span className="font-serif text-xs tracking-[0.3em] uppercase text-secondary-200 font-medium mb-3 block">
-              {t("brand.name")}
+              {STRUCTURE_NAME}
             </span>
             <blockquote className="text-secondary-50/70 leading-relaxed font-serif italic text-[13px] tracking-wide max-w-xs">
               &ldquo;{t("brand.tagline")}&rdquo;
@@ -62,7 +70,9 @@ export function Footer() {
             </h4>
             <div className="flex flex-col items-center lg:items-end space-y-2 text-[13px] text-secondary-50 tracking-wide">
               <a
-                href={whatsappHref(tc("whatsappPrefill"))}
+                href={whatsappHref(
+                  tc("whatsappPrefill", { brand: STRUCTURE_NAME }),
+                )}
                 data-track="contact_whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +98,10 @@ export function Footer() {
                 <span>{PHONE_DISPLAY}</span>
               </a>
               <a
-                href={mailtoHref(tc("mailSubject"), tc("mailBody"))}
+                href={mailtoHref(
+                  tc("mailSubject", { brand: STRUCTURE_NAME }),
+                  tc("mailBody"),
+                )}
                 data-track="contact_email"
                 className="flex items-center space-x-2.5 hover:text-secondary-200 transition-colors group"
               >
@@ -106,10 +119,10 @@ export function Footer() {
         <div className="w-full pt-8 flex flex-col lg:flex-row items-center justify-between gap-6 text-[10px] text-secondary-200/60 uppercase tracking-[0.15em]">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
             <span className="text-neutral-200">
-              {t("legal.classification")}
+              {t("legal.classification", { stars: STARS })}
             </span>
             <span className="hidden sm:inline text-neutral-50/20">|</span>
-            <span>{t("legal.cin")}</span>
+            <span>{t("legal.cin", { cin: CIN })}</span>
           </div>
 
           {/* Reachable from every page, which is what makes withdrawing consent
@@ -132,8 +145,13 @@ export function Footer() {
           </nav>
         </div>
 
+        {/* The year is read at render time rather than written into the copy:
+            a frozen literal silently ages into looking abandoned. */}
         <div className="mt-12 text-[9px] text-neutral-400/50 tracking-[0.25em] text-center uppercase">
-          {t("legal.copyright")}
+          {t("legal.copyright", {
+            year: new Date().getFullYear(),
+            brand: STRUCTURE_NAME,
+          })}
         </div>
       </div>
     </footer>

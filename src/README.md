@@ -60,7 +60,8 @@ The `gen:*` scripts have `--check` counterparts (`check:palette`, etc.) that fai
 ```
 app/[locale]/          pages; _components/ holds page-composition pieces
 app/api/               route handlers (consent log, retention cron)
-configuration/         non-secret constants: contact, language, site, privacy
+app/manifest.ts        the web app manifest, derived from configuration/
+configuration/         property.mjs is every business fact; the rest derive from it
 db/                    schema.ts, client.ts, safe.ts, migrations/, bootstrap/
 lib/                   domain logic — enquiry/, email/, consent/, privacy/, retention/
 messages/              it.json is the reference locale; the other four must match its keys
@@ -72,6 +73,9 @@ Path alias: `@/*` → this directory.
 
 ## Things worth knowing before changing something
 
+- **Every business fact belongs to `configuration/property.mjs`, and nowhere else.** The property's name, email, phone, address, licence code, capacity, check-in times and review score are written down once; `configuration/contact.ts`, `site.ts`, `stay.ts` and `privacy.ts` derive from it and exist only to give those values stable names. Typing an address straight into a component still compiles, so `check:config` walks the repository and blocks the commit — it names the file and, inside a message file, the exact key. The point is that selling this site to another property is an edit to one file plus new photographs and prose: see [`docs/Rebranding.md`](../docs/Rebranding.md).
+- **Copy must not restate a fact.** Where a sentence needs the property's name, address or check-in time, the message takes a placeholder (`{brand}`, `{cin}`, `{from}`, `{hours}`) and the component supplies it from the config. `pages.terms.sections.scope.owner` is the pattern. Times are stored as `[hour, minute]` and formatted per locale by `formatTime`, because English writes them as am/pm and the other four locales do not.
+- **Image paths live in `configuration/images.mjs`, alt text in the message files.** A component asks for `IMAGES.home.hero`, never for a filename. It is `.mjs` for the same reason `property.mjs` and `style/palette.mjs` are: `scripts/generate-og-image.mjs` has to import it with no build step.
 - **Adding a page** means four edits, not one: the route under `app/[locale]/`, the `MetaPage` union *and* the `PATHS` record in `lib/metadata.ts` (these drive canonical and hreflang), and the `meta.*` / `pages.*` keys in **all five** message files.
 - **Message keys must match across all five locales.** `check:locales` compares key sets and blocks the commit otherwise. Avoid modelling prose as arrays — the checker descends into them, so a translator splitting one sentence changes the count and breaks the build.
 - **The middleware is `proxy.ts`**, not `middleware.ts`. Next 16 renamed it. It resolves the locale and redirects unprefixed paths.

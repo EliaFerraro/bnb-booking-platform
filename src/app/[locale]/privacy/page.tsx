@@ -10,6 +10,7 @@ import {
 } from "../_components/LegalPage";
 import { ADDRESS_LINE, CIN, EMAIL, PHONE_DISPLAY } from "@/configuration/contact";
 import { LEGAL_UPDATED_AT, RETENTION_MONTHS } from "@/configuration/privacy";
+import { STRUCTURE_NAME } from "@/configuration/site";
 import { buildMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({
@@ -47,7 +48,7 @@ function PrivacyContent({ locale }: { locale: string }) {
       intro={t("intro")}
     >
       <LegalSection title={t("sections.controller.title")}>
-        <p>{t("sections.controller.body")}</p>
+        <p>{t("sections.controller.body", { brand: STRUCTURE_NAME })}</p>
         <dl className="flex flex-col gap-3 mt-2">
           <LegalDefinition term={t("sections.controller.labels.address")}>
             {ADDRESS_LINE}

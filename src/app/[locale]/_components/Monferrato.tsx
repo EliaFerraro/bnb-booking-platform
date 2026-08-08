@@ -2,9 +2,11 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
 import Image from "next/image";
+import { IMAGES } from "@/configuration/images.mjs";
 
 export function Monferrato() {
   const t = useTranslations("pages.homepage.monferrato");
+  const ti = useTranslations("pages.homepage.images");
   return (
     <section id="monferrato-section" className="w-full py-16 md:py-32 bg-primary-500/5">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
@@ -13,8 +15,8 @@ export function Monferrato() {
         >
           <Image
             className="object-cover transition-transform duration-1000 ease-out"
-            src="/img/photos/hills-monferrato.jpg"
-            alt="Le colline del Monferrato"
+            src={IMAGES.home.hills}
+            alt={ti("hills")}
             fill
             sizes="(min-width: 1024px) 55vw, 100vw"
           />

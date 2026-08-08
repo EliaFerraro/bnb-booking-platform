@@ -2,7 +2,7 @@
   "meta": {
     "tagline": "B&B a Montemagno, nel cuore del Monferrato",
     "description": "Una camera curata in una casa di famiglia a Montemagno, tra le colline del Monferrato. Colazione fatta in casa, giardino e accoglienza personale.",
-    "ogAlt": "Il cortile del B&B Il Respiro del Borgo al tramonto",
+    "ogAlt": "Il cortile del B&B {brand} al tramonto",
     "structure": {
       "title": "La casa e la camera",
       "description": "La camera, gli spazi comuni, la veranda e il giardino del nostro B&B a Montemagno, nel Monferrato."
@@ -17,7 +17,7 @@
     },
     "contact": {
       "title": "Dove siamo e contatti",
-      "description": "Come raggiungerci a Montemagno (AT) e come scriverci per verificare la disponibilità: risposta personale entro 24 ore."
+      "description": "Come raggiungerci a Montemagno (AT) e come scriverci per verificare la disponibilità: risposta personale entro {hours} ore."
     },
     "privacy": {
       "title": "Privacy Policy",
@@ -37,15 +37,16 @@
     "surroundings": "AMBIENTE",
     "amenities": "SERVIZI",
     "findus": "DOVE SIAMO",
-    "checkAvailabilities": "CONTROLLA DISPONIBILITÀ"
+    "checkAvailabilities": "CONTROLLA DISPONIBILITÀ",
+    "logoAlt": "Logo di {brand}"
   },
   "contactChannels": {
-    "whatsappPrefill": "Buongiorno, vorrei informazioni su Il Respiro del Borgo.",
-    "mailSubject": "Richiesta informazioni — Il Respiro del Borgo",
+    "whatsappPrefill": "Buongiorno, vorrei informazioni su {brand}.",
+    "mailSubject": "Richiesta informazioni — {brand}",
     "mailBody": "Buongiorno,\n\nvorrei informazioni sulla disponibilità.\n\nDate: dal ___ al ___\nOspiti: ___\n\nNote:\n\nGrazie,\n"
   },
   "map": {
-    "title": "Posizione di Il Respiro del Borgo a Montemagno"
+    "title": "Posizione di {brand} a Montemagno"
   },
   "datePicker": {
     "placeholder": "Scegli una data",
@@ -55,11 +56,11 @@
   },
   "enquiryEmail": {
     "subject": "Abbiamo ricevuto la tua richiesta — {structure}",
-    "preheader": "Ti rispondiamo personalmente entro 24 ore.",
+    "preheader": "Ti rispondiamo personalmente entro {hours} ore.",
     "eyebrow": "Richiesta ricevuta",
     "heading": "Grazie, abbiamo ricevuto la tua richiesta",
     "greeting": "Ciao {name},",
-    "received": "grazie per averci scritto. Abbiamo ricevuto la tua richiesta e ti risponderemo personalmente entro 24 ore.",
+    "received": "grazie per averci scritto. Abbiamo ricevuto la tua richiesta e ti risponderemo personalmente entro {hours} ore.",
     "summaryTitle": "Riepilogo della richiesta",
     "labelDates": "Date",
     "labelGuests": "Ospiti",
@@ -116,9 +117,18 @@
         "title": "Montemagno",
         "description": "Arroccato sulla collina, Montemagno è un borgo medievale unico nel suo genere, celebre per il suo caratteristico impianto urbano a mandorla e i suoi dodici vicoli storici. Passeggiare tra le sue strade significa fare un salto indietro nel tempo, ammirando l'imponente castello merlato che domina silenzioso la vallata circostante.",
         "features": {
-          "alleys": "Vicoli Storici",
-          "square": "Piazza Barocca",
-          "distance": "Dal B&B"
+          "alleys": {
+            "value": "12",
+            "label": "Vicoli Storici"
+          },
+          "square": {
+            "value": "XIX s.",
+            "label": "Piazza Barocca"
+          },
+          "distance": {
+            "value": "A piedi",
+            "label": "Dal B&B"
+          }
         },
         "cta": "Esplora il borgo medievale"
       },
@@ -176,6 +186,16 @@
             "text": "Posto davvero incantevole e padroni di casa squisiti! Ci siamo sentiti a casa. Lo consiglio al 100%. Ci torneremo… promesso!!"
           }
         ]
+      },
+      "images": {
+        "hero": "Il cortile della cascina al tramonto",
+        "house": "La cascina vista dal giardino al tramonto",
+        "room": "Un dettaglio della camera",
+        "breakfast": "Tavola imbandita per la colazione all'aperto nel giardino",
+        "hills": "Le colline del Monferrato",
+        "village": "Il borgo di Montemagno",
+        "portraitLeft": "L'accoglienza in Monferrato",
+        "portraitRight": "La convivialità nella nostra cascina"
       }
     },
     "structure": {
@@ -187,7 +207,7 @@
       "intro": {
         "eyebrow": "La nostra dimora",
         "title": "Una casa che racconta il Monferrato",
-        "body": "Il Respiro del Borgo nasce dal recupero attento di un'antica cascina piemontese, dove ogni pietra, ogni trave e ogni mattone a vista custodiscono la memoria della vita contadina. Abbiamo restaurato gli ambienti con rispetto, mantenendo l'anima originaria della \"casa della nonna\" e arricchendola con il comfort discreto di oggi. Il risultato è una dimora intima, calda e luminosa, pensata per farti sentire a casa fin dal primo passo.",
+        "body": "{brand} nasce dal recupero attento di un'antica cascina piemontese, dove ogni pietra, ogni trave e ogni mattone a vista custodiscono la memoria della vita contadina. Abbiamo restaurato gli ambienti con rispetto, mantenendo l'anima originaria della \"casa della nonna\" e arricchendola con il comfort discreto di oggi. Il risultato è una dimora intima, calda e luminosa, pensata per farti sentire a casa fin dal primo passo.",
         "quote": "Qui le mura respirano insieme alle vigne: abbiamo solo riaperto le finestre sul tempo."
       },
       "house": {
@@ -217,11 +237,9 @@
       },
       "specs": {
         "guests": {
-          "value": "2",
           "label": "Ospiti"
         },
         "size": {
-          "value": "37 m²",
           "label": "Camera e bagno"
         },
         "bed": {
@@ -229,7 +247,6 @@
           "label": "Matrimoniale o singoli"
         },
         "checkin": {
-          "value": "15 – 20",
           "label": "Orario check-in"
         }
       },
@@ -260,7 +277,7 @@
       "intro": {
         "eyebrow": "Dove ci troviamo",
         "title": "Nel cuore delle colline del Monferrato",
-        "body": "Il Respiro del Borgo si trova a Montemagno, piccolo borgo medievale incastonato tra i vigneti del Monferrato astigiano, riconosciuto Patrimonio dell'Umanità UNESCO. È una terra di colline morbide, cantine storiche e tavole generose, dove ogni stagione dipinge il paesaggio di colori diversi. Da qui partono passeggiate, strade del vino e itinerari d'arte che raccontano un Piemonte autentico e ancora poco affollato.",
+        "body": "{brand} si trova a Montemagno, piccolo borgo medievale incastonato tra i vigneti del Monferrato astigiano, riconosciuto Patrimonio dell'Umanità UNESCO. È una terra di colline morbide, cantine storiche e tavole generose, dove ogni stagione dipinge il paesaggio di colori diversi. Da qui partono passeggiate, strade del vino e itinerari d'arte che raccontano un Piemonte autentico e ancora poco affollato.",
         "quote": "Un paesaggio che cambia colore a ogni ora, e non smette mai di sorprendere."
       },
       "montemagno": {
@@ -313,6 +330,15 @@
         "title": "Lasciati guidare tra le colline",
         "body": "Al tuo arrivo saremo felici di consigliarti itinerari, cantine e tavole su misura per te. Scrivici e iniziamo a immaginare insieme il tuo soggiorno.",
         "button": "Contattaci"
+      },
+      "images": {
+        "hero": "Le colline del Monferrato all'ora d'oro",
+        "villageSpring": "Il borgo di Montemagno in primavera",
+        "castle": "Il castello e le vigne",
+        "villageWinter": "Il borgo di Montemagno in una sera d'inverno",
+        "hillsView": "La vista sulle colline del Monferrato",
+        "vines": "Aperitivo tra le vigne",
+        "sunset": "Tramonto sulle colline"
       }
     },
     "services": {
@@ -397,6 +423,10 @@
         "title": "Hai un desiderio particolare?",
         "body": "Raccontaci di cosa hai bisogno per il tuo soggiorno: ci piace prenderci cura dei dettagli che fanno la differenza.",
         "button": "Scrivici"
+      },
+      "images": {
+        "hero": "La colazione servita in giardino",
+        "breakfast": "Tavola della colazione all'aperto"
       }
     },
     "contact": {
@@ -408,7 +438,7 @@
       "intro": {
         "eyebrow": "Contatti e prenotazioni",
         "title": "A un passo dalle colline",
-        "body": "Saremo felici di rispondere a ogni tua domanda e di aiutarti a organizzare il soggiorno. Scrivici o chiamaci: dietro Il Respiro del Borgo c'è una famiglia, non un centralino."
+        "body": "Saremo felici di rispondere a ogni tua domanda e di aiutarti a organizzare il soggiorno. Scrivici o chiamaci: dietro {brand} c'è una famiglia, non un centralino."
       },
       "cards": {
         "whatsapp": "WhatsApp",
@@ -416,11 +446,10 @@
         "phone": "Telefono",
         "email": "Email",
         "address": "Indirizzo",
-        "addressLine1": "Via della Pace, 24",
-        "addressLine2": "14030 Montemagno (AT) — Piemonte, Italia",
+        "regionCountry": "Piemonte, Italia",
         "hours": "Ricevimento",
-        "hoursValue": "Check-in 15:00 – 20:00",
-        "hoursNote": "Check-out entro le 10:30"
+        "hoursValue": "Check-in {from} – {to}",
+        "hoursNote": "Check-out entro le {time}"
       },
       "form": {
         "eyebrow": "Richiesta di disponibilità",
@@ -445,7 +474,7 @@
         "privacyNote": "Useremo i tuoi dati solo per risponderti.",
         "success": {
           "title": "Richiesta inviata",
-          "body": "Grazie! Abbiamo ricevuto la tua richiesta e ti abbiamo inviato una conferma a {email}. Ti risponderemo personalmente entro 24 ore.",
+          "body": "Grazie! Abbiamo ricevuto la tua richiesta e ti abbiamo inviato una conferma a {email}. Ti risponderemo personalmente entro {hours} ore.",
           "spamHint": "Se non vedi la conferma, controlla la cartella spam.",
           "faster": "Scriveteci su WhatsApp"
         },
@@ -510,6 +539,9 @@
         "whatsapp": "Scrivici su WhatsApp",
         "call": "Chiamaci",
         "email": "Scrivici"
+      },
+      "images": {
+        "hero": "Il cortile della cascina al tramonto"
       }
     },
     "privacy": {
@@ -522,7 +554,7 @@
       "sections": {
         "controller": {
           "title": "Chi tratta i tuoi dati",
-          "body": "Il titolare del trattamento è Il Respiro del Borgo, la struttura ricettiva che gestisce questo sito e riceve le richieste inviate dal modulo di contatto.",
+          "body": "Il titolare del trattamento è {brand}, la struttura ricettiva che gestisce questo sito e riceve le richieste inviate dal modulo di contatto.",
           "labels": {
             "address": "Indirizzo",
             "email": "Email",
@@ -734,7 +766,7 @@
         "scope": {
           "title": "Oggetto",
           "body": "Questo sito ha una funzione informativa e di contatto: presenta la struttura, gli spazi, i servizi e il territorio, e mette a disposizione un modulo per richiedere informazioni sulla disponibilità. Non è una piattaforma di prenotazione e non gestisce pagamenti.",
-          "owner": "Il sito è gestito da Il Respiro del Borgo, {address}, CIN {cin}."
+          "owner": "Il sito è gestito da {brand}, {address}, CIN {cin}."
         },
         "notABooking": {
           "title": "La richiesta non è una prenotazione",
@@ -762,7 +794,7 @@
         },
         "intellectualProperty": {
           "title": "Proprietà intellettuale",
-          "body": "Le fotografie, i testi, il nome e il marchio della struttura appartengono a Il Respiro del Borgo. Puoi condividere le pagine del sito liberamente; per riutilizzare fotografie o testi in altri contesti serve invece il nostro consenso scritto."
+          "body": "Le fotografie, i testi, il nome e il marchio della struttura appartengono a {brand}. Puoi condividere le pagine del sito liberamente; per riutilizzare fotografie o testi in altri contesti serve invece il nostro consenso scritto."
         },
         "availability": {
           "title": "Disponibilità del sito",
@@ -796,23 +828,20 @@
   },
   "footer": {
     "location": {
-      "title": "Sede e Posizione",
-      "address": "Via della Pace, 24",
-      "city": "14030 Montemagno (AT)"
+      "title": "Sede e Posizione"
     },
     "brand": {
-      "name": "Il Respiro del Borgo",
       "tagline": "Un rifugio intimo nel cuore del Monferrato, pensato per rallentare il tempo e riscoprire l'autentica ospitalità piemontese."
     },
     "contact": {
       "title": "Contatti e Prenotazioni"
     },
     "legal": {
-      "classification": "Struttura Ricettiva Classificata ★★",
+      "classification": "Struttura Ricettiva Classificata {stars}",
       "privacy": "Privacy Policy",
       "cookies": "Cookie Policy",
-      "copyright": "© 2026 Il Respiro del Borgo. Tutti i diritti riservati.",
-      "cin": "CIN: IT005077C1SCRVTNU4",
+      "copyright": "© {year} {brand}. Tutti i diritti riservati.",
+      "cin": "CIN: {cin}",
       "terms": "Termini",
       "manageCookies": "Gestisci i cookie"
     }

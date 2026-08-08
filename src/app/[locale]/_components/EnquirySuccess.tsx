@@ -5,6 +5,8 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { WhatsappIcon } from "@hugeicons/core-free-icons";
 import { Button } from "@/ui/components/shadcn/button";
 import { whatsappHref } from "@/configuration/contact";
+import { STRUCTURE_NAME } from "@/configuration/site";
+import { RESPONSE_HOURS } from "@/configuration/stay";
 
 /**
  * The confirmation panel, staged so it arrives rather than appears: the ring
@@ -37,7 +39,7 @@ export function EnquirySuccess({ email }: { email: string }) {
         className="text-base text-neutral-700 leading-relaxed font-light mb-2 animate-rise-in"
         style={{ animationDelay: "1000ms" }}
       >
-        {t("success.body", { email })}
+        {t("success.body", { email, hours: RESPONSE_HOURS })}
       </p>
       <p
         className="text-sm text-neutral-600 leading-relaxed font-light mb-8 animate-rise-in"
@@ -52,7 +54,9 @@ export function EnquirySuccess({ email }: { email: string }) {
           className="bg-primary-500 text-neutral-50 px-8 py-5 rounded-full text-xs font-semibold tracking-widest uppercase h-auto hover:bg-primary-600"
         >
           <a
-            href={whatsappHref(tc("whatsappPrefill"))}
+            href={whatsappHref(
+              tc("whatsappPrefill", { brand: STRUCTURE_NAME }),
+            )}
             target="_blank"
             rel="noopener noreferrer"
           >

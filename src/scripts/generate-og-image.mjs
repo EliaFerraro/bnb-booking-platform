@@ -17,11 +17,15 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import sharp from "sharp";
+import { IMAGES } from "../configuration/images.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const SOURCE = join(ROOT, "public", "img", "photos", "yard-sunset.jpg");
-const OUTPUT = join(ROOT, "public", "img", "brand", "og-cover.jpg");
-const STAMP = join(ROOT, "public", "img", "brand", "og-cover.source");
+/** The manifest stores public-root-relative paths; `public/` prefixes them. */
+const publicPath = (p) => join(ROOT, "public", p);
+
+const SOURCE = publicPath(IMAGES.ogSource);
+const OUTPUT = publicPath(IMAGES.brand.ogCover);
+const STAMP = `${OUTPUT.replace(/\.jpg$/, ".source")}`;
 
 /** The ratio Facebook, WhatsApp and iMessage all crop to. */
 const WIDTH = 1200;

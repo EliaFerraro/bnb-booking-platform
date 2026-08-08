@@ -18,6 +18,7 @@ import {
   MapsLocation01Icon,
 } from "@hugeicons/core-free-icons";
 import { enquiryHref } from "@/configuration/contact";
+import { IMAGES } from "@/configuration/images.mjs";
 import { buildMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({
@@ -54,8 +55,8 @@ function ServicesContent({ locale }: { locale: string }) {
   return (
     <>
       <PageHero
-        image="/img/photos/breakfast-outdoor.jpg"
-        alt="La colazione servita in giardino"
+        image={IMAGES.services.hero}
+        alt={t("images.hero")}
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
         tagline={t("hero.tagline")}
@@ -82,8 +83,8 @@ function ServicesContent({ locale }: { locale: string }) {
           <div className="relative lg:col-span-5 w-full aspect-4/3 lg:aspect-[1.1] overflow-hidden shadow-xl rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px] order-1">
             <Image
               className="object-cover object-center"
-              src="/img/photos/breakfast-table.jpg"
-              alt="Tavola della colazione all'aperto"
+              src={IMAGES.services.breakfast}
+              alt={t("images.breakfast")}
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
             />

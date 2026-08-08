@@ -1,4 +1,5 @@
 import nodemailer, { type Transporter } from "nodemailer";
+import { STRUCTURE_NAME } from "@/configuration/site";
 import { requireEnv } from "@/lib/env";
 import {
   EMAIL_LOGO_BASE64,
@@ -23,8 +24,13 @@ export function hostInbox(): string {
   return process.env.ENQUIRY_TO || senderAddress();
 }
 
+/**
+ * Re-exported under this name so the templates keep asking the transport who
+ * they are speaking for. The value itself is a fact about the property, not a
+ * property of the mail account, so it comes from the config.
+ */
 export function structureName(): string {
-  return process.env.STRUCTURE_NAME || "Il Respiro del Borgo";
+  return STRUCTURE_NAME;
 }
 
 function getTransport(): Transporter {

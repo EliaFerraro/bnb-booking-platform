@@ -1,35 +1,45 @@
-export const PHONE_DISPLAY = "+39 339 7096 173";
-export const PHONE_E164 = "+393397096173";
+/**
+ * How to reach the property, and the identity that has to appear beside it.
+ *
+ * Every value is derived from `configuration/property.mjs` — this module exists
+ * to give the rest of the app stable names and the two href builders, not to
+ * hold data. Change a number or an address there, not here.
+ */
+
+import { PROPERTY } from "./property.mjs";
+
+export const PHONE_DISPLAY = PROPERTY.contact.phoneDisplay;
+export const PHONE_E164 = PROPERTY.contact.phoneE164;
 export const PHONE_HREF = `tel:${PHONE_E164}`;
 
-export const EMAIL = "ilrespirodelborgobnb@gmail.com";
+export const EMAIL = PROPERTY.contact.email;
 
 /**
  * Postal and licence identity, printed in the footer of every outgoing email.
  * Deliberately not translated: an address is written in the language of the
  * country that sends it, and the CIN is a code.
+ *
+ * The parts are exported too, because the footer and the contact card print the
+ * street on its own line above the locality rather than as one run of text.
  */
-export const ADDRESS_LINE = "Via della Pace, 24 — 14030 Montemagno (AT), Italia";
-export const CIN = "IT005077C1SCRVTNU4";
+export const ADDRESS_STREET = PROPERTY.address.street;
+export const ADDRESS_LOCALITY = `${PROPERTY.address.postalCode} ${PROPERTY.address.town} (${PROPERTY.address.province})`;
+export const ADDRESS_LINE = `${ADDRESS_STREET} — ${ADDRESS_LOCALITY}, ${PROPERTY.address.country}`;
+
+export const CIN = PROPERTY.legal.cin;
 
 /** wa.me expects the E.164 number without the leading "+". */
 export const WHATSAPP_NUMBER = PHONE_E164.replace("+", "");
 
-/**
- * Satellite view (!5e1) pinned to the verified "B&B Il respiro del borgo"
- * business listing rather than to the street address, so the property itself
- * is what the marker names.
- */
-export const GOOGLE_MAPS_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.3064615128733!2d8.32918422280645!3d44.97954837222017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47879796d9f3d325%3A0xb81fd54187ec5bf1!2sB%26B%20Il%20respiro%20del%20borgo%2C%20CODICE%20CIN%20IT005077C1SCRVTNU4!5e1!3m2!1sit!2sit!4v1782767467060!5m2!1sit!2sit";
+export const GOOGLE_MAPS_EMBED_URL = PROPERTY.geo.mapsEmbedUrl;
 
 /**
- * The same place as an ordinary link rather than an embed. Offered to visitors
- * who decline the map: an outbound link they choose to follow sends nothing to
- * Google until they click it, so it needs no consent.
+ * The place as an ordinary link rather than an embed. Serves both the visitors
+ * who decline the map and the "read the reviews" link on the homepage: Google
+ * shows the reviews on the listing this points at, so one URL covers both and
+ * there is nothing to keep in sync.
  */
-export const GOOGLE_MAPS_PLACE_URL =
-  "https://www.google.com/maps/search/?api=1&query=B%26B+Il+respiro+del+borgo+Montemagno";
+export const GOOGLE_MAPS_PLACE_URL = PROPERTY.geo.mapsPlaceUrl;
 
 /**
  * mailto: query values must be percent-encoded (RFC 6068). URLSearchParams is

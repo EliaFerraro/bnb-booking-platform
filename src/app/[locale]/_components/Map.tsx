@@ -10,6 +10,7 @@ import {
   GOOGLE_MAPS_EMBED_URL,
   GOOGLE_MAPS_PLACE_URL,
 } from "@/configuration/contact";
+import { STRUCTURE_NAME } from "@/configuration/site";
 
 /**
  * Rendered by the locale layout, so it appears above the footer on every page —
@@ -41,7 +42,7 @@ export function Map() {
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title={t("title")}
+            title={t("title", { brand: STRUCTURE_NAME })}
           />
         ) : (
           <MapPlaceholder

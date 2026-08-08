@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { IMAGES } from "@/configuration/images.mjs";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   CoffeeIcon,
@@ -9,6 +10,7 @@ import {
 
 export function Breakfast() {
   const t = useTranslations("pages.homepage.breakfast");
+  const ti = useTranslations("pages.homepage.images");
   return (
     <section
       id="breakfast-section"
@@ -69,8 +71,8 @@ export function Breakfast() {
         >
           <Image
             className="object-cover object-center transition-transform duration-700 ease-out"
-            src="/img/photos/breakfast-table.jpg"
-            alt="Tavola imbandita per la colazione all'aperto nel giardino del B&B"
+            src={IMAGES.home.breakfast}
+            alt={ti("breakfast")}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
           />

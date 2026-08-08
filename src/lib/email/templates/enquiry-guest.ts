@@ -4,6 +4,7 @@ import {
   PHONE_HREF,
   whatsappHref,
 } from "@/configuration/contact";
+import { RESPONSE_HOURS } from "@/configuration/stay";
 import { fullName, formatStay } from "@/lib/enquiry/format";
 import type { EnquiryInput } from "@/lib/enquiry/schema";
 import { brandFooterLines, brandHeader } from "../brand";
@@ -35,10 +36,13 @@ export async function buildGuestAcknowledgementMail(
   const doc: MailDocument = {
     lang: enquiry.locale,
     ...brandHeader(),
-    preheader: t("preheader"),
+    preheader: t("preheader", { hours: RESPONSE_HOURS }),
     eyebrow: t("eyebrow"),
     heading: t("heading"),
-    intro: [t("greeting", { name: fullName(enquiry) }), t("received")],
+    intro: [
+      t("greeting", { name: fullName(enquiry) }),
+      t("received", { hours: RESPONSE_HOURS }),
+    ],
     rowsTitle: rows.length ? t("summaryTitle") : undefined,
     rows,
     quote: { label: t("labelMessage"), text: enquiry.message },

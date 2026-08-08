@@ -47,21 +47,26 @@ npx --no-install lint-staged
 #    forgotten in another would only fail at runtime.
 npm run --silent check:locales
 
-# 3. style/palette.css is generated from style/palette.mjs; committing one
+# 3. Every business fact belongs to configuration/property.mjs alone. Typing an
+#    address or a phone number straight into a component still compiles, and it
+#    is what quietly makes the site unsellable to the next owner.
+npm run --silent check:config
+
+# 4. style/palette.css is generated from style/palette.mjs; committing one
 #    without the other would silently split the brand palette in two.
 npm run --silent check:palette
 
-# 4. lib/email/logo.ts embeds public/img/brand/logo.png; replacing the artwork
+# 5. lib/email/logo.ts embeds public/img/brand/logo.png; replacing the artwork
 #    without regenerating would leave the old logo in every outgoing email.
 npm run --silent check:email-logo
 
-# 5. Two migrations generated on separate branches collide silently: same
+# 6. Two migrations generated on separate branches collide silently: same
 #    sequence number, divergent snapshots. This is offline — it reads the
 #    journal, never the database — so the hook still works with Postgres
 #    stopped, which is a hard requirement for every step here.
 npm run --silent check:migrations
 
-# 6. Type errors span files that are not staged, so this has to be project-wide.
+# 7. Type errors span files that are not staged, so this has to be project-wide.
 npm run --silent typecheck
 
 echo "pre-commit: checks passed"

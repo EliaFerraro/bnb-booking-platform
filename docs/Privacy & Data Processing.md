@@ -14,7 +14,7 @@ GDPR art. 5(2) makes the controller responsible not merely for complying but for
 | :--- | :--- |
 | **Controller** | Il Respiro del Borgo |
 | **Address** | Via della Pace, 24 — 14030 Montemagno (AT), Italia |
-| **Email** | ilrespirodelborgobnb@gmail.com |
+| **Email** | ilrespirodelborgo@gmail.com |
 | **Phone** | +39 339 7096 173 |
 | **CIN** | IT005077C1SCRVTNU4 |
 | **VAT number** | None, and correctly so. The property is run as a *non-entrepreneurial* activity (attività ricettiva non imprenditoriale), which carries no VAT registration under Italian law; income is declared as *redditi diversi*. The CIN is the identifier that matters here, and it is published in the footer of every page and of every outgoing email. |

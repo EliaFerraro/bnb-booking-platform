@@ -13,6 +13,15 @@ import {
   TemperatureIcon,
 } from "@hugeicons/core-free-icons";
 import { enquiryHref } from "@/configuration/contact";
+import { IMAGES } from "@/configuration/images.mjs";
+import { STRUCTURE_NAME } from "@/configuration/site";
+import {
+  CHECK_IN_FROM,
+  CHECK_IN_TO,
+  MAX_GUESTS,
+  ROOM_SIZE_SQM,
+  formatTime,
+} from "@/configuration/stay";
 import { buildMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({
@@ -34,21 +43,28 @@ const ROOM_AMENITIES = [
 ] as const;
 
 const HOUSE_FEATURES = ["veranda", "garden", "light", "slowness"] as const;
+
+/**
+ * The four figures under the room, in order. Three of them are facts about the
+ * property and come from the config; only `bed` is a phrase, so it is the only
+ * one whose value is still translated. The labels are all translated.
+ */
 const SPECS = ["guests", "size", "bed", "checkin"] as const;
-const GALLERY = [
-  { src: "/img/photos/garden-yard.jpg", altKey: "yard" },
-  { src: "/img/photos/room-corner.jpg", altKey: "room" },
-  { src: "/img/photos/room-bathroom.jpg", altKey: "bathroom" },
-  { src: "/img/photos/terrace-veranda.jpg", altKey: "veranda" },
-] as const;
 
 function StructureContent({ locale }: { locale: string }) {
   const t = useTranslations("pages.structure");
 
+  const specValues: Record<(typeof SPECS)[number], string> = {
+    guests: String(MAX_GUESTS),
+    size: `${ROOM_SIZE_SQM} m²`,
+    bed: t("specs.bed.value"),
+    checkin: `${formatTime(locale, CHECK_IN_FROM)} – ${formatTime(locale, CHECK_IN_TO)}`,
+  };
+
   return (
     <>
       <PageHero
-        image="/img/photos/house-sunset.jpg"
+        image={IMAGES.structure.hero}
         alt={t("images.hero")}
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
@@ -66,7 +82,7 @@ function StructureContent({ locale }: { locale: string }) {
             {t("intro.title")}
           </h2>
           <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light mb-8">
-            {t("intro.body")}
+            {t("intro.body", { brand: STRUCTURE_NAME })}
           </p>
           <blockquote className="font-serif italic text-xl md:text-2xl text-primary-500 leading-relaxed">
             &ldquo;{t("intro.quote")}&rdquo;
@@ -80,7 +96,7 @@ function StructureContent({ locale }: { locale: string }) {
           <div className="relative lg:col-span-6 aspect-4/3 md:aspect-auto md:h-137.5 w-full overflow-hidden shadow-md rounded-[48px_12px_48px_12px] md:rounded-[160px_16px_160px_16px]">
             <Image
               className="object-cover"
-              src="/img/photos/house-aerial.jpg"
+              src={IMAGES.structure.house}
               alt={t("images.spaces")}
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"
@@ -139,7 +155,7 @@ function StructureContent({ locale }: { locale: string }) {
           <div className="relative lg:col-span-6 order-1 lg:order-2 aspect-4/3 md:aspect-auto md:h-150 w-full overflow-hidden shadow-md rounded-[12px_48px_12px_48px] md:rounded-[16px_160px_16px_160px]">
             <Image
               className="object-cover"
-              src="/img/photos/room-bedroom.jpg"
+              src={IMAGES.structure.room}
               alt={t("images.room")}
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"
@@ -154,7 +170,7 @@ function StructureContent({ locale }: { locale: string }) {
           {SPECS.map((s) => (
             <div key={s} className="flex flex-col items-center">
               <span className="font-serif text-2xl md:text-3xl text-secondary-100 font-semibold mb-2">
-                {t(`specs.${s}.value`)}
+                {specValues[s]}
               </span>
               <span className="text-[11px] tracking-[0.2em] uppercase text-secondary-50/80 font-medium">
                 {t(`specs.${s}.label`)}
@@ -171,7 +187,7 @@ function StructureContent({ locale }: { locale: string }) {
             {t("gallery.title")}
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {GALLERY.map((g, i) => (
+            {IMAGES.structure.gallery.map((g, i) => (
               <div
                 key={g.src}
                 className={`relative overflow-hidden shadow-sm aspect-4/5 ${

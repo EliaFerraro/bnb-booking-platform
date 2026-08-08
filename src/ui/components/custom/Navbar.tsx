@@ -1,6 +1,8 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
+import { IMAGES } from "@/configuration/images.mjs";
+import { STRUCTURE_NAME } from "@/configuration/site";
 import { LanguagePicker } from "@/ui/components/custom/LanguagePicker";
 import { Button } from "@/ui/components/shadcn/button";
 import { NavbarLink } from "@/ui/components/custom/NavbarLink";
@@ -18,8 +20,8 @@ export function Navbar() {
               intrinsic size is the 1440x1013 artwork; `w-*` scales it down and
               `h-auto` keeps Next from stretching it. */}
           <Image
-            src="/img/brand/logo.png"
-            alt="B&B Logo"
+            src={IMAGES.brand.logo}
+            alt={t("logoAlt", { brand: STRUCTURE_NAME })}
             width={1440}
             height={1013}
             priority

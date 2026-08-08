@@ -1,10 +1,16 @@
+import { Fragment } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
 import Image from "next/image";
+import { IMAGES } from "@/configuration/images.mjs";
+
+/** Village trivia, in the order it is shown. Same shape the environment page uses. */
+const FEATURES = ["alleys", "square", "distance"] as const;
 
 export function Montemagno() {
   const t = useTranslations("pages.homepage.montemagno");
+  const ti = useTranslations("pages.homepage.images");
   return (
     <section id="montemagno-section" className="w-full py-16 md:py-32 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
@@ -21,26 +27,17 @@ export function Montemagno() {
           </p>
 
           <div className="flex items-center space-x-6 text-xs tracking-wider uppercase text-neutral-500 font-medium mb-10">
-            <div className="flex flex-col">
-              <span className="text-xl font-serif text-neutral-950 font-semibold mb-1">
-                12
-              </span>
-              <span>{t("features.alleys")}</span>
-            </div>
-            <div className="h-8 w-px bg-neutral-300" />
-            <div className="flex flex-col">
-              <span className="text-xl font-serif text-neutral-950 font-semibold mb-1">
-                XIX s.
-              </span>
-              <span>{t("features.square")}</span>
-            </div>
-            <div className="h-8 w-px bg-neutral-300" />
-            <div className="flex flex-col">
-              <span className="text-xl font-serif text-neutral-950 font-semibold mb-1">
-                A piedi
-              </span>
-              <span>{t("features.distance")}</span>
-            </div>
+            {FEATURES.map((key, i) => (
+              <Fragment key={key}>
+                {i > 0 && <div className="h-8 w-px bg-neutral-300" />}
+                <div className="flex flex-col">
+                  <span className="text-xl font-serif text-neutral-950 font-semibold mb-1">
+                    {t(`features.${key}.value`)}
+                  </span>
+                  <span>{t(`features.${key}.label`)}</span>
+                </div>
+              </Fragment>
+            ))}
           </div>
 
           <div className="flex justify-start">
@@ -60,8 +57,8 @@ export function Montemagno() {
         >
           <Image
             className="object-cover transition-transform duration-1000 ease-out"
-            src="/img/photos/village-montemagno.png"
-            alt="Il borgo di Montemagno"
+            src={IMAGES.home.village}
+            alt={ti("village")}
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"
           />

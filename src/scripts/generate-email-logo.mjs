@@ -18,6 +18,7 @@ import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { PROPERTY } from "../configuration/property.mjs";
 import sharp from "sharp";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -51,7 +52,7 @@ async function render() {
 /** Attached inline and referenced as \`cid:\${EMAIL_LOGO_CID}\` by the layout. */
 export const EMAIL_LOGO_CID = "brand-logo";
 
-export const EMAIL_LOGO_FILENAME = "il-respiro-del-borgo.png";
+export const EMAIL_LOGO_FILENAME = "${PROPERTY.brand.slug}.png";
 
 /** Rendered size in CSS pixels; the bitmap behind it is twice as wide. */
 export const EMAIL_LOGO_WIDTH = ${DISPLAY_WIDTH};

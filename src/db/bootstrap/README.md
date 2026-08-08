@@ -7,6 +7,13 @@ committed migrations.
 Requires PostgreSQL installed locally (developed against 17). Production uses
 Supabase and never runs any of this.
 
+Both names come from `brand.slug` in `configuration/property.mjs`, so a fork of
+this site for another property gets its own database rather than colliding with
+this one on a shared machine. `local.sql` therefore contains a `__SLUG__`
+placeholder and is not meant to be run directly — `npm run db:bootstrap`
+substitutes it. The names below assume the current slug; the script prints the
+connection string it actually created.
+
 ## The path to use
 
 ```powershell

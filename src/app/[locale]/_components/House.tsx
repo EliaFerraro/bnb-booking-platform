@@ -2,9 +2,11 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/ui/components/shadcn/button";
 import Link from "next/link";
 import Image from "next/image";
+import { IMAGES } from "@/configuration/images.mjs";
 
 export function House() {
   const t = useTranslations("pages.homepage.house");
+  const ti = useTranslations("pages.homepage.images");
   return (
     <section id="house-section" className="w-full py-16 md:py-32 bg-secondary-50/30">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
@@ -13,8 +15,8 @@ export function House() {
         >
           <Image
             className="object-cover transform transition-transform duration-1000 ease-out"
-            src="/img/photos/house-sunset.jpg"
-            alt="Photo of the house"
+            src={IMAGES.home.house}
+            alt={ti("house")}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
           />

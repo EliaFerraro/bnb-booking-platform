@@ -8,6 +8,7 @@ import {
   SITE_URL,
   STRUCTURE_NAME,
 } from "@/configuration/site";
+import { RESPONSE_HOURS } from "@/configuration/stay";
 
 const LOCALES = LANGUAGES.map((l) => l.code.toLowerCase());
 const DEFAULT_LOCALE = DEFAULT_LANGUAGE.code.toLowerCase();
@@ -63,9 +64,18 @@ export async function buildMetadata({
 }: Options): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta" });
 
+  // Every meta string gets the same values. Which of them a given message
+  // actually interpolates is the translator's business, and ICU ignores the
+  // rest — that beats keeping a per-key list of who needs what in sync.
+  const facts = { brand: STRUCTURE_NAME, hours: RESPONSE_HOURS };
+
   const path = PATHS[page ?? "home"];
-  const title = page ? t(`${page}.title`) : `${STRUCTURE_NAME} — ${t("tagline")}`;
-  const description = page ? t(`${page}.description`) : t("description");
+  const title = page
+    ? t(`${page}.title`, facts)
+    : `${STRUCTURE_NAME} — ${t("tagline", facts)}`;
+  const description = page
+    ? t(`${page}.description`, facts)
+    : t("description", facts);
 
   // Titles for subpages arrive bare and are completed by the layout's template;
   // Open Graph has no template of its own, so it gets the finished string.
@@ -98,7 +108,7 @@ export async function buildMetadata({
           url: OG_IMAGE_PATH,
           width: OG_IMAGE_WIDTH,
           height: OG_IMAGE_HEIGHT,
-          alt: t("ogAlt"),
+          alt: t("ogAlt", facts),
         },
       ],
     },

@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { PageHero } from "../_components/PageHero";
 import { EnquiryForm } from "../_components/EnquiryForm";
 import { Button } from "@/ui/components/shadcn/button";
@@ -15,6 +15,8 @@ import {
   WhatsappIcon,
 } from "@hugeicons/core-free-icons";
 import {
+  ADDRESS_LOCALITY,
+  ADDRESS_STREET,
   EMAIL,
   ENQUIRY_ANCHOR,
   PHONE_DISPLAY,
@@ -22,6 +24,14 @@ import {
   mailtoHref,
   whatsappHref,
 } from "@/configuration/contact";
+import { IMAGES } from "@/configuration/images.mjs";
+import { STRUCTURE_NAME } from "@/configuration/site";
+import {
+  CHECK_IN_FROM,
+  CHECK_IN_TO,
+  CHECK_OUT_BY,
+  formatTime,
+} from "@/configuration/stay";
 import { buildMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({
@@ -42,15 +52,21 @@ const DIRECTIONS = [
 function ContactContent() {
   const t = useTranslations("pages.contact");
   const tc = useTranslations("contactChannels");
+  const locale = useLocale();
 
-  const emailHref = mailtoHref(tc("mailSubject"), tc("mailBody"));
-  const whatsAppUrl = whatsappHref(tc("whatsappPrefill"));
+  const emailHref = mailtoHref(
+    tc("mailSubject", { brand: STRUCTURE_NAME }),
+    tc("mailBody"),
+  );
+  const whatsAppUrl = whatsappHref(
+    tc("whatsappPrefill", { brand: STRUCTURE_NAME }),
+  );
 
   return (
     <>
       <PageHero
-        image="/img/photos/courtyard-sunset.jpg"
-        alt="Il cortile della cascina al tramonto"
+        image={IMAGES.contact.hero}
+        alt={t("images.hero")}
         subtitle={t("hero.subtitle")}
         title={t("hero.title")}
         tagline={t("hero.tagline")}
@@ -66,7 +82,7 @@ function ContactContent() {
             {t("intro.title")}
           </h2>
           <p className="text-base md:text-lg text-neutral-700 leading-relaxed font-light">
-            {t("intro.body")}
+            {t("intro.body", { brand: STRUCTURE_NAME })}
           </p>
         </div>
 
@@ -136,9 +152,11 @@ function ContactContent() {
                 {t("cards.address")}
               </span>
               <span className="font-serif text-lg text-neutral-950 leading-snug block">
-                {t("cards.addressLine1")}
+                {ADDRESS_STREET}
               </span>
-              <span className="text-sm text-neutral-600">{t("cards.addressLine2")}</span>
+              <span className="text-sm text-neutral-600">
+                {ADDRESS_LOCALITY} — {t("cards.regionCountry")}
+              </span>
             </div>
           </div>
 
@@ -151,9 +169,16 @@ function ContactContent() {
                 {t("cards.hours")}
               </span>
               <span className="font-serif text-lg text-neutral-950 leading-snug block">
-                {t("cards.hoursValue")}
+                {t("cards.hoursValue", {
+                  from: formatTime(locale, CHECK_IN_FROM),
+                  to: formatTime(locale, CHECK_IN_TO),
+                })}
               </span>
-              <span className="text-sm text-neutral-600">{t("cards.hoursNote")}</span>
+              <span className="text-sm text-neutral-600">
+                {t("cards.hoursNote", {
+                  time: formatTime(locale, CHECK_OUT_BY),
+                })}
+              </span>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@
 /** Attached inline and referenced as `cid:${EMAIL_LOGO_CID}` by the layout. */
 export const EMAIL_LOGO_CID = "brand-logo";
 
-export const EMAIL_LOGO_FILENAME = "il-respiro-del-borgo.png";
+export const EMAIL_LOGO_FILENAME = "ilrespirodelborgo.png";
 
 /** Rendered size in CSS pixels; the bitmap behind it is twice as wide. */
 export const EMAIL_LOGO_WIDTH = 190;

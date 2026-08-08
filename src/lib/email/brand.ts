@@ -4,6 +4,7 @@ import {
   EMAIL,
   PHONE_DISPLAY,
 } from "@/configuration/contact";
+import { PROPERTY } from "@/configuration/property.mjs";
 import { structureName } from "./transport";
 
 /**
@@ -13,7 +14,7 @@ import { structureName } from "./transport";
  */
 
 /** Locale-neutral on purpose: it names a place, so it needs no translation. */
-const KICKER = "Montemagno · Monferrato";
+const KICKER = PROPERTY.brand.kicker;
 
 export function brandHeader() {
   return { brandName: structureName(), brandKicker: KICKER };

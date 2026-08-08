@@ -9,6 +9,8 @@
  * nothing secret belongs here.
  */
 
+import { PROPERTY } from "./property.mjs";
+
 /**
  * Bumping this invalidates every stored choice: the banner reappears and the
  * next decision is logged against the new version. Do that when a third-party
@@ -34,7 +36,13 @@ export const CONSENT_POLICY_VERSION = "2026-08-04";
  */
 export const LEGAL_UPDATED_AT = "2026-08-05";
 
-export const CONSENT_COOKIE = "ilrespirodelborgo_consent";
+/**
+ * Namespaced by the property slug so a cookie inspector shows whose site set
+ * it. Renaming the slug in `configuration/property.mjs` therefore makes every
+ * stored choice unreadable and re-shows the banner — worth knowing, and only
+ * ever acceptable when the site changes hands.
+ */
+export const CONSENT_COOKIE = `${PROPERTY.brand.slug}_consent`;
 
 /**
  * Six months. The Italian Garante's cookie guidelines expect a declined banner

@@ -2,7 +2,7 @@
   "meta": {
     "tagline": "Chambre d'hôtes à Montemagno, au cœur du Monferrato",
     "description": "Une chambre soignée dans une maison de famille à Montemagno, au milieu des collines du Monferrato. Petit-déjeuner maison, jardin et accueil personnel.",
-    "ogAlt": "La cour du B&B Il Respiro del Borgo au coucher du soleil",
+    "ogAlt": "La cour du B&B {brand} au coucher du soleil",
     "structure": {
       "title": "La maison et la chambre",
       "description": "La chambre, les espaces communs, la véranda et le jardin de notre chambre d'hôtes à Montemagno, dans le Monferrato."
@@ -17,7 +17,7 @@
     },
     "contact": {
       "title": "Où nous trouver et nous contacter",
-      "description": "Comment nous rejoindre à Montemagno (AT) et comment nous écrire pour vérifier les disponibilités : réponse personnelle sous 24 heures."
+      "description": "Comment nous rejoindre à Montemagno (AT) et comment nous écrire pour vérifier les disponibilités : réponse personnelle sous {hours} heures."
     },
     "privacy": {
       "title": "Politique de confidentialité",
@@ -37,15 +37,16 @@
     "surroundings": "ENVIRONS",
     "amenities": "SERVICES",
     "findus": "NOUS TROUVER",
-    "checkAvailabilities": "VÉRIFIER LES DISPONIBILITÉS"
+    "checkAvailabilities": "VÉRIFIER LES DISPONIBILITÉS",
+    "logoAlt": "Logo de {brand}"
   },
   "contactChannels": {
-    "whatsappPrefill": "Bonjour, je souhaiterais des informations sur Il Respiro del Borgo.",
-    "mailSubject": "Demande d'informations — Il Respiro del Borgo",
+    "whatsappPrefill": "Bonjour, je souhaiterais des informations sur {brand}.",
+    "mailSubject": "Demande d'informations — {brand}",
     "mailBody": "Bonjour,\n\nje souhaiterais connaître vos disponibilités.\n\nDates : du ___ au ___\nVoyageurs : ___\n\nRemarques :\n\nMerci,\n"
   },
   "map": {
-    "title": "Emplacement de Il Respiro del Borgo à Montemagno"
+    "title": "Emplacement de {brand} à Montemagno"
   },
   "datePicker": {
     "placeholder": "Choisis une date",
@@ -55,11 +56,11 @@
   },
   "enquiryEmail": {
     "subject": "Nous avons bien reçu ta demande — {structure}",
-    "preheader": "Nous te répondrons personnellement sous 24 heures.",
+    "preheader": "Nous te répondrons personnellement sous {hours} heures.",
     "eyebrow": "Demande reçue",
     "heading": "Merci — nous avons bien ta demande",
     "greeting": "Bonjour {name},",
-    "received": "merci de nous avoir écrit. Nous avons bien reçu ta demande et te répondrons personnellement sous 24 heures.",
+    "received": "merci de nous avoir écrit. Nous avons bien reçu ta demande et te répondrons personnellement sous {hours} heures.",
     "summaryTitle": "Récapitulatif de ta demande",
     "labelDates": "Dates",
     "labelGuests": "Voyageurs",
@@ -116,9 +117,18 @@
         "title": "Montemagno",
         "description": "Perché sur la colline, Montemagno est un village médiéval unique en son genre, célèbre pour son tracé urbain caractéristique en forme d'amande et ses douze ruelles historiques. Se promener dans ses rues signifie faire un bond en arrière dans le temps, en admirant l'imposant château crénelé qui domine silencieusement la vallée environnante.",
         "features": {
-          "alleys": "Ruelles Historiques",
-          "square": "Place Baroque",
-          "distance": "Du B&B"
+          "alleys": {
+            "value": "12",
+            "label": "Ruelles Historiques"
+          },
+          "square": {
+            "value": "XIXe s.",
+            "label": "Place Baroque"
+          },
+          "distance": {
+            "value": "À pied",
+            "label": "Du B&B"
+          }
         },
         "cta": "Explorer le village médiéval"
       },
@@ -176,6 +186,16 @@
             "text": "Un endroit vraiment enchanteur et des hôtes délicieux ! Nous nous sommes sentis chez nous. Je le recommande à 100 %. Nous reviendrons… promis !!"
           }
         ]
+      },
+      "images": {
+        "hero": "La cour de la ferme au coucher du soleil",
+        "house": "La ferme vue du jardin au coucher du soleil",
+        "room": "Un détail de la chambre",
+        "breakfast": "Une table de petit-déjeuner dressée dehors dans le jardin",
+        "hills": "Les collines du Monferrato",
+        "village": "Le village de Montemagno",
+        "portraitLeft": "L'accueil en Monferrato",
+        "portraitRight": "La convivialité dans notre ferme"
       }
     },
     "structure": {
@@ -187,7 +207,7 @@
       "intro": {
         "eyebrow": "Notre demeure",
         "title": "Une maison qui raconte le Monferrato",
-        "body": "Il Respiro del Borgo est né de la restauration attentive d'une ancienne ferme piémontaise, où chaque pierre, chaque poutre et chaque brique apparente conserve la mémoire de la vie paysanne. Nous avons restauré les espaces avec respect, en préservant l'âme originelle de la \"maison de grand-mère\" et en l'enrichissant d'un confort discret et actuel. Le résultat est une demeure intime, chaleureuse et lumineuse, pensée pour te faire sentir chez toi dès le premier pas.",
+        "body": "{brand} est né de la restauration attentive d'une ancienne ferme piémontaise, où chaque pierre, chaque poutre et chaque brique apparente conserve la mémoire de la vie paysanne. Nous avons restauré les espaces avec respect, en préservant l'âme originelle de la \"maison de grand-mère\" et en l'enrichissant d'un confort discret et actuel. Le résultat est une demeure intime, chaleureuse et lumineuse, pensée pour te faire sentir chez toi dès le premier pas.",
         "quote": "Ici les murs respirent au rythme des vignes : nous avons seulement rouvert les fenêtres sur le temps."
       },
       "house": {
@@ -217,11 +237,9 @@
       },
       "specs": {
         "guests": {
-          "value": "2",
           "label": "Voyageurs"
         },
         "size": {
-          "value": "37 m²",
           "label": "Chambre & salle de bain"
         },
         "bed": {
@@ -229,7 +247,6 @@
           "label": "Lit double ou lits simples"
         },
         "checkin": {
-          "value": "15 h – 20 h",
           "label": "Heure d'arrivée"
         }
       },
@@ -260,7 +277,7 @@
       "intro": {
         "eyebrow": "Où nous sommes",
         "title": "Au cœur des collines du Monferrato",
-        "body": "Il Respiro del Borgo se trouve à Montemagno, petit village médiéval niché parmi les vignobles du Monferrato d'Asti, reconnu patrimoine mondial de l'UNESCO. C'est une terre de collines douces, de caves historiques et de tables généreuses, où chaque saison peint le paysage de couleurs différentes. D'ici partent des promenades, des routes des vins et des itinéraires artistiques qui révèlent un Piémont authentique et encore peu fréquenté.",
+        "body": "{brand} se trouve à Montemagno, petit village médiéval niché parmi les vignobles du Monferrato d'Asti, reconnu patrimoine mondial de l'UNESCO. C'est une terre de collines douces, de caves historiques et de tables généreuses, où chaque saison peint le paysage de couleurs différentes. D'ici partent des promenades, des routes des vins et des itinéraires artistiques qui révèlent un Piémont authentique et encore peu fréquenté.",
         "quote": "Un paysage qui change de couleur à chaque heure et ne cesse jamais de surprendre."
       },
       "montemagno": {
@@ -313,6 +330,15 @@
         "title": "Laisse-toi guider à travers les collines",
         "body": "À ton arrivée, nous serons heureux de te conseiller itinéraires, caves et tables sur mesure. Écris-nous et imaginons ensemble ton séjour.",
         "button": "Contacte-nous"
+      },
+      "images": {
+        "hero": "Les collines du Monferrato à l'heure dorée",
+        "villageSpring": "Le village de Montemagno au printemps",
+        "castle": "Le château et les vignes",
+        "villageWinter": "Le village de Montemagno par un soir d'hiver",
+        "hillsView": "La vue sur les collines du Monferrato",
+        "vines": "Un apéritif parmi les vignes",
+        "sunset": "Coucher de soleil sur les collines"
       }
     },
     "services": {
@@ -397,6 +423,10 @@
         "title": "Tu as un souhait particulier ?",
         "body": "Dis-nous ce dont tu as besoin pour ton séjour : nous aimons prendre soin des détails qui font la différence.",
         "button": "Écris-nous"
+      },
+      "images": {
+        "hero": "Le petit-déjeuner servi au jardin",
+        "breakfast": "La table du petit-déjeuner en plein air"
       }
     },
     "contact": {
@@ -408,7 +438,7 @@
       "intro": {
         "eyebrow": "Contact & réservations",
         "title": "À un pas des collines",
-        "body": "Nous serons heureux de répondre à toutes tes questions et de t'aider à organiser ton séjour. Écris-nous ou appelle-nous : derrière Il Respiro del Borgo, il y a une famille, pas un standard téléphonique."
+        "body": "Nous serons heureux de répondre à toutes tes questions et de t'aider à organiser ton séjour. Écris-nous ou appelle-nous : derrière {brand}, il y a une famille, pas un standard téléphonique."
       },
       "cards": {
         "whatsapp": "WhatsApp",
@@ -416,11 +446,10 @@
         "phone": "Téléphone",
         "email": "E-mail",
         "address": "Adresse",
-        "addressLine1": "Via della Pace, 24",
-        "addressLine2": "14030 Montemagno (AT) — Piémont, Italie",
+        "regionCountry": "Piémont, Italie",
         "hours": "Réception",
-        "hoursValue": "Arrivée 15 h – 20 h",
-        "hoursNote": "Départ avant 10 h 30"
+        "hoursValue": "Arrivée {from} – {to}",
+        "hoursNote": "Départ avant {time}"
       },
       "form": {
         "eyebrow": "Demande de disponibilité",
@@ -445,7 +474,7 @@
         "privacyNote": "Nous utiliserons tes données uniquement pour te répondre.",
         "success": {
           "title": "Demande envoyée",
-          "body": "Merci ! Nous avons bien reçu ta demande et t'avons envoyé une confirmation à {email}. Nous te répondrons personnellement sous 24 heures.",
+          "body": "Merci ! Nous avons bien reçu ta demande et t'avons envoyé une confirmation à {email}. Nous te répondrons personnellement sous {hours} heures.",
           "spamHint": "Si tu ne vois pas la confirmation, vérifie ton dossier spam.",
           "faster": "Écris-nous sur WhatsApp"
         },
@@ -510,6 +539,9 @@
         "whatsapp": "Écris-nous sur WhatsApp",
         "call": "Appelle-nous",
         "email": "Écris-nous"
+      },
+      "images": {
+        "hero": "La cour de la ferme au coucher du soleil"
       }
     },
     "privacy": {
@@ -522,7 +554,7 @@
       "sections": {
         "controller": {
           "title": "Qui traite tes données",
-          "body": "Le responsable du traitement est Il Respiro del Borgo, la maison d'hôtes qui gère ce site et reçoit les demandes envoyées par le formulaire de contact.",
+          "body": "Le responsable du traitement est {brand}, la maison d'hôtes qui gère ce site et reçoit les demandes envoyées par le formulaire de contact.",
           "labels": {
             "address": "Adresse",
             "email": "E-mail",
@@ -734,7 +766,7 @@
         "scope": {
           "title": "Objet",
           "body": "Ce site a une vocation d'information et de contact : il présente la structure, ses espaces, ses services et le territoire alentour, et met à disposition un formulaire pour se renseigner sur la disponibilité. Ce n'est pas une plateforme de réservation et il ne gère aucun paiement.",
-          "owner": "Le site est géré par Il Respiro del Borgo, {address}, CIN {cin}."
+          "owner": "Le site est géré par {brand}, {address}, CIN {cin}."
         },
         "notABooking": {
           "title": "Une demande n'est pas une réservation",
@@ -762,7 +794,7 @@
         },
         "intellectualProperty": {
           "title": "Propriété intellectuelle",
-          "body": "Les photographies, les textes, le nom et la marque de la structure appartiennent à Il Respiro del Borgo. Tu peux partager librement les pages du site ; réutiliser des photographies ou des textes dans d'autres contextes requiert en revanche notre accord écrit."
+          "body": "Les photographies, les textes, le nom et la marque de la structure appartiennent à {brand}. Tu peux partager librement les pages du site ; réutiliser des photographies ou des textes dans d'autres contextes requiert en revanche notre accord écrit."
         },
         "availability": {
           "title": "Disponibilité du site",
@@ -796,23 +828,20 @@
   },
   "footer": {
     "location": {
-      "title": "Siège et Emplacement",
-      "address": "Via della Pace, 24",
-      "city": "14030 Montemagno (AT)"
+      "title": "Siège et Emplacement"
     },
     "brand": {
-      "name": "Il Respiro del Borgo",
       "tagline": "Un refuge intime au cœur du Monferrato, conçu pour ralentir le temps et redécouvrir l'hospitalité piémontaise authentique."
     },
     "contact": {
       "title": "Contact et Réservations"
     },
     "legal": {
-      "classification": "Hébergement Classifié ★★",
+      "classification": "Hébergement Classifié {stars}",
       "privacy": "Politique de Confidentialité",
       "cookies": "Politique de Cookies",
-      "copyright": "© 2026 Il Respiro del Borgo. Tous droits réservés.",
-      "cin": "CIN : IT005077C1SCRVTNU4",
+      "copyright": "© {year} {brand}. Tous droits réservés.",
+      "cin": "CIN : {cin}",
       "terms": "Conditions",
       "manageCookies": "Gérer les cookies"
     }

@@ -133,7 +133,6 @@ Authentication: Vercel attaches `Authorization: Bearer $CRON_SECRET` automatical
 | `SMTP_USER` | yes | Gmail account that sends enquiry mail. |
 | `SMTP_APP_PASSWORD` | yes | Google App Password; a normal password will not work. |
 | `ENQUIRY_TO` | no | Defaults to `SMTP_USER`. |
-| `STRUCTURE_NAME` | no | Falls back to the property name in code. |
 | `NEXT_PUBLIC_SITE_URL` | no | Unset on Vercel; set once a custom domain exists. |
 | `DATABASE_URL` | no | Unset means no persistence — see §1.1. |
 | `DIRECT_DATABASE_URL` | Supabase only | Migrations; falls back to `DATABASE_URL`. |
@@ -141,6 +140,8 @@ Authentication: Vercel attaches `Authorization: Bearer $CRON_SECRET` automatical
 | `CRON_SECRET` | production | Unset means the retention endpoint refuses to run. |
 
 `src/.env.example` documents all of them with empty values, which the pre-commit credential check permits.
+
+Note what is *not* here: the property's name, address, phone, licence code and check-in times are not environment variables. They are not secret and they do not vary between deployments, so they live in `src/configuration/property.mjs` — see §7 and `docs/Rebranding.md`. `STRUCTURE_NAME` used to be an environment variable and was removed: a stale value in the Vercel dashboard would silently override the config file.
 
 ## 6. Observability & Maintenance
 
@@ -151,5 +152,15 @@ Authentication: Vercel attaches `Authorization: Bearer $CRON_SECRET` automatical
 
 ## 7. White-Label Rebranding Scalability
 
-- **Environment variables** — brand-specific configuration (`STRUCTURE_NAME`, site URL, mail credentials) is already environment-driven.
-- **Multi-tenant potential** — the infrastructure can be cloned into a new Vercel/Supabase project pairing for a different property with minimal configuration change. Content lives in `src/messages/*.json` and `src/configuration/*.ts`, both of which are per-property rather than per-guest.
+The codebase is split into three layers, so that reselling it is an edit rather than a rewrite. `docs/Rebranding.md` is the checklist.
+
+| Layer | Lives in | Changes per property |
+| :--- | :--- | :--- |
+| **Property** — the facts | `src/configuration/property.mjs` | edit the values |
+| **Content** — prose, photographs, colours | `src/messages/*.json`, `src/public/img/`, `src/style/palette.mjs` | rewrite / swap files |
+| **Structure** — routes, components, `lib/` | everything else | never |
+
+- **One file for the facts** — name, slug, email, phone, address, CIN, coordinates, capacity, room size, check-in and check-out times, response SLA and review score are all in `property.mjs`. Everything downstream derives from it: the `configuration/*.ts` modules, the footer, the legal pages, the emails, the web app manifest, the consent cookie name and the local database role.
+- **Enforced, not just intended** — `npm run check:config` fails the build (and the pre-commit hook) if any of those values is written out by hand anywhere else. Without it the separation would rot on the first hurried commit.
+- **Environment** — only secrets and per-deployment values: mail credentials, site URL, database URL, hashing salt, cron secret.
+- **Multi-tenant potential** — the infrastructure can be cloned into a new Vercel/Supabase project pairing for a different property with no structural change.

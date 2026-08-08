@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { QuoteUpIcon, GoogleIcon } from "@hugeicons/core-free-icons";
-
-const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Il+Respiro+del+Borgo+Montemagno";
+import { GOOGLE_MAPS_PLACE_URL } from "@/configuration/contact";
+import { PROPERTY } from "@/configuration/property.mjs";
 
 type Review = {
   name: string;
@@ -50,9 +49,9 @@ export function Reviews() {
           <div className="h-px w-12 bg-secondary-600 mx-auto mt-4 mb-8" />
 
           <div className="inline-flex items-center gap-3">
-            <Stars rating={5} />
+            <Stars rating={PROPERTY.reviews.stars} />
             <span className="text-lg font-serif font-semibold text-neutral-950">
-              4.9
+              {PROPERTY.reviews.average}
             </span>
             <span className="h-4 w-px bg-neutral-300" />
             <span className="inline-flex items-center gap-1.5 text-xs md:text-sm text-neutral-600 tracking-wide">
@@ -94,7 +93,7 @@ export function Reviews() {
         </div>
 
         <div className="w-full flex justify-center mt-14">
-          <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
+          <a href={GOOGLE_MAPS_PLACE_URL} target="_blank" rel="noopener noreferrer">
             <span className="inline-flex items-center gap-2 bg-primary-500 text-neutral-50 px-8 py-4 rounded-full text-xs font-medium tracking-[0.2em] uppercase hover:bg-primary-700 transition-all cursor-pointer shadow-md">
               <HugeiconsIcon icon={GoogleIcon} className="w-4 h-4" strokeWidth={1.5} />
               {t("cta")}
